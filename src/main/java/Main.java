@@ -1,6 +1,9 @@
 import ddfinder.DDFinder;
 import FastADC.FastADC;
+import ddfinder.differentialdependency.DifferentialDependencySet;
 import de.metanome.algorithms.dcfinder.denialconstraints.DenialConstraintSet;
+import de.metanome.algorithms.dcfinder.input.Input;
+import de.metanome.algorithms.dcfinder.input.RelationalInput;
 
 public class Main {
 
@@ -18,20 +21,14 @@ public class Main {
             rowLimit = Integer.parseInt(args[1]);
         }
 
-        String dfp;
+        String dfp = "";
         if(args.length > 2){
             dfp = args[2];
         }
 
-        double threshold = 0.01d;
-        int shardLength = 350;
-        boolean linear = false;         // linear single-thread in EvidenceSetBuilder
-        boolean singleColumn = false;   // only single-attribute predicates
-
-        DDFinder dDFinder = new DDFinder(rowLimit);
-        FastADC fastADC = new FastADC(singleColumn, threshold, shardLength, linear);
-        DenialConstraintSet dcs = fastADC.buildApproxDCs(fp, rowLimit);
-        System.out.println();
+        DDFinder dDFinder = new DDFinder(rowLimit, new Input(new RelationalInput(fp), rowLimit), dfp);
+        DifferentialDependencySet dds = dDFinder.buildDDs();
+        //System.out.println("get dds size: " + dds.size());
     }
 
 }

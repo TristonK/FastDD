@@ -19,7 +19,7 @@ public class Input {
     private final IndexProvider<String> providerS;
     private final IndexProvider<Long> providerL;
     private final IndexProvider<Double> providerD;
-
+    private final double[][] doubleInput;
 
     public Input(RelationalInput relationalInput) {
         this(relationalInput, -1);
@@ -37,6 +37,7 @@ public class Input {
 
         parsedColumns = buildParsedColumns(columns);
         intInput = buildIntInput(parsedColumns);
+        doubleInput = buildDoubleInput(parsedColumns);
         System.out.println(" [Input] # of Tuples: " + rowCount);
         System.out.println(" [Input] # of Attributes: " + colCount);
     }
@@ -130,4 +131,30 @@ public class Input {
         return name;
     }
 
+    private double[][] buildDoubleInput(List<ParsedColumn<?>> pColumns) {
+        //IndexProvider.sort(providerL);
+        //IndexProvider.sort(providerD);
+
+        double[][] currIntInput = new double[colCount][rowCount];
+
+        for (int col = 0; col < colCount; col++) {
+            ParsedColumn<?> pColumn = pColumns.get(col);
+            for (int row = 0; row < rowCount; ++row){
+                if(pColumn.getValue(row).getClass()==String.class){
+                    //TODO
+                    currIntInput[col][row] = 1;
+                }else if(pColumn.getValue(row).getClass()==Double.class){
+                    currIntInput[col][row] = (Double)pColumn.getValue(row);
+                } else{
+                    currIntInput[col][row] = ((Long)pColumn.getValue(row)).doubleValue();
+                }
+            }
+        }
+
+        return currIntInput;
+    }
+
+    public double[][] getDoubleInput(){
+        return this.doubleInput;
+    }
 }

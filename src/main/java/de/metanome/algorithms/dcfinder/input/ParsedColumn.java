@@ -14,6 +14,9 @@ public class ParsedColumn<T extends Comparable<T>> {
     private final List<T> values = new ArrayList<>();
     private final Class<T> type;
 
+    private Double maxNum;
+    private Double minNum;
+    private List<Double> thresholds;
     private final IndexProvider<T> indexProvider;
 
     public ParsedColumn(String columnName, Class<T> type, int index, IndexProvider<T> indexProvider) {
@@ -21,11 +24,20 @@ public class ParsedColumn<T extends Comparable<T>> {
         this.type = type;
         this.index = index;
         this.indexProvider = indexProvider;
+        this.maxNum = Double.MIN_VALUE;
+        this.minNum = Double.MAX_VALUE;
     }
 
     public void addLine(T value) {
         valueSet.addValue(value, 1, 0);
         values.add(value);
+        if(type == Double.class){
+            maxNum = Math.max(maxNum, (Double)value);
+            minNum = Math.min(minNum, (Double)value);
+        }else if(type == Long.class){
+            maxNum = Math.max(maxNum, ((Long) value).doubleValue());
+            minNum = Math.min(minNum, ((Long) value).doubleValue());
+        }
         indexProvider.getIndex(value);
     }
 
@@ -122,5 +134,17 @@ public class ParsedColumn<T extends Comparable<T>> {
     public String getColumnIdentifier() {
         return columnName;
     }
+
+    public List<Double> getThresholds(){
+        return thresholds;
+    }
+
+    public void setThresholds(List<Double> thresholds){
+        this.thresholds = new ArrayList<>(thresholds);
+    }
+
+    public Double getMaxNum(){return maxNum;}
+
+    public Double getMinNum() {return minNum;}
 
 }
