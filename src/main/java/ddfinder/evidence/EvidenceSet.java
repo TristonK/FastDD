@@ -1,7 +1,6 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import com.koloboke.collect.map.hash.HashLongLongMap;
 import ddfinder.predicate.PredicateBuilder;
 
 import java.util.ArrayList;
@@ -14,14 +13,14 @@ import java.util.List;
  */
 public class EvidenceSet implements Iterable<Evidence>{
 
-    private HashMap<Long,Evidence> clueToEvidence;
+    private HashMap<LongBitSet, Evidence> clueToEvidence;
     private final int[] colMap;
 
 
     private List<List<LongBitSet>> countToPredicateSets;
 
     public EvidenceSet(PredicateBuilder predicateBuilder, int[] colMap){
-        clueToEvidence = new HashMap<>();
+        clueToEvidence = new HashMap<LongBitSet, Evidence>();
         this.colMap = colMap;
         this.countToPredicateSets = new ArrayList<>();
         buildColMasks(predicateBuilder);
@@ -35,9 +34,9 @@ public class EvidenceSet implements Iterable<Evidence>{
     }
 
 
-    public void build(HashLongLongMap clueSet){
+    public void build(HashMap<LongBitSet, Long> clueSet){
         for (var entry : clueSet.entrySet()) {
-            long clue = entry.getKey();
+            LongBitSet clue = entry.getKey();
             Evidence evi = new Evidence(clue, entry.getValue(), countToPredicateSets);
             clueToEvidence.put(clue, evi);
         }

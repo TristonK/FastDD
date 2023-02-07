@@ -14,10 +14,10 @@ public class Evidence {
     public LongBitSet bitset;
 
     private final long count;
-    private final long clue;
+    private final LongBitSet clue;
 
     private List<List<LongBitSet>> countToPredicateSets;
-    public Evidence(Long clue, Long count, List<List<LongBitSet>> countToPredicateSets){
+    public Evidence(LongBitSet clue, Long count, List<List<LongBitSet>> countToPredicateSets){
         this.clue = clue;
         this.count = count;
         this.countToPredicateSets = countToPredicateSets;
@@ -27,8 +27,8 @@ public class Evidence {
     private void buildEvidenceFromClue(){
         LongBitSet bitSet = new LongBitSet(countToPredicateSets.size()*3);
         for(int i = 0; i < countToPredicateSets.size(); i++){
-            long mask = ((7L<<(i*3))&clue)>>(i*3);
-            bitSet.or(countToPredicateSets.get(i).get((int)mask));
+            //long mask = ((7L<<(i*3))&clue)>>(i*3);
+            //bitSet.or(countToPredicateSets.get(i).get((int)mask));
         }
         this.bitset = bitSet;
     }
@@ -47,7 +47,7 @@ public class Evidence {
 
     @Override
     public int hashCode() {
-        return (int) (clue ^ (clue >>> 32));
+        return clue.hashCode();
     }
 
     public long getCount() {

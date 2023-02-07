@@ -20,15 +20,23 @@ public class PredicateBuilder {
     private final IndexProvider<Predicate> predicateIdProvider;
 
     private List<Integer> numericPredicatesGroup;
+
+    private List<Integer> longPredicatesGroup;
+
+    private List<Integer> doublePredicatesGroup;
     private List<Integer> strPredicatesGroup;
+
+    private static int intervalCnt;
 
     private Map<Integer, List<Predicate>> colToPredicatesGroup;
 
     public PredicateBuilder(Input input){
+        intervalCnt = 0;
         predicates = new ArrayList<>();
         predicateProvider = new PredicateProvider();
         predicateIdProvider = new IndexProvider<>();
-        numericPredicatesGroup = new ArrayList<>();
+        longPredicatesGroup = new ArrayList<>();
+        doublePredicatesGroup = new ArrayList<>();
         strPredicatesGroup = new ArrayList<>();
         colToPredicatesGroup = new HashMap<>();
         for(ParsedColumn<?> column: input.getColumns()){
@@ -74,16 +82,19 @@ public class PredicateBuilder {
         List<Predicate> partialPredicates = new ArrayList<>();
         ColumnOperand<?> operand = new ColumnOperand<>(column, 0);
         for(int i = threshold - 1; i >= 0; i--){
-            partialPredicates.add(predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, i));
+            partialPredicates.add(predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, thresholds.get(i)));
         }
         for(int i = 0; i< threshold; i++){
-            partialPredicates.add(predicateProvider.getPredicate(Operator.GREATER, operand, i));
+            partialPredicates.add(predicateProvider.getPredicate(Operator.GREATER, operand, thresholds.get(i)));
         }
         predicates.addAll(partialPredicates);
         colToPredicatesGroup.put(column.getIndex(), partialPredicates);
-        if(column.isNum()){
-            numericPredicatesGroup.add(column.getIndex());
-        }else{
+        intervalCnt += thresholds.size() + 1;
+        if(column.isLong()){
+            longPredicatesGroup.add(column.getIndex());
+        } else if(column.isDouble()){
+          doublePredicatesGroup.add(column.getIndex());
+        } else{
             strPredicatesGroup.add(column.getIndex());
         }
     }
@@ -95,6 +106,12 @@ public class PredicateBuilder {
     public List<Integer> getStrPredicatesGroup() {
         return strPredicatesGroup;
     }
+
+    public List<Integer> getLongPredicatesGroup() {return longPredicatesGroup;}
+
+    public List<Integer> getDoublePredicatesGroup() {return doublePredicatesGroup;}
+
+    public static int getIntervalCnt() {return  intervalCnt;}
 
     public ParsedColumn<?> getPredicateColumn(int colIndex){
         return colToPredicatesGroup.get(colIndex).get(0).getOperand().getColumn();

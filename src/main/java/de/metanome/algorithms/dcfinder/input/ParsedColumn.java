@@ -62,6 +62,14 @@ public class ParsedColumn<T extends Comparable<T>> {
         return type != String.class;
     }
 
+    public boolean isLong(){
+        return type == Long.class;
+    }
+
+    public boolean isDouble(){
+        return type == Double.class;
+    }
+
     public int getIndexAt(int row) {
         return indexProvider.getIndex(values.get(row));
     }

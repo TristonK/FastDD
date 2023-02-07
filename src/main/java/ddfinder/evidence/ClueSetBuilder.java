@@ -15,13 +15,13 @@ import java.util.*;
 
 abstract public class ClueSetBuilder {
 
-    abstract public HashLongLongMap buildClueSet();
+    abstract public HashMap<LongBitSet, Long> buildClueSet();
 
-    HashLongLongMap accumulateClues(long[]... clueArrays) {
-        HashLongLongMap clueSet = HashLongLongMaps.newMutableMap();
-        for (long[] map : clueArrays) {
-            for (long clue : map) {
-                clueSet.addValue(clue, 1L, 0L);
+    HashMap<LongBitSet, Long> accumulateClues(LongBitSet[]... clueArrays) {
+        HashMap<LongBitSet, Long> clueSet = new HashMap<>();
+        for (LongBitSet[] map : clueArrays) {
+            for (LongBitSet clue : map) {
+                clueSet.put(clue, clueSet.getOrDefault(clue, 0L) +1);
             }
         }
         return clueSet;
@@ -35,20 +35,18 @@ abstract public class ClueSetBuilder {
 
         int colIndex;
 
-        List<Long> masks;
-
+        int pos;
         public PredicatePack(ParsedColumn<?> column, int pos){
             this.colIndex = column.getIndex();
             this.thresholds = new ArrayList<>(column.getThresholds());
-            this.masks = new ArrayList<>();
-            for(int i = 0; i < thresholds.size() + 1; i++){
-                masks.add((long) i <<pos);
-            }
+            this.pos = pos;
         }
     }
 
-    // count/3 -> colIndex
-    static int[] colMap;
+    /**
+     * bit pos -> colIndex
+    */
+     static int[] colMap;
 
     static List<ClueSetBuilder.PredicatePack> strPacks;  // String single-column predicate packs
     static List<ClueSetBuilder.PredicatePack> numPacks;  // numerical single-column predicate packs
@@ -65,29 +63,39 @@ abstract public class ClueSetBuilder {
     }
 
     private static void buildPredicateGroupsAndCorrectMap(PredicateBuilder pBuilder) {
-        List<Integer> numericPredicatesGroup = pBuilder.getNumericPredicatesGroup();
         List<Integer> strPredicatesGroup = pBuilder.getStrPredicatesGroup();
+        List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
+        List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
 
-        colMap = new int[numericPredicatesGroup.size()+strPredicatesGroup.size()];
+        colMap = new int[pBuilder.getIntervalCnt()];
 
         int count = 0;
-
-        for(Integer colIndex: numericPredicatesGroup){
+        for(Integer colIndex: longPredicatesGroup){
             numPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
-            colMap[count/3] = colIndex;
-            count += 3;
+            int interval  = pBuilder.getPredicateColumn(colIndex).getThresholds().size() + 1;
+            for(int i = count; i < count + interval; i++){
+                colMap[i] = colIndex;
+            }
+            count += interval;
         }
-
+        for(Integer colIndex: doublePredicatesGroup){
+            numPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
+            int interval  = pBuilder.getPredicateColumn(colIndex).getThresholds().size() + 1;
+            for(int i = count; i < count + interval; i++){
+                colMap[i] = colIndex;
+            }
+            count += interval;
+        }
         for(Integer colIndex: strPredicatesGroup){
             strPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
-            colMap[count/3] = colIndex;
-            count+=3;
+            int interval  = pBuilder.getPredicateColumn(colIndex).getThresholds().size() + 1;
+            for(int i = count; i < count + interval; i++){
+                colMap[i] = colIndex;
+            }
+            count += interval;
         }
 
         System.out.println("  [CLUE] # of bits in clue: " + count);
-        if (count > 64) {
-            throw new UnsupportedOperationException("Too many predicates! Not supported yet!");
-        }
     }
 
 

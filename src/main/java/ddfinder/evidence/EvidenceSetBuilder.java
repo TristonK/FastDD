@@ -1,10 +1,13 @@
 package ddfinder.evidence;
 
+import ch.javasoft.bitset.LongBitSet;
 import com.koloboke.collect.map.hash.HashLongLongMap;
 import com.koloboke.collect.map.hash.HashLongLongMaps;
 import com.koloboke.function.LongLongConsumer;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
+
+import java.util.HashMap;
 
 /**
  * @author tristonK 2022/12/31
@@ -19,25 +22,24 @@ public class EvidenceSetBuilder {
     public EvidenceSet buildEvidenceSet(PliShard[] pliShards){
         if (pliShards.length != 0) {
             long t1 = System.currentTimeMillis();
-            HashLongLongMap clueSet = linearBuildClueSet(pliShards);
+            HashMap<LongBitSet, Long> clueSet = linearBuildClueSet(pliShards);
             System.out.println("[Time] build clueSet: " + (System.currentTimeMillis()-t1));
-            evidenceSet.build(clueSet);
+            //evidenceSet.build(clueSet);
         }
         return evidenceSet;
     }
 
-    private HashLongLongMap linearBuildClueSet(PliShard[] pliShards){
+    private HashMap<LongBitSet, Long> linearBuildClueSet(PliShard[] pliShards){
         int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
         System.out.println("  [CLUE] task count: " + taskCount);
 
-        HashLongLongMap clueSet = HashLongLongMaps.newMutableMap();
-        LongLongConsumer add = (k, v) -> clueSet.addValue(k, v, 0L);
+        HashMap<LongBitSet, Long> clueSet = new HashMap<>();
 
         for (int i = 0; i < pliShards.length; i++) {
             for (int j = i; j < pliShards.length; j++) {
                 ClueSetBuilder builder = i == j ? new SingleClueSetBuilder(pliShards[i]) : new CrossClueSetBuilder(pliShards[i], pliShards[j]);
-                HashLongLongMap partialClueSet = builder.buildClueSet();
-                partialClueSet.forEach(add);
+                HashMap<LongBitSet, Long> partialClueSet = builder.buildClueSet();
+                partialClueSet.forEach((k, v) -> clueSet.put(k, clueSet.getOrDefault(k,0L) + 1));
             }
         }
         System.out.println(" [CLUE] # of clueSet size: " + clueSet.size());
