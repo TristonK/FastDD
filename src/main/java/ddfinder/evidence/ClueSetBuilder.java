@@ -21,7 +21,7 @@ abstract public class ClueSetBuilder {
         HashMap<LongBitSet, Long> clueSet = new HashMap<>();
         for (LongBitSet[] map : clueArrays) {
             for (LongBitSet clue : map) {
-                clueSet.put(clue, clueSet.getOrDefault(clue, 0L) +1);
+                clueSet.merge(clue, 1L, Long::sum);
             }
         }
         return clueSet;
@@ -67,7 +67,7 @@ abstract public class ClueSetBuilder {
         List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
         List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
 
-        colMap = new int[pBuilder.getIntervalCnt()];
+        colMap = new int[PredicateBuilder.getIntervalCnt()];
 
         int count = 0;
         for(Integer colIndex: longPredicatesGroup){

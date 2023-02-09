@@ -34,15 +34,15 @@ public class EvidenceSetBuilder {
         System.out.println("  [CLUE] task count: " + taskCount);
 
         HashMap<LongBitSet, Long> clueSet = new HashMap<>();
-
         for (int i = 0; i < pliShards.length; i++) {
             for (int j = i; j < pliShards.length; j++) {
                 ClueSetBuilder builder = i == j ? new SingleClueSetBuilder(pliShards[i]) : new CrossClueSetBuilder(pliShards[i], pliShards[j]);
                 HashMap<LongBitSet, Long> partialClueSet = builder.buildClueSet();
-                partialClueSet.forEach((k, v) -> clueSet.put(k, clueSet.getOrDefault(k,0L) + 1));
+                partialClueSet.forEach((k, v) -> clueSet.merge(k, v, Long::sum));
             }
         }
         System.out.println(" [CLUE] # of clueSet size: " + clueSet.size());
+        System.out.println("clue cnt: " + clueSet.values().stream().mapToLong(Long::longValue).sum());
         return clueSet;
     }
 

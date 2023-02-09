@@ -40,11 +40,12 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
     }
 
     private void setNumMask(LongBitSet[] clues1, Pli pli1, int i, Pli pli2, int j, int pos) {
-        int beg1 = pli1.pliShard.beg;
-        int beg2 = pli2.pliShard.beg, range2 = pli2.pliShard.end - beg2;
+        int beg1 = pli1.pliShard.beg, beg2 = pli2.pliShard.beg;
+        int range2 = pli2.pliShard.end - beg2;
 
         for (int tid1 : pli1.get(i).getRawCluster()) {
-            int t1 = tid1 - beg1, r1 = t1 * range2 - beg2;
+            int t1 = tid1 - beg1;
+            int r1 = t1 * range2 - beg2;
             for (int tid2 : pli2.get(j).getRawCluster()) {
                 clues1[r1 + tid2].set(pos);
                 //clues2[(tid2 - beg2) * range1 + t1].set(pos);
@@ -62,13 +63,23 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         final double[] probeKeys = probePli.getKeys();
 
         for(int i = 0; i < pivotKeys.length; i++){
-            int thresholdIndex = 1;
+            int thresholdIndexl = 1;
+            int thresholdIndexb = thresholds.size()-1;
             for(int j = 0; j < probeKeys.length; j++){
-                if(probeKeys[j] == pivotKeys[i]){continue;}
-                while(thresholdIndex < thresholds.size() && Math.abs(probeKeys[j] - pivotKeys[i]) > thresholds.get(thresholdIndex)){
-                    thresholdIndex ++;
+                if(probeKeys[j] == pivotKeys[i]){
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos);
                 }
-                setNumMask(forwardArray, pivotPli, i, probePli, j, pos+thresholdIndex);
+                else if(probeKeys[j] < pivotKeys[i]){
+                    while(thresholdIndexl < thresholds.size() && pivotKeys[i] - probeKeys[j] > thresholds.get(thresholdIndexl)){
+                        thresholdIndexl ++;
+                    }
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos+thresholdIndexl);
+                }else{
+                    while (thresholdIndexb > 0 && probeKeys[j] - pivotKeys[i] <= thresholds.get(thresholdIndexb)){
+                        thresholdIndexb--;
+                    }
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos+thresholdIndexb+1);
+                }
             }
         }
     }

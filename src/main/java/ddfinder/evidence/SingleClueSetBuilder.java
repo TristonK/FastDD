@@ -7,6 +7,7 @@ import ddfinder.pli.Pli;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -41,7 +42,6 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         }
 
         HashMap<LongBitSet, Long> clueSet = accumulateClues(clues);
-
         return clueSet;
     }
 
@@ -52,6 +52,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         for (int i = 0; i < rawCluster1.size() ; i++) {
             int tid1 = rawCluster1.get(i);
             for (int j = 0; j < rawCluster2.size(); j++) {
+                tid1 = rawCluster1.get(i);
                 int tid2 = rawCluster2.get(j);
                 if(tid2 < tid1){int temp = tid1; tid1 = tid2; tid2 = temp;}
                 int t1 = tid1 - tidBeg;
@@ -65,11 +66,21 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     }
 
     private void correctNum(LongBitSet[] clues, Pli pli, int pos, List<Double>thresholds) {
-        for (int i = 0; i < pli.size() - 1; i++) {
-            // index为0的默认为0，不需要修改
+        for (int i = 0; i < pli.size(); i++) {
+            // index为0的情况
+            Cluster pli1 = pli.get(i);
+            for (int q = 0; q < pli1.size() -1; q++) {
+                int tid1 = pli1.get(q);
+                for (int w = q + 1; w < pli1.size(); w++) {
+                    int tid2 = pli1.get(w);
+                    if(tid2 < tid1){int temp = tid1; tid1 = tid2; tid2 = temp;}
+                    int t1 = tid1 - tidBeg;
+                    clues[(tid2-tid1-1)+t1*(2*tidRange- t1 -1)/2].set(pos);
+                }
+            }
             int thresholdIndex = 1;
             for(int j = i + 1; j < pli.size(); j++){
-                while(thresholdIndex < thresholds.size() && Math.abs(pli.keys[j] - pli.keys[i]) > thresholds.get(thresholdIndex)){
+                while(thresholdIndex < thresholds.size() && pli.keys[i] - pli.keys[j] > thresholds.get(thresholdIndex)){
                     thresholdIndex ++;
                 }
                 setNumMask(clues, pli.get(i), pli.get(j), pos + thresholdIndex);

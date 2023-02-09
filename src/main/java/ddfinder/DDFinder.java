@@ -1,6 +1,7 @@
 package ddfinder;
 
 
+import bruteforce.EvidenceCount;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.evidence.Evidence;
 import ddfinder.evidence.EvidenceSetBuilder;
@@ -48,6 +49,7 @@ public class DDFinder {
         evidenceSetBuilder.buildEvidenceSet(pliShards);
         System.out.println("[Time] build clueSet and evidence set " + (System.currentTimeMillis()-t0) + " ms");
         System.out.println("[EvidenceSet] # size is " + evidenceSetBuilder.getEvidenceSet().size());
+        System.out.println("[ClueSet]Brute Force # size is "+ EvidenceCount.calculate(input));
         return dds;
     }
 }
