@@ -1,13 +1,11 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import com.koloboke.collect.map.hash.HashLongLongMap;
 import ddfinder.pli.Cluster;
 import ddfinder.pli.Pli;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -78,13 +76,25 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
                     clues[(tid2-tid1-1)+t1*(2*tidRange- t1 -1)/2].set(pos);
                 }
             }
-            int thresholdIndex = 1;
-            for(int j = i + 1; j < pli.size(); j++){
-                while(thresholdIndex < thresholds.size() && pli.keys[i] - pli.keys[j] > thresholds.get(thresholdIndex)){
-                    thresholdIndex ++;
+            int start = i+1;
+            for(int index = 1; index < thresholds.size() && start < pli.size(); index++){
+                int end = pli.getFirstIndexWhereKeyIsLT(pli.keys[i]-thresholds.get(index), start, 1);
+                for(int correct = start ; correct < end && correct < pli.size(); correct++){
+                    setNumMask(clues, pli.get(i), pli.get(correct), pos + index);
                 }
-                setNumMask(clues, pli.get(i), pli.get(j), pos + thresholdIndex);
+                start = end;
             }
+            for(int correct = start; correct < pli.size(); correct++){
+                setNumMask(clues, pli.get(i), pli.get(correct), pos + thresholds.size());
+            }
+
+//            int thresholdIndex = 1;
+//            for(int j = i + 1; j < pli.size(); j++){
+//                while(thresholdIndex < thresholds.size() && pli.keys[i] - pli.keys[j] > thresholds.get(thresholdIndex)){
+//                    thresholdIndex ++;
+//                }
+//                setNumMask(clues, pli.get(i), pli.get(j), pos + thresholdIndex);
+//            }
         }
     }
 

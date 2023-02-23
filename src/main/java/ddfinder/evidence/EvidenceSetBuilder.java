@@ -1,9 +1,6 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import com.koloboke.collect.map.hash.HashLongLongMap;
-import com.koloboke.collect.map.hash.HashLongLongMaps;
-import com.koloboke.function.LongLongConsumer;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
 
@@ -23,7 +20,8 @@ public class EvidenceSetBuilder {
         if (pliShards.length != 0) {
             long t1 = System.currentTimeMillis();
             HashMap<LongBitSet, Long> clueSet = linearBuildClueSet(pliShards);
-            System.out.println("[Time] build clueSet: " + (System.currentTimeMillis()-t1));
+            System.out.println("[ClueSet] build cost: " + (System.currentTimeMillis()-t1) + " ms");
+            System.out.println("[ClueSet] # clueSet size: " + clueSet.size());
             //evidenceSet.build(clueSet);
         }
         return evidenceSet;
@@ -41,8 +39,6 @@ public class EvidenceSetBuilder {
                 partialClueSet.forEach((k, v) -> clueSet.merge(k, v, Long::sum));
             }
         }
-        System.out.println(" [CLUE] # of clueSet size: " + clueSet.size());
-        System.out.println("clue cnt: " + clueSet.values().stream().mapToLong(Long::longValue).sum());
         return clueSet;
     }
 

@@ -42,15 +42,18 @@ public class Pli {
         return clusters.get(i);
     }
 
-    // less than or equal to target
-    public int getFirstIndexWhereKeyIsLTE(int target) {
-        return getFirstIndexWhereKeyIsLTE(target, 0);
+    // less than target
+    public int getFirstIndexWhereKeyIsLT(int target) {
+        return getFirstIndexWhereKeyIsLT(target, 0, 0);
     }
 
-    public int getFirstIndexWhereKeyIsLTE(int target, int l) {
+    /**
+    * @param inequal: 0: return LTE, 1: retrun LT
+    * */
+    public int getFirstIndexWhereKeyIsLT(double target, int l, int inequal) {
         Integer i = keyToClusterIdMap.get(target);
         if (i != null) {
-            return i;
+            return i + inequal;
         }
 
         int r = keys.length;
@@ -64,6 +67,18 @@ public class Pli {
         }
 
         return l;
+    }
+
+    /**
+     * @param inequal: 0: return LTE, 1: retrun LT
+     * */
+    public int getFirstIndexWhereKeyIsLTByBL(double target, int l, int inequal){
+        Integer i = keyToClusterIdMap.get(target);
+        if (i != null) {
+            return i + inequal;
+        }
+        int r = keys.length;
+
     }
 
     @Override

@@ -17,7 +17,6 @@ public class EvidenceCount {
         Set<LongBitSet> clueSet = new HashSet<>();
         double[][] dInput = input.getDoubleInput();
         List<ParsedColumn<?>> columns = input.getParsedColumns();
-        long calCnt = 0;
         for(int i = 0; i < dInput[0].length-1; i++){
             for(int j = i+1; j<dInput[0].length; j++){
                 LongBitSet clue = new LongBitSet(PredicateBuilder.getIntervalCnt());
@@ -43,10 +42,8 @@ public class EvidenceCount {
                     cnt += th.size() + 1;
                 }
                 clueSet.add(clue);
-                calCnt++;
             }
         }
-        System.out.println("[Brute Force] # calculate cnt " + calCnt);
         return clueSet.size();
     }
 }

@@ -1,7 +1,6 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import com.koloboke.collect.map.hash.HashLongLongMap;
 import ddfinder.pli.Pli;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
@@ -39,7 +38,10 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         return accumulateClues(forwardClues);
     }
 
+    static public long timeCnt = 0;
+
     private void setNumMask(LongBitSet[] clues1, Pli pli1, int i, Pli pli2, int j, int pos) {
+
         int beg1 = pli1.pliShard.beg, beg2 = pli2.pliShard.beg;
         int range2 = pli2.pliShard.end - beg2;
 
@@ -51,6 +53,7 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
                 //clues2[(tid2 - beg2) * range1 + t1].set(pos);
             }
         }
+
     }
 
     private void correctStr(LongBitSet[] clues1, Pli pivotPli, Pli probePli, int pos) {
@@ -63,24 +66,54 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         final double[] probeKeys = probePli.getKeys();
 
         for(int i = 0; i < pivotKeys.length; i++){
-            int thresholdIndexl = 1;
-            int thresholdIndexb = thresholds.size()-1;
-            for(int j = 0; j < probeKeys.length; j++){
-                if(probeKeys[j] == pivotKeys[i]){
-                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos);
+            int start = 0;
+            for(int index = thresholds.size()-1; index >= 0 && start < probeKeys.length; index--){
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]+thresholds.get(index), start, 0);
+                for(int j = start; j < end; j++){
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index + 1);
                 }
-                else if(probeKeys[j] < pivotKeys[i]){
-                    while(thresholdIndexl < thresholds.size() && pivotKeys[i] - probeKeys[j] > thresholds.get(thresholdIndexl)){
-                        thresholdIndexl ++;
-                    }
-                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos+thresholdIndexl);
-                }else{
-                    while (thresholdIndexb > 0 && probeKeys[j] - pivotKeys[i] <= thresholds.get(thresholdIndexb)){
-                        thresholdIndexb--;
-                    }
-                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos+thresholdIndexb+1);
+                start = end;
+            }
+            if(start >= probeKeys.length){
+                continue;
+            }
+            if(probeKeys[start] == pivotKeys[i]){
+                setNumMask(forwardArray, pivotPli, i, probePli, start, pos);
+                start ++;
+            }
+            for(int index = 1; index < thresholds.size() && start < probeKeys.length; index++){
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]-thresholds.get(index), start, 1);
+                for(int j = start; j < end; j++){
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index);
+                }
+                start = end;
+            }
+            if(start < probeKeys.length){
+                for(int j = start; j < probeKeys.length; j++){
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + thresholds.size());
                 }
             }
+
+//            int thresholdIndexl = 1;
+//            int thresholdIndexb = thresholds.size()-1;
+//            for(int j = 0; j < probeKeys.length; j++){
+//                if(probeKeys[j] == pivotKeys[i]){
+//                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos);
+//                }
+//                else if(probeKeys[j] < pivotKeys[i]){
+//                    while(thresholdIndexl < thresholds.size() && pivotKeys[i] - probeKeys[j] > thresholds.get(thresholdIndexl)){
+//                        thresholdIndexl ++;
+//                    }
+//                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos+thresholdIndexl);
+//                }else{
+//                    while (thresholdIndexb > 0 && probeKeys[j] - pivotKeys[i] <= thresholds.get(thresholdIndexb)){
+//                        thresholdIndexb--;
+//                    }
+//                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos+thresholdIndexb+1);
+//                }
+//            }
+
+
         }
     }
 
