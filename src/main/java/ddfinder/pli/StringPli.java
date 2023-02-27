@@ -1,16 +1,21 @@
 package ddfinder.pli;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
-public class Pli implements IPli<Double>{
+/**
+ * @author tristonK 2023/2/23
+ */
+public class StringPli implements IPli<String>{
 
     public PliShard pliShard;   // the PliShard that this PLI belongs to
 
-    public Double[] keys;
+    public String[] keys;
     List<Cluster> clusters;
-    Map<Double, Integer> keyToClusterIdMap;
+    Map<String, Integer> keyToClusterIdMap;
 
-    public Pli(List<Cluster> rawClusters, Double[] keys, Map<Double, Integer> translator) {
+    public StringPli(List<Cluster> rawClusters, String[] keys, Map<String, Integer> translator) {
         this.clusters = rawClusters;
         this.keys = keys;
         this.keyToClusterIdMap = translator;
@@ -21,7 +26,7 @@ public class Pli implements IPli<Double>{
         return keys.length;
     }
 
-    public Double[] getKeys() {
+    public String[] getKeys() {
         return keys;
     }
 
@@ -29,12 +34,12 @@ public class Pli implements IPli<Double>{
         return clusters;
     }
 
-    public Cluster getClusterByKey(Double key) {
+    public Cluster getClusterByKey(String key) {
         Integer clusterId = keyToClusterIdMap.get(key);
         return clusterId != null ? clusters.get(clusterId) : null;
     }
 
-    public Integer getClusterIdByKey(Double key) {
+    public Integer getClusterIdByKey(String key) {
         return keyToClusterIdMap.get(key);
     }
 
@@ -43,25 +48,10 @@ public class Pli implements IPli<Double>{
     }
 
     /**
-    * @param inequal: 0: return LTE, 1: retrun LT
-    * */
-    public int getFirstIndexWhereKeyIsLT(Double target, int l, int inequal) {
-        Integer i = keyToClusterIdMap.get(target);
-        if (i != null) {
-            return i + inequal;
-        }
-
-        int r = keys.length;
-        while (l < r) {
-            int m = l + ((r - l) >>> 1);
-            if (keys[m] <= target) {
-                r = m;
-            } else {
-                l = m + 1;
-            }
-        }
-
-        return l;
+     * @param inequal: 0: return LTE, 1: retrun LT
+     * */
+    public int getFirstIndexWhereKeyIsLT(String target, int l, int inequal) {
+        throw new IllegalCallerException("should not call binary search in string pli");
     }
 
     /**
@@ -84,11 +74,11 @@ public class Pli implements IPli<Double>{
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < clusters.size(); i++) {
-            sb.append(keys[i] + ": " + clusters.get(i) + "\n");
+            sb.append(keys[i]).append(": ").append(clusters.get(i)).append("\n");
         }
 
-        sb.append(Arrays.toString(keys) + "\n");
-        sb.append(keyToClusterIdMap + "\n");
+        sb.append(Arrays.toString(keys)).append("\n");
+        sb.append(keyToClusterIdMap).append("\n");
 
         return sb.toString();
     }

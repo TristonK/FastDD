@@ -1,9 +1,10 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.pli.Pli;
+import ddfinder.pli.IPli;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
+import ddfinder.utils.StringCalculation;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class CrossClueSetBuilder extends ClueSetBuilder {
 
-    private final List<Pli> plis1, plis2;
+    private final List<IPli> plis1, plis2;
     private final int evidenceCount;
 
     public CrossClueSetBuilder(PliShard shard1, PliShard shard2) {
@@ -27,23 +28,26 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         for(int i = 0; i < evidenceCount; i++){
             forwardClues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
         }
-
         for(PredicatePack strPack: strPacks){
-            correctStr(forwardClues, plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.pos);
+            correctStr(forwardClues, plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.pos, strPack.thresholds);
         }
-        for (PredicatePack numPack: numPacks){
+        for (PredicatePack intPack: intPacks){
+            correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+        }
+        for (PredicatePack numPack: doublePacks){
             correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
         }
+
 
         return accumulateClues(forwardClues);
     }
 
     static public long timeCnt = 0;
 
-    private void setNumMask(LongBitSet[] clues1, Pli pli1, int i, Pli pli2, int j, int pos) {
+    private void setNumMask(LongBitSet[] clues1, IPli pli1, int i, IPli pli2, int j, int pos) {
 
-        int beg1 = pli1.pliShard.beg, beg2 = pli2.pliShard.beg;
-        int range2 = pli2.pliShard.end - beg2;
+        int beg1 = pli1.getPliShard().beg, beg2 = pli2.getPliShard().beg;
+        int range2 = pli2.getPliShard().end - beg2;
 
         for (int tid1 : pli1.get(i).getRawCluster()) {
             int t1 = tid1 - beg1;
@@ -56,14 +60,34 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
 
     }
 
-    private void correctStr(LongBitSet[] clues1, Pli pivotPli, Pli probePli, int pos) {
-        //TODO
+    private void correctStr(LongBitSet[] clues1, IPli pivotPli, IPli probePli, int pos, List<Double>thresholds) {
+        final String[] pivotKeys = (String[]) pivotPli.getKeys();
+        final String[] probeKeys = (String[]) probePli.getKeys();
+        for(int i = 0; i < pivotKeys.length; i++){
+            for(int j = 0; j < probeKeys.length; j++){
+                int diff = StringCalculation.getDistance(pivotKeys[i], probeKeys[j]);
+                int c = 0;
+                if(diff <= thresholds.get(0)){
+                    c = 0;
+                } else if (diff > thresholds.get(thresholds.size()-1)) {
+                    c = thresholds.size();
+                }else{
+                    while(c < thresholds.size()-1){
+                        if(diff > thresholds.get(c) && diff <= thresholds.get(c+1)){
+                            c++;
+                            break;
+                        }
+                        c++;
+                    }
+                }
+                setNumMask(clues1, pivotPli, i, probePli, j, pos + c);
+            }
+        }
     }
 
-
-    private void correctNum(LongBitSet[] forwardArray, Pli pivotPli, Pli probePli, int pos, List<Double>thresholds) {
-        final double[] pivotKeys = pivotPli.getKeys();
-        final double[] probeKeys = probePli.getKeys();
+    private void correctNum(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double>thresholds) {
+        final Double[] pivotKeys = (Double[]) pivotPli.getKeys();
+        final Double[] probeKeys = (Double[]) probePli.getKeys();
 
         for(int i = 0; i < pivotKeys.length; i++){
             int start = 0;
@@ -77,7 +101,7 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
             if(start >= probeKeys.length){
                 continue;
             }
-            if(probeKeys[start] == pivotKeys[i]){
+            if(probeKeys[start].equals(pivotKeys[i])){
                 setNumMask(forwardArray, pivotPli, i, probePli, start, pos);
                 start ++;
             }
@@ -112,8 +136,40 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
 //                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos+thresholdIndexb+1);
 //                }
 //            }
+        }
+    }
+    private void correctInteger(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double>thresholds) {
+        final Integer[] pivotKeys = (Integer[]) pivotPli.getKeys();
+        final Integer[] probeKeys = (Integer[]) probePli.getKeys();
 
-
+        for(int i = 0; i < pivotKeys.length; i++){
+            int start = 0;
+            for(int index = thresholds.size()-1; index >= 0 && start < probeKeys.length; index--){
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]+thresholds.get(index).intValue(), start, 0);
+                for(int j = start; j < end; j++){
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index + 1);
+                }
+                start = end;
+            }
+            if(start >= probeKeys.length){
+                continue;
+            }
+            if(probeKeys[start].equals(pivotKeys[i])){
+                setNumMask(forwardArray, pivotPli, i, probePli, start, pos);
+                start ++;
+            }
+            for(int index = 1; index < thresholds.size() && start < probeKeys.length; index++){
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]-thresholds.get(index).intValue(), start, 1);
+                for(int j = start; j < end; j++){
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index);
+                }
+                start = end;
+            }
+            if(start < probeKeys.length){
+                for(int j = start; j < probeKeys.length; j++){
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + thresholds.size());
+                }
+            }
         }
     }
 

@@ -11,15 +11,17 @@ public class Input {
     private final String name;
     private final int colCount;
     private final int rowCount;
-
+    private int intCnt, doubleCnt, stringCnt;
     private final List<ParsedColumn<?>> parsedColumns;
 
-    private final int[][] intInput;   // int expression of the dataset
+    private int[][] intInput;   // int expression of the dataset
 
     private final IndexProvider<String> providerS;
     private final IndexProvider<Long> providerL;
     private final IndexProvider<Double> providerD;
-    private final double[][] doubleInput;
+    private double[][] doubleInput;
+    private String[][] stringInput;
+    private int[][] colIndex;
 
     public Input(RelationalInput relationalInput) {
         this(relationalInput, -1);
@@ -31,22 +33,28 @@ public class Input {
         providerL = new IndexProvider<>();
         providerD = new IndexProvider<>();
 
+        intCnt = doubleCnt = stringCnt = 0;
         Column[] columns = readRelationalInputToColumns(relationalInput, rowLimit);
         colCount = columns.length;
         rowCount = colCount > 0 ? columns[0].getLineCount() : 0;
 
         parsedColumns = buildParsedColumns(columns);
-        intInput = buildIntInput(parsedColumns);
-        doubleInput = buildDoubleInput(parsedColumns);
+        colIndex = new int[3][Math.max(intCnt, Math.max(doubleCnt, stringCnt))];
+        buildInput(parsedColumns);
+        //intInput = buildIntInput(parsedColumns);
+        //doubleInput = buildDoubleInput(parsedColumns);
+        System.out.println("[Name]: " + name);
         System.out.println(" [Input] # of Tuples: " + rowCount);
-        System.out.println(" [Input] # of Attributes: " + colCount);
+        System.out.println(" [Input] # of Attributes: " + colCount + "(Integer: " + intCnt + "; Double: "+ doubleCnt + "; String: " + stringCnt + " )");
+
     }
 
     private Column[] readRelationalInputToColumns(RelationalInput relationalInput, int rowLimit) {
         final int columnCount = relationalInput.numberOfColumns();
         Column[] columns = new Column[columnCount];
-        for (int i = 0; i < columnCount; ++i)
+        for (int i = 0; i < columnCount; ++i) {
             columns[i] = new Column(relationalInput.relationName(), relationalInput.columnNames[i]);
+        }
 
         int nLine = 0;
         try {
@@ -54,12 +62,14 @@ public class Input {
             csvReader.readHeaders();    // skip the header
             while (csvReader.readRecord()) {
                 String[] line = csvReader.getValues();
-                for (int i = 0; i < columnCount; ++i)
+                for (int i = 0; i < columnCount; ++i) {
                     columns[i].addLine(line[i]);
+                }
 
                 ++nLine;
-                if (rowLimit > 0 && nLine >= rowLimit)
+                if (rowLimit > 0 && nLine >= rowLimit) {
                     break;
+                }
             }
             csvReader.close();
         } catch (Exception e) {
@@ -77,22 +87,58 @@ public class Input {
             if (c.getType() == Column.Type.LONG) {
                 ParsedColumn<Long> pColumn = new ParsedColumn<>(c.getName(), Long.class, i, providerL);
                 pColumns.add(pColumn);
-                for (int l = 0; l < c.getLineCount(); ++l)
+                for (int l = 0; l < c.getLineCount(); ++l) {
                     pColumn.addLine(c.getLong(l));
+                }
+                intCnt++;
             } else if (c.getType() == Column.Type.NUMERIC) {
                 ParsedColumn<Double> pColumn = new ParsedColumn<>(c.getName(), Double.class, i, providerD);
                 pColumns.add(pColumn);
-                for (int l = 0; l < c.getLineCount(); ++l)
+                for (int l = 0; l < c.getLineCount(); ++l) {
                     pColumn.addLine(c.getDouble(l));
+                }
+                doubleCnt++;
             } else if (c.getType() == Column.Type.STRING) {
                 ParsedColumn<String> pColumn = new ParsedColumn<>(c.getName(), String.class, i, providerS);
                 pColumns.add(pColumn);
-                for (int l = 0; l < c.getLineCount(); ++l)
+                for (int l = 0; l < c.getLineCount(); ++l) {
                     pColumn.addLine(c.getString(l));
+                }
+                stringCnt++;
             }
         }
 
         return pColumns;
+    }
+
+    private void buildInput(List<ParsedColumn<?>> pColumns){
+        intInput = new int[intCnt][rowCount];
+        doubleInput = new double[doubleCnt][rowCount];
+        stringInput = new String[stringCnt][rowCount];
+        int iid = 0, did = 0, sid = 0;
+        for (int col = 0; col < colCount; col++) {
+            ParsedColumn<?> pColumn = pColumns.get(col);
+
+            if(pColumn.getType() ==String.class){
+                for (int row = 0; row < rowCount; ++row){
+                    stringInput[sid][row] = (String) pColumn.getValue(row);
+                }
+                colIndex[2][sid] = col;
+                sid++;
+            }else if(pColumn.getType()==Double.class){
+                for (int row = 0; row < rowCount; ++row){
+                    doubleInput[did][row] = (Double)pColumn.getValue(row);
+                }
+                colIndex[1][did] = col;
+                did++;
+            } else{
+                for (int row = 0; row < rowCount; ++row){
+                    intInput[iid][row] =  ((Long) pColumn.getValue(row)).intValue();
+                }
+                colIndex[0][iid] = col;
+                iid++;
+            }
+        }
     }
 
     private int[][] buildIntInput(List<ParsedColumn<?>> pColumns) {
@@ -103,8 +149,9 @@ public class Input {
 
         for (int col = 0; col < colCount; col++) {
             ParsedColumn<?> pColumn = pColumns.get(col);
-            for (int row = 0; row < rowCount; ++row)
+            for (int row = 0; row < rowCount; ++row) {
                 currIntInput[col][row] = pColumn.getIndexAt(row);
+            }
         }
 
         return currIntInput;
@@ -156,5 +203,14 @@ public class Input {
 
     public double[][] getDoubleInput(){
         return this.doubleInput;
+    }
+
+    public String[][] getStringInput() {return this.stringInput;}
+
+    /**
+     * @param type: 0-int, 1-double, 2-string
+     */
+    public int getCol(int type, int index){
+        return colIndex[type][index];
     }
 }

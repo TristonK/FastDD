@@ -66,7 +66,10 @@ public class PredicateBuilder {
      * */
     private void addPredicates(ParsedColumn<?> column, int mode, int threshold){
         List<Double> thresholds = new ArrayList<>();
-        Double diffD =  column.getMaxNum() - column.getMinNum();
+        Double diffD = 5.0;
+        if(column.isNum()){
+            diffD =  column.getMaxNum() - column.getMinNum();
+        }
         if(mode == 0 || !column.isNum()){
             //TODO:修改String属性列情况
             double step = diffD/(threshold+1);

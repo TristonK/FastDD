@@ -1,14 +1,8 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import com.koloboke.collect.map.hash.HashLongLongMap;
-import com.koloboke.collect.map.hash.HashLongLongMaps;
-import ddfinder.predicate.Predicate;
 import ddfinder.predicate.PredicateBuilder;
-import ddfinder.predicate.PredicateSet;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
-import de.metanome.algorithms.dcfinder.predicates.Operator;
-import de.metanome.algorithms.dcfinder.predicates.operands.ColumnOperand;
 
 
 import java.util.*;
@@ -49,12 +43,13 @@ abstract public class ClueSetBuilder {
      static int[] colMap;
 
     static List<ClueSetBuilder.PredicatePack> strPacks;  // String single-column predicate packs
-    static List<ClueSetBuilder.PredicatePack> numPacks;  // numerical single-column predicate packs
+    static List<ClueSetBuilder.PredicatePack> doublePacks;  // numerical single-column predicate packs
+    static List<ClueSetBuilder.PredicatePack> intPacks;
 
     public static void configure(PredicateBuilder pBuilder) {
         strPacks = new ArrayList<>();
-        numPacks = new ArrayList<>();
-
+        doublePacks = new ArrayList<>();
+        intPacks = new ArrayList<>();
         buildPredicateGroupsAndCorrectMap(pBuilder);
     }
 
@@ -71,7 +66,7 @@ abstract public class ClueSetBuilder {
 
         int count = 0;
         for(Integer colIndex: longPredicatesGroup){
-            numPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
+            intPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
             int interval  = pBuilder.getPredicateColumn(colIndex).getThresholds().size() + 1;
             for(int i = count; i < count + interval; i++){
                 colMap[i] = colIndex;
@@ -79,7 +74,7 @@ abstract public class ClueSetBuilder {
             count += interval;
         }
         for(Integer colIndex: doublePredicatesGroup){
-            numPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
+            doublePacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
             int interval  = pBuilder.getPredicateColumn(colIndex).getThresholds().size() + 1;
             for(int i = count; i < count + interval; i++){
                 colMap[i] = colIndex;

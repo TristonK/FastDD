@@ -41,12 +41,12 @@ public class DDFinder {
 
     public DifferentialDependencySet buildDDs(){
         long bfTime = System.currentTimeMillis();
-        int bfSize = EvidenceCount.calculate(input);
+        int bfSize = new EvidenceCount().calculate(input);
         System.out.println("[Brute Force] cost: " + (System.currentTimeMillis()-bfTime) + " ms");
         System.out.println("[Brute Force] # clueSet Size "+ bfSize);
         long t0 = System.currentTimeMillis();
         pliShardBuilder = new PliShardBuilder(350, input.getParsedColumns());
-        PliShard[] pliShards = pliShardBuilder.buildPliShards(input.getDoubleInput());
+        PliShard[] pliShards = pliShardBuilder.buildPliShards(input.getDoubleInput(), input.getIntInput(), input.getStringInput());
         long buildPliTime = System.currentTimeMillis() - t0;
         System.out.println("[Time] build PLIs cost: " + buildPliTime + "ms");
         DifferentialDependencySet dds = new DifferentialDependencySet();

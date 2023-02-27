@@ -4,20 +4,20 @@ import java.util.List;
 
 public class PliShard {
 
-    public final List<Pli> plis;
+    public final List<IPli> plis;
 
     /*
         tuple id range [beg, end)
     */
     public final int beg, end;
 
-    public PliShard(List<Pli> plis, int beg, int end) {
+    public PliShard(List<IPli> plis, int beg, int end) {
         this.plis = plis;
         this.beg = beg;
         this.end = end;
 
-        for (Pli pli : plis) {
-            pli.pliShard = this;
+        for (IPli pli : plis) {
+            pli.setPlishard(this);
         }
     }
 }
