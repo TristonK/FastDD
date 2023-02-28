@@ -46,6 +46,7 @@ public class IntPli implements IPli<Integer>{
         return clusters.get(i);
     }
 
+    private final double ERR = 0.000000001;
     /**
      * @param inequal: 0: return LTE, 1: retrun LT
      * */
@@ -58,13 +59,13 @@ public class IntPli implements IPli<Integer>{
         int r = keys.length;
         while (l < r) {
             int m = l + ((r - l) >>> 1);
-            if (keys[m] <= target) {
+            if (keys[m] < target + ERR) {
                 r = m;
             } else {
                 l = m + 1;
             }
         }
-
+        if(inequal == 1 && l < keys.length && Math.abs(keys[l] - target) < ERR){return l + 1;}
         return l;
     }
 

@@ -81,7 +81,12 @@ public class Input {
 
     private List<ParsedColumn<?>> buildParsedColumns(Column[] columns) {
         List<ParsedColumn<?>> pColumns = new ArrayList<>(colCount);
-
+        Arrays.sort(columns, new Comparator<Column>() {
+            @Override
+            public int compare(Column o1, Column o2) {
+                return o2.getType().compareTo(o1.getType());
+            }
+        });
         for (int i = 0; i < colCount; i++) {
             Column c = columns[i];
             if (c.getType() == Column.Type.LONG) {
@@ -107,7 +112,6 @@ public class Input {
                 stringCnt++;
             }
         }
-
         return pColumns;
     }
 

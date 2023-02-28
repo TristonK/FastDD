@@ -27,7 +27,7 @@ public class PliShardBuilder {
     }
 
     // build the Pli of a given column within tuple id range [beg, end)
-    private Pli buildDoublePli(double[] colValues, int beg, int end) {
+    private DoublePli buildDoublePli(double[] colValues, int beg, int end) {
         HashDoubleSet keySet = HashDoubleSets.newMutableSet();
         for (int row = beg; row < end; ++row) {
             keySet.add(colValues[row]);
@@ -53,7 +53,7 @@ public class PliShardBuilder {
             clusters.get(keyToClusterID.get(colValues[row])).add(row);
         }
 
-        return new Pli(clusters, dkeys, keyToClusterID);
+        return new DoublePli(clusters, dkeys, keyToClusterID);
     }
 
     private IntPli buildIntPli(int[] colValues, int beg, int end) {

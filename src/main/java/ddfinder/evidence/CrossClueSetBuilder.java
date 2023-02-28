@@ -17,6 +17,8 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
     private final List<IPli> plis1, plis2;
     private final int evidenceCount;
 
+    private final double ERR = 0.000000001;
+
     public CrossClueSetBuilder(PliShard shard1, PliShard shard2) {
         plis1 = shard1.plis;
         plis2 = shard2.plis;
@@ -67,13 +69,13 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
             for(int j = 0; j < probeKeys.length; j++){
                 int diff = StringCalculation.getDistance(pivotKeys[i], probeKeys[j]);
                 int c = 0;
-                if(diff <= thresholds.get(0)){
+                if(diff < ERR + thresholds.get(0)){
                     c = 0;
-                } else if (diff > thresholds.get(thresholds.size()-1)) {
+                } else if (diff > ERR + thresholds.get(thresholds.size()-1)) {
                     c = thresholds.size();
                 }else{
                     while(c < thresholds.size()-1){
-                        if(diff > thresholds.get(c) && diff <= thresholds.get(c+1)){
+                        if(diff > thresholds.get(c) + ERR && diff < ERR + thresholds.get(c+1)){
                             c++;
                             break;
                         }

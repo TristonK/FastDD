@@ -6,6 +6,7 @@ import ddfinder.utils.StringCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -14,7 +15,8 @@ import java.util.Set;
  * @author tristonK 2023/2/7
  */
 public class EvidenceCount {
-    public int calculate(Input input){
+    private final double ERR = 0.000000001;
+    public Set<LongBitSet> calculate(Input input){
         Set<LongBitSet> clueSet = new HashSet<>();
         //int -> double -> string
         double[][] dInput = input.getDoubleInput();
@@ -56,18 +58,18 @@ public class EvidenceCount {
                 clueSet.add(clue);
             }
         }
-        return clueSet.size();
+        return clueSet;
     }
 
     private int findMaskPos(double diff, List<Double> th){
         int c = 0;
-        if(diff <= th.get(0)){
+        if(diff < th.get(0) + ERR){
             c = 0;
-        } else if (diff > th.get(th.size()-1)) {
+        } else if (diff > th.get(th.size()-1) + ERR) {
             c = th.size();
         }else{
             while(c < th.size()-1){
-                if(diff > th.get(c) && diff <= th.get(c+1)){
+                if(diff > th.get(c)+ERR && diff < th.get(c+1) + ERR){
                     c++;
                     break;
                 }

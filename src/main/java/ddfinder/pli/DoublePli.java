@@ -2,7 +2,7 @@ package ddfinder.pli;
 
 import java.util.*;
 
-public class Pli implements IPli<Double>{
+public class DoublePli implements IPli<Double>{
 
     public PliShard pliShard;   // the PliShard that this PLI belongs to
 
@@ -10,7 +10,7 @@ public class Pli implements IPli<Double>{
     List<Cluster> clusters;
     Map<Double, Integer> keyToClusterIdMap;
 
-    public Pli(List<Cluster> rawClusters, Double[] keys, Map<Double, Integer> translator) {
+    public DoublePli(List<Cluster> rawClusters, Double[] keys, Map<Double, Integer> translator) {
         this.clusters = rawClusters;
         this.keys = keys;
         this.keyToClusterIdMap = translator;
@@ -42,6 +42,8 @@ public class Pli implements IPli<Double>{
         return clusters.get(i);
     }
 
+    private final double ERR = 0.000000001;
+
     /**
     * @param inequal: 0: return LTE, 1: retrun LT
     * */
@@ -54,13 +56,13 @@ public class Pli implements IPli<Double>{
         int r = keys.length;
         while (l < r) {
             int m = l + ((r - l) >>> 1);
-            if (keys[m] <= target) {
+            if (keys[m] < target + ERR) {
                 r = m;
             } else {
                 l = m + 1;
             }
         }
-
+        if(inequal == 1 && l < keys.length &&Math.abs(keys[l] - target) < ERR){return l + 1;}
         return l;
     }
 

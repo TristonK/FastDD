@@ -3,11 +3,12 @@ package ddfinder.evidence;
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.pli.Cluster;
 import ddfinder.pli.IPli;
-import ddfinder.pli.Pli;
+import ddfinder.pli.DoublePli;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
 import ddfinder.utils.StringCalculation;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,6 +20,8 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     private final List<IPli> plis;
     private final int tidBeg, tidRange;
     private final int evidenceCount;
+
+    private final double ERR = 0.000000001;
 
     public SingleClueSetBuilder(PliShard shard) {
         plis = shard.plis;
@@ -32,18 +35,15 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         for(int i = 0; i < evidenceCount; i++){
             clues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
         }
-
-        for(PredicatePack numPack: doublePacks){
-            correctNum(clues, plis.get(numPack.colIndex), numPack.pos, numPack.thresholds);
-        }
         for(PredicatePack intPack: intPacks){
             correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
         }
-
+        for(PredicatePack doublePack: doublePacks){
+            correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
+        }
         for(PredicatePack strPack : strPacks){
             correctStr(clues, plis.get(strPack.colIndex), strPack.pos, strPack.thresholds);
         }
-
         return accumulateClues(clues);
     }
 
@@ -51,14 +51,17 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         List<Integer> rawCluster1 = cluster1.getRawCluster();
         List<Integer> rawCluster2 = cluster2.getRawCluster();
 
-        for (int i = 0; i < rawCluster1.size() ; i++) {
-            int tid1 = rawCluster1.get(i);
-            for (int j = 0; j < rawCluster2.size(); j++) {
-                tid1 = rawCluster1.get(i);
-                int tid2 = rawCluster2.get(j);
-                if(tid2 < tid1){int temp = tid1; tid1 = tid2; tid2 = temp;}
+        for (Integer value : rawCluster1) {
+            for (Integer integer : rawCluster2) {
+                int tid1 = value;
+                int tid2 = integer;
+                if (tid2 < tid1) {
+                    int temp = tid1;
+                    tid1 = tid2;
+                    tid2 = temp;
+                }
                 int t1 = tid1 - tidBeg;
-                clues[(tid2-tid1-1)+t1*(2*tidRange- t1 -1)/2].set(pos);
+                clues[(tid2 - tid1 - 1) + t1 * (2 * tidRange - t1 - 1) / 2].set(pos);
             }
         }
     }
@@ -79,13 +82,13 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
             for(int j = i + 1; j < pli.size(); j++){
                 int diff = StringCalculation.getDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 int c = 0;
-                if(diff <= thresholds.get(0)){
+                if(diff < ERR + thresholds.get(0)){
                     c = 0;
-                } else if (diff > thresholds.get(thresholds.size()-1)) {
+                } else if (diff > ERR + thresholds.get(thresholds.size()-1)) {
                     c = thresholds.size();
                 }else{
                     while(c < thresholds.size()-1){
-                        if(diff > thresholds.get(c) && diff <= thresholds.get(c+1)){
+                        if(diff > thresholds.get(c) + ERR && diff < ERR + thresholds.get(c+1)){
                             c++;
                             break;
                         }
@@ -111,7 +114,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
                 }
             }
             int start = i+1;
-            if(pli.getClass() == Pli.class){
+            if(pli.getClass() == DoublePli.class){
                 Double key = (Double)pli.getKeys()[i];
                 for(int index = 1; index < thresholds.size() && start < pli.size(); index++){
                     int end = pli.getFirstIndexWhereKeyIsLT(key-thresholds.get(index), start, 1);

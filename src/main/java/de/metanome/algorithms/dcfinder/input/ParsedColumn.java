@@ -155,4 +155,11 @@ public class ParsedColumn<T extends Comparable<T>> {
 
     public Double getMinNum() {return minNum;}
 
+    public int getTypeIndex() {
+        if(type.equals(Long.class)){return 0;}
+        else if(type.equals(Double.class)){return 1;}
+        else {
+            return 2;
+        }
+    }
 }

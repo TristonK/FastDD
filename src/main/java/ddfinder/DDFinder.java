@@ -2,6 +2,7 @@ package ddfinder;
 
 
 import bruteforce.EvidenceCount;
+import ch.javasoft.bitset.LongBitSet;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.evidence.CrossClueSetBuilder;
 import ddfinder.evidence.Evidence;
@@ -14,7 +15,9 @@ import ddfinder.predicate.PredicateBuilder;
 import de.metanome.algorithms.dcfinder.input.Input;
 
 import java.io.File;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * @author tristonk
@@ -41,9 +44,9 @@ public class DDFinder {
 
     public DifferentialDependencySet buildDDs(){
         long bfTime = System.currentTimeMillis();
-        int bfSize = new EvidenceCount().calculate(input);
+        Set<LongBitSet> bf = new EvidenceCount().calculate(input);
         System.out.println("[Brute Force] cost: " + (System.currentTimeMillis()-bfTime) + " ms");
-        System.out.println("[Brute Force] # clueSet Size "+ bfSize);
+        System.out.println("[Brute Force] # clueSet Size "+ bf.size());
         long t0 = System.currentTimeMillis();
         pliShardBuilder = new PliShardBuilder(350, input.getParsedColumns());
         PliShard[] pliShards = pliShardBuilder.buildPliShards(input.getDoubleInput(), input.getIntInput(), input.getStringInput());
@@ -52,7 +55,7 @@ public class DDFinder {
         DifferentialDependencySet dds = new DifferentialDependencySet();
         t0 = System.currentTimeMillis();
         EvidenceSetBuilder evidenceSetBuilder = new EvidenceSetBuilder(predicateBuilder);
-        evidenceSetBuilder.buildEvidenceSet(pliShards);
+        Set<LongBitSet> clues = evidenceSetBuilder.buildEvidenceSet(pliShards);
         System.out.println("[Time] build clueSet and evidence set " + (System.currentTimeMillis()-t0) + " ms");
         return dds;
     }

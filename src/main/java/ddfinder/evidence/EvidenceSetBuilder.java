@@ -5,6 +5,7 @@ import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
 
 import java.util.HashMap;
+import java.util.Set;
 
 /**
  * @author tristonK 2022/12/31
@@ -16,15 +17,16 @@ public class EvidenceSetBuilder {
         evidenceSet = new EvidenceSet(predicateBuilder, ClueSetBuilder.colMap);
     }
 
-    public EvidenceSet buildEvidenceSet(PliShard[] pliShards){
+    public Set<LongBitSet> buildEvidenceSet(PliShard[] pliShards){
         if (pliShards.length != 0) {
             long t1 = System.currentTimeMillis();
             HashMap<LongBitSet, Long> clueSet = linearBuildClueSet(pliShards);
             System.out.println("[ClueSet] build cost: " + (System.currentTimeMillis()-t1) + " ms");
             System.out.println("[ClueSet] # clueSet size: " + clueSet.size());
+            return clueSet.keySet();
             //evidenceSet.build(clueSet);
         }
-        return evidenceSet;
+        return null;
     }
 
     private HashMap<LongBitSet, Long> linearBuildClueSet(PliShard[] pliShards){
