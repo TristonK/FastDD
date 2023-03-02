@@ -103,7 +103,7 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
             if(start >= probeKeys.length){
                 continue;
             }
-            if(probeKeys[start].equals(pivotKeys[i])){
+            if(Math.abs(probeKeys[start] - pivotKeys[i]) < ERR){
                 setNumMask(forwardArray, pivotPli, i, probePli, start, pos);
                 start ++;
             }
