@@ -8,7 +8,7 @@ import de.metanome.algorithms.dcfinder.predicates.Operator;
 import de.metanome.algorithms.dcfinder.predicates.operands.ColumnOperand;
 
 
-import java.io.File;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -40,17 +40,48 @@ public class PredicateBuilder {
         strPredicatesGroup = new ArrayList<>();
         colToPredicatesGroup = new HashMap<>();
         for(ParsedColumn<?> column: input.getColumns()){
-            addPredicates(column, 0, 5);
+            addPredicates(column, CalculateThresholds(column, 0, 5));
         }
         predicateIdProvider.addAll(predicates);
         Predicate.configure(predicateProvider);
         PredicateSet.configure(predicateIdProvider);
     }
 
-    public PredicateBuilder(File index, Input input){
+    /**
+     * @param index: file contents:
+     *             col1 thresholds1 thresholds2 thresholds3...
+     *             col2 thresholds1 ...
+     * */
+    public PredicateBuilder(File index, Input input) throws IOException {
         predicates = new ArrayList<>();
         predicateProvider = new PredicateProvider();
         predicateIdProvider = new IndexProvider<>();
+        intervalCnt = 0;
+        longPredicatesGroup = new ArrayList<>();
+        doublePredicatesGroup = new ArrayList<>();
+        strPredicatesGroup = new ArrayList<>();
+        colToPredicatesGroup = new HashMap<>();
+        BufferedReader reader = new BufferedReader(new FileReader(index));
+        String line;
+        Map<String, List<Double>> recordThresholds = new HashMap<>();
+        while ((line = reader.readLine()) != null){
+            String[] contents = line.split(" ");
+            List<Double> thresholds = new ArrayList<>();
+            boolean hasZero = false;
+            for(int i = 1; i < contents.length; i++){
+                if(Double.parseDouble(contents[i])==0){hasZero = true;}
+                thresholds.add(Double.parseDouble(contents[i]));
+            }
+            if(!hasZero){thresholds.add(0.0);}
+            Collections.sort(thresholds);
+            recordThresholds.put(contents[0], thresholds);
+        }
+        for(ParsedColumn<?> column: input.getColumns()){
+            addPredicates(column, recordThresholds.getOrDefault(column.getColumnName(), null));
+        }
+        predicateIdProvider.addAll(predicates);
+        Predicate.configure(predicateProvider);
+        PredicateSet.configure(predicateIdProvider);
     }
 
     public List<Predicate> getPredicates() {
@@ -59,12 +90,7 @@ public class PredicateBuilder {
 
     public int size(){return predicates.size();}
 
-    /**
-     * mode:
-     *  - simple(0): 0~maxThr with num threshold
-     *  - log(1): 0 ~ log(Thershold)
-     * */
-    private void addPredicates(ParsedColumn<?> column, int mode, int threshold){
+    private List<Double> CalculateThresholds(ParsedColumn<?> column, int mode, int threshold){
         List<Double> thresholds = new ArrayList<>();
         Double diffD = 5.0;
         if(column.isNum()){
@@ -81,13 +107,25 @@ public class PredicateBuilder {
         } else{
             throw  new IllegalArgumentException("Bad add predicates mode.");
         }
+        return thresholds;
+    }
+
+    /**
+     * mode:
+     *  - simple(0): 0~maxThr with num threshold
+     *  - log(1): 0 ~ log(Thershold)
+     * */
+    private void addPredicates(ParsedColumn<?> column, List<Double> thresholds){
+        if(thresholds == null){
+            throw new IllegalArgumentException("Null thresholds is not supported");
+        }
         column.setThresholds(thresholds);
         List<Predicate> partialPredicates = new ArrayList<>();
         ColumnOperand<?> operand = new ColumnOperand<>(column, 0);
-        for(int i = threshold - 1; i >= 0; i--){
+        for(int i = thresholds.size() - 1; i >= 0; i--){
             partialPredicates.add(predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, thresholds.get(i)));
         }
-        for(int i = 0; i< threshold; i++){
+        for(int i = 0; i< thresholds.size(); i++){
             partialPredicates.add(predicateProvider.getPredicate(Operator.GREATER, operand, thresholds.get(i)));
         }
         predicates.addAll(partialPredicates);
@@ -101,6 +139,7 @@ public class PredicateBuilder {
             strPredicatesGroup.add(column.getIndex());
         }
     }
+
 
     public List<Integer> getNumericPredicatesGroup() {
         return numericPredicatesGroup;
