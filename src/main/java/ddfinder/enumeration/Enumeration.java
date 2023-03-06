@@ -11,8 +11,7 @@ import java.util.Set;
  */
 public interface Enumeration {
     /**
-     * @param clueSet: clue set
      * @return differential dependency set
      */
-    public DifferentialDependencySet buildDifferentialDenpendency(Set<LongBitSet> clueSet, PredicateSet predicateSet);
+    public DifferentialDependencySet buildDifferentialDenpendency();
 }

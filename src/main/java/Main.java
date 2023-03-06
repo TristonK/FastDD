@@ -5,6 +5,8 @@ import de.metanome.algorithms.dcfinder.denialconstraints.DenialConstraintSet;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.RelationalInput;
 
+import java.io.IOException;
+
 public class Main {
 
     /**
@@ -12,7 +14,7 @@ public class Main {
      * input: filePath size
      * input: filePath size dfFlie
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String fp = args[0];
 
         // limit the number of tuples in dataset, -1 means no limit

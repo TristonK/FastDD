@@ -29,6 +29,18 @@ public class EvidenceSetBuilder {
         return null;
     }
 
+    public Set<LongBitSet> buildFullClueSet(PliShard[] pliShards){
+        if(pliShards.length != 1){
+            throw new IllegalCallerException("Only for fullPli");
+        }
+        long t1 = System.currentTimeMillis();
+        ClueSetBuilder clueSetBuilder = new FullClueSetBuilder(pliShards[0]);
+        HashMap<LongBitSet, Long> clueSet = clueSetBuilder.buildClueSet();
+        System.out.println("[ClueSet] build cost: " + (System.currentTimeMillis()-t1) + " ms");
+        System.out.println("[ClueSet] # clueSet size: " + clueSet.size());
+        return clueSet.keySet();
+    }
+
     private HashMap<LongBitSet, Long> linearBuildClueSet(PliShard[] pliShards){
         int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
         System.out.println("  [CLUE] task count: " + taskCount);

@@ -19,16 +19,16 @@ public class PredicateBuilder {
     private final PredicateProvider predicateProvider;
     private final IndexProvider<Predicate> predicateIdProvider;
 
-    private List<Integer> numericPredicatesGroup;
-
     private List<Integer> longPredicatesGroup;
 
     private List<Integer> doublePredicatesGroup;
     private List<Integer> strPredicatesGroup;
-
+    private Map<Integer, Set<Integer>> interval2IntervalGroups;
     private static int intervalCnt;
 
     private Map<Integer, List<Predicate>> colToPredicatesGroup;
+
+    private Map<Integer, IntervalPredicate> intervalPredicateMap;
 
     public PredicateBuilder(Input input){
         intervalCnt = 0;
@@ -39,6 +39,8 @@ public class PredicateBuilder {
         doublePredicatesGroup = new ArrayList<>();
         strPredicatesGroup = new ArrayList<>();
         colToPredicatesGroup = new HashMap<>();
+        interval2IntervalGroups = new HashMap<>();
+        intervalPredicateMap = new HashMap<>();
         for(ParsedColumn<?> column: input.getColumns()){
             addPredicates(column, CalculateThresholds(column, 0, 5));
         }
@@ -100,7 +102,9 @@ public class PredicateBuilder {
             //TODO:修改String属性列情况
             double step = diffD/(threshold+1);
             for(int i = 0; i < threshold; i++){
-                thresholds.add(i*step);
+                String  str = String.format("%.2f",i*step);
+                double isteps = Double.parseDouble(str);
+                thresholds.add(isteps);
             }
         } else if(mode == 1){
             //TODO
@@ -128,8 +132,19 @@ public class PredicateBuilder {
         for(int i = 0; i< thresholds.size(); i++){
             partialPredicates.add(predicateProvider.getPredicate(Operator.GREATER, operand, thresholds.get(i)));
         }
+
+        //add intervalPredicate
+        intervalPredicateMap.put(intervalCnt, new IntervalPredicate(column.getColumnName(), -1, thresholds.get(0)));
+        for(int i = 1; i < thresholds.size(); i++){
+            intervalPredicateMap.put(intervalCnt + i, new IntervalPredicate(column.getColumnName(), thresholds.get(i-1), thresholds.get(i)));
+        }
+        intervalPredicateMap.put(intervalCnt + thresholds.size(), new IntervalPredicate(column.getColumnName(), thresholds.get(thresholds.size()-1), -1));
+
         predicates.addAll(partialPredicates);
         colToPredicatesGroup.put(column.getIndex(), partialPredicates);
+        Set<Integer> thresholdsIds = new HashSet<>();
+        for(int i = intervalCnt; i < intervalCnt + thresholds.size() + 1; i++){thresholdsIds.add(i);}
+        for(int i = intervalCnt; i < intervalCnt + thresholds.size() + 1; i++){interval2IntervalGroups.put(i, thresholdsIds);}
         intervalCnt += thresholds.size() + 1;
         if(column.isLong()){
             longPredicatesGroup.add(column.getIndex());
@@ -140,10 +155,6 @@ public class PredicateBuilder {
         }
     }
 
-
-    public List<Integer> getNumericPredicatesGroup() {
-        return numericPredicatesGroup;
-    }
 
     public List<Integer> getStrPredicatesGroup() {
         return strPredicatesGroup;
@@ -174,5 +185,13 @@ public class PredicateBuilder {
             predicateSets.add(mask.getLongBitSet());
         }
         return predicateSets;
+    }
+
+    public Map<Integer, Set<Integer>> getInterval2IntervalGroups() {
+        return interval2IntervalGroups;
+    }
+
+    public Map<Integer, IntervalPredicate> getIntervalPredicateMap() {
+        return intervalPredicateMap;
     }
 }

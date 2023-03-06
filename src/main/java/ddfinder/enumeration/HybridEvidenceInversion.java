@@ -4,6 +4,7 @@ import ch.javasoft.bitset.LongBitSet;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.predicate.PredicateSet;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -11,12 +12,11 @@ import java.util.Set;
  */
 public class HybridEvidenceInversion implements Enumeration{
     /**
-     * @param clueSet:     clue set
-     * @param predicateSet
      * @return
      */
     @Override
-    public DifferentialDependencySet buildDifferentialDenpendency(Set<LongBitSet> clueSet, PredicateSet predicateSet) {
+    public DifferentialDependencySet buildDifferentialDenpendency() {
         return null;
     }
+
 }

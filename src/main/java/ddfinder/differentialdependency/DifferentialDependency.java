@@ -1,17 +1,21 @@
 package ddfinder.differentialdependency;
 
 import ddfinder.differentialfunction.DifferentialFunction;
+import ddfinder.predicate.IntervalPredicate;
 import ddfinder.predicate.Predicate;
 import ddfinder.predicate.PredicateSet;
+
+import java.util.List;
 
 /**
  * @author tristonk
  */
 public class DifferentialDependency {
 
-    private final DifferentialFunction left, right;
+    private List<IntervalPredicate> left;
+    private IntervalPredicate right;
 
-    public DifferentialDependency(DifferentialFunction left, DifferentialFunction right){
+    public DifferentialDependency(List<IntervalPredicate> left, IntervalPredicate right){
         if(left == null || right == null){
             throw new IllegalArgumentException("DifferentialFunction should not be null.");
         }
@@ -30,12 +34,11 @@ public class DifferentialDependency {
     @Override
     public int hashCode() {
         int result = 0;
-        for(Predicate p : left.getPredicates()){
+        int prime1 = 23;
+        for(IntervalPredicate p : left){
             result += p.hashCode();
         }
-        for(Predicate p: right.getPredicates()){
-            result += p.hashCode();
-        }
+        result += right.hashCode() * prime1;
         return result;
     }
 
@@ -49,10 +52,10 @@ public class DifferentialDependency {
         }
 
         DifferentialDependency other = (DifferentialDependency) obj;
-        if (left.getPredicates().size() != other.left.getPredicates().size() || right.getPredicates().size() != right.getPredicates().size()){
+        if (left.size() != other.left.size()){
             return false;
         } else {
-           return left.getPredicates().equals(other.left.getPredicates()) && right.getPredicates().equals(other.right.getPredicates());
+           return left.equals(other.left) && right.equals(other.right);
         }
     }
 }
