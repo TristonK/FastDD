@@ -26,6 +26,11 @@ public class PredicateSet implements Iterable<Predicate>{
         this.bitset = bitset.clone();
     }
 
+    public PredicateSet(int haveAllPredicates){
+        this.bitset = new LongBitSet(haveAllPredicates);
+        for(int i = 0; i < haveAllPredicates; i++){this.bitset.set(i);}
+    }
+
     public PredicateSet(PredicateSet pS) {
         this.bitset = pS.getBitset().clone();
     }

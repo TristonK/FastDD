@@ -44,7 +44,7 @@ public class Predicate {
 
     @Override
     public String toString() {
-        return "["+operand.toString() + "(" + operator.getShortString() + distance + ")]";
+        return "["+operand.getColumn().getColumnName() + "(" + operator.getShortString() + distance + ")]";
     }
 
     @Override
@@ -82,6 +82,13 @@ public class Predicate {
         }
 
         return distance == other.getDistance();
+    }
+
+    public Predicate getInversePredicate(){
+        if(operator == Operator.LESS_EQUAL){
+            return predicateProvider.getPredicate(Operator.GREATER, operand, distance);
+        }
+        return predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, distance);
     }
 
 }

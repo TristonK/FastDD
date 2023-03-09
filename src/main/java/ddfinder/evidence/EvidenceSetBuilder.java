@@ -14,7 +14,7 @@ public class EvidenceSetBuilder {
     private final EvidenceSet evidenceSet;
     public EvidenceSetBuilder(PredicateBuilder predicateBuilder){
         ClueSetBuilder.configure(predicateBuilder);
-        evidenceSet = new EvidenceSet(predicateBuilder, ClueSetBuilder.colMap);
+        evidenceSet = new EvidenceSet(predicateBuilder);
     }
 
     public Set<LongBitSet> buildEvidenceSet(PliShard[] pliShards){
@@ -23,8 +23,8 @@ public class EvidenceSetBuilder {
             HashMap<LongBitSet, Long> clueSet = linearBuildClueSet(pliShards);
             System.out.println("[ClueSet] build cost: " + (System.currentTimeMillis()-t1) + " ms");
             System.out.println("[ClueSet] # clueSet size: " + clueSet.size());
+            evidenceSet.build(clueSet);
             return clueSet.keySet();
-            //evidenceSet.build(clueSet);
         }
         return null;
     }

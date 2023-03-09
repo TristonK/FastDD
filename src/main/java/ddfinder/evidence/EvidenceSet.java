@@ -14,31 +14,32 @@ import java.util.List;
 public class EvidenceSet implements Iterable<Evidence>{
 
     private HashMap<LongBitSet, Evidence> clueToEvidence;
-    private final int[] colMap;
+    private List<Evidence> evidences;
 
-
+    /**
+     * count: a bit of 1 in the whole clue
+     * predicatesSet: all statisfied predicates
+     * example: predicates:{<=2, <=1, <=0, <=0, >0, >1, >2}
+     *          clue: 0010 => {<=2, >0, >1}
+     * */
     private List<List<LongBitSet>> countToPredicateSets;
 
-    public EvidenceSet(PredicateBuilder predicateBuilder, int[] colMap){
+    public EvidenceSet(PredicateBuilder predicateBuilder){
         clueToEvidence = new HashMap<LongBitSet, Evidence>();
-        this.colMap = colMap;
+        evidences = new ArrayList<>();
         this.countToPredicateSets = new ArrayList<>();
-        buildColMasks(predicateBuilder);
-    }
-
-    public void buildColMasks(PredicateBuilder predicateBuilder){
-        for(int i = 0; i < colMap.length; i++){
-            int col = colMap[i];
-            countToPredicateSets.add(predicateBuilder.getColPredicateSet(col));
+        for(int i = 0; i < predicateBuilder.getColSize(); i++){
+            // colMap : bit in clue => colIndex
+            countToPredicateSets.add(predicateBuilder.getColPredicateSet(i));
         }
     }
-
 
     public void build(HashMap<LongBitSet, Long> clueSet){
         for (var entry : clueSet.entrySet()) {
             LongBitSet clue = entry.getKey();
             Evidence evi = new Evidence(clue, entry.getValue(), countToPredicateSets);
             clueToEvidence.put(clue, evi);
+            evidences.add(evi);
         }
     }
 
@@ -55,6 +56,17 @@ public class EvidenceSet implements Iterable<Evidence>{
 
     @Override
     public Iterator<Evidence> iterator() {
-        return clueToEvidence.values().iterator();
+        return evidences.iterator();
+    }
+
+    public Evidence getEvidenceById(int id){
+        if(id >= evidences.size()){
+            throw new IllegalArgumentException("No such evidence id {" + id + "} in evidence set");
+        }
+        return evidences.get(id);
+    }
+
+    public List<Evidence> getEvidences(){
+        return evidences;
     }
 }

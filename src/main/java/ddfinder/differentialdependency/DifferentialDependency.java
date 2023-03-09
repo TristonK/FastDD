@@ -12,10 +12,10 @@ import java.util.List;
  */
 public class DifferentialDependency {
 
-    private List<IntervalPredicate> left;
-    private IntervalPredicate right;
+    private List<Predicate> left;
+    private Predicate right;
 
-    public DifferentialDependency(List<IntervalPredicate> left, IntervalPredicate right){
+    public DifferentialDependency(List<Predicate> left, Predicate right){
         if(left == null || right == null){
             throw new IllegalArgumentException("DifferentialFunction should not be null.");
         }
@@ -23,19 +23,27 @@ public class DifferentialDependency {
         this.right = right;
     }
 
+    public static final String AND = " ∧ ";
     public String toString(){
-        return "{ " +
-                left.toString() +
-                " -> " +
-                right.toString() +
-                " }";
+        StringBuilder sb = new StringBuilder("{ ");
+        boolean first = true;
+        for(Predicate predicate : left){
+            if(first){
+                sb.append(predicate.toString());
+                first = false;
+            }else{
+                sb.append(AND).append(predicate.toString());
+            }
+        }
+        sb.append(" -> ").append(right.toString()).append("}");
+        return sb.toString();
     }
 
     @Override
     public int hashCode() {
         int result = 0;
         int prime1 = 23;
-        for(IntervalPredicate p : left){
+        for(Predicate p : left){
             result += p.hashCode();
         }
         result += right.hashCode() * prime1;

@@ -81,7 +81,7 @@ public class SingleThresholdDD implements Enumeration{
         }
         System.out.println("[enumration] cost: " + (System.currentTimeMillis() - t1));
         System.out.println("finish finding # size " + covers.size());
-        DifferentialDependencySet dds = new DifferentialDependencySet(covers, predicateBuilder.getIntervalPredicateMap());
+        DifferentialDependencySet dds = new DifferentialDependencySet();//(covers, predicateBuilder.getIntervalPredicateMap());
         System.out.println("dds size # " + dds.size());
         return dds;
     }

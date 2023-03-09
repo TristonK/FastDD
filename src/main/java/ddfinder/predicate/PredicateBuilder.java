@@ -133,18 +133,18 @@ public class PredicateBuilder {
             partialPredicates.add(predicateProvider.getPredicate(Operator.GREATER, operand, thresholds.get(i)));
         }
 
-        //add intervalPredicate
+       /* //add intervalPredicate
         intervalPredicateMap.put(intervalCnt, new IntervalPredicate(column.getColumnName(), -1, thresholds.get(0)));
         for(int i = 1; i < thresholds.size(); i++){
             intervalPredicateMap.put(intervalCnt + i, new IntervalPredicate(column.getColumnName(), thresholds.get(i-1), thresholds.get(i)));
         }
-        intervalPredicateMap.put(intervalCnt + thresholds.size(), new IntervalPredicate(column.getColumnName(), thresholds.get(thresholds.size()-1), -1));
+        intervalPredicateMap.put(intervalCnt + thresholds.size(), new IntervalPredicate(column.getColumnName(), thresholds.get(thresholds.size()-1), -1));*/
 
         predicates.addAll(partialPredicates);
         colToPredicatesGroup.put(column.getIndex(), partialPredicates);
-        Set<Integer> thresholdsIds = new HashSet<>();
+        /*Set<Integer> thresholdsIds = new HashSet<>();
         for(int i = intervalCnt; i < intervalCnt + thresholds.size() + 1; i++){thresholdsIds.add(i);}
-        for(int i = intervalCnt; i < intervalCnt + thresholds.size() + 1; i++){interval2IntervalGroups.put(i, thresholdsIds);}
+        for(int i = intervalCnt; i < intervalCnt + thresholds.size() + 1; i++){interval2IntervalGroups.put(i, thresholdsIds);}*/
         intervalCnt += thresholds.size() + 1;
         if(column.isLong()){
             longPredicatesGroup.add(column.getIndex());
@@ -156,20 +156,40 @@ public class PredicateBuilder {
     }
 
 
+    /**
+     * @return list of cloumns indexes that are strings
+     * */
     public List<Integer> getStrPredicatesGroup() {
         return strPredicatesGroup;
     }
 
+    /**
+     * @return list of cloumns indexes that are integers
+     * */
     public List<Integer> getLongPredicatesGroup() {return longPredicatesGroup;}
 
+    /**
+     * @return list of cloumns indexes that are double numbers
+     * */
     public List<Integer> getDoublePredicatesGroup() {return doublePredicatesGroup;}
 
+    /**
+     * @return count of all intervals
+     * */
     public static int getIntervalCnt() {return  intervalCnt;}
 
+    /**
+     * @return ParsedColumn associated with @Param colIndex
+     * */
     public ParsedColumn<?> getPredicateColumn(int colIndex){
         return colToPredicatesGroup.get(colIndex).get(0).getOperand().getColumn();
     }
 
+    /**
+     * @return construct each bit in clue => statisfied predicates of cloumn {@param col}
+     * example: predicates:{<=2, <=1, <=0, >0, >1, >2}
+     *          clue: 0010 => {<=2, >0, >1}
+     * */
     public List<LongBitSet> getColPredicateSet(int col){
         List<LongBitSet> predicateSets = new ArrayList<>();
         List<Predicate> predicatesOfCol = colToPredicatesGroup.get(col);
@@ -193,5 +213,45 @@ public class PredicateBuilder {
 
     public Map<Integer, IntervalPredicate> getIntervalPredicateMap() {
         return intervalPredicateMap;
+    }
+
+    /**
+     * @return counts of columns
+    */
+    public int getColSize(){
+        return colToPredicatesGroup.size();
+    }
+
+    /**
+     * @return predicates of {@param col}
+     * */
+    public List<Predicate> getColPredicates(int col){
+        return colToPredicatesGroup.get(col);
+    }
+
+    /**
+     * @return Predicates Size of {@param col}
+     * */
+    public int getColPredicatesSize(int col){
+        return colToPredicatesGroup.get(col).size();
+    }
+
+    /**
+     * @return Thresholds size of {@param col}
+     */
+    public int getColThresholdsSize(int col){
+        return getColPredicatesSize(col)/2;
+    }
+
+    public int getPredicateId(Predicate predicate){
+        return predicateIdProvider.getIndex(predicate);
+    }
+
+    public PredicateProvider getPredicateProvider() {
+        return predicateProvider;
+    }
+
+    public IndexProvider<Predicate> getPredicateIdProvider() {
+        return predicateIdProvider;
     }
 }

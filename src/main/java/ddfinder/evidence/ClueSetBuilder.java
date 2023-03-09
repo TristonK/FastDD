@@ -40,7 +40,8 @@ abstract public class ClueSetBuilder {
     /**
      * bit pos -> colIndex
     */
-     static int[] colMap;
+     static int[] bit2ColMap;
+     static int[] col2FirstBitMap;
 
     static List<ClueSetBuilder.PredicatePack> strPacks;  // String single-column predicate packs
     static List<ClueSetBuilder.PredicatePack> doublePacks;  // numerical single-column predicate packs
@@ -54,7 +55,7 @@ abstract public class ClueSetBuilder {
     }
 
     static public int[] getCorrectionMap() {
-        return colMap;
+        return bit2ColMap;
     }
 
     private static void buildPredicateGroupsAndCorrectMap(PredicateBuilder pBuilder) {
@@ -62,31 +63,35 @@ abstract public class ClueSetBuilder {
         List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
         List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
 
-        colMap = new int[PredicateBuilder.getIntervalCnt()];
+        bit2ColMap = new int[PredicateBuilder.getIntervalCnt()];
+        col2FirstBitMap = new int [strPredicatesGroup.size() + longPredicatesGroup.size() + doublePredicatesGroup.size()];
 
         int count = 0;
         for(Integer colIndex: longPredicatesGroup){
             intPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
-            int interval  = pBuilder.getPredicateColumn(colIndex).getThresholds().size() + 1;
+            int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             for(int i = count; i < count + interval; i++){
-                colMap[i] = colIndex;
+                bit2ColMap[i] = colIndex;
             }
+            col2FirstBitMap[colIndex] = count;
             count += interval;
         }
         for(Integer colIndex: doublePredicatesGroup){
             doublePacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
-            int interval  = pBuilder.getPredicateColumn(colIndex).getThresholds().size() + 1;
+            int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             for(int i = count; i < count + interval; i++){
-                colMap[i] = colIndex;
+                bit2ColMap[i] = colIndex;
             }
+            col2FirstBitMap[colIndex] = count;
             count += interval;
         }
         for(Integer colIndex: strPredicatesGroup){
             strPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
-            int interval  = pBuilder.getPredicateColumn(colIndex).getThresholds().size() + 1;
+            int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             for(int i = count; i < count + interval; i++){
-                colMap[i] = colIndex;
+                bit2ColMap[i] = colIndex;
             }
+            col2FirstBitMap[colIndex] = count;
             count += interval;
         }
 

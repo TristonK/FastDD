@@ -19,7 +19,6 @@ public class EvidenceCount {
         double[][] dInput = input.getDoubleInput();
         int[][] iInput = input.getIntInput();
         String[][] sInput = input.getStringInput();
-        Map<Double, Integer> countp1 = new HashMap<>();
         List<ParsedColumn<?>> columns = input.getParsedColumns();
         int rows = 0;
         if(dInput.length == 0){
@@ -38,9 +37,6 @@ public class EvidenceCount {
                 for(int k = 0; k < iInput.length; k++){
                     double diff = Math.abs(iInput[k][i]- iInput[k][j]);
                     List<Double> th = columns.get(k).getThresholds();
-                    if(k == 1){
-                        countp1.put(diff, countp1.getOrDefault(diff, 0)+1);
-                    }
                     clue.set(findMaskPos(diff, th) + cnt);
                     cnt += th.size() + 1;
                 }
@@ -59,15 +55,6 @@ public class EvidenceCount {
                 clueSet.add(clue);
             }
         }
-        Double[] keys = new Double[countp1.size()];
-        countp1.keySet().toArray(keys);
-        Arrays.sort(keys);
-        int cnt = 0;
-        for(int i =2; i < keys.length; i++){
-            cnt += countp1.get(keys[i]);
-            System.out.printf("%.2f  ", cnt*1.0/keys[i]);
-        }
-        System.out.println(" ");
         return clueSet;
     }
 
