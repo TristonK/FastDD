@@ -91,4 +91,21 @@ public class Predicate {
         return predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, distance);
     }
 
+    /**
+     * @return 0: not for a column or not the same operator
+     * 1: this have a bigger distance
+     * -1: p has a bigger distance
+     * */
+    public int comparePredicate(Predicate p){
+        if(p.operand.equals(this.operand)  && p.operator.equals(this.operator)){
+            int flag = operator == Operator.LESS_EQUAL? 1 : -1;
+            if(this.distance >= p.distance){
+                return flag;
+            }else {
+                return -flag;
+            }
+        }
+        return 0;
+    }
+
 }

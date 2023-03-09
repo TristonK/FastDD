@@ -30,6 +30,8 @@ public class PredicateBuilder {
 
     private Map<Integer, IntervalPredicate> intervalPredicateMap;
 
+    private List<BitSet> colPredicateGroup;
+
     public PredicateBuilder(Input input){
         intervalCnt = 0;
         predicates = new ArrayList<>();
@@ -254,4 +256,20 @@ public class PredicateBuilder {
     public IndexProvider<Predicate> getPredicateIdProvider() {
         return predicateIdProvider;
     }
+
+    public List<BitSet> getColPredicateGroup(){
+        if(colPredicateGroup == null){
+            colPredicateGroup = new ArrayList<>();
+            for(int i = 0; i < getColSize(); i++){
+                BitSet bs = new BitSet();
+                for(Predicate pred: getColPredicates(i)){
+                    bs.set(predicateIdProvider.getIndex(pred));
+                }
+                colPredicateGroup.add(bs);
+            }
+        }
+        return colPredicateGroup;
+    }
+
+
 }

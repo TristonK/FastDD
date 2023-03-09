@@ -1,6 +1,8 @@
 package ddfinder.enumeration;
 
+import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
+import ch.javasoft.bitset.search.NTreeSearch;
 import ch.javasoft.bitset.search.TranslatingTreeSearch;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.evidence.Evidence;
@@ -27,11 +29,14 @@ public class HybridEvidenceInversion implements Enumeration{
     LongBitSet evidenceBitSet;
 
     IndexProvider<Predicate> predicateIndexProvider;
+
+    List<BitSet> colToPredicatesGroup;
     public HybridEvidenceInversion(EvidenceSet evidenceSet, PredicateBuilder predicateBuilder){
         this.predicates = new PredicateSet(predicateBuilder.getPredicates().size());
         this.pred2PredGroupMap = new HashMap<>();
         this.covers = new HashSet<>();
         this.evidenceSet = evidenceSet;
+        this.colToPredicatesGroup = predicateBuilder.getColPredicateGroup();
         predicateIndexProvider = predicateBuilder.getPredicateIdProvider();
         for(int col = 0; col < predicateBuilder.getColSize(); col++){
             HashSet<Integer> pids = new HashSet<>();
@@ -84,12 +89,17 @@ public class HybridEvidenceInversion implements Enumeration{
                 currEvidences.add(bs);
             }
 
-            Set<LongBitSet> partialCovers =  hybridEI(currPredicateSpace, predsNotSatisfied, currEvidences);
-            for(LongBitSet partialCover : partialCovers){
+            Set<IBitSet> partialCovers =  new EvidenceInversion(satisfiedPid, colToPredicatesGroup, predsNotSatisfied, currEvidences, predicates.size()).getCovers();
+            for(IBitSet partialCover : partialCovers){
                 partialCover.set(satisfiedPid);
-                covers.add(partialCover);
+                covers.add((LongBitSet) partialCover);
             }
         }
+        System.out.println("[Minimize] # before: " + covers.size());
+
+        covers = minimize();
+
+        System.out.println("[Minimize] # after: " + covers.size());
 
         return new DifferentialDependencySet(covers, predicateIndexProvider);
 
@@ -161,8 +171,62 @@ public class HybridEvidenceInversion implements Enumeration{
         }
     }
 
-    void minimize(){
+    private Set<LongBitSet> minimize(){
+        long t1 = System.currentTimeMillis();
+
+        NTreeSearch nt = new NTreeSearch();
+        for (LongBitSet key : covers) {
+            nt.add(LongBitSet.FACTORY.create(key));
+        }
+
+        Set<LongBitSet> nonGeneralized = new HashSet<>();
+
+        for (LongBitSet key : covers) {
+
+            IBitSet bs = LongBitSet.FACTORY.create(key);
+
+            nt.remove(bs);
+
+            if (!nt.containsSubset(bs)) {
+                nonGeneralized.add(key);
+            }
+
+            nt.add(bs);
+
+        }
+        covers = nonGeneralized;
+
         Set<LongBitSet> minimizeCovers = new HashSet<>();
+        LongBitSet[] coversArray = covers.toArray(new LongBitSet[0]);
+        boolean[] flags = new boolean[coversArray.length];
+        Arrays.fill(flags, true);
+        for(int i = 0; i < coversArray.length; i++){
+            for(int j = i+1; j< coversArray.length; j++){
+                LongBitSet bs1 = coversArray[i].clone();
+                bs1.xor(coversArray[j]);
+                if(bs1.cardinality() == 2){
+                    int pid1 = bs1.nextSetBit(0);
+                    int pid2 = bs1.nextSetBit(pid1+1);
+                    int hasPid1Index = i, hasPid2Index = j;
+                    if(!coversArray[i].get(pid1)){hasPid2Index = i; hasPid1Index = j;}
+                    int cmpAns = predicateIndexProvider.getObject(pid1).comparePredicate(predicateIndexProvider.getObject(pid2));
+                    // save pid1
+                    if(cmpAns == 1){
+                        flags[hasPid2Index] = false;
+                    }
+                    // save pid2
+                    else if(cmpAns == -1){
+                        flags[hasPid1Index] = false;
+                    }
+                }
+            }
+        }
+        for(int i = 0; i < coversArray.length; i++){
+            if(flags[i]){minimizeCovers.add(coversArray[i]);}
+        }
+
+        System.out.println("[Minimize] cost "+ (System.currentTimeMillis() - t1));
+        return minimizeCovers;
     }
 
 
