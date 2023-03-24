@@ -1,4 +1,4 @@
-package ddfinder.evidence;
+package ddfinder.evidence.cluebitset;
 
 import java.util.BitSet;
 

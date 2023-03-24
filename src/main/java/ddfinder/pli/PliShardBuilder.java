@@ -56,8 +56,10 @@ public class PliShardBuilder {
             clusters.get(keyToClusterID.get(colValues[row])).add(row);
             if(shardLength == -1){clusterInput[index][row] = keyToClusterID.get(colValues[row]);}
         }
-
-        return new DoublePli(clusters, dkeys, keyToClusterID);
+        if(shardLength == -1){
+            return new DoublePli(clusters, dkeys, keyToClusterID, clusterInput[index]);
+        }
+        return  new DoublePli(clusters, dkeys, keyToClusterID, null);
     }
 
     private IntPli buildIntPli(int[] colValues, int beg, int end, int index) {
@@ -84,8 +86,10 @@ public class PliShardBuilder {
             clusters.get(keyToClusterID.get(colValues[row])).add(row);
             if(shardLength == -1){clusterInput[index][row] = keyToClusterID.get(colValues[row]);}
         }
-
-        return new IntPli(clusters, ikeys, keyToClusterID);
+        if(shardLength == -1){
+            return new IntPli(clusters, ikeys, keyToClusterID, clusterInput[index]);
+        }
+        return  new IntPli(clusters, ikeys, keyToClusterID, null);
     }
 
     private StringPli buildStringPli(String[] colValues, int beg, int end, int index) {
@@ -109,8 +113,10 @@ public class PliShardBuilder {
             clusters.get(keyToClusterID.get(colValues[row])).add(row);
             if(shardLength == -1){clusterInput[index][row] = keyToClusterID.get(colValues[row]);}
         }
-
-        return new StringPli(clusters, keys, keyToClusterID);
+        if(shardLength == -1){
+            return new StringPli(clusters, keys, keyToClusterID, clusterInput[index]);
+        }
+        return  new StringPli(clusters, keys, keyToClusterID, null);
     }
 
     public PliShard[] buildPliShards(double[][] doubleInput, int[][] intInput, String[][] stringInput) {

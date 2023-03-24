@@ -28,4 +28,10 @@ public interface IPli<T> {
     public PliShard getPliShard();
 
     public void setPlishard(PliShard pli);
+
+    public int getThresholdsBetween(int leftIndex, int rightIndex);
+
+    public void setThresholdsBetween(int leftIndex, int rightIndex, int thresholdIndex);
+
+    public int getClusterIdByRow(int row);
 }

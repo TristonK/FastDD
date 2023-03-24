@@ -1,10 +1,6 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.predicate.Predicate;
-import ddfinder.predicate.PredicateBuilder;
-import ddfinder.predicate.PredicateSet;
-import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
 import java.util.List;
 

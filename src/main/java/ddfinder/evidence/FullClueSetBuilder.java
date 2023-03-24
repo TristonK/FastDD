@@ -1,11 +1,10 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.evidence.ClueSetBuilder;
 import ddfinder.pli.*;
 import ddfinder.predicate.PredicateBuilder;
 import ddfinder.utils.StringCalculation;
-import de.metanome.algorithms.dcfinder.input.Input;
-import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
 import java.util.*;
 

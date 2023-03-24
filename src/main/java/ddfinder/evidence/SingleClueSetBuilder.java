@@ -1,6 +1,7 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.evidence.ClueSetBuilder;
 import ddfinder.pli.Cluster;
 import ddfinder.pli.IPli;
 import ddfinder.pli.DoublePli;
@@ -8,9 +9,9 @@ import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
 import ddfinder.utils.StringCalculation;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * To build the clue set of one Pli shard
@@ -36,10 +37,12 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
             clues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
         }
         for(PredicatePack intPack: intPacks){
-            correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+            linerCorrectNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+            //correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
         }
         for(PredicatePack doublePack: doublePacks){
-            correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
+            linerCorrectNum(clues,  plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
+            //correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
         }
         for(PredicatePack strPack : strPacks){
             correctStr(clues, plis.get(strPack.colIndex), strPack.pos, strPack.thresholds);
@@ -66,20 +69,33 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         }
     }
 
+    private void setSelfNumMask(LongBitSet[] clues,Cluster cluster, int pos){
+        for (int q = 0; q < cluster.size() -1; q++) {
+            int tid1 = cluster.get(q);
+            for (int w = q + 1; w < cluster.size(); w++) {
+                int tid2 = cluster.get(w);
+                if(tid2 < tid1){int temp = tid1; tid1 = tid2; tid2 = temp;}
+                int t1 = tid1 - tidBeg;
+                clues[(tid2-tid1-1)+t1*(2*tidRange- t1 -1)/2].set(pos);
+            }
+        }
+    }
+
     private void correctStr(LongBitSet[] clues, IPli pli, int pos, List<Double>thresholds) {
         for (int i = 0; i < pli.size(); i++) {
             // index为0的情况
-            Cluster pli1 = pli.get(i);
-            for (int q = 0; q < pli1.size() -1; q++) {
-                int tid1 = pli1.get(q);
-                for (int w = q + 1; w < pli1.size(); w++) {
-                    int tid2 = pli1.get(w);
-                    if(tid2 < tid1){int temp = tid1; tid1 = tid2; tid2 = temp;}
-                    int t1 = tid1 - tidBeg;
-                    clues[(tid2-tid1-1)+t1*(2*tidRange- t1 -1)/2].set(pos);
-                }
-            }
+            setSelfNumMask(clues,pli.get(i), pos);
             for(int j = i + 1; j < pli.size(); j++){
+                /*String smallOne = (String) pli.getKeys()[i], biggerOne = (String) pli.getKeys()[j];
+                if(smallOne.compareTo(biggerOne) > 0){
+                    String tmp = biggerOne;
+                    biggerOne = smallOne;
+                    smallOne = tmp;
+                }
+                if(ClueSetBuilder.stringDistance.containsKey(smallOne) && ClueSetBuilder.stringDistance.get(smallOne).containsKey(biggerOne)){
+                    setNumMask(clues, pli.get(i), pli.get(j), pos + ClueSetBuilder.stringDistance.get(smallOne).get(biggerOne));
+                    continue;
+                }*/
                 int diff = StringCalculation.getDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 int c = 0;
                 if(diff < ERR + thresholds.get(0)){
@@ -96,6 +112,9 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
                     }
                 }
                 setNumMask(clues, pli.get(i), pli.get(j), pos + c);
+                //ConcurrentHashMap<String, Integer> newMap = stringDistance.getOrDefault(smallOne, new ConcurrentHashMap<String, Integer>());
+                //newMap.put(biggerOne, c);
+                //stringDistance.put(smallOne, newMap);
             }
         }
     }
@@ -103,16 +122,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     private void correctNum(LongBitSet[] clues, IPli pli, int pos, List<Double>thresholds) {
         for (int i = 0; i < pli.size(); i++) {
             // index为0的情况
-            Cluster pli1 = pli.get(i);
-            for (int q = 0; q < pli1.size() -1; q++) {
-                int tid1 = pli1.get(q);
-                for (int w = q + 1; w < pli1.size(); w++) {
-                    int tid2 = pli1.get(w);
-                    if(tid2 < tid1){int temp = tid1; tid1 = tid2; tid2 = temp;}
-                    int t1 = tid1 - tidBeg;
-                    clues[(tid2-tid1-1)+t1*(2*tidRange- t1 -1)/2].set(pos);
-                }
-            }
+            setSelfNumMask(clues, pli.get(i), pos);
             int start = i+1;
             if(pli.getClass() == DoublePli.class){
                 Double key = (Double)pli.getKeys()[i];
@@ -138,14 +148,22 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
                 setNumMask(clues, pli.get(i), pli.get(correct), pos + thresholds.size());
             }
 
-//            int thresholdIndex = 1;
-//            for(int j = i + 1; j < pli.size(); j++){
-//                while(thresholdIndex < thresholds.size() && pli.keys[i] - pli.keys[j] > thresholds.get(thresholdIndex)){
-//                    thresholdIndex ++;
-//                }
-//                setNumMask(clues, pli.get(i), pli.get(j), pos + thresholdIndex);
-//            }
         }
     }
+    private void linerCorrectNum(LongBitSet[] clues, IPli pli, int pos, List<Double>thresholds){
+        for(int i = 0; i < pli.size(); i++){
+            int[] offsets;
+            if(pli.getClass() == DoublePli.class){
+                offsets = linerCountDouble((Double[]) pli.getKeys(), i , (Double) pli.getKeys()[i], thresholds);
+            }else{
+                offsets = linerCountInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
+            }
+           setSelfNumMask(clues, pli.get(i), pos);
+            for(int j = i + 1; j < pli.size(); j++){
+                setNumMask(clues, pli.get(i), pli.get(j), pos + offsets[j-i]);
+            }
+        }
+    }
+
 
 }

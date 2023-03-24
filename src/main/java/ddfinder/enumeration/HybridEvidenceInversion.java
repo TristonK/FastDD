@@ -97,9 +97,9 @@ public class HybridEvidenceInversion implements Enumeration{
         }
         System.out.println("[Minimize] # before: " + covers.size());
 
-        covers = minimize();
+        //covers = minimize();
 
-        System.out.println("[Minimize] # after: " + covers.size());
+        //System.out.println("[Minimize] # after: " + covers.size());
 
         return new DifferentialDependencySet(covers, predicateIndexProvider);
 

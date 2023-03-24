@@ -1,6 +1,9 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.evidence.ClueSetBuilder;
+import ddfinder.pli.Cluster;
+import ddfinder.pli.DoublePli;
 import ddfinder.pli.IPli;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
@@ -8,6 +11,7 @@ import ddfinder.utils.StringCalculation;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * To build the clue set of two Pli shards
@@ -34,10 +38,12 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
             correctStr(forwardClues, plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.pos, strPack.thresholds);
         }
         for (PredicatePack intPack: intPacks){
-            correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+            linerCorrectNum(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+            //correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
         }
         for (PredicatePack numPack: doublePacks){
-            correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
+            linerCorrectNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
+            //correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
         }
 
 
@@ -67,6 +73,16 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         final String[] probeKeys = (String[]) probePli.getKeys();
         for(int i = 0; i < pivotKeys.length; i++){
             for(int j = 0; j < probeKeys.length; j++){
+               /* String smallOne = pivotKeys[i], biggerOne = probeKeys[j];
+                if(smallOne.compareTo(biggerOne) > 0){
+                    String tmp = biggerOne;
+                    biggerOne = smallOne;
+                    smallOne = tmp;
+                }
+                if(ClueSetBuilder.stringDistance.containsKey(smallOne) && ClueSetBuilder.stringDistance.get(smallOne).containsKey(biggerOne)){
+                    setNumMask(clues1, pivotPli, i, probePli, j, pos +  ClueSetBuilder.stringDistance.get(smallOne).get(biggerOne));
+                    continue;
+                }*/
                 int diff = StringCalculation.getDistance(pivotKeys[i], probeKeys[j]);
                 int c = 0;
                 if(diff < ERR + thresholds.get(0)){
@@ -83,6 +99,9 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
                     }
                 }
                 setNumMask(clues1, pivotPli, i, probePli, j, pos + c);
+                /*ConcurrentHashMap<String, Integer> newMap = stringDistance.getOrDefault(smallOne, new ConcurrentHashMap<String, Integer>());
+                newMap.put(biggerOne, c);
+                stringDistance.put(smallOne, newMap);*/
             }
         }
     }
@@ -171,6 +190,20 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
                 for(int j = start; j < probeKeys.length; j++){
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + thresholds.size());
                 }
+            }
+        }
+    }
+
+    private void linerCorrectNum(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double>thresholds){
+        for(int i = 0; i < pivotPli.size(); i++){
+            int[] offsets;
+            if(pivotPli.getClass() == DoublePli.class){
+                offsets = linerCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
+            }else{
+                offsets = linerCountInt((Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
+            }
+            for(int j = 0; j < probePli.size(); j++){
+                setNumMask(forwardArray, pivotPli, i, probePli, j, pos + offsets[j]);
             }
         }
     }

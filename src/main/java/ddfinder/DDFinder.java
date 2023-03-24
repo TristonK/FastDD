@@ -1,22 +1,19 @@
 package ddfinder;
 
-
 import bruteforce.EvidenceCount;
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.enumeration.Enumeration;
 import ddfinder.enumeration.HybridEvidenceInversion;
-import ddfinder.enumeration.SingleThresholdDD;
-import ddfinder.evidence.*;
+import ddfinder.evidence.EvidenceSet;
+import ddfinder.evidence.EvidenceSetBuilder;
 import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
-import ddfinder.predicate.Predicate;
 import ddfinder.predicate.PredicateBuilder;
 import de.metanome.algorithms.dcfinder.input.Input;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -44,11 +41,12 @@ public class DDFinder {
     }
 
     public DifferentialDependencySet buildDDs(){
-        long bfTime = System.currentTimeMillis();
-        Set<LongBitSet> bf = new EvidenceCount().calculate(input);
-        System.out.println("[Brute Force] cost: " + (System.currentTimeMillis()-bfTime) + " ms");
-        System.out.println("[Brute Force] # clueSet Size "+ bf.size());
+        //long bfTime = System.currentTimeMillis();
+        //Set<LongBitSet> bf = new EvidenceCount().calculate(input);
+        //System.out.println("[Brute Force] cost: " + (System.currentTimeMillis()-bfTime) + " ms");
+        //System.out.println("[Brute Force] # clueSet Size "+ bf.size());
         long t0 = System.currentTimeMillis();
+        //pliShardBuilder = new PliShardBuilder(350, input.getParsedColumns());
         pliShardBuilder = new PliShardBuilder(350, input.getParsedColumns());
         PliShard[] pliShards = pliShardBuilder.buildPliShards(input.getDoubleInput(), input.getIntInput(), input.getStringInput());
         long buildPliTime = System.currentTimeMillis() - t0;
@@ -66,8 +64,6 @@ public class DDFinder {
         DifferentialDependencySet dds = ddfinder.buildDifferentialDenpendency();
         System.out.println("[Enumeration] cost: " + (System.currentTimeMillis() - enmurationTime));
         System.out.println("[Enumeration] # dds: " + dds.size());
-        dds.printDDs();
-        System.out.println();
         return dds;
     }
 }

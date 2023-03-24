@@ -10,10 +10,15 @@ public class DoublePli implements IPli<Double>{
     List<Cluster> clusters;
     Map<Double, Integer> keyToClusterIdMap;
 
-    public DoublePli(List<Cluster> rawClusters, Double[] keys, Map<Double, Integer> translator) {
+    Map<Integer, Map<Integer, Integer>> twoIdToThresholds;
+    int[] rowToId;
+
+    public DoublePli(List<Cluster> rawClusters, Double[] keys, Map<Double, Integer> translator, int[]rowToId) {
         this.clusters = rawClusters;
         this.keys = keys;
         this.keyToClusterIdMap = translator;
+        this.twoIdToThresholds = new HashMap<>();
+        this.rowToId = rowToId;
     }
 
 
@@ -93,5 +98,48 @@ public class DoublePli implements IPli<Double>{
         sb.append(keyToClusterIdMap + "\n");
 
         return sb.toString();
+    }
+
+    /**
+     * @param leftIndex
+     * @param rightIndex
+     * @return
+     */
+    @Override
+    public int getThresholdsBetween(int leftIndex, int rightIndex) {
+        if(leftIndex == rightIndex){return 0;}
+        if(rightIndex < leftIndex){
+            int tmp = rightIndex;
+            rightIndex = leftIndex;
+            leftIndex = tmp;
+        }
+        Map<Integer, Integer> rightKeyMap = twoIdToThresholds.getOrDefault(leftIndex, new HashMap<>());
+        return rightKeyMap.getOrDefault(rightIndex, -1);
+    }
+
+    /**
+     * @param leftIndex
+     * @param rightIndex
+     * @param thresholdIndex
+     */
+    @Override
+    public void setThresholdsBetween(int leftIndex, int rightIndex, int thresholdIndex) {
+        if(rightIndex == leftIndex){return;}
+        if(rightIndex < leftIndex){
+            int tmp = rightIndex;
+            rightIndex = leftIndex;
+            leftIndex = tmp;
+        }
+        Map<Integer, Integer> rightKeyMap = twoIdToThresholds.getOrDefault(leftIndex, new HashMap<>());
+        rightKeyMap.putIfAbsent(rightIndex, thresholdIndex);
+    }
+
+    /**
+     * @param row
+     * @return
+     */
+    @Override
+    public int getClusterIdByRow(int row) {
+        return rowToId[row];
     }
 }

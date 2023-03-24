@@ -1,6 +1,7 @@
 package ddfinder.pli;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -14,10 +15,16 @@ public class IntPli implements IPli<Integer>{
     List<Cluster> clusters;
     Map<Integer, Integer> keyToClusterIdMap;
 
-    public IntPli(List<Cluster> rawClusters, Integer[] keys, Map<Integer, Integer> translator) {
+    Map<Integer, Map<Integer, Integer>> twoIdToThresholds;
+
+    int[] rowToId;
+
+    public IntPli(List<Cluster> rawClusters, Integer[] keys, Map<Integer, Integer> translator, int[] rowToId) {
         this.clusters = rawClusters;
         this.keys = keys;
         this.keyToClusterIdMap = translator;
+        this.twoIdToThresholds = new HashMap<>();
+        this.rowToId = rowToId;
     }
 
 
@@ -83,6 +90,50 @@ public class IntPli implements IPli<Integer>{
     @Override
     public void setPlishard(PliShard pliShard) {
         this.pliShard = pliShard;
+    }
+
+    /**
+     * @param leftIndex
+     * @param rightIndex
+     * @return
+     */
+    @Override
+    public int getThresholdsBetween(int leftIndex, int rightIndex) {
+        if(leftIndex == rightIndex){return 0;}
+        if(rightIndex < leftIndex){
+            int tmp = rightIndex;
+            rightIndex = leftIndex;
+            leftIndex = tmp;
+        }
+        Map<Integer, Integer> rightKeyMap = twoIdToThresholds.getOrDefault(leftIndex, new HashMap<>());
+        return rightKeyMap.getOrDefault(rightIndex, -1);
+    }
+
+    /**
+     * @param leftIndex
+     * @param rightIndex
+     * @param thresholdIndex
+     */
+    @Override
+    public void setThresholdsBetween(int leftIndex, int rightIndex, int thresholdIndex) {
+        if(rightIndex == leftIndex){return;}
+        if(rightIndex < leftIndex){
+            int tmp = rightIndex;
+            rightIndex = leftIndex;
+            leftIndex = tmp;
+        }
+        Map<Integer, Integer> rightKeyMap = twoIdToThresholds.getOrDefault(leftIndex, new HashMap<>());
+        rightKeyMap.putIfAbsent(rightIndex, thresholdIndex);
+    }
+
+
+    /**
+     * @param row
+     * @return
+     */
+    @Override
+    public int getClusterIdByRow(int row) {
+        return rowToId[row];
     }
 
     @Override

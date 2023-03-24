@@ -21,6 +21,7 @@ public class EvidenceSetBuilder {
         if (pliShards.length != 0) {
             long t1 = System.currentTimeMillis();
             HashMap<LongBitSet, Long> clueSet = linearBuildClueSet(pliShards);
+            //HashMap<LongBitSet, Long> clueSet = buildClueContextSet(pliShards);
             System.out.println("[ClueSet] build cost: " + (System.currentTimeMillis()-t1) + " ms");
             System.out.println("[ClueSet] # clueSet size: " + clueSet.size());
             evidenceSet.build(clueSet);
@@ -40,6 +41,17 @@ public class EvidenceSetBuilder {
         System.out.println("[ClueSet] # clueSet size: " + clueSet.size());
         return clueSet.keySet();
     }
+
+    public HashMap<LongBitSet, Long> buildClueContextSet(PliShard[] pliShards){
+        if(pliShards.length != 1){
+            throw new IllegalCallerException("Only for fullPli");
+        }
+        ClueSetBuilder clueSetBuilder = new ClueContextSetBuilder(pliShards[0]);
+        HashMap<LongBitSet, Long> clueSet = clueSetBuilder.buildClueSet();
+        return clueSet;
+    }
+
+
 
     private HashMap<LongBitSet, Long> linearBuildClueSet(PliShard[] pliShards){
         int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
