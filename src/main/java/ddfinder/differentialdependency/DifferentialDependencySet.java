@@ -1,5 +1,6 @@
 package ddfinder.differentialdependency;
 
+import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.evidence.Evidence;
 import ddfinder.predicate.IntervalPredicate;
@@ -21,9 +22,9 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
         dependencies = new HashSet<>();
     }
 
-    public DifferentialDependencySet(Set<LongBitSet> covers, IndexProvider<Predicate> indexProvider){
+    public DifferentialDependencySet(Set<IBitSet> covers, IndexProvider<Predicate> indexProvider){
         dependencies = new HashSet<>();
-        for(LongBitSet cover: covers){
+        for(IBitSet cover: covers){
             if(cover.cardinality() < 2){
                 System.out.println("bad cover");
                 assert false;
@@ -32,7 +33,7 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
             Predicate right = null;
             for(int i = cover.nextSetBit(0); i>=0; i = cover.nextSetBit(i+1)){
                 Predicate p = indexProvider.getObject(i);
-                if(right == null && p.getOperator() == Operator.GREATER){
+                if(right == null && !p.isAccepted()){
                     right = p.getInversePredicate();
                 }else {
                     left.add(p);
@@ -65,6 +66,10 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
         for(DifferentialDependency dd: dependencies){
             System.out.println(dd.toString());
         }
+    }
+
+    public void minimize(){
+
     }
 
 }

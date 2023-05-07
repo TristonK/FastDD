@@ -10,6 +10,8 @@ import ddfinder.evidence.EvidenceSet;
 import ddfinder.predicate.Predicate;
 import ddfinder.predicate.PredicateBuilder;
 import ddfinder.predicate.PredicateSet;
+import ddfinder.predicate.PredicateSpace;
+import ddfinder.search.TranslatingMinimizeTree;
 import ddfinder.utils.ObjectIndexBijection;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
@@ -22,13 +24,17 @@ import java.util.concurrent.ConcurrentHashMap;
 public class HybridEvidenceInversion implements Enumeration{
     PredicateSet predicates;
     HashMap<Integer, Set<Integer>> pred2PredGroupMap;
-    Set<LongBitSet> covers;
+    Set<IBitSet> covers;
     EvidenceSet evidenceSet;
     Map<Integer, LongBitSet> predSatisfiedEvidenceSet;
 
     LongBitSet evidenceBitSet;
 
     IndexProvider<Predicate> predicateIndexProvider;
+
+    LongBitSet pivotPredicates;
+
+    List<Integer> acceptedPredicates;
 
     List<BitSet> colToPredicatesGroup;
     public HybridEvidenceInversion(EvidenceSet evidenceSet, PredicateBuilder predicateBuilder){
@@ -38,15 +44,25 @@ public class HybridEvidenceInversion implements Enumeration{
         this.evidenceSet = evidenceSet;
         this.colToPredicatesGroup = predicateBuilder.getColPredicateGroup();
         predicateIndexProvider = predicateBuilder.getPredicateIdProvider();
-        for(int col = 0; col < predicateBuilder.getColSize(); col++){
+        LongBitSet acceptPredicatesBitSet = predicateBuilder.getAcceptPredicatesBitSet();
+        this.acceptedPredicates = new ArrayList<>();
+        for(int i = acceptPredicatesBitSet.nextSetBit(0); i >= 0; i = acceptPredicatesBitSet.nextSetBit(i + 1)){
+            this.acceptedPredicates.add(i);
+        }
+        pivotPredicates = predicateBuilder.getRejectPredicatesBitSet();
+        for (BitSet bitSet : colToPredicatesGroup) {
             HashSet<Integer> pids = new HashSet<>();
-            for(Predicate predicate: predicateBuilder.getColPredicates(col)){
-                pids.add(predicateBuilder.getPredicateId(predicate));
+            for (int i = bitSet.nextSetBit(0); i >= 0; i = bitSet.nextSetBit(i + 1)) {
+                pids.add(i);
             }
-            for(int pid: pids){
+            for (int pid : pids) {
                 pred2PredGroupMap.put(pid, pids);
             }
         }
+        for(BitSet bs: colToPredicatesGroup){
+            bs.andNot(pivotPredicates.toBitSet());
+        }
+        constructMinimizeTree(predicateBuilder);
     }
 
     /**
@@ -57,9 +73,10 @@ public class HybridEvidenceInversion implements Enumeration{
         buildClueIndexes();
 
         List<Integer> preds = new ArrayList<>();
-        for(int i = 0; i< predicates.size();i++){
+        for(int i = pivotPredicates.nextSetBit(0); i >= 0; i = pivotPredicates.nextSetBit(i + 1)){
             preds.add(i);
         }
+        //TODO: 可能需要修改排序规则，这里是右侧的选择
         preds.sort(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -67,14 +84,16 @@ public class HybridEvidenceInversion implements Enumeration{
             }
         });
 
+        int minimizeBefore = 0;
+
         for(int i = 0; i < preds.size(); i++){
             int satisfiedPid = preds.get(i);
             if (predSatisfiedEvidenceSet.get(satisfiedPid).cardinality() == 0){
                 // dd must have at least two predicates
                 continue;
             }
-            List<Integer> currPredicateSpace = new ArrayList<>(preds);
-            currPredicateSpace = currPredicateSpace.subList(i+1, currPredicateSpace.size());
+            //List<Integer> currPredicateSpace = new ArrayList<>(predicates);
+            List<Integer> currPredicateSpace = new ArrayList<>(acceptedPredicates);
             currPredicateSpace.removeAll(pred2PredGroupMap.get(satisfiedPid));
 
             Set<Integer> predsNotSatisfied = new HashSet<>();
@@ -89,13 +108,26 @@ public class HybridEvidenceInversion implements Enumeration{
                 currEvidences.add(bs);
             }
 
-            Set<IBitSet> partialCovers =  new EvidenceInversion(satisfiedPid, colToPredicatesGroup, predsNotSatisfied, currEvidences, predicates.size()).getCovers();
+            int satisfiedCol = predicateIndexProvider.getObject(satisfiedPid).getOperand().getColumn().getIndex();
+            Set<IBitSet> partialCovers =
+                new EvidenceInversion(satisfiedCol, colToPredicatesGroup, predsNotSatisfied, currEvidences, predicates.size()).getCovers();
+
+            //minimizeBefore += partialCovers.size();
+
+
             for(IBitSet partialCover : partialCovers){
                 partialCover.set(satisfiedPid);
                 covers.add((LongBitSet) partialCover);
             }
         }
+
         System.out.println("[Minimize] # before: " + covers.size());
+        long minimizeTime = System.currentTimeMillis();
+        TranslatingMinimizeTree minimizeTree = new TranslatingMinimizeTree(intervalSize,predicateId2NodeId, col2Interval,
+                col2PredicateId, colSize, intervalLength);
+        covers = minimizeTree.minimize(new ArrayList<>(covers));
+        System.out.println("[Minimize TIME]: " + (System.currentTimeMillis() - minimizeTime));
+        System.out.println("[Minimize] # after: " + covers.size());
 
         //covers = minimize();
 
@@ -171,7 +203,7 @@ public class HybridEvidenceInversion implements Enumeration{
         }
     }
 
-    private Set<LongBitSet> minimize(){
+   /* private Set<LongBitSet> minimize(){
         long t1 = System.currentTimeMillis();
 
         NTreeSearch nt = new NTreeSearch();
@@ -227,6 +259,36 @@ public class HybridEvidenceInversion implements Enumeration{
 
         System.out.println("[Minimize] cost "+ (System.currentTimeMillis() - t1));
         return minimizeCovers;
+    }*/
+
+    int intervalSize; int[] predicateId2NodeId; int[] col2Interval;
+    int[] col2PredicateId; int colSize; int[] intervalLength;
+    private void constructMinimizeTree(PredicateBuilder predicateBuilder){
+        colSize = predicateBuilder.getColSize();
+        intervalSize = 0;
+        predicateId2NodeId = new int[predicateBuilder.size()];
+        col2Interval = new int[colSize];
+        col2PredicateId = new int[colSize];
+        intervalLength = new int[colSize];
+        List<BitSet>  colPredicateGroup = predicateBuilder.getColPredicateGroup();
+        for(int i = 0; i < colSize; i++){
+            BitSet bs = colPredicateGroup.get(i);
+            col2Interval[i] = intervalSize;
+            intervalLength[i] = bs.cardinality()/2;
+            intervalSize += intervalLength[i];
+            int cnt = 0;
+            for(int j = bs.nextSetBit(0); j >= 0; j = bs.nextSetBit(j + 1)){
+                if(cnt == 0){
+                    col2PredicateId[i] = j;
+                }
+                if(cnt < intervalLength[i]/2){
+                    predicateId2NodeId[j] = i;
+                }else{
+                    predicateId2NodeId[j] = i + colSize;
+                }
+                cnt++;
+            }
+        }
     }
 
 

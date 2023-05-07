@@ -1,5 +1,6 @@
 package ddfinder.differentialdependency;
 
+import ch.javasoft.bitset.IBitSet;
 import ddfinder.differentialfunction.DifferentialFunction;
 import ddfinder.predicate.IntervalPredicate;
 import ddfinder.predicate.Predicate;
@@ -15,16 +16,20 @@ public class DifferentialDependency {
     private List<Predicate> left;
     private Predicate right;
 
+    private IBitSet predicateSet;
+
     public DifferentialDependency(List<Predicate> left, Predicate right){
         if(left == null || right == null){
             throw new IllegalArgumentException("DifferentialFunction should not be null.");
         }
         this.left = left;
         this.right = right;
+        predicateSet = null;
     }
 
     public static final String AND = " ∧ ";
     public String toString(){
+
         StringBuilder sb = new StringBuilder("{ ");
         boolean first = true;
         for(Predicate predicate : left){

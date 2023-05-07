@@ -2,11 +2,9 @@ package ddfinder.enumeration;
 
 import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
-import ch.javasoft.bitset.search.ITreeSearch;
 import ch.javasoft.bitset.search.TranslatingTreeSearch;
 import ch.javasoft.bitset.search.TreeSearch;
-import ddfinder.predicate.Predicate;
-import ddfinder.predicate.PredicateBuilder;
+import ddfinder.search.TranslatingMinimizeTree;
 
 import java.util.*;
 
@@ -19,27 +17,32 @@ public class EvidenceInversion {
     List<LongBitSet> evidenceBitSets;
     TranslatingTreeSearch posCover;
 
+    // predicate id in predicates set -> index of {same column, same op}
+    int[] predicateIdToGroupId;
+
     int predicateSetSize;
     public EvidenceInversion(Integer mustTruePredicate, List<BitSet> preidcatesGroupsBiteset, Set<Integer> notMatchPredicates, List<LongBitSet> evidenceBitSets, int predicatesSize){
         colPredicatesBitSet = new ArrayList<>();
         this.evidenceBitSets = evidenceBitSets;
         this.predicateSetSize = predicatesSize;
-        for(BitSet bs: preidcatesGroupsBiteset){
-            if(bs.get(mustTruePredicate)){continue;}
-            IBitSet preidcateGroup = new LongBitSet(bs);
+        for(int i = 0; i < preidcatesGroupsBiteset.size(); i++){
+            if(i == mustTruePredicate){continue;}
+            IBitSet preidcateGroup = new LongBitSet(preidcatesGroupsBiteset.get(i));
             notMatchPredicates.forEach(pid->{if(preidcateGroup.get(pid)){preidcateGroup.clear(pid);}});
             colPredicatesBitSet.add(preidcateGroup);
         }
     }
 
     public Set<IBitSet> getCovers(){
+        //TODO: 修改排序，此处的排序只会影响
         posCover = new TranslatingTreeSearch(countPredsInEvidenceSet(), colPredicatesBitSet);
         List<IBitSet> sortedNegCover = new ArrayList<>();
         for (LongBitSet bitset : evidenceBitSets) {
             sortedNegCover.add(bitset.clone());
         }
 
-        sortedNegCover = minimize(sortedNegCover);
+        // for evidence minimize
+        sortedNegCover = minimizeEvidenceSet(sortedNegCover);
 
         posCover.add(new LongBitSet());
 
@@ -55,7 +58,7 @@ public class EvidenceInversion {
         return result;
     }
 
-    private List<IBitSet> minimize(final List<IBitSet> sortedNegCover) {
+    private List<IBitSet> minimizeEvidenceSet(final List<IBitSet> sortedNegCover) {
 
         Collections.sort(sortedNegCover, new Comparator<IBitSet>() {
             @Override
@@ -80,7 +83,6 @@ public class EvidenceInversion {
         neg.getAndRemoveGeneralizations(invalid);
         neg.add(invalid);
     }
-
 
     private int[] countPredsInEvidenceSet(){
         int[] counts = new int[predicateSetSize];

@@ -2,6 +2,7 @@ package ddfinder;
 
 import bruteforce.EvidenceCount;
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.enumeration.Enumeration;
 import ddfinder.enumeration.HybridEvidenceInversion;
@@ -30,6 +31,7 @@ public class DDFinder {
         this.rowLimit = rowLimit;
         this.input = input;
         long t0 = System.currentTimeMillis();
+        // cal + file
         if(Objects.equals(predicatesPath, "")){
             this.predicateBuilder = new PredicateBuilder(input);
         }else{

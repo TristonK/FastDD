@@ -17,17 +17,23 @@ public class Predicate {
         Predicate.predicateProvider = provider;
     }
 
+    private final boolean accepted;
+
     public Predicate(Operator op, double distance, ColumnOperand<?> operand){
+        this(op, distance, operand, true);
+    }
+
+    public Predicate(Operator op, double distance, ColumnOperand<?> operand, boolean accepted){
         if (op == null) {
             throw new IllegalArgumentException("Operator must not be null.");
         }
         if (operand == null) {
             throw new IllegalArgumentException("Operand must not be null.");
         }
-
         this.operator = op;
         this.operand = operand;
         this.distance = distance;
+        this.accepted = accepted;
     }
 
     public ColumnOperand getOperand() {
@@ -108,4 +114,7 @@ public class Predicate {
         return 0;
     }
 
+    public boolean isAccepted() {
+        return accepted;
+    }
 }

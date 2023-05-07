@@ -17,10 +17,14 @@ public class PredicateProvider {
     }
 
     public Predicate getPredicate(Operator op, ColumnOperand<?> op1, Double distance) {
+        return getPredicate(op, op1, distance, true);
+    }
+
+    public Predicate getPredicate(Operator op, ColumnOperand<?> op1, Double distance, boolean accepted) {
         Map<Double, Predicate> map = predicates.computeIfAbsent(op, a -> new HashMap<>()).computeIfAbsent(op1, a -> new HashMap<>());
         Predicate p = map.get(distance);
         if (p == null) {
-            p = new Predicate(op, distance, op1);
+            p = new Predicate(op, distance, op1, accepted);
             map.put(distance, p);
         }
         return p;

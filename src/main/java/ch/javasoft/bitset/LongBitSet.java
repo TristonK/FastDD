@@ -85,6 +85,12 @@ public class LongBitSet implements IBitSet, Serializable {
             return new LongBitSet(bits);
         }
 
+        public LongBitSet createAllSet(int capacity){
+            LongBitSet longBitSet = new LongBitSet(capacity);
+            longBitSet.setUntil(capacity);
+            return longBitSet;
+        }
+
         public Class<LongBitSet> getBitSetClass() {
             return LongBitSet.class;
         }
@@ -182,6 +188,7 @@ public class LongBitSet implements IBitSet, Serializable {
 
     public void clear(int bit) {
         int unit = bit / BITS_PER_UNIT;
+        if(unit >= mUnits.length){return;}
         int index = bit % BITS_PER_UNIT;
         long mask = 1L << index;
         mUnits[unit] &= ~mask;
@@ -798,6 +805,20 @@ public class LongBitSet implements IBitSet, Serializable {
         }
         System.arraycopy(mUnits, 0, arr, offset, len);
         return arr;
+    }
+
+    /**
+     * set[1, endIndex] as true
+     * */
+    private void setUntil(int endIndex) {
+        int endUnit = endIndex / BITS_PER_UNIT;
+        ensureCapacity(endUnit + 1);
+        for(int i = 0; i < endUnit; i++){
+            mUnits[i] = 0xffffffffffffffffL;
+        }
+        for(int i = 0; i <= endIndex % BITS_PER_UNIT; i++){
+            mUnits[endUnit] |= 1L << i;
+        }
     }
 
 }

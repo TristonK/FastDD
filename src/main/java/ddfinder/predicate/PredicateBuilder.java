@@ -1,5 +1,6 @@
 package ddfinder.predicate;
 
+import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 import de.metanome.algorithms.dcfinder.input.Input;
@@ -16,13 +17,18 @@ import java.util.*;
  */
 public class PredicateBuilder {
     private List<Predicate> predicates;
+    private List<Predicate> rejectedPredicates;
+    private List<Predicate> acceptedPredicates;
     private final PredicateProvider predicateProvider;
     private final IndexProvider<Predicate> predicateIdProvider;
 
+    // 属性为long的谓词的列的序号
     private List<Integer> longPredicatesGroup;
 
     private List<Integer> doublePredicatesGroup;
     private List<Integer> strPredicatesGroup;
+
+
     private Map<Integer, Set<Integer>> interval2IntervalGroups;
     private static int intervalCnt;
 
@@ -31,6 +37,10 @@ public class PredicateBuilder {
     private Map<Integer, IntervalPredicate> intervalPredicateMap;
 
     private List<BitSet> colPredicateGroup;
+
+    private LongBitSet predicatesBitSet;
+    private LongBitSet acceptPredicatesBitSet;
+    private LongBitSet rejectPredicatesBitSet;
 
     public PredicateBuilder(Input input){
         intervalCnt = 0;
@@ -43,18 +53,22 @@ public class PredicateBuilder {
         colToPredicatesGroup = new HashMap<>();
         interval2IntervalGroups = new HashMap<>();
         intervalPredicateMap = new HashMap<>();
+        rejectedPredicates = new ArrayList<>();
+        acceptedPredicates = new ArrayList<>();
         for(ParsedColumn<?> column: input.getColumns()){
-            addPredicates(column, CalculateThresholds(column, 0, 5));
+            List<List<Double>> thresholdsAll = CalculateThresholds(column, 0, 5);
+            addPredicates(column, thresholdsAll.get(0), thresholdsAll.get(1));
         }
         predicateIdProvider.addAll(predicates);
         Predicate.configure(predicateProvider);
         PredicateSet.configure(predicateIdProvider);
+        calBitSet();
     }
 
     /**
      * @param index: file contents:
-     *             col1 thresholds1 thresholds2 thresholds3...
-     *             col2 thresholds1 ...
+     *             col1 [thresholds1,thresholds2][thresholds3...]
+     *             col2 [thresholds1...]
      * */
     public PredicateBuilder(File index, Input input) throws IOException {
         predicates = new ArrayList<>();
@@ -65,27 +79,43 @@ public class PredicateBuilder {
         doublePredicatesGroup = new ArrayList<>();
         strPredicatesGroup = new ArrayList<>();
         colToPredicatesGroup = new HashMap<>();
+        rejectedPredicates = new ArrayList<>();
+        acceptedPredicates = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new FileReader(index));
         String line;
-        Map<String, List<Double>> recordThresholds = new HashMap<>();
+        // accepted: xx <= y, rejected: xx > y
+        Map<String, List<Double>> smallerThresholds = new HashMap<>();
+        // accepted: xx > y, rejected: xx <= y
+        Map<String, List<Double>> biggerThresholds = new HashMap<>();
         while ((line = reader.readLine()) != null){
-            String[] contents = line.split(" ");
-            List<Double> thresholds = new ArrayList<>();
-            boolean hasZero = false;
-            for(int i = 1; i < contents.length; i++){
-                if(Double.parseDouble(contents[i])==0){hasZero = true;}
-                thresholds.add(Double.parseDouble(contents[i]));
+            String[] contents = line.split("\\[");
+            contents[0] = contents[0].trim();
+            if(contents.length == 2){
+                contents[1] = contents[1].trim();
+                String thresholdsString = contents[1].substring(0, contents[1].length() - 1);
+                List<Double> nThresholds = handleThresholdString(thresholdsString, true);
+                smallerThresholds.put(contents[0], nThresholds);
+                biggerThresholds.put(contents[0], nThresholds);
+            }else if(contents.length == 3){
+                contents[1] = contents[1].trim();
+                String smallerString = contents[1].substring(0, contents[1].length() - 1);
+                List<Double> sThresholds = handleThresholdString(smallerString, true);
+                smallerThresholds.put(contents[0], sThresholds);
+                contents[2] = contents[2].trim();
+                String biggerString = contents[2].substring(0, contents[2].length() -1);
+                List<Double> bThresholds = handleThresholdString(biggerString,false);
+                biggerThresholds.put(contents[0], bThresholds);
+            }else{
+                throw new IllegalArgumentException("Please using correct predicates file: 'colName [t1,t2,..][t3,t4,..]' or 'colName [t1,t2,..]'");
             }
-            if(!hasZero){thresholds.add(0.0);}
-            Collections.sort(thresholds);
-            recordThresholds.put(contents[0], thresholds);
         }
         for(ParsedColumn<?> column: input.getColumns()){
-            addPredicates(column, recordThresholds.getOrDefault(column.getColumnName(), null));
+            addPredicates(column, smallerThresholds.getOrDefault(column.getColumnName(), null), biggerThresholds.getOrDefault(column.getColumnName(), null));
         }
         predicateIdProvider.addAll(predicates);
         Predicate.configure(predicateProvider);
         PredicateSet.configure(predicateIdProvider);
+        calBitSet();
     }
 
     public List<Predicate> getPredicates() {
@@ -94,8 +124,8 @@ public class PredicateBuilder {
 
     public int size(){return predicates.size();}
 
-    private List<Double> CalculateThresholds(ParsedColumn<?> column, int mode, int threshold){
-        List<Double> thresholds = new ArrayList<>();
+    private List<List<Double>> CalculateThresholds(ParsedColumn<?> column, int mode, int threshold){
+        List<List<Double>> thresholds = new ArrayList<>();
         Double diffD = 5.0;
         if(column.isNum()){
             diffD =  column.getMaxNum() - column.getMinNum();
@@ -103,11 +133,20 @@ public class PredicateBuilder {
         if(mode == 0 || !column.isNum()){
             //TODO:修改String属性列情况
             double step = diffD/(threshold+1);
-            for(int i = 0; i < threshold; i++){
+            List<Double> sThresholds = new ArrayList<>();
+            for(int i = 0; i < (threshold+1)/2; i++){
                 String  str = String.format("%.2f",i*step);
                 double isteps = Double.parseDouble(str);
-                thresholds.add(isteps);
+                sThresholds.add(isteps);
             }
+            thresholds.add(sThresholds);
+            List<Double> bThresholds = new ArrayList<>();
+            for(int i = (threshold+1)/2; i < threshold; i++){
+                String  str = String.format("%.2f",i*step);
+                double isteps = Double.parseDouble(str);
+                bThresholds.add(isteps);
+            }
+            thresholds.add(bThresholds);
         } else if(mode == 1){
             //TODO
         } else{
@@ -121,33 +160,53 @@ public class PredicateBuilder {
      *  - simple(0): 0~maxThr with num threshold
      *  - log(1): 0 ~ log(Thershold)
      * */
-    private void addPredicates(ParsedColumn<?> column, List<Double> thresholds){
-        if(thresholds == null){
+    private void addPredicates(ParsedColumn<?> column, List<Double> smallThresholds, List<Double> bigThresholds){
+        if(smallThresholds == null){
             throw new IllegalArgumentException("Null thresholds is not supported");
         }
-        column.setThresholds(thresholds);
         List<Predicate> partialPredicates = new ArrayList<>();
         ColumnOperand<?> operand = new ColumnOperand<>(column, 0);
-        for(int i = thresholds.size() - 1; i >= 0; i--){
-            partialPredicates.add(predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, thresholds.get(i)));
+        List<Double> all = new ArrayList<>(smallThresholds);
+        if(smallThresholds.equals(bigThresholds)){
+            for(int i = smallThresholds.size() - 1; i >= 0; i--){
+                Predicate p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
+                partialPredicates.add(p);
+                acceptedPredicates.add(p);
+            }
+            for(int i = 0; i< smallThresholds.size(); i++){
+                Predicate p = predicateProvider.getPredicate(Operator.GREATER, operand, smallThresholds.get(i));
+                partialPredicates.add(p);
+                acceptedPredicates.add(p);
+            }
+        } else if(smallThresholds.get(smallThresholds.size() - 1) >= bigThresholds.get(0)){
+            throw new IllegalArgumentException("For 'colName [t1,t2,..][t3,t4,..]', all thresholds in the first should smaller than later");
+        } else{
+            for(int i = bigThresholds.size() -1; i >= 0; i--){
+                Predicate p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, bigThresholds.get(i), false);
+                partialPredicates.add(p);
+                rejectedPredicates.add(p);
+            }
+            for(int i = smallThresholds.size() - 1; i >= 0; i--){
+                Predicate p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
+                partialPredicates.add(p);
+                acceptedPredicates.add(p);
+            }
+            for(int i = 0; i< smallThresholds.size(); i++){
+                Predicate p = predicateProvider.getPredicate(Operator.GREATER, operand, smallThresholds.get(i), false);
+                partialPredicates.add(p);
+                rejectedPredicates.add(p);
+            }
+            for(int i = 0; i< bigThresholds.size(); i++){
+                Predicate p = predicateProvider.getPredicate(Operator.GREATER, operand, bigThresholds.get(i));
+                partialPredicates.add(p);
+                acceptedPredicates.add(p);
+            }
+            all.addAll(bigThresholds);
         }
-        for(int i = 0; i< thresholds.size(); i++){
-            partialPredicates.add(predicateProvider.getPredicate(Operator.GREATER, operand, thresholds.get(i)));
-        }
-
-       /* //add intervalPredicate
-        intervalPredicateMap.put(intervalCnt, new IntervalPredicate(column.getColumnName(), -1, thresholds.get(0)));
-        for(int i = 1; i < thresholds.size(); i++){
-            intervalPredicateMap.put(intervalCnt + i, new IntervalPredicate(column.getColumnName(), thresholds.get(i-1), thresholds.get(i)));
-        }
-        intervalPredicateMap.put(intervalCnt + thresholds.size(), new IntervalPredicate(column.getColumnName(), thresholds.get(thresholds.size()-1), -1));*/
-
+        column.setThresholds(all);
         predicates.addAll(partialPredicates);
         colToPredicatesGroup.put(column.getIndex(), partialPredicates);
-        /*Set<Integer> thresholdsIds = new HashSet<>();
-        for(int i = intervalCnt; i < intervalCnt + thresholds.size() + 1; i++){thresholdsIds.add(i);}
-        for(int i = intervalCnt; i < intervalCnt + thresholds.size() + 1; i++){interval2IntervalGroups.put(i, thresholdsIds);}*/
-        intervalCnt += thresholds.size() + 1;
+        intervalCnt += all.size() + 1;
         if(column.isLong()){
             longPredicatesGroup.add(column.getIndex());
         } else if(column.isDouble()){
@@ -271,5 +330,47 @@ public class PredicateBuilder {
         return colPredicateGroup;
     }
 
+    private List<Double> handleThresholdString(String s, boolean needZero){
+        s = s.trim();
+        String[] thresholdString = s.split(",");
+        List<Double> thresholds = new ArrayList<>();
+        boolean hasZero = false;
+        for(int i = 1; i < thresholdString.length; i++){
+            if(Double.parseDouble(thresholdString[i])==0){hasZero = true;}
+            thresholds.add(Double.parseDouble(thresholdString[i]));
+        }
+        if(!hasZero && needZero){thresholds.add(0.0);}
+        Collections.sort(thresholds);
+        return thresholds;
+    }
 
+    private void calBitSet(){
+        predicatesBitSet = new LongBitSet();
+        acceptPredicatesBitSet = new LongBitSet();
+        rejectPredicatesBitSet = new LongBitSet();
+        for(Predicate p: acceptedPredicates){
+           // System.out.println("accept: " + p);
+            int id = predicateIdProvider.getIndex(p);
+            predicatesBitSet.set(id);
+            acceptPredicatesBitSet.set(id);
+        }
+        for(Predicate p: rejectedPredicates){
+           // System.out.println("reject: " + p);
+            int id = predicateIdProvider.getIndex(p);
+            predicatesBitSet.set(id);
+            rejectPredicatesBitSet.set(id);
+        }
+    }
+
+    public LongBitSet getAcceptPredicatesBitSet() {
+        return acceptPredicatesBitSet;
+    }
+
+    public LongBitSet getRejectPredicatesBitSet() {
+        return rejectPredicatesBitSet;
+    }
+
+    public LongBitSet getPredicatesBitSet() {
+        return predicatesBitSet;
+    }
 }

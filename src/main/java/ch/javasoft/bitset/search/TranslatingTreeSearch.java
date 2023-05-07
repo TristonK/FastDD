@@ -125,4 +125,16 @@ public class TranslatingTreeSearch implements ITreeSearch {
             }
         }
     }
+
+    public NTreeSearch getSearch() {
+        return search;
+    }
+
+    public BitSetTranslator getTranslator() {
+        return translator;
+    }
+
+    public Collection<IBitSet> getBitsetListTransformed() {
+        return bitsetListTransformed;
+    }
 }
