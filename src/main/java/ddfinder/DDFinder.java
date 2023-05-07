@@ -12,9 +12,14 @@ import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
 import ddfinder.predicate.PredicateBuilder;
 import de.metanome.algorithms.dcfinder.input.Input;
+import thresholds.Determination;
+import thresholds.ExtremaStrategy;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -32,6 +37,33 @@ public class DDFinder {
         this.input = input;
         long t0 = System.currentTimeMillis();
         // cal + file
+        //Determination
+        //ExtremaStrategy s = new ExtremaStrategy();
+        //Determination d = new Determination(Math.min(input.getRowCount()/5,200), 6, 2, this.input.getColCount(), s);
+        //d.sampleAndCalculate(this.input);
+        //List<List<List<Double>>> theresholds = d.determine(); //接收阈值
+
+//        String fileName = input.getName();
+//        try {
+//            File file = new File("thresholdsOut/" + fileName + ".txt");
+//            if (!file.getParentFile().exists()) {
+//                file.getParentFile().mkdirs();
+//            }
+//            if (!file.exists()) {
+//                file.createNewFile();
+//            }
+//            System.out.println("[thresholdsNum]: " + maxThresholdsSize);
+//            System.out.println("[thresholds Output] Save thresholds to " + fileName);
+//            BufferedWriter out = new BufferedWriter(new FileWriter(file));
+//            out.write(input.getParsedColumns()+"\n"); //打印属性名
+//            for (List<List<Double>> thresholds : theresholds) {
+//                out.write(thresholds.toString() + "\n");
+//            }
+//            out.close();
+//            System.out.println("文件创建成功！");
+//            System.out.println("[Thresholds] determine thresholds cost: " + (System.currentTimeMillis() - t0) + " ms");
+//        } catch (IOException e) {
+//            System.out.println(e.toString());
         if(Objects.equals(predicatesPath, "")){
             this.predicateBuilder = new PredicateBuilder(input);
         }else{

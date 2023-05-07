@@ -166,6 +166,10 @@ public class Input {
         return rowCount;
     }
 
+    public int getColCount() {//新增
+        return colCount;
+    }
+
     public int[][] getIntInput() {
         return intInput;
     }
