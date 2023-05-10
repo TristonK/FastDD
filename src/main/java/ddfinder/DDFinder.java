@@ -1,11 +1,13 @@
 package ddfinder;
 
 import bruteforce.EvidenceCount;
+import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.enumeration.Enumeration;
 import ddfinder.enumeration.HybridEvidenceInversion;
+import ddfinder.evidence.Evidence;
 import ddfinder.evidence.EvidenceSet;
 import ddfinder.evidence.EvidenceSetBuilder;
 import ddfinder.pli.PliShard;
@@ -98,6 +100,28 @@ public class DDFinder {
         DifferentialDependencySet dds = ddfinder.buildDifferentialDenpendency();
         System.out.println("[Enumeration] cost: " + (System.currentTimeMillis() - enmurationTime));
         System.out.println("[Enumeration] # dds: " + dds.size());
+        /*for(DifferentialDependency dd: dds){
+            boolean flag = false;
+            //LongBitSet tesss = new LongBitSet("000000000010001");
+            for(Evidence evidences: evidenceSet){
+               if(tesss.isSubSetOf(evidences.getBitset())){
+                    LongBitSet lbs = evidences.getBitset();
+                    for(int kk = lbs.nextSetBit(0);kk >= 0; kk = lbs.nextSetBit(kk+1)){
+                        System.out.printf(" %s ", predicateBuilder.getPredicateIdProvider().getObject(kk).toString());
+                    }
+                    //System.out.println(evidences.toString());
+                }
+                if(dd.getLeftPredicateSet().isSubSetOf(evidences.getBitset())){
+                    if(dd.getPredicateSet().isSubSetOf(evidences.getBitset())){
+                        flag = true; break;
+                    }else{
+                        System.out.println("eeeeeeeeeeeeerrrr");
+                    }
+                }
+            }
+            if(flag) System.out.println(dd.toString());
+            //else System.out.println("no one support -- " + dd.toString());
+        }*/
         return dds;
     }
 }

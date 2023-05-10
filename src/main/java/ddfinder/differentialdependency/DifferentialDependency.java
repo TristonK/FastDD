@@ -17,14 +17,16 @@ public class DifferentialDependency {
     private Predicate right;
 
     private IBitSet predicateSet;
+    private IBitSet leftPredicateSet;
 
-    public DifferentialDependency(List<Predicate> left, Predicate right){
+    public DifferentialDependency(List<Predicate> left, Predicate right, IBitSet predicateSet, IBitSet leftPredicates){
         if(left == null || right == null){
             throw new IllegalArgumentException("DifferentialFunction should not be null.");
         }
         this.left = left;
         this.right = right;
-        predicateSet = null;
+        this.predicateSet = predicateSet;
+        this.leftPredicateSet = leftPredicates;
     }
 
     public static final String AND = " ∧ ";
@@ -70,5 +72,13 @@ public class DifferentialDependency {
         } else {
            return left.equals(other.left) && right.equals(other.right);
         }
+    }
+
+    public IBitSet getPredicateSet() {
+        return predicateSet;
+    }
+
+    public IBitSet getLeftPredicateSet() {
+        return leftPredicateSet;
     }
 }
