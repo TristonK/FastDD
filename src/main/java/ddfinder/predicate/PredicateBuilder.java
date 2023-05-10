@@ -42,6 +42,8 @@ public class PredicateBuilder {
     private LongBitSet acceptPredicatesBitSet;
     private LongBitSet rejectPredicatesBitSet;
 
+    private final boolean isRfdTest = true;
+
     public PredicateBuilder(Input input){
         intervalCnt = 0;
         predicates = new ArrayList<>();
@@ -168,15 +170,30 @@ public class PredicateBuilder {
         ColumnOperand<?> operand = new ColumnOperand<>(column, 0);
         List<Double> all = new ArrayList<>(smallThresholds);
         if(smallThresholds.equals(bigThresholds)){
-            for(int i = smallThresholds.size() - 1; i >= 0; i--){
-                Predicate p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
-                partialPredicates.add(p);
-                acceptedPredicates.add(p);
-            }
-            for(int i = 0; i< smallThresholds.size(); i++){
-                Predicate p = predicateProvider.getPredicate(Operator.GREATER, operand, smallThresholds.get(i));
-                partialPredicates.add(p);
-                acceptedPredicates.add(p);
+            if(!isRfdTest){
+                for(int i = smallThresholds.size() - 1; i >= 0; i--){
+                    Predicate p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
+                    partialPredicates.add(p);
+                    acceptedPredicates.add(p);
+                    rejectedPredicates.add(p);
+                }
+                for(int i = 0; i< smallThresholds.size(); i++){
+                    Predicate p = predicateProvider.getPredicate(Operator.GREATER, operand, smallThresholds.get(i));
+                    partialPredicates.add(p);
+                    acceptedPredicates.add(p);
+                    rejectedPredicates.add(p);
+                }
+            }else{
+                for(int i = smallThresholds.size() - 1; i >= 0; i--){
+                    Predicate p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
+                    partialPredicates.add(p);
+                    acceptedPredicates.add(p);
+                }
+                for(int i = 0; i< smallThresholds.size(); i++){
+                    Predicate p = predicateProvider.getPredicate(Operator.GREATER, operand, smallThresholds.get(i),false);
+                    partialPredicates.add(p);
+                    rejectedPredicates.add(p);
+                }
             }
         } else if(smallThresholds.get(smallThresholds.size() - 1) >= bigThresholds.get(0)){
             throw new IllegalArgumentException("For 'colName [t1,t2,..][t3,t4,..]', all thresholds in the first should smaller than later");
@@ -335,12 +352,13 @@ public class PredicateBuilder {
         String[] thresholdString = s.split(",");
         List<Double> thresholds = new ArrayList<>();
         boolean hasZero = false;
-        for(int i = 1; i < thresholdString.length; i++){
+        for(int i = 0; i < thresholdString.length; i++){
             if(Double.parseDouble(thresholdString[i])==0){hasZero = true;}
             thresholds.add(Double.parseDouble(thresholdString[i]));
         }
         if(!hasZero && needZero){thresholds.add(0.0);}
         Collections.sort(thresholds);
+        //System.out.println(thresholds);
         return thresholds;
     }
 
@@ -349,7 +367,7 @@ public class PredicateBuilder {
         acceptPredicatesBitSet = new LongBitSet();
         rejectPredicatesBitSet = new LongBitSet();
         for(Predicate p: acceptedPredicates){
-           // System.out.println("accept: " + p);
+          //  System.out.println("accept: " + p);
             int id = predicateIdProvider.getIndex(p);
             predicatesBitSet.set(id);
             acceptPredicatesBitSet.set(id);

@@ -58,4 +58,9 @@ public class Evidence {
     public LongBitSet getBitset(){
         return bitset;
     }
+
+    @Override
+    public String toString() {
+        return bitset.toString();
+    }
 }

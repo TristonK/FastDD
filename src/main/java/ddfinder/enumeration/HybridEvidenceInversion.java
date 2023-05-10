@@ -42,7 +42,10 @@ public class HybridEvidenceInversion implements Enumeration{
         this.pred2PredGroupMap = new HashMap<>();
         this.covers = new HashSet<>();
         this.evidenceSet = evidenceSet;
-        this.colToPredicatesGroup = predicateBuilder.getColPredicateGroup();
+        this.colToPredicatesGroup = new ArrayList<>();
+        for(BitSet bs: predicateBuilder.getColPredicateGroup()){
+            colToPredicatesGroup.add((BitSet) bs.clone());
+        }
         predicateIndexProvider = predicateBuilder.getPredicateIdProvider();
         LongBitSet acceptPredicatesBitSet = predicateBuilder.getAcceptPredicatesBitSet();
         this.acceptedPredicates = new ArrayList<>();
@@ -59,6 +62,7 @@ public class HybridEvidenceInversion implements Enumeration{
                 pred2PredGroupMap.put(pid, pids);
             }
         }
+        //System.out.println(pivotPredicates.toString());
         for(BitSet bs: colToPredicatesGroup){
             bs.andNot(pivotPredicates.toBitSet());
         }
@@ -261,8 +265,17 @@ public class HybridEvidenceInversion implements Enumeration{
         return minimizeCovers;
     }*/
 
-    int intervalSize; int[] predicateId2NodeId; int[] col2Interval;
-    int[] col2PredicateId; int colSize; int[] intervalLength;
+    //所有的interval个数
+    int intervalSize;
+    // predicate的id对应到node的id，先所有属性的的小于等于，再所有属性的大于
+    int[] predicateId2NodeId;
+    // 列对应的interval起始点，也就是从这一位开始设置
+    int[] col2Interval;
+    // 列对应的第一个谓词的id
+    int[] col2PredicateId;
+    int colSize;
+    // 列i对应的interval个数
+    int[] intervalLength;
     private void constructMinimizeTree(PredicateBuilder predicateBuilder){
         colSize = predicateBuilder.getColSize();
         intervalSize = 0;
@@ -273,6 +286,7 @@ public class HybridEvidenceInversion implements Enumeration{
         List<BitSet>  colPredicateGroup = predicateBuilder.getColPredicateGroup();
         for(int i = 0; i < colSize; i++){
             BitSet bs = colPredicateGroup.get(i);
+            //System.out.println(bs.toString());
             col2Interval[i] = intervalSize;
             intervalLength[i] = bs.cardinality()/2;
             intervalSize += intervalLength[i];
@@ -281,7 +295,7 @@ public class HybridEvidenceInversion implements Enumeration{
                 if(cnt == 0){
                     col2PredicateId[i] = j;
                 }
-                if(cnt < intervalLength[i]/2){
+                if(cnt < intervalLength[i]){
                     predicateId2NodeId[j] = i;
                 }else{
                     predicateId2NodeId[j] = i + colSize;

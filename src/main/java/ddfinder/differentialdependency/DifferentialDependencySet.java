@@ -25,6 +25,8 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
     public DifferentialDependencySet(Set<IBitSet> covers, IndexProvider<Predicate> indexProvider){
         dependencies = new HashSet<>();
         for(IBitSet cover: covers){
+            IBitSet newCover = cover.clone();
+            IBitSet lCover =cover.clone();
             if(cover.cardinality() < 2){
                 System.out.println("bad cover");
                 assert false;
@@ -35,15 +37,22 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
                 Predicate p = indexProvider.getObject(i);
                 if(right == null && !p.isAccepted()){
                     right = p.getInversePredicate();
+                    newCover.clear(i);
+                    lCover.clear(i);
+                    newCover.set(indexProvider.getIndex(right));
                 }else {
                     left.add(p);
                 }
             }
             if(right == null){
-                right = left.get(left.size() -1).getInversePredicate();
+                Predicate chooseRight = left.get(left.size() - 1);
+                right = chooseRight.getInversePredicate();
                 left.remove(left.size() - 1);
+                lCover.clear(indexProvider.getIndex(chooseRight));
+                newCover.clear(indexProvider.getIndex(chooseRight));
+                newCover.set(indexProvider.getIndex(right));
             }
-            dependencies.add(new DifferentialDependency(left, right));
+            dependencies.add(new DifferentialDependency(left, right, newCover, lCover));
         }
     }
 

@@ -20,26 +20,33 @@ public class MinimizeTree {
         this.bitsets = new ArrayList<>();
     }
 
-    public boolean canAdd(IBitSet candidateTransformed, List<Integer> nodes, int index){
+    public IBitSet canAdd(IBitSet candidateTransformed, List<Integer> nodes, int index){
         if(bitsets.size() > 0){
             for(IBitSet bs : bitsets){
                 if(candidateTransformed.isSubSetOf(bs)){
-                    return false;
+                    return bs;
+                    //return false;
                 }
             }
         }
-        if(index >= nodes.size()){return true;}
+        if(index >= nodes.size()){
+            return null;
+            //return true;
+        }
         int nextNode = nodes.get(index);
         if(subtrees.containsKey(nextNode)){
-            boolean flag = subtrees.get(nextNode).canAdd(candidateTransformed, nodes, index + 1);
-            if(!flag){return  false;}
+            IBitSet flag = subtrees.get(nextNode).canAdd(candidateTransformed, nodes, index + 1);
+            if(flag != null){return flag;}
+            //if(!flag){return  false;}
         }
         return canAdd(candidateTransformed, nodes, index + 1);
     }
 
-    public boolean addTree(IBitSet candidateTransformed, List<Integer> nodes){
-        if(!canAdd(candidateTransformed, nodes, 0)){
-            return false;
+    public IBitSet addTree(IBitSet candidateTransformed, List<Integer> nodes){
+        IBitSet canRemovedBy = canAdd(candidateTransformed, nodes, 0);
+        if(canRemovedBy != null){
+            return canRemovedBy;
+            //return false;
         }
         MinimizeTree currNode = this;
         for(int i = 0; i < nodes.size(); i++){
@@ -50,6 +57,6 @@ public class MinimizeTree {
             currNode = currNode.subtrees.get(currNodeId);
         }
         currNode.bitsets.add(candidateTransformed);
-        return true;
+        return null;
     }
 }
