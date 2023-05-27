@@ -40,6 +40,24 @@ public class ClueContextSetBuilder extends ClueSetBuilder{
         return ret;
     }
 
+    public HashMap<LongBitSet, Long> linearBuildClueSet() {
+        HashMap<LongBitSet, Long> ret = new HashMap<>();
+//        for(int i = 0; i < tidRange; i++){
+//            //System.out.println("check "+ i);
+//            caclulateTid(i).forEach(clueContext -> ret.merge(clueContext.getClue(), clueContext.getRightSide().getLongCardinality(), Long::sum));
+//        }
+        return ret;
+    }
+
+    public HashMap<LongBitSet, Long> binaryBuildClueSet() {
+        HashMap<LongBitSet, Long> ret = new HashMap<>();
+//        for(int i = 0; i < tidRange; i++){
+//            //System.out.println("check "+ i);
+//            caclulateTid(i).forEach(clueContext -> ret.merge(clueContext.getClue(), clueContext.getRightSide().getLongCardinality(), Long::sum));
+//        }
+        return ret;
+    }
+
     private Set<clueContext> caclulateTid(int tid){
         Set<clueContext> clueContextSet = new HashSet<>();
         clueContextSet.add(new clueContext(tid, tidRange, allSameClue));
