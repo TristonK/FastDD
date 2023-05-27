@@ -7,9 +7,7 @@ import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.enumeration.Enumeration;
 import ddfinder.enumeration.HybridEvidenceInversion;
-import ddfinder.evidence.Evidence;
-import ddfinder.evidence.EvidenceSet;
-import ddfinder.evidence.EvidenceSetBuilder;
+import ddfinder.evidence.*;
 import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
 import ddfinder.predicate.PredicateBuilder;
@@ -76,7 +74,7 @@ public class DDFinder {
         System.out.println("Predicates Size: " + predicateBuilder.size());
     }
 
-    public DifferentialDependencySet buildDDs(){
+    public DifferentialDependencySet buildDDs(){ //DifferentialDependencySet
         //long bfTime = System.currentTimeMillis();
         //Set<LongBitSet> bf = new EvidenceCount().calculate(input);
         //System.out.println("[Brute Force] cost: " + (System.currentTimeMillis()-bfTime) + " ms");
@@ -88,13 +86,17 @@ public class DDFinder {
         long buildPliTime = System.currentTimeMillis() - t0;
         System.out.println("[PLIs] build PLIs cost: " + buildPliTime + "ms");
         t0 = System.currentTimeMillis();
-        EvidenceSetBuilder evidenceSetBuilder = new EvidenceSetBuilder(predicateBuilder);
+
+        //EvidenceSetBuild evidenceSetBuilder = new BrutalEvidenceSetBuilder(predicateBuilder);
+        EvidenceSetBuild evidenceSetBuilder = new LinearEvidenceSetBuilder(predicateBuilder);
+        //EvidenceSetBuild evidenceSetBuilder = new BinaryEvidenceSetBuilder(predicateBuilder);
+
         //Set<LongBitSet> clues = evidenceSetBuilder.buildEvidenceSet(pliShards);
         //evidenceSetBuilder.buildFullClueSet(pliShards);
         evidenceSetBuilder.buildEvidenceSet(pliShards);
         EvidenceSet evidenceSet = evidenceSetBuilder.getEvidenceSet();
         System.out.println("[EvidenceSet] build clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
-        //Enumeration ddfiner = new SingleThresholdDD(clues, predicateBuilder);
+//        Enumeration ddfiner = new SingleThresholdDD(clues, predicateBuilder);
         long enmurationTime = System.currentTimeMillis();
         Enumeration ddfinder = new HybridEvidenceInversion(evidenceSet, predicateBuilder);
         DifferentialDependencySet dds = ddfinder.buildDifferentialDenpendency();
