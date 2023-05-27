@@ -30,6 +30,30 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
     }
 
     public HashMap<LongBitSet, Long> buildClueSet() {
+
+        //TODO；改造成暴力
+
+        LongBitSet[] forwardClues = new LongBitSet[evidenceCount];   // plis1 -> plis2
+        for(int i = 0; i < evidenceCount; i++){
+            forwardClues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
+        }
+        for(PredicatePack strPack: strPacks){
+            correctStr(forwardClues, plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.pos, strPack.thresholds);
+        }
+        for (PredicatePack intPack: intPacks){
+            //linerCorrectNum(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+            correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+        }
+        for (PredicatePack numPack: doublePacks){
+            //linerCorrectNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
+            correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
+        }
+
+
+        return accumulateClues(forwardClues);
+    }
+
+    public HashMap<LongBitSet, Long> linearBuildClueSet() {
         LongBitSet[] forwardClues = new LongBitSet[evidenceCount];   // plis1 -> plis2
         for(int i = 0; i < evidenceCount; i++){
             forwardClues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
@@ -44,6 +68,27 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         for (PredicatePack numPack: doublePacks){
             linerCorrectNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
             //correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
+        }
+
+
+        return accumulateClues(forwardClues);
+    }
+
+    public HashMap<LongBitSet, Long> binaryBuildClueSet() {
+        LongBitSet[] forwardClues = new LongBitSet[evidenceCount];   // plis1 -> plis2
+        for(int i = 0; i < evidenceCount; i++){
+            forwardClues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
+        }
+        for(PredicatePack strPack: strPacks){
+            correctStr(forwardClues, plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.pos, strPack.thresholds);
+        }
+        for (PredicatePack intPack: intPacks){
+            //linerCorrectNum(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+            correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+        }
+        for (PredicatePack numPack: doublePacks){
+            //linerCorrectNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
+            correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
         }
 
 
