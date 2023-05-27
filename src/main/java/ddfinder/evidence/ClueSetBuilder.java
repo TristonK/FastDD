@@ -12,7 +12,12 @@ import java.util.concurrent.ConcurrentHashMap;
 
 abstract public class ClueSetBuilder {
 
+//    ClueSetBuildStrategy strategy;//策略模式实现buildClueSet
+//
     abstract public HashMap<LongBitSet, Long> buildClueSet();
+    abstract public HashMap<LongBitSet, Long> linearBuildClueSet();
+    abstract public HashMap<LongBitSet, Long> binaryBuildClueSet();
+
     private final double ERR = 0.000000001;
 
     HashMap<LongBitSet, Long> accumulateClues(LongBitSet[]... clueArrays) {
@@ -183,6 +188,7 @@ abstract public class ClueSetBuilder {
         }
         return posTothreshold;
     }
+
 
 
 }

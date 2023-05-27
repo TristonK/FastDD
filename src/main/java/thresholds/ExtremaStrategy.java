@@ -10,13 +10,13 @@ import java.util.*;
 public class ExtremaStrategy implements ThresholdsStrategy {
 
     /**
-     * @param diff2Freq 存储了diff-freq的hashmap
-     * @param orderedKeyList 存储了升序排列的diff值
-     * @param thresholdsNum 返回的阈值数量，可能由于去重而不足
-     * @param minThresholdsSize  最小的阈值返回数量
-     * @param freqBoundary  频度阈值，用于划分左右区间
-     * @param indexBoundary  左阈值边界下标，避免右侧阈值频度很大却被划分到resLeft的情况
-     * @return 返回List<List<Double>>类型，包括左区间阈值和右区间阈值
+     * @param diff2Freq         存储了diff-freq的hashmap
+     * @param orderedKeyList    存储了升序排列的diff值
+     * @param thresholdsNum     返回的阈值数量，可能由于去重而不足
+     * @param minThresholdsSize 最小的阈值返回数量
+     * @param freqBoundary      频度阈值，用于划分左右区间
+     * @param indexBoundary     左阈值边界下标，避免右侧阈值频度很大却被划分到resLeft的情况
+     * @return 返回List<List < Double>>类型，包括左区间阈值和右区间阈值
      */
     @Override
     public List<List<Double>> calculateThresholds(HashMap<Double, Integer> diff2Freq, List<Double> orderedKeyList, int thresholdsNum, int minThresholdsSize, double freqBoundary, double indexBoundary) {
@@ -32,17 +32,25 @@ public class ExtremaStrategy implements ThresholdsStrategy {
         int partitionRightIndex = 0;//用于划分右阈值选取空间
         long totalFreqSum = 0;//freq累计和
 
+        //左侧阈值一定包含0
+
         //阈值数量为1时，返回两个同样的阈值
         if (diff2Freq.size() <= 1) {
-            resLeft.add(orderedKeyList.get(0));
+            resLeft.add(0.0);
+            if (ERR < orderedKeyList.get(0)) {//左端点阈值为不0，加入res中
+                resLeft.add(orderedKeyList.get(0));
+            }
             List<List<Double>> sameRes = new ArrayList<>();
             sameRes.add(resLeft);
             sameRes.add(resLeft);
             return sameRes;
         }
 
-        //阈值数量小于minThresholdsSize,返回全部阈值，左右各一半
-        if (diff2Freq.size() <= minThresholdsSize) {
+        //阈值数量小于thresholdsNum,返回全部阈值，左右各一半
+        if (diff2Freq.size() < thresholdsNum) {
+            if (ERR < orderedKeyList.get(0)) {//左端点阈值为不0，将0阈值加入resleft中
+                resLeft.add(0.0);
+            }
             for (int i = 0; i < diff2Freq.size() / 2; i++) {
                 resLeft.add(orderedKeyList.get(i));
             }
@@ -85,13 +93,17 @@ public class ExtremaStrategy implements ThresholdsStrategy {
         //评估函数计算
         //TODO:使用大顶堆优化评估函数计算的时间复杂度
 
-        if (ERR > orderedKeyList.get(0)) {//左端点阈值为0，直接加入res中
-            resLeft.add(orderedKeyList.get(0));
-            count++;
-        }
+        //优先在resleft中加入0阈值
+        resLeft.add(0.0);
+        count++;
+
+//        if (ERR > orderedKeyList.get(0)) {//左端点阈值为0，直接加入res中
+//            resLeft.add(orderedKeyList.get(0));
+//            count++;
+//        }
 
         //[1,partitionLeftIndex]
-        while (count < Math.ceil(thresholdsNum / 2.0)) {//
+        while (count < Math.ceil((thresholdsNum + 1) / 2.0)) {//
             for (int i = tmpIndex + 1; i < partitionLeftIndex + 1; i++) {
                 double intervalLength = orderedKeyList.get(i) - orderedKeyList.get(tmpIndex);
                 long freqSum = 0;

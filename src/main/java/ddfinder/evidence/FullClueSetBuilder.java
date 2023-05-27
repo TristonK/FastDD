@@ -65,6 +65,21 @@ public class FullClueSetBuilder extends ClueSetBuilder {
         return clueSet;
     }
 
+    public HashMap<LongBitSet, Long> linearBuildClueSet(){
+        //TODO:实现线性
+        HashMap<LongBitSet, Long> clueSet = new HashMap<>();
+        return clueSet;
+    }
+
+    public HashMap<LongBitSet, Long> binaryBuildClueSet(){
+        //TODO:实现二分
+        HashMap<LongBitSet, Long> clueSet = new HashMap<>();
+        return clueSet;
+    }
+
+
+
+
     /**
      * @return (cluster1, cluster2) -> threshold(from 0 to thresholds.size())
      * */
