@@ -20,52 +20,20 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     private final int evidenceCount;
 
     private final double ERR = 0.000000001;
+    private long[] forwardClues;
+    private long[] bases;
+    private IClueOffset calUtils;
 
-    public SingleClueSetBuilder(PliShard shard) {
+    public SingleClueSetBuilder(PliShard shard, IClueOffset calUtils) {
         plis = shard.plis;
         tidBeg = shard.beg;
         tidRange = shard.end - shard.beg;
         evidenceCount = tidRange * (tidRange - 1) / 2;
+        this.calUtils = calUtils;
     }
 
 
     public HashMap<LongBitSet, Long> buildClueSet() {
-
-
-        LongBitSet[] clues = new LongBitSet[evidenceCount];
-//        for(int i = 0; i < evidenceCount; i++){
-//            clues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
-//        }
-//        for(PredicatePack intPack: intPacks){
-//            //linerCorrectNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
-//            correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
-//        }
-//        for(PredicatePack doublePack: doublePacks){
-//            //linerCorrectNum(clues,  plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
-//            correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
-//        }
-//        for(PredicatePack strPack : strPacks){
-//            correctStr(clues, plis.get(strPack.colIndex), strPack.pos, strPack.thresholds);
-//        }
-
-        for (int i = 0; i < evidenceCount; i++) {
-            clues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
-        }
-        for (PredicatePack intPack : intPacks) {
-            //linerCorrectNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
-            correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
-        }
-        for (PredicatePack doublePack : doublePacks) {
-            //linerCorrectNum(clues,  plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
-            correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
-        }
-        for (PredicatePack strPack : strPacks) {
-            correctStr(clues, plis.get(strPack.colIndex), strPack.pos, strPack.thresholds);
-        }
-        return accumulateClues(clues);
-    }
-
-    public HashMap<LongBitSet, Long> linearBuildClueSet() {
         LongBitSet[] clues = new LongBitSet[evidenceCount];
         for (int i = 0; i < evidenceCount; i++) {
             clues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
@@ -75,7 +43,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
             //correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
         }
         for (PredicatePack doublePack : doublePacks) {
-            linerCorrectNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
+            linerCorrectNum(clues,  plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
             //correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
         }
         for (PredicatePack strPack : strPacks) {
@@ -84,24 +52,6 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         return accumulateClues(clues);
     }
 
-    public HashMap<LongBitSet, Long> binaryBuildClueSet() {
-        LongBitSet[] clues = new LongBitSet[evidenceCount];//确定clue的个数
-        for (int i = 0; i < evidenceCount; i++) {
-            clues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
-        }
-        for (PredicatePack intPack : intPacks) {
-            //linerCorrectNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
-            correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
-        }
-        for (PredicatePack doublePack : doublePacks) {
-            //linerCorrectNum(clues,  plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
-            correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
-        }
-        for (PredicatePack strPack : strPacks) {
-            correctStr(clues, plis.get(strPack.colIndex), strPack.pos, strPack.thresholds);
-        }
-        return accumulateClues(clues);
-    }
 
     private void setNumMask(LongBitSet[] clues, Cluster cluster1, Cluster cluster2, int pos) {
         List<Integer> rawCluster1 = cluster1.getRawCluster();
@@ -117,6 +67,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
                     tid2 = temp;
                 }
                 int t1 = tid1 - tidBeg;
+
                 clues[(tid2 - tid1 - 1) + t1 * (2 * tidRange - t1 - 1) / 2].set(pos);
             }
         }
@@ -182,7 +133,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
             setSelfNumMask(clues, pli.get(i), pos);
             int start = i + 1;
             if (pli.getClass() == DoublePli.class) {
-                Double key = (Double) pli.getKeys()[i];
+                Double key = (Double) pli.getKeys()[i];//获取pli的第i个key值
                 for (int index = 1; index < thresholds.size() && start < pli.size(); index++) {
                     int end = pli.getFirstIndexWhereKeyIsLT(key - thresholds.get(index), start, 1);
                     for (int correct = start; correct < end && correct < pli.size(); correct++) {
@@ -212,9 +163,9 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         for (int i = 0; i < pli.size(); i++) {
             int[] offsets;
             if (pli.getClass() == DoublePli.class) {
-                offsets = linerCountDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
+                offsets = calUtils.linerCountDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
             } else {
-                offsets = linerCountInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
+                offsets = calUtils.linerCountInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
             }
             setSelfNumMask(clues, pli.get(i), pos);
             for (int j = i + 1; j < pli.size(); j++) {
@@ -223,58 +174,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         }
     }
 
-    //TODO: 改造bruteforce适应plishard形式
-//    private void brutalCount(LongBitSet[] clues, IPli pli, int pos, List<Double> thresholds) {
-//        Object[] keys = pli.getKeys();
-//        if (keys instanceof Integer[]) {
-//            Integer[] key = (Integer[]) keys;
-//            for (int i = 0; i < pli.size() - 1; i++) {//遍历某个属性的plishard的key值，用来做差
-//                for (int j = i + 1; j < pli.size(); j++) {
-//                    double diff = Math.abs(key[i] - key[j]);
-//                    clue.set(findMaskPos(diff, thresholds) + pos);
-//                }
-//            }
-//        }
-//        else if (keys instanceof Double[]) {
-//            Double[] key = (Double[]) keys;
-//            for (int i = 0; i < pli.size() - 1; i++) {//遍历某个属性的plishard的key值，用来做差
-//                for (int j = i + 1; j < pli.size(); j++) {
-//                    double diff = Math.abs(key[i] - key[j]);
-//                    clue.set(findMaskPos(diff, thresholds) + pos);
-//                }
-//            }
-//        }
-//        else{
-//            String[] key = (String[]) keys;
-//            for (int i = 0; i < pli.size() - 1; i++) {//遍历某个属性的plishard的key值，用来做差
-//                for (int j = i + 1; j < pli.size(); j++) {
-//                    double diff = StringCalculation.getDistance(key[i], key[j]);
-//                    clue.set(findMaskPos(diff, thresholds) + pos);
-//                }
-//            }
-//        }
-//
-//
-//
-//    }
 
-    private int findMaskPos(double diff, List<Double> th) {//找到元组差值在阈值列表中的位置
-        int c = 0;
-        if (diff < th.get(0) + ERR) {
-            c = 0;
-        } else if (diff > th.get(th.size() - 1) + ERR) {
-            c = th.size();
-        } else {
-            while (c < th.size() - 1) {
-                if (diff > th.get(c) + ERR && diff < th.get(c + 1) + ERR) {
-                    c++;
-                    break;
-                }
-                c++;
-            }
-        }
-        return c;
-    }
 
 
 }

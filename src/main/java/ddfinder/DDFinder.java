@@ -1,9 +1,5 @@
 package ddfinder;
 
-import bruteforce.EvidenceCount;
-import ch.javasoft.bitset.IBitSet;
-import ch.javasoft.bitset.LongBitSet;
-import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.enumeration.Enumeration;
 import ddfinder.enumeration.HybridEvidenceInversion;
@@ -12,16 +8,10 @@ import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
 import ddfinder.predicate.PredicateBuilder;
 import de.metanome.algorithms.dcfinder.input.Input;
-import thresholds.Determination;
-import thresholds.ExtremaStrategy;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * @author tristonk
@@ -87,9 +77,7 @@ public class DDFinder {
         System.out.println("[PLIs] build PLIs cost: " + buildPliTime + "ms");
         t0 = System.currentTimeMillis();
 
-        //EvidenceSetBuild evidenceSetBuilder = new BrutalEvidenceSetBuilder(predicateBuilder);
-        EvidenceSetBuild evidenceSetBuilder = new LinearEvidenceSetBuilder(predicateBuilder);
-        //EvidenceSetBuild evidenceSetBuilder = new BinaryEvidenceSetBuilder(predicateBuilder);
+        EvidenceSetBuilder evidenceSetBuilder = new EvidenceSetBuilder(predicateBuilder);
 
         //Set<LongBitSet> clues = evidenceSetBuilder.buildEvidenceSet(pliShards);
         //evidenceSetBuilder.buildFullClueSet(pliShards);
