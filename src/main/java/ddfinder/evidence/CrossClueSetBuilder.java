@@ -102,6 +102,7 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         final Double[] probeKeys = (Double[]) probePli.getKeys();
 
         for(int i = 0; i < pivotKeys.length; i++){
+            //下面用接口方法实现
             int start = 0;
             for(int index = thresholds.size()-1; index >= 0 && start < probeKeys.length; index--){
                 int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]+thresholds.get(index), start, 0);
@@ -175,9 +176,13 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         for(int i = 0; i < pivotPli.size(); i++){
             int[] offsets;
             if(pivotPli.getClass() == DoublePli.class){
-                offsets = calUtils.linerCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
+                offsets = calUtils.brutalCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
+//                offsets = calUtils.linerCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
+//                offsets = calUtils.binaryCountCrossDouble(probePli, 0, (Double) pivotPli.getKeys()[i], thresholds);
             }else{
-                offsets = calUtils.linerCountInt((Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
+                offsets = calUtils.brutalCountInt((Integer[]) probePli.getKeys(), 0 , (Integer) pivotPli.getKeys()[i], thresholds);
+//                offsets = calUtils.linerCountInt((Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
+//                offsets = calUtils.binaryCountCrossInt(probePli, 0, (Integer) pivotPli.getKeys()[i], thresholds);
             }
             for(int j = 0; j < probePli.size(); j++){
                 setNumMask(forwardArray, pivotPli, i, probePli, j, pos + offsets[j]);
