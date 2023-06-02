@@ -163,11 +163,11 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         for (int i = 0; i < pli.size(); i++) {
             int[] offsets;
             if (pli.getClass() == DoublePli.class) {
-                offsets = calUtils.brutalCountDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
+                offsets = calUtils.countDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
 //                offsets = calUtils.linerCountDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
 //                offsets = calUtils.binaryCountSingleDouble(pli, i, (Double) pli.getKeys()[i], thresholds);
             } else {
-                offsets = calUtils.brutalCountInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
+                offsets = calUtils.countInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
 //                offsets = calUtils.linerCountInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
 //                offsets = calUtils.binaryCountSingleInt(pli, i, (Integer) pli.getKeys()[i], thresholds);
             }
