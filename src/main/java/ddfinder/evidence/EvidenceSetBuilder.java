@@ -1,6 +1,7 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.evidence.offsetimpl.LinearCalOffset;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
 
@@ -61,12 +62,12 @@ public class EvidenceSetBuilder {
 
         HashMap<LongBitSet, Long> clueSet = new HashMap<>();
 
-        IClueOffset calUtils = new ClueOffset();
+        IClueOffset calUtils = new LinearCalOffset();
+        System.out.println("[ClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
 
         for (int i = 0; i < pliShards.length; i++) {
             for (int j = i; j < pliShards.length; j++) {
                 ClueSetBuilder builder = i == j ? new SingleClueSetBuilder(pliShards[i],calUtils) : new CrossClueSetBuilder(pliShards[i], pliShards[j], calUtils);
-
                 HashMap<LongBitSet, Long> partialClueSet = builder.buildClueSet();
                 partialClueSet.forEach((k, v) -> clueSet.merge(k, v, Long::sum));
             }
