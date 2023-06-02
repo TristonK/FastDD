@@ -176,11 +176,11 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         for(int i = 0; i < pivotPli.size(); i++){
             int[] offsets;
             if(pivotPli.getClass() == DoublePli.class){
-                offsets = calUtils.brutalCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
+                offsets = calUtils.countDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
 //                offsets = calUtils.linerCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
 //                offsets = calUtils.binaryCountCrossDouble(probePli, 0, (Double) pivotPli.getKeys()[i], thresholds);
             }else{
-                offsets = calUtils.brutalCountInt((Integer[]) probePli.getKeys(), 0 , (Integer) pivotPli.getKeys()[i], thresholds);
+                offsets = calUtils.countInt((Integer[]) probePli.getKeys(), 0 , (Integer) pivotPli.getKeys()[i], thresholds);
 //                offsets = calUtils.linerCountInt((Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
 //                offsets = calUtils.binaryCountCrossInt(probePli, 0, (Integer) pivotPli.getKeys()[i], thresholds);
             }
