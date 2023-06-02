@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface IClueOffset {
     final double ERR = 0.000000001;
-    int[]countDouble(Double[] keys, int startPos, double key, List<Double> thresholds);
+    int[] countDouble(Double[] keys, int startPos, double key, List<Double> thresholds);
     int[] countInt(Integer[] keys, int startPos, int key, List<Double> thresholds);
 }
