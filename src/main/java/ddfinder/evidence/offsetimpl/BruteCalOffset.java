@@ -1,6 +1,7 @@
 package ddfinder.evidence.offsetimpl;
 
 import ddfinder.evidence.IClueOffset;
+import ddfinder.pli.IPli;
 
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class BruteCalOffset implements IClueOffset {
         return c;
     }
 
-    public int[] countDouble(Double[] keys, int startPos, double key, List<Double> thresholds) {
+    public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
 //        int thresholdsId = thresholds.size() - 1;
@@ -40,7 +41,7 @@ public class BruteCalOffset implements IClueOffset {
         return posTothreshold;
     }
 
-    public int[] countInt(Integer[] keys, int startPos, int key, List<Double> thresholds) {
+    public int[] countInt(IPli probePli, int isSingle, Integer[] keys, int startPos, int key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
 //        int thresholdsId = thresholds.size() - 1;
@@ -54,4 +55,6 @@ public class BruteCalOffset implements IClueOffset {
         }
         return posTothreshold;
     }
+
+
 }
