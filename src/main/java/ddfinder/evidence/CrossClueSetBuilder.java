@@ -35,19 +35,19 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
 
     public HashMap<LongBitSet, Long> buildClueSet() {
         LongBitSet[] forwardClues = new LongBitSet[evidenceCount];   // plis1 -> plis2
-        for(int i = 0; i < evidenceCount; i++){
-            forwardClues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
+        for (int i = 0; i < evidenceCount; i++) {
+            forwardClues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());//TODO: n个阈值有n+1个interval，这里需要修改（eg:54 => 45）
         }
-        for(PredicatePack strPack: strPacks){
+        for (PredicatePack strPack : strPacks) {
             correctStr(forwardClues, plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.pos, strPack.thresholds);
         }
-        for (PredicatePack intPack: intPacks){
+        for (PredicatePack intPack : intPacks) {
             linerCorrectNum(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
-            //correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+//            correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
         }
-        for (PredicatePack numPack: doublePacks){
+        for (PredicatePack numPack : doublePacks) {
             linerCorrectNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
-            //correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
+//            correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
         }
 
 
@@ -72,20 +72,22 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
 
     }
 
-    private void correctStr(LongBitSet[] clues1, IPli pivotPli, IPli probePli, int pos, List<Double>thresholds) {
+    private void correctStr(LongBitSet[] clues1, IPli pivotPli, IPli probePli, int pos, List<Double> thresholds) {
+        //假设元组对含有三个属性。每个属性含有2个阈值，那么clue = 100 010 001 表示: 第一个属性的差值为0，第二个属性的差值在阈值列表中的第二位...
+        //TODO: 上面的clue对应地修改为： 00 10 01
         final String[] pivotKeys = (String[]) pivotPli.getKeys();
         final String[] probeKeys = (String[]) probePli.getKeys();
-        for(int i = 0; i < pivotKeys.length; i++){
-            for(int j = 0; j < probeKeys.length; j++){
+        for (int i = 0; i < pivotKeys.length; i++) {
+            for (int j = 0; j < probeKeys.length; j++) {
                 int diff = StringCalculation.getDistance(pivotKeys[i], probeKeys[j]);
                 int c = 0;
-                if(diff < ERR + thresholds.get(0)){
+                if (diff < ERR + thresholds.get(0)) {
                     c = 0;
-                } else if (diff > ERR + thresholds.get(thresholds.size()-1)) {
+                } else if (diff > ERR + thresholds.get(thresholds.size() - 1)) {
                     c = thresholds.size();
-                }else{
-                    while(c < thresholds.size()-1){
-                        if(diff > thresholds.get(c) + ERR && diff < ERR + thresholds.get(c+1)){
+                } else {
+                    while (c < thresholds.size() - 1) {
+                        if (diff > thresholds.get(c) + ERR && diff < ERR + thresholds.get(c + 1)) {
                             c++;
                             break;
                         }
@@ -97,196 +99,100 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         }
     }
 
-    private void correctNum(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double>thresholds) {
+    private void correctNum(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double> thresholds) {
         final Double[] pivotKeys = (Double[]) pivotPli.getKeys();
         final Double[] probeKeys = (Double[]) probePli.getKeys();
 
-        for(int i = 0; i < pivotKeys.length; i++){
+        for (int i = 0; i < pivotKeys.length; i++) {
             //下面用接口方法实现
             int start = 0;
-            for(int index = thresholds.size()-1; index >= 0 && start < probeKeys.length; index--){
-                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]+thresholds.get(index), start, 0);
-                for(int j = start; j < end; j++){
+            for (int index = thresholds.size() - 1; index >= 0 && start < probeKeys.length; index--) {
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] + thresholds.get(index), start, 0);
+                for (int j = start; j < end; j++) {
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index + 1);
                 }
                 start = end;
             }
-            if(start >= probeKeys.length){
+            if (start >= probeKeys.length) {
                 continue;
             }
-            if(Math.abs(probeKeys[start] - pivotKeys[i]) < ERR){
+            if (Math.abs(probeKeys[start] - pivotKeys[i]) < ERR) {
                 setNumMask(forwardArray, pivotPli, i, probePli, start, pos);
-                start ++;
+                start++;
             }
-            for(int index = 1; index < thresholds.size() && start < probeKeys.length; index++){
-                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]-thresholds.get(index), start, 1);//LT：less than 获取probePli.keys[]中 key小于的首个元素的位置
-                for(int j = start; j < end; j++){
+            for (int index = 1; index < thresholds.size() && start < probeKeys.length; index++) {
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] - thresholds.get(index), start, 1);//LT：less than 获取probePli.keys[]中 key小于的首个元素的位置
+                for (int j = start; j < end; j++) {
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index);
                 }
                 start = end;
             }
-            if(start < probeKeys.length){
-                for(int j = start; j < probeKeys.length; j++){
+            if (start < probeKeys.length) {
+                for (int j = start; j < probeKeys.length; j++) {
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + thresholds.size());
                 }
             }
 
         }
     }
-    private void correctInteger(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double>thresholds) {
+
+    private void correctInteger(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double> thresholds) {
         //与liner的区别在于，针对pivotPli中的每个key，在给定阈值差距的情况下，去寻找probepli中满足该阈值条件的子数组(start to end)，然后setNumMask
         //keys数组：根据行顺序存储的某一列键值，大小为350or更小
-        //本质上还是线性扫描
-        //问题：keys数组的顺序是按行来的，应该不能保证升序，为什么可以固定阈值找连续子数组呢？
+        //keys数组降序
         final Integer[] pivotKeys = (Integer[]) pivotPli.getKeys();
         final Integer[] probeKeys = (Integer[]) probePli.getKeys();
 
-        for(int i = 0; i < pivotKeys.length; i++){
+        for (int i = 0; i < pivotKeys.length; i++) {
             int start = 0;
-            for(int index = thresholds.size()-1; index >= 0 && start < probeKeys.length; index--){
-                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]+thresholds.get(index).intValue(), start, 0);//得到probePli中键值 - pivotkeys[i]的差值大于指定阈值的位置
-                for(int j = start; j < end; j++){
-                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index + 1);//给定阈值(index决定)
+            for (int index = thresholds.size() - 1; index >= 0 && start < probeKeys.length; index--) {
+                //keys降序排列
+                //end得到的返回值是比目标key值+指定阈值的和小或相等的第一个下标i，即keys[i]<key+th[index]
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] + thresholds.get(index).intValue(), start, 0);
+                for (int j = start; j < end; j++) {
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index + 1);//给定偏移为index+1，即keys[start] to keys[end]的值与目标key的差值都在此范围内
                 }
                 start = end;
             }
-            if(start >= probeKeys.length){
+            if (start >= probeKeys.length) {
                 continue;
             }
-            if(probeKeys[start].equals(pivotKeys[i])){
+            if (probeKeys[start].equals(pivotKeys[i])) {
                 setNumMask(forwardArray, pivotPli, i, probePli, start, pos);
-                start ++;
+                start++;
             }
-            for(int index = 1; index < thresholds.size() && start < probeKeys.length; index++){
-                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i]-thresholds.get(index).intValue(), start, 1);
-                for(int j = start; j < end; j++){
+            for (int index = 1; index < thresholds.size() && start < probeKeys.length; index++) {
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] - thresholds.get(index).intValue(), start, 1);
+                for (int j = start; j < end; j++) {
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index);
                 }
                 start = end;
             }
-            if(start < probeKeys.length){
-                for(int j = start; j < probeKeys.length; j++){
+            if (start < probeKeys.length) {
+                for (int j = start; j < probeKeys.length; j++) {
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + thresholds.size());
                 }
             }
         }
     }
 
-    private void linerCorrectNum(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double>thresholds){
-        for(int i = 0; i < pivotPli.size(); i++){
+    private void linerCorrectNum(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double> thresholds) {
+        for (int i = 0; i < pivotPli.size(); i++) {
             int[] offsets;
-            if(pivotPli.getClass() == DoublePli.class){
-                offsets = calUtils.countDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
+            if (pivotPli.getClass() == DoublePli.class) {
+                offsets = calUtils.countDouble(probePli, 0, (Double[]) probePli.getKeys(), 0, (Double) pivotPli.getKeys()[i], thresholds);
 //                offsets = calUtils.linerCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
 //                offsets = calUtils.binaryCountCrossDouble(probePli, 0, (Double) pivotPli.getKeys()[i], thresholds);
-            }else{
-                offsets = calUtils.countInt((Integer[]) probePli.getKeys(), 0 , (Integer) pivotPli.getKeys()[i], thresholds);
+            } else {
+                offsets = calUtils.countInt(probePli, 0, (Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
 //                offsets = calUtils.linerCountInt((Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
 //                offsets = calUtils.binaryCountCrossInt(probePli, 0, (Integer) pivotPli.getKeys()[i], thresholds);
             }
-            for(int j = 0; j < probePli.size(); j++){
+            for (int j = 0; j < probePli.size(); j++) {
                 setNumMask(forwardArray, pivotPli, i, probePli, j, pos + offsets[j]);
             }
         }
     }
 
-
-//    private void tempCalBase(){
-//        long[] temp = new long[bases.length];
-//        for (PredicatePack intPack: intPacks){
-//            temp[intPack.colIndex] = intPack.thresholds.size()+1;
-//        }
-//        for (PredicatePack numPack: doublePacks){
-//            temp[numPack.colIndex] = numPack.thresholds.size()+1;
-//        }
-//        for(PredicatePack strPack: strPacks){
-//            temp[strPack.colIndex] = strPack.thresholds.size()+1;
-//        }
-//        bases[0] = 0;
-//        bases[1] = temp[0];
-//        for(int i = 2; i < bases.length; i++){
-//            bases[i] = bases[i - 1] * temp[i - 1];
-//        }
-//    }
-//    public HashMap<LongBitSet, Long> buildClueSet() {
-//        //TODO:改造clue为long形式
-////        forwardClues = new long[evidenceCount];
-////        bases = new long[strPacks.size()+ intPacks.size()+doublePacks.size()];
-////        tempCalBase();
-//
-//        LongBitSet[] forwardClues = new LongBitSet[evidenceCount];   // plis1 -> plis2
-//        for(int i = 0; i < evidenceCount; i++){
-//            forwardClues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
-//        }
-//
-//        for(PredicatePack strPack: strPacks){
-//            correctStr(plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.colIndex, strPack.thresholds);
-//        }
-//        for (PredicatePack intPack: intPacks){
-//            linerCorrectNum(plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.colIndex, intPack.thresholds);
-//        }
-//        for (PredicatePack numPack: doublePacks){
-//            linerCorrectNum(plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.colIndex, numPack.thresholds);
-//        }
-//        //TODO
-////        return null;
-//        return accumulateClues(forwardClues);
-//    }
-//
-//
-//    private void setNumMask(IPli pli1, int i, IPli pli2, int j, int colIndex, int offset) {
-//
-//        int beg1 = pli1.getPliShard().beg, beg2 = pli2.getPliShard().beg;
-//        int range2 = pli2.getPliShard().end - beg2;
-//
-//        for (int tid1 : pli1.get(i).getRawCluster()) {
-//            int t1 = tid1 - beg1;
-//            int r1 = t1 * range2 - beg2;
-//            for (int tid2 : pli2.get(j).getRawCluster()) {
-//                forwardClues[r1 + tid2] *= bases[colIndex] * offset;
-//                //clues2[(tid2 - beg2) * range1 + t1].set(pos);
-//            }
-//        }
-//
-//    }
-//
-//    private void correctStr(IPli pivotPli, IPli probePli, int colIndex, List<Double>thresholds) {
-//        final String[] pivotKeys = (String[]) pivotPli.getKeys();
-//        final String[] probeKeys = (String[]) probePli.getKeys();
-//        for(int i = 0; i < pivotKeys.length; i++){
-//            for(int j = 0; j < probeKeys.length; j++){
-//                int diff = StringCalculation.getDistance(pivotKeys[i], probeKeys[j]);
-//                int c = 0;
-//                if(diff < ERR + thresholds.get(0)){
-//                    c = 0;
-//                } else if (diff > ERR + thresholds.get(thresholds.size()-1)) {
-//                    c = thresholds.size();
-//                }else{
-//                    while(c < thresholds.size()-1){
-//                        if(diff > thresholds.get(c) + ERR && diff < ERR + thresholds.get(c+1)){
-//                            c++;
-//                            break;
-//                        }
-//                        c++;
-//                    }
-//                }
-//                setNumMask(pivotPli, i, probePli, j, colIndex, c);
-//            }
-//        }
-//    }
-//
-//    private void linerCorrectNum(IPli pivotPli, IPli probePli, int colIndex, List<Double>thresholds){
-//        for(int i = 0; i < pivotPli.size(); i++){
-//            int[] offsets;
-//            if(pivotPli.getClass() == DoublePli.class){
-//                offsets = calUtils.linerCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
-//            }else{
-//                offsets = calUtils.linerCountInt((Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
-//            }
-//            for(int j = 0; j < probePli.size(); j++){
-//                setNumMask(pivotPli, i, probePli, j, colIndex, offsets[j]);
-//            }
-//        }
-//    }
 
 }
