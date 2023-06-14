@@ -1,6 +1,7 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.evidence.longclueimpl.LongClueSetBuilder;
 import ddfinder.predicate.PredicateBuilder;
 
 import java.util.ArrayList;
@@ -14,6 +15,8 @@ import java.util.List;
 public class EvidenceSet implements Iterable<Evidence>{
 
     private HashMap<LongBitSet, Evidence> clueToEvidence;
+    private HashMap<Long, Evidence> longClueToEvidence;
+
     private List<Evidence> evidences;
 
     /**
@@ -26,6 +29,7 @@ public class EvidenceSet implements Iterable<Evidence>{
 
     public EvidenceSet(PredicateBuilder predicateBuilder){
         clueToEvidence = new HashMap<LongBitSet, Evidence>();
+        longClueToEvidence = new HashMap<>();
         evidences = new ArrayList<>();
         this.countToPredicateSets = new ArrayList<>();
         for(int i = 0; i < predicateBuilder.getColSize(); i++){
@@ -43,8 +47,19 @@ public class EvidenceSet implements Iterable<Evidence>{
         }
     }
 
+    // v2 using long
+    public void buildFromLong(HashMap<Long, Long> clueSet){
+        for(var entry: clueSet.entrySet()){
+            long clue = entry.getKey();
+            Evidence evi = new Evidence(clue, entry.getValue(), countToPredicateSets, LongClueSetBuilder.bases);
+            //if(evi==null){System.out.println("xxxxxx");}
+            longClueToEvidence.put(clue, evi);
+            evidences.add(evi);
+        }
+    }
+
     public int size() {
-        return clueToEvidence.size();
+        return evidences.size();
     }
 
     @Override

@@ -41,7 +41,7 @@ public abstract class LongClueSetBuilder {
     }
 
 
-    static long[] bases;
+    public static long[] bases;
 
     static List<PredicatePack> strPacks;  // String single-column predicate packs
     static List<PredicatePack> doublePacks;  // numerical single-column predicate packs
