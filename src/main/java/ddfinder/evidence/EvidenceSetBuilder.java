@@ -30,14 +30,19 @@ public class EvidenceSetBuilder {
             HashMap<LongBitSet, Long> clueSet = linearBuildClueSet(pliShards);
             System.out.println("[ClueSet] build cost: " + (System.currentTimeMillis() - t1) + " ms");
             System.out.println("[ClueSet] # clueSet size: " + clueSet.size());
-            long t2 = System.currentTimeMillis();
-            HashMap<Long, Long> longClueSet = buildLongClueSet(pliShards);
-            System.out.println("[LongClueSet] build cost: " + (System.currentTimeMillis() - t2) + " ms");
-            System.out.println("[LongClueSet] # clueSet size: " + longClueSet.size());
             evidenceSet.build(clueSet);
             return clueSet.keySet();
         }
         return null;
+    }
+
+    public Set<Long> buildEvidenceSetFromLongClue(PliShard[] pliShards){
+        long t2 = System.currentTimeMillis();
+        HashMap<Long, Long> longClueSet = buildLongClueSet(pliShards);
+        System.out.println("[LongClueSet] build cost: " + (System.currentTimeMillis() - t2) + " ms");
+        System.out.println("[LongClueSet] # clueSet size: " + longClueSet.size());
+        evidenceSet.buildFromLong(longClueSet);
+        return longClueSet.keySet();
     }
 
     public Set<LongBitSet> buildFullClueSet(PliShard[] pliShards) {
@@ -96,7 +101,7 @@ public class EvidenceSetBuilder {
         HashMap<Long, Long> clueSet = new HashMap<>();
 
         IClueOffset calUtils = new LinearCalOffset();
-        System.out.println("[ClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
+        System.out.println("[LongClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
 
         for (int i = 0; i < pliShards.length; i++) {
             for (int j = i; j < pliShards.length; j++) {
