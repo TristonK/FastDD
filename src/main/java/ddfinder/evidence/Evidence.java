@@ -22,6 +22,19 @@ public class Evidence {
         this.bitset = buildEvidenceFromClue(countToPredicateSets);
     }
 
+    public Evidence(long clue, Long count, List<List<LongBitSet>> countToPredicateSets, long[] bases){
+        this.clue = null;
+        this.count = count;
+        LongBitSet evidenceBitSet = new LongBitSet();
+        for(int i = countToPredicateSets.size() - 1; i >= 0; i--){
+            long offset = clue / bases[i];
+            clue %= bases[i];
+            LongBitSet mask = countToPredicateSets.get(i).get((int)offset);
+            evidenceBitSet.or(mask);
+        }
+        this.bitset = evidenceBitSet;
+    }
+
     private LongBitSet buildEvidenceFromClue(List<List<LongBitSet>> countToPredicateSets){
         LongBitSet evidenceBitSet = new LongBitSet();
         for(int i = clue.nextSetBit(0); i >=0 ; i = clue.nextSetBit(i+1)){

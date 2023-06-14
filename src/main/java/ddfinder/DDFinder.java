@@ -75,16 +75,21 @@ public class DDFinder {
         PliShard[] pliShards = pliShardBuilder.buildPliShards(input.getDoubleInput(), input.getIntInput(), input.getStringInput());
         long buildPliTime = System.currentTimeMillis() - t0;
         System.out.println("[PLIs] build PLIs cost: " + buildPliTime + "ms");
-        t0 = System.currentTimeMillis();
 
+        // test bitset
+        /* t0 = System.currentTimeMillis();
         EvidenceSetBuilder evidenceSetBuilder = new EvidenceSetBuilder(predicateBuilder);
-
-        //Set<LongBitSet> clues = evidenceSetBuilder.buildEvidenceSet(pliShards);
-        //evidenceSetBuilder.buildFullClueSet(pliShards);
         evidenceSetBuilder.buildEvidenceSet(pliShards);
         EvidenceSet evidenceSet = evidenceSetBuilder.getEvidenceSet();
         System.out.println("[EvidenceSet] build clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
-//        Enumeration ddfiner = new SingleThresholdDD(clues, predicateBuilder);
+        System.out.println("COUNT: " + evidenceSet.size());*/
+        // test Long
+        t0 = System.currentTimeMillis();
+        EvidenceSetBuilder evidenceSetBuilder = new EvidenceSetBuilder(predicateBuilder);
+        evidenceSetBuilder.buildEvidenceSetFromLongClue(pliShards);
+        EvidenceSet evidenceSet = evidenceSetBuilder.getEvidenceSet();
+        System.out.println("[EvidenceSet] build long clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
+        //   Enumeration ddfiner = new SingleThresholdDD(clues, predicateBuilder);
         long enmurationTime = System.currentTimeMillis();
         Enumeration ddfinder = new HybridEvidenceInversion(evidenceSet, predicateBuilder);
         DifferentialDependencySet dds = ddfinder.buildDifferentialDenpendency();
@@ -112,6 +117,6 @@ public class DDFinder {
             if(flag) System.out.println(dd.toString());
             //else System.out.println("no one support -- " + dd.toString());
         }*/
-        return dds;
+        return null;//dds;
     }
 }
