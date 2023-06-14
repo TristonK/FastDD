@@ -1,6 +1,9 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.evidence.longclueimpl.LongClueSetBuilder;
+import ddfinder.evidence.longclueimpl.LongCrossClueSetBuilder;
+import ddfinder.evidence.longclueimpl.LongSingleClueSetBuilder;
 import ddfinder.evidence.offsetimpl.LinearCalOffset;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
@@ -17,6 +20,7 @@ public class EvidenceSetBuilder {
 
     public EvidenceSetBuilder(PredicateBuilder predicateBuilder) {
         ClueSetBuilder.configure(predicateBuilder);
+        LongClueSetBuilder.configure(predicateBuilder);
         evidenceSet = new EvidenceSet(predicateBuilder);
     }
 
@@ -30,6 +34,15 @@ public class EvidenceSetBuilder {
             return clueSet.keySet();
         }
         return null;
+    }
+
+    public Set<Long> buildEvidenceSetFromLongClue(PliShard[] pliShards){
+        long t2 = System.currentTimeMillis();
+        HashMap<Long, Long> longClueSet = buildLongClueSet(pliShards);
+        System.out.println("[LongClueSet] build cost: " + (System.currentTimeMillis() - t2) + " ms");
+        System.out.println("[LongClueSet] # clueSet size: " + longClueSet.size());
+        evidenceSet.buildFromLong(longClueSet);
+        return longClueSet.keySet();
     }
 
     public Set<LongBitSet> buildFullClueSet(PliShard[] pliShards) {
@@ -78,5 +91,25 @@ public class EvidenceSetBuilder {
 
     public EvidenceSet getEvidenceSet() {
         return evidenceSet;
+    }
+
+    private HashMap<Long, Long> buildLongClueSet(PliShard[] pliShards) {
+
+        int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
+        System.out.println("  [CLUE] task count: " + taskCount);
+
+        HashMap<Long, Long> clueSet = new HashMap<>();
+
+        IClueOffset calUtils = new LinearCalOffset();
+        System.out.println("[LongClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
+
+        for (int i = 0; i < pliShards.length; i++) {
+            for (int j = i; j < pliShards.length; j++) {
+                LongClueSetBuilder builder = i == j ? new LongSingleClueSetBuilder(pliShards[i],calUtils) : new LongCrossClueSetBuilder(pliShards[i], pliShards[j], calUtils);
+                HashMap<Long, Long> partialClueSet = builder.buildClueSet();
+                partialClueSet.forEach((k, v) -> clueSet.merge(k, v, Long::sum));
+            }
+        }
+        return clueSet;
     }
 }
