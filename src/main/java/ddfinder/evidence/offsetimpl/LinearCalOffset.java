@@ -9,6 +9,7 @@ import java.util.List;
  * @author tristonK 2023/6/2
  */
 public class LinearCalOffset implements IClueOffset {
+
     //TODO: clue的位数-1，对应的postothreshold也需要-1
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int pos = startPos;

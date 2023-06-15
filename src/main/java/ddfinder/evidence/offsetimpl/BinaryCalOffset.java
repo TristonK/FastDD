@@ -9,6 +9,7 @@ import java.util.List;
  * @author tristonK 2023/6/2
  */
 public class BinaryCalOffset implements IClueOffset {
+
     @Override
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int[] posTothreshold = new int[probePli.size()];
