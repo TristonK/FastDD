@@ -1,6 +1,7 @@
 package ddfinder.evidence.offsetimpl;
 
 import ddfinder.evidence.IClueOffset;
+import ddfinder.pli.IPli;
 
 import java.util.List;
 
@@ -8,7 +9,8 @@ import java.util.List;
  * @author tristonK 2023/6/2
  */
 public class LinearCalOffset implements IClueOffset {
-    public int[] countDouble(Double[] keys, int startPos, double key, List<Double> thresholds) {
+    //TODO: clue的位数-1，对应的postothreshold也需要-1
+    public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
         int thresholdsId = thresholds.size() - 1;
@@ -47,7 +49,7 @@ public class LinearCalOffset implements IClueOffset {
         return posTothreshold;
     }
 
-    public int[] countInt(Integer[] keys, int startPos, int key, List<Double> thresholds) {
+    public int[] countInt(IPli probePli, int isSingle, Integer[] keys, int startPos, int key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
         int thresholdsId = thresholds.size() - 1;
@@ -84,4 +86,5 @@ public class LinearCalOffset implements IClueOffset {
         }
         return posTothreshold;
     }
+
 }

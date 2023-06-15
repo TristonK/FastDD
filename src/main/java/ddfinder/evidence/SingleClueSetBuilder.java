@@ -40,11 +40,11 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         }
         for (PredicatePack intPack : intPacks) {
             linerCorrectNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
-            //correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
+//            correctNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
         }
         for (PredicatePack doublePack : doublePacks) {
-            linerCorrectNum(clues,  plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
-            //correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
+            linerCorrectNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
+//            correctNum(clues, plis.get(doublePack.colIndex), doublePack.pos, doublePack.thresholds);
         }
         for (PredicatePack strPack : strPacks) {
             correctStr(clues, plis.get(strPack.colIndex), strPack.pos, strPack.thresholds);
@@ -128,15 +128,17 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     }
 
     private void correctNum(LongBitSet[] clues, IPli pli, int pos, List<Double> thresholds) {
+
         for (int i = 0; i < pli.size(); i++) {
             // index为0的情况
             setSelfNumMask(clues, pli.get(i), pos);
+            //接口实现
             int start = i + 1;
             if (pli.getClass() == DoublePli.class) {
                 Double key = (Double) pli.getKeys()[i];//获取pli的第i个key值
                 for (int index = 1; index < thresholds.size() && start < pli.size(); index++) {
                     int end = pli.getFirstIndexWhereKeyIsLT(key - thresholds.get(index), start, 1);
-                    for (int correct = start; correct < end && correct < pli.size(); correct++) {
+                    for (int correct = start; correct < end && correct < pli.size(); correct++) {//correct对应从目标key开始往后的下标，循环遍历完之后也就是对应的j
                         setNumMask(clues, pli.get(i), pli.get(correct), pos + index);
                     }
                     start = end;
@@ -163,22 +165,20 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
         for (int i = 0; i < pli.size(); i++) {
             int[] offsets;
             if (pli.getClass() == DoublePli.class) {
-                offsets = calUtils.countDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
+                offsets = calUtils.countDouble(pli, 1, (Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
 //                offsets = calUtils.linerCountDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
 //                offsets = calUtils.binaryCountSingleDouble(pli, i, (Double) pli.getKeys()[i], thresholds);
             } else {
-                offsets = calUtils.countInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
+                offsets = calUtils.countInt(pli, 1, (Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
 //                offsets = calUtils.linerCountInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
 //                offsets = calUtils.binaryCountSingleInt(pli, i, (Integer) pli.getKeys()[i], thresholds);
             }
             setSelfNumMask(clues, pli.get(i), pos);
             for (int j = i + 1; j < pli.size(); j++) {
-                setNumMask(clues, pli.get(i), pli.get(j), pos + offsets[j - i]);
+                setNumMask(clues, pli.get(i), pli.get(j), pos + offsets[j - i]);//i是当前的目标key下标，j是在其之后的所有key,j-i代表offset数组中的下标（i对应0）
             }
         }
     }
-
-
 
 
 }
