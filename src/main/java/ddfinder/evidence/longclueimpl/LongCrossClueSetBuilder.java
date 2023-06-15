@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author tristonK 2023/6/2
  */
-public class LongCrossClueSetBuilder extends LongClueSetBuilder{
+public class LongCrossClueSetBuilder extends LongClueSetBuilder {
     private final List<IPli> plis1, plis2;
     private final int evidenceCount;
 
@@ -29,14 +29,14 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder{
 
     public HashMap<Long, Long> buildClueSet() {
         forwardClues = new long[evidenceCount];   // plis1 -> plis2
-        for(PredicatePack strPack: strPacks){
+        for (PredicatePack strPack : strPacks) {
             correctStr(plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.base, strPack.thresholds);
         }
-        for (PredicatePack intPack: intPacks){
+        for (PredicatePack intPack : intPacks) {
             linerCorrectNum(plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.base, intPack.thresholds);
             //correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
         }
-        for (PredicatePack numPack: doublePacks){
+        for (PredicatePack numPack : doublePacks) {
             linerCorrectNum(plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.base, numPack.thresholds);
             //correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
         }
@@ -59,20 +59,20 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder{
 
     }
 
-    private void correctStr(IPli pivotPli, IPli probePli, long base, List<Double>thresholds) {
+    private void correctStr(IPli pivotPli, IPli probePli, long base, List<Double> thresholds) {
         final String[] pivotKeys = (String[]) pivotPli.getKeys();
         final String[] probeKeys = (String[]) probePli.getKeys();
-        for(int i = 0; i < pivotKeys.length; i++){
-            for(int j = 0; j < probeKeys.length; j++){
+        for (int i = 0; i < pivotKeys.length; i++) {
+            for (int j = 0; j < probeKeys.length; j++) {
                 int diff = StringCalculation.getDistance(pivotKeys[i], probeKeys[j]);
                 int c = 0;
-                if(diff < ERR + thresholds.get(0)){
+                if (diff < ERR + thresholds.get(0)) {
                     c = 0;
-                } else if (diff > ERR + thresholds.get(thresholds.size()-1)) {
+                } else if (diff > ERR + thresholds.get(thresholds.size() - 1)) {
                     c = thresholds.size();
-                }else{
-                    while(c < thresholds.size()-1){
-                        if(diff > thresholds.get(c) + ERR && diff < ERR + thresholds.get(c+1)){
+                } else {
+                    while (c < thresholds.size() - 1) {
+                        if (diff > thresholds.get(c) + ERR && diff < ERR + thresholds.get(c + 1)) {
                             c++;
                             break;
                         }
@@ -84,15 +84,15 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder{
         }
     }
 
-    private void linerCorrectNum(IPli pivotPli, IPli probePli, long base, List<Double>thresholds){
-        for(int i = 0; i < pivotPli.size(); i++){
+    private void linerCorrectNum(IPli pivotPli, IPli probePli, long base, List<Double> thresholds) {
+        for (int i = 0; i < pivotPli.size(); i++) {
             int[] offsets;
-            if(pivotPli.getClass() == DoublePli.class){
-                offsets = calUtils.countDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
-            }else{
-                offsets = calUtils.countInt((Integer[]) probePli.getKeys(), 0 , (Integer) pivotPli.getKeys()[i], thresholds);
+            if (pivotPli.getClass() == DoublePli.class) {
+                offsets = calUtils.countDouble(probePli, 0, (Double[]) probePli.getKeys(), 0, (Double) pivotPli.getKeys()[i], thresholds);
+            } else {
+                offsets = calUtils.countInt(probePli, 0, (Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
             }
-            for(int j = 0; j < probePli.size(); j++){
+            for (int j = 0; j < probePli.size(); j++) {
                 setNumMask(pivotPli, i, probePli, j, base, offsets[j]);
             }
         }

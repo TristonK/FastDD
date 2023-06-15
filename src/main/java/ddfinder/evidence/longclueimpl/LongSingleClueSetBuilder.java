@@ -68,7 +68,7 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
     }
 
     private void setSelfNumMask(Cluster cluster, long base) {
-       return;
+        return;
     }
 
     private void correctStr(IPli pli, long base, List<Double> thresholds) {
@@ -100,9 +100,10 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
         for (int i = 0; i < pli.size(); i++) {
             int[] offsets;
             if (pli.getClass() == DoublePli.class) {
-                offsets = calUtils.countDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
+                offsets = calUtils.countDouble(pli, 1, (Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
             } else {
-                offsets = calUtils.countInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
+                offsets = calUtils.countInt(pli, 1, (Integer[])pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds)
+                ;
             }
             setSelfNumMask(pli.get(i), base);
             for (int j = i + 1; j < pli.size(); j++) {
@@ -110,7 +111,6 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
             }
         }
     }
-
 
 
 }

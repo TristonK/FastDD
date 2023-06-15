@@ -27,6 +27,7 @@ public class BruteCalOffset implements IClueOffset {
         return c;
     }
 
+
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
