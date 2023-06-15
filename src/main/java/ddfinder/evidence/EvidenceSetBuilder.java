@@ -4,6 +4,8 @@ import ch.javasoft.bitset.LongBitSet;
 import ddfinder.evidence.longclueimpl.LongClueSetBuilder;
 import ddfinder.evidence.longclueimpl.LongCrossClueSetBuilder;
 import ddfinder.evidence.longclueimpl.LongSingleClueSetBuilder;
+import ddfinder.evidence.offsetimpl.BinaryCalOffset;
+import ddfinder.evidence.offsetimpl.BruteCalOffset;
 import ddfinder.evidence.offsetimpl.LinearCalOffset;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.PredicateBuilder;
@@ -75,7 +77,9 @@ public class EvidenceSetBuilder {
 
         HashMap<LongBitSet, Long> clueSet = new HashMap<>();
 
-        IClueOffset calUtils = new LinearCalOffset();
+//        IClueOffset calUtils = new LinearCalOffset();
+//        IClueOffset calUtils = new BruteCalOffset();
+        IClueOffset calUtils = new BinaryCalOffset();
         System.out.println("[ClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
 
         for (int i = 0; i < pliShards.length; i++) {
