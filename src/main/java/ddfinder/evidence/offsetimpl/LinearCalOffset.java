@@ -10,21 +10,17 @@ import java.util.List;
  */
 public class LinearCalOffset implements IClueOffset {
 
-    //TODO: clue的位数-1，对应的postothreshold也需要-1
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
         int thresholdsId = thresholds.size() - 1;
         // > key
+        // handle diff > max(thresholds)
+        while (pos < keys.length && keys[pos] - key > thresholds.get(thresholdsId) + ERR) {
+            posTothreshold[pos - startPos] = thresholdsId + 1;
+            pos++;
+        }
         while (pos < keys.length && keys[pos] - key > ERR) {
-            // handle diff > max(thresholds)
-            while (pos < keys.length && keys[pos] - key > thresholds.get(thresholdsId) + ERR) {
-                posTothreshold[pos - startPos] = thresholdsId + 1;
-                pos++;
-            }
-            if (pos == keys.length) {
-                break;
-            }
             // handle diff <= max(thresholds)
             while (thresholdsId > 0 && keys[pos] - key < thresholds.get(thresholdsId - 1) + ERR) {
                 thresholdsId--;
@@ -55,15 +51,12 @@ public class LinearCalOffset implements IClueOffset {
         int[] posTothreshold = new int[keys.length - startPos];
         int thresholdsId = thresholds.size() - 1;
         // > key
+        // handle diff > max(thresholds)
+        while (pos < keys.length && keys[pos] - key > thresholds.get(thresholdsId)) {
+            posTothreshold[pos - startPos] = thresholdsId + 1;
+            pos++;
+        }
         while (pos < keys.length && key < keys[pos]) {
-            // handle diff > max(thresholds)
-            while (pos < keys.length && keys[pos] - key > thresholds.get(thresholdsId)) {
-                posTothreshold[pos - startPos] = thresholdsId + 1;
-                pos++;
-            }
-            if (pos == keys.length) {
-                break;
-            }
             // handle diff <= max(thresholds)
             while (thresholdsId > 0 && keys[pos] - key <= thresholds.get(thresholdsId - 1)) {
                 thresholdsId--;

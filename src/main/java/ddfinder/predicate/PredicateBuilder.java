@@ -59,6 +59,7 @@ public class PredicateBuilder {
         acceptedPredicates = new ArrayList<>();
         for(ParsedColumn<?> column: input.getColumns()){
             List<List<Double>> thresholdsAll = CalculateThresholds(column, 0, 5);
+            //System.out.println(thresholdsAll.get(0).toString() + " ] [ " + thresholdsAll.get(1).toString());
             addPredicates(column, thresholdsAll.get(0), thresholdsAll.get(1));
         }
         predicateIdProvider.addAll(predicates);

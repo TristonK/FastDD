@@ -77,15 +77,20 @@ public class EvidenceSetBuilder {
 
         HashMap<LongBitSet, Long> clueSet = new HashMap<>();
 
-//        IClueOffset calUtils = new LinearCalOffset();
-//        IClueOffset calUtils = new BruteCalOffset();
-        IClueOffset calUtils = new BinaryCalOffset();
-        System.out.println("[ClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
+        IClueOffset linearCalOffsetUtils = new LinearCalOffset();
+        IClueOffset bruteCalOffsetUtils = new BruteCalOffset();
+        IClueOffset binaryCalOffsetUtils = new BinaryCalOffset();
+        //System.out.println("[ClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
 
         for (int i = 0; i < pliShards.length; i++) {
             for (int j = i; j < pliShards.length; j++) {
-                ClueSetBuilder builder = i == j ? new SingleClueSetBuilder(pliShards[i],calUtils) : new CrossClueSetBuilder(pliShards[i], pliShards[j], calUtils);
-                HashMap<LongBitSet, Long> partialClueSet = builder.buildClueSet();
+                ClueSetBuilder builderLinear = i == j ? new SingleClueSetBuilder(pliShards[i], binaryCalOffsetUtils) : new CrossClueSetBuilder(pliShards[i], pliShards[j], binaryCalOffsetUtils);
+                HashMap<LongBitSet, Long> partialClueSet =builderLinear.buildClueSet();
+                ClueSetBuilder builder2 = i == j ? new SingleClueSetBuilder(pliShards[i], bruteCalOffsetUtils) : new CrossClueSetBuilder(pliShards[i], pliShards[j], bruteCalOffsetUtils);
+                HashMap<LongBitSet, Long> partialClueSet2 =builder2.buildClueSet();
+                if(!partialClueSet.equals(partialClueSet2)){
+                    System.out.println("NOT EQUAL AT " + i + " " + j);
+                }
                 partialClueSet.forEach((k, v) -> clueSet.merge(k, v, Long::sum));
             }
         }
@@ -104,13 +109,20 @@ public class EvidenceSetBuilder {
 
         HashMap<Long, Long> clueSet = new HashMap<>();
 
-        IClueOffset calUtils = new LinearCalOffset();
-        System.out.println("[LongClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
+        IClueOffset linearCalOffsetUtils = new LinearCalOffset();
+        IClueOffset bruteCalOffsetUtils = new BruteCalOffset();
+        IClueOffset binaryCalOffsetUtils = new BinaryCalOffset();
+        // System.out.println("[LongClueOffset] Using Strategy: " + calUtils.getClass().getSimpleName());
 
         for (int i = 0; i < pliShards.length; i++) {
             for (int j = i; j < pliShards.length; j++) {
-                LongClueSetBuilder builder = i == j ? new LongSingleClueSetBuilder(pliShards[i],calUtils) : new LongCrossClueSetBuilder(pliShards[i], pliShards[j], calUtils);
+                LongClueSetBuilder builder = i == j ? new LongSingleClueSetBuilder(pliShards[i], linearCalOffsetUtils) : new LongCrossClueSetBuilder(pliShards[i], pliShards[j],linearCalOffsetUtils);
                 HashMap<Long, Long> partialClueSet = builder.buildClueSet();
+                /*LongClueSetBuilder builder2 = i == j ? new LongSingleClueSetBuilder(pliShards[i], bruteCalOffsetUtils) : new LongCrossClueSetBuilder(pliShards[i], pliShards[j], bruteCalOffsetUtils);
+                HashMap<Long, Long> partialClueSet2 = builder2.buildClueSet();
+                if(!partialClueSet.equals(partialClueSet2)){
+                    System.out.println("NOT EQUAL AT " + i + " " + j);
+                }*/
                 partialClueSet.forEach((k, v) -> clueSet.merge(k, v, Long::sum));
             }
         }
