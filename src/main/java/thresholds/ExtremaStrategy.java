@@ -67,24 +67,24 @@ public class ExtremaStrategy implements ThresholdsStrategy {
         //TODO:统计累加频度,选定左侧和右侧区间点
 
         for (int i = 0; i < diff2Freq.size(); i++) {
-            totalFreqSum += diff2Freq.get(orderedKeyList.get(i));
+            totalFreqSum += diff2Freq.get(orderedKeyList.get(i));//累加总阈值频度，和freqBoundary共同确定左右阈值边界
         }
 
         long tmpCount = 0;
-        for (int i = 0; i < diff2Freq.size() * indexBoundary; i++) {//限定左侧阈值的边界下标
+        for (int i = 0; ; i++) {//限定左侧阈值的边界下标
             tmpCount += diff2Freq.get(orderedKeyList.get(i));//累加freq
-            if (totalFreqSum * freqBoundary <= tmpCount) {
+            if (totalFreqSum * freqBoundary <= tmpCount || i >= diff2Freq.size() * indexBoundary) {
                 partitionLeftIndex = i;//记录左侧边界终止下标
                 tmpCount = 0;
                 break;
             }
         }
 
-        for (int i = diff2Freq.size() - 1; i > partitionLeftIndex + 1; i--) {//partitionRightIndex最小为partitionLeftIndex + 1
+        for (int i = diff2Freq.size() - 1; i > partitionLeftIndex + 1; i--) {//从右往左确定右阈值的左边界
             tmpCount += diff2Freq.get(orderedKeyList.get(i));
             if (totalFreqSum * freqBoundary <= tmpCount) {
                 partitionRightIndex = i;//记录右侧边界起始下标
-                tmpCount = 0;
+//                tmpCount = 0;
                 break;
             }
         }
@@ -103,7 +103,7 @@ public class ExtremaStrategy implements ThresholdsStrategy {
 //        }
 
         //[1,partitionLeftIndex]
-        while (count < Math.ceil((thresholdsNum + 1) / 2.0)) {//
+        while (count < Math.ceil((thresholdsNum + 1) / 2.0)) {
             for (int i = tmpIndex + 1; i < partitionLeftIndex + 1; i++) {
                 double intervalLength = orderedKeyList.get(i) - orderedKeyList.get(tmpIndex);
                 long freqSum = 0;
@@ -117,7 +117,7 @@ public class ExtremaStrategy implements ThresholdsStrategy {
                 }
             }
             resLeft.add(orderedKeyList.get(index));
-            tmpIndex = index;
+            tmpIndex = index;//tmpIndex到index下标内的最优阈值被选取，不再考虑范围内的其他阈值
             maxScore = -1;
             count++;
         }
@@ -127,7 +127,7 @@ public class ExtremaStrategy implements ThresholdsStrategy {
 //        tmpIndex = Math.max(index, orderedKeyList.size() / 2);//左侧寻找的最右阈值点
 
 
-        //右区间，查询方向依然为从左至右
+        //右区间，查询方向依然为从左至右 TODO:确认查询方向是否需要改变
         //[partitionRightIndex,diff2Freq.size()-1]
         tmpIndex = partitionRightIndex;
         while (count < thresholdsNum) {
