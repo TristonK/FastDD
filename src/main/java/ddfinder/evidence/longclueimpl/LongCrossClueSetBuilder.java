@@ -34,14 +34,10 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder {
         }
         for (PredicatePack intPack : intPacks) {
             linerCorrectNum(plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.base, intPack.thresholds);
-            //correctInteger(forwardClues, plis1.get(intPack.colIndex), plis2.get(intPack.colIndex), intPack.pos, intPack.thresholds);
         }
         for (PredicatePack numPack : doublePacks) {
             linerCorrectNum(plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.base, numPack.thresholds);
-            //correctNum(forwardClues, plis1.get(numPack.colIndex), plis2.get(numPack.colIndex), numPack.pos, numPack.thresholds);
         }
-
-
         return accumulateClues(forwardClues);
     }
 
@@ -56,7 +52,6 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder {
                 forwardClues[r1 + tid2] += base * offset;
             }
         }
-
     }
 
     private void correctStr(IPli pivotPli, IPli probePli, long base, List<Double> thresholds) {
@@ -85,12 +80,28 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder {
     }
 
     private void linerCorrectNum(IPli pivotPli, IPli probePli, long base, List<Double> thresholds) {
+        //IClueOffset bruteCalOffsetUtils = new BruteCalOffset();
+        //IClueOffset binaryCalOffsetUtils = new BinaryCalOffset();
         for (int i = 0; i < pivotPli.size(); i++) {
             int[] offsets;
             if (pivotPli.getClass() == DoublePli.class) {
                 offsets = calUtils.countDouble(probePli, 0, (Double[]) probePli.getKeys(), 0, (Double) pivotPli.getKeys()[i], thresholds);
+                /*int[] offsets2 = bruteCalOffsetUtils.countDouble(probePli, 0, (Double[]) probePli.getKeys(), 0, (Double) pivotPli.getKeys()[i], thresholds);
+                if(!offsets.equals(offsets2)){
+                    System.out.println("Index " + i + "Pivot = " + pivotPli.getKeys()[i]);
+                    System.out.println(probePli.getKeys().toString());
+                    System.out.println("offset for linear: " + offsets.toString());
+                    System.out.println("offset for brute: " + offsets2.toString());
+                }*/
             } else {
                 offsets = calUtils.countInt(probePli, 0, (Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
+                /*int[] offsets2 = bruteCalOffsetUtils.countInt(probePli, 0, (Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
+                if(!offsets.equals(offsets2)){
+                    System.out.println("Index " + i + "Pivot = " + pivotPli.getKeys()[i]);
+                    System.out.println(probePli.getKeys().toString());
+                    System.out.println("offset for linear: " + offsets.toString());
+                    System.out.println("offset for brute: " + offsets2.toString());
+                }*/
             }
             for (int j = 0; j < probePli.size(); j++) {
                 setNumMask(pivotPli, i, probePli, j, base, offsets[j]);

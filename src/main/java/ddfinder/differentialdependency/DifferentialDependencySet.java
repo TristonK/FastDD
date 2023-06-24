@@ -56,6 +56,30 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
         }
     }
 
+    public DifferentialDependencySet(Set<IBitSet> covers, int rightID, IndexProvider<Predicate> indexProvider){
+        dependencies = new HashSet<>();
+        for(IBitSet cover: covers){
+            IBitSet newCover = cover.clone();
+            IBitSet lCover =cover.clone();
+            if(cover.cardinality() < 1){
+                System.out.println("bad cover");
+                assert false;
+            }
+            List<Predicate> left = new ArrayList<>();
+            Predicate right = indexProvider.getObject(rightID);
+            for(int i = cover.nextSetBit(0); i>=0; i = cover.nextSetBit(i+1)){
+                if(i == rightID){
+                    System.out.println("right ID exists in Left");
+                    assert false;
+                }
+                Predicate p = indexProvider.getObject(i);
+                left.add(p);
+            }
+            newCover.set(rightID);
+            dependencies.add(new DifferentialDependency(left, right, newCover, lCover));
+        }
+    }
+
     public Set<DifferentialDependency> getDependencies() {
         return dependencies;
     }
@@ -79,6 +103,10 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
 
     public void minimize(){
 
+    }
+
+    public void addAll(DifferentialDependencySet dds){
+        dependencies.addAll(dds.getDependencies());
     }
 
 }
