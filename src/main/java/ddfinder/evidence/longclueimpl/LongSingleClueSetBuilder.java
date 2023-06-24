@@ -1,6 +1,5 @@
 package ddfinder.evidence.longclueimpl;
 
-import ch.javasoft.bitset.LongBitSet;
 import ddfinder.evidence.IClueOffset;
 import ddfinder.pli.Cluster;
 import ddfinder.pli.DoublePli;
@@ -35,8 +34,8 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
 
     public HashMap<Long, Long> buildClueSet() {
         forwardClues = new long[evidenceCount];
-        for (PredicatePack intPack : intPacks) {
-            linerCorrectNum(plis.get(intPack.colIndex), intPack.base, intPack.thresholds);
+        for (PredicatePack longPack : longPacks) {
+            linerCorrectNum(plis.get(longPack.colIndex), longPack.base, longPack.thresholds);
         }
         for (PredicatePack doublePack : doublePacks) {
             linerCorrectNum(plis.get(doublePack.colIndex), doublePack.base, doublePack.thresholds);
@@ -102,8 +101,7 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
             if (pli.getClass() == DoublePli.class) {
                 offsets = calUtils.countDouble(pli, 1, (Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
             } else {
-                offsets = calUtils.countInt(pli, 1, (Integer[])pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds)
-                ;
+                offsets = calUtils.countInt(pli, 1, (Long[])pli.getKeys(), i, (Long) pli.getKeys()[i], thresholds);
             }
             setSelfNumMask(pli.get(i), base);
             for (int j = i + 1; j < pli.size(); j++) {

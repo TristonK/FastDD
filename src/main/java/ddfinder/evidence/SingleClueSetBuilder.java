@@ -1,14 +1,12 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.evidence.ClueSetBuilder;
 import ddfinder.pli.*;
-import ddfinder.predicate.PredicateBuilder;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 import ddfinder.utils.StringCalculation;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * To build the clue set of one Pli shard
@@ -36,7 +34,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     public HashMap<LongBitSet, Long> buildClueSet() {
         LongBitSet[] clues = new LongBitSet[evidenceCount];
         for (int i = 0; i < evidenceCount; i++) {
-            clues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());
+            clues[i] = new LongBitSet(DifferentialFunctionBuilder.getIntervalCnt());
         }
         for (PredicatePack intPack : intPacks) {
             linerCorrectNum(clues, plis.get(intPack.colIndex), intPack.pos, intPack.thresholds);
@@ -166,12 +164,8 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
             int[] offsets;
             if (pli.getClass() == DoublePli.class) {
                 offsets = calUtils.countDouble(pli, 1, (Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
-//                offsets = calUtils.linerCountDouble((Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
-//                offsets = calUtils.binaryCountSingleDouble(pli, i, (Double) pli.getKeys()[i], thresholds);
             } else {
-                offsets = calUtils.countInt(pli, 1, (Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
-//                offsets = calUtils.linerCountInt((Integer[]) pli.getKeys(), i, (Integer) pli.getKeys()[i], thresholds);
-//                offsets = calUtils.binaryCountSingleInt(pli, i, (Integer) pli.getKeys()[i], thresholds);
+                offsets = calUtils.countInt(pli, 1, (Long[]) pli.getKeys(), i, (Long) pli.getKeys()[i], thresholds);
             }
             setSelfNumMask(clues, pli.get(i), pos);
             for (int j = i + 1; j < pli.size(); j++) {

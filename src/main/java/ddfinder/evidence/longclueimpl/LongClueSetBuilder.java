@@ -1,7 +1,6 @@
 package ddfinder.evidence.longclueimpl;
 
-import ch.javasoft.bitset.LongBitSet;
-import ddfinder.predicate.PredicateBuilder;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
 import java.util.ArrayList;
@@ -45,21 +44,17 @@ public abstract class LongClueSetBuilder {
 
     static List<PredicatePack> strPacks;  // String single-column predicate packs
     static List<PredicatePack> doublePacks;  // numerical single-column predicate packs
-    static List<PredicatePack> intPacks;
+    static List<PredicatePack> longPacks;
 
-
-    static ConcurrentHashMap<String, ConcurrentHashMap<String, Integer>> stringDistance;
-
-    public static void configure(PredicateBuilder pBuilder) {
+    public static void configure(DifferentialFunctionBuilder pBuilder) {
         strPacks = new ArrayList<>();
         doublePacks = new ArrayList<>();
-        intPacks = new ArrayList<>();
-        stringDistance = new ConcurrentHashMap<>();
+        longPacks = new ArrayList<>();
         bases = new long[pBuilder.getColSize()];
         buildPredicateGroupsAndCorrectMap(pBuilder);
     }
 
-    private static void buildPredicateGroupsAndCorrectMap(PredicateBuilder pBuilder) {
+    private static void buildPredicateGroupsAndCorrectMap(DifferentialFunctionBuilder pBuilder) {
         List<Integer> strPredicatesGroup = pBuilder.getStrPredicatesGroup();
         List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
         List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
@@ -68,7 +63,7 @@ public abstract class LongClueSetBuilder {
 
         long count = 1;
         for(Integer colIndex: longPredicatesGroup){
-            intPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
+            longPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
             int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             bases[colIndex] = count;
             count *= interval;

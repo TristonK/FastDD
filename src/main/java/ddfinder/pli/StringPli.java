@@ -91,40 +91,6 @@ public class StringPli implements IPli<String>{
     }
 
     /**
-     * @param leftIndex
-     * @param rightIndex
-     * @return
-     */
-    @Override
-    public int getThresholdsBetween(int leftIndex, int rightIndex) {
-        if(leftIndex == rightIndex){return 0;}
-        if(rightIndex < leftIndex){
-            int tmp = rightIndex;
-            rightIndex = leftIndex;
-            leftIndex = tmp;
-        }
-        Map<Integer, Integer> rightKeyMap = twoIdToThresholds.getOrDefault(leftIndex, new HashMap<>());
-        return rightKeyMap.getOrDefault(rightIndex, -1);
-    }
-
-    /**
-     * @param leftIndex
-     * @param rightIndex
-     * @param thresholdIndex
-     */
-    @Override
-    public void setThresholdsBetween(int leftIndex, int rightIndex, int thresholdIndex) {
-        if(rightIndex == leftIndex){return;}
-        if(rightIndex < leftIndex){
-            int tmp = rightIndex;
-            rightIndex = leftIndex;
-            leftIndex = tmp;
-        }
-        Map<Integer, Integer> rightKeyMap = twoIdToThresholds.getOrDefault(leftIndex, new HashMap<>());
-        rightKeyMap.putIfAbsent(rightIndex, thresholdIndex);
-    }
-
-    /**
      * @param row
      * @return
      */

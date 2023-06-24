@@ -1,7 +1,7 @@
 package bruteforce;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.predicate.PredicateBuilder;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 import ddfinder.utils.StringCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
@@ -18,7 +18,7 @@ public class EvidenceCount {
         Set<LongBitSet> clueSet = new HashSet<>();
         //int -> double -> string
         double[][] dInput = input.getDoubleInput();
-        int[][] iInput = input.getIntInput();
+        long[][] iInput = input.getLongInput();
         String[][] sInput = input.getStringInput();
         List<ParsedColumn<?>> columns = input.getParsedColumns();
         int rows = 0;
@@ -37,7 +37,7 @@ public class EvidenceCount {
         }
         for (int i = 0; i < rows - 1; i++) {
             for (int j = i + 1; j < rows; j++) {
-                LongBitSet clue = new LongBitSet(PredicateBuilder.getIntervalCnt());
+                LongBitSet clue = new LongBitSet(DifferentialFunctionBuilder.getIntervalCnt());
                 int cnt = 0;
                 for (int k = 0; k < iInput.length; k++) {
                     double diff = Math.abs(iInput[k][i] - iInput[k][j]);

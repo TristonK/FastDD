@@ -8,18 +8,18 @@ import java.util.Map;
 /**
  * @author tristonK 2023/2/23
  */
-public class IntPli implements IPli<Integer>{
+public class LongPli implements IPli<Long>{
     public PliShard pliShard;   // the PliShard that this PLI belongs to
 
-    public Integer[] keys;
+    public Long[] keys;
     List<Cluster> clusters;
-    Map<Integer, Integer> keyToClusterIdMap;
+    Map<Long, Integer> keyToClusterIdMap;
 
     Map<Integer, Map<Integer, Integer>> twoIdToThresholds;
 
     int[] rowToId;
 
-    public IntPli(List<Cluster> rawClusters, Integer[] keys, Map<Integer, Integer> translator, int[] rowToId) {
+    public LongPli(List<Cluster> rawClusters, Long[] keys, Map<Long, Integer> translator, int[] rowToId) {
         this.clusters = rawClusters;
         this.keys = keys;
         this.keyToClusterIdMap = translator;
@@ -32,7 +32,7 @@ public class IntPli implements IPli<Integer>{
         return keys.length;
     }
 
-    public Integer[] getKeys() {
+    public Long[] getKeys() {
         return keys;
     }
 
@@ -40,12 +40,12 @@ public class IntPli implements IPli<Integer>{
         return clusters;
     }
 
-    public Cluster getClusterByKey(Integer key) {
+    public Cluster getClusterByKey(Long key) {
         Integer clusterId = keyToClusterIdMap.get(key);
         return clusterId != null ? clusters.get(clusterId) : null;
     }
 
-    public Integer getClusterIdByKey(Integer key) {
+    public Integer getClusterIdByKey(Long key) {
         return keyToClusterIdMap.get(key);
     }
 
@@ -57,7 +57,7 @@ public class IntPli implements IPli<Integer>{
     /**
      * @param inequal: 0: return LTE, 1: retrun LT
      * */
-    public int getFirstIndexWhereKeyIsLT(Integer target, int l, int inequal) {
+    public int getFirstIndexWhereKeyIsLT(Long target, int l, int inequal) {
         Integer i = keyToClusterIdMap.get(target);
         if (i != null) {
             return i + inequal;
@@ -76,61 +76,16 @@ public class IntPli implements IPli<Integer>{
         return l;
     }
 
-    /**
-     * @return
-     */
     @Override
     public PliShard getPliShard() {
         return this.pliShard;
     }
 
-    /**
-     * @param pliShard
-     */
     @Override
     public void setPlishard(PliShard pliShard) {
         this.pliShard = pliShard;
     }
 
-    /**
-     * @param leftIndex
-     * @param rightIndex
-     * @return
-     */
-    @Override
-    public int getThresholdsBetween(int leftIndex, int rightIndex) {
-        if(leftIndex == rightIndex){return 0;}
-        if(rightIndex < leftIndex){
-            int tmp = rightIndex;
-            rightIndex = leftIndex;
-            leftIndex = tmp;
-        }
-        Map<Integer, Integer> rightKeyMap = twoIdToThresholds.getOrDefault(leftIndex, new HashMap<>());
-        return rightKeyMap.getOrDefault(rightIndex, -1);
-    }
-
-    /**
-     * @param leftIndex
-     * @param rightIndex
-     * @param thresholdIndex
-     */
-    @Override
-    public void setThresholdsBetween(int leftIndex, int rightIndex, int thresholdIndex) {
-        if(rightIndex == leftIndex){return;}
-        if(rightIndex < leftIndex){
-            int tmp = rightIndex;
-            rightIndex = leftIndex;
-            leftIndex = tmp;
-        }
-        Map<Integer, Integer> rightKeyMap = twoIdToThresholds.getOrDefault(leftIndex, new HashMap<>());
-        rightKeyMap.putIfAbsent(rightIndex, thresholdIndex);
-    }
-
-
-    /**
-     * @param row
-     * @return
-     */
     @Override
     public int getClusterIdByRow(int row) {
         return rowToId[row];

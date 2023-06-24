@@ -1,10 +1,7 @@
 package ddfinder.pli;
 
 
-import com.koloboke.collect.set.hash.HashDoubleSet;
-import com.koloboke.collect.set.hash.HashDoubleSets;
-import com.koloboke.collect.set.hash.HashIntSet;
-import com.koloboke.collect.set.hash.HashIntSets;
+import com.koloboke.collect.set.hash.*;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 import net.mintern.primitive.Primitive;
 
@@ -62,17 +59,17 @@ public class PliShardBuilder {
         return  new DoublePli(clusters, dkeys, keyToClusterID, null);
     }
 
-    private IntPli buildIntPli(int[] colValues, int beg, int end, int index) {
-        HashIntSet keySet = HashIntSets.newMutableSet();
+    private LongPli buildIntPli(long[] colValues, int beg, int end, int index) {
+        HashLongSet keySet = HashLongSets.newMutableSet();
         for (int row = beg; row < end; ++row) {
             keySet.add(colValues[row]);
         }
 
-        int[] keys = keySet.toIntArray();
-        Integer[] ikeys = new Integer[keys.length];
-        Primitive.sort(keys, (a, b) -> Integer.compare(b, a), false);
+        long[] keys = keySet.toLongArray();
+        Long[] ikeys = new Long[keys.length];
+        Primitive.sort(keys, (a, b) -> Long.compare(b, a), false);
 
-        Map<Integer, Integer> keyToClusterID = new HashMap<>(); // int (key) -> cluster id
+        Map<Long, Integer> keyToClusterID = new HashMap<>(); // long (key) -> cluster id
         for (int clusterID = 0; clusterID < keys.length; clusterID++) {
             ikeys[clusterID] = keys[clusterID];
             keyToClusterID.put(ikeys[clusterID], clusterID);
@@ -87,9 +84,9 @@ public class PliShardBuilder {
             if(shardLength == -1){clusterInput[index][row] = keyToClusterID.get(colValues[row]);}
         }
         if(shardLength == -1){
-            return new IntPli(clusters, ikeys, keyToClusterID, clusterInput[index]);
+            return new LongPli(clusters, ikeys, keyToClusterID, clusterInput[index]);
         }
-        return  new IntPli(clusters, ikeys, keyToClusterID, null);
+        return  new LongPli(clusters, ikeys, keyToClusterID, null);
     }
 
     private StringPli buildStringPli(String[] colValues, int beg, int end, int index) {
@@ -119,17 +116,17 @@ public class PliShardBuilder {
         return  new StringPli(clusters, keys, keyToClusterID, null);
     }
 
-    public PliShard[] buildPliShards(double[][] doubleInput, int[][] intInput, String[][] stringInput) {
+    public PliShard[] buildPliShards(double[][] doubleInput, long[][] longInput, String[][] stringInput) {
         int rowEnd;
         if (doubleInput == null || doubleInput.length == 0 || doubleInput[0].length == 0) {
-            if(intInput == null || intInput.length == 0 || intInput[0].length == 0){
+            if(longInput == null || longInput.length == 0 || longInput[0].length == 0){
                 if(stringInput== null || stringInput.length == 0 || stringInput[0].length == 0){
                     return new PliShard[0];
                 }else{
                     rowEnd = stringInput[0].length;
                 }
             }else{
-                rowEnd = intInput[0].length;
+                rowEnd = longInput[0].length;
             }
         }else {
             rowEnd = doubleInput[0].length;
@@ -151,25 +148,17 @@ public class PliShardBuilder {
                 shardBeg = rowBeg; shardEnd = rowEnd;
             }
             List<IPli> plis = new ArrayList<>();
-            for (int j =0 ;j < intInput.length; j++) {
-                plis.add(buildIntPli(intInput[j], shardBeg, shardEnd, j));
+            for (int j =0 ;j < longInput.length; j++) {
+                plis.add(buildIntPli(longInput[j], shardBeg, shardEnd, j));
             }
             for (int j =0 ;j < doubleInput.length; j++) {
-                plis.add(buildDoublePli(doubleInput[j], shardBeg, shardEnd,  j + intInput.length));
+                plis.add(buildDoublePli(doubleInput[j], shardBeg, shardEnd,  j + longInput.length));
             }
             for (int j =0 ;j < stringInput.length; j++) {
-                plis.add(buildStringPli(stringInput[j], shardBeg, shardEnd, j + intInput.length + doubleInput.length));
+                plis.add(buildStringPli(stringInput[j], shardBeg, shardEnd, j + longInput.length + doubleInput.length));
             }
             pliShards[i] = new PliShard(plis, shardBeg, shardEnd);
         }
-
-//        IntStream.range(0, nShards).forEach(i -> {
-//            int shardBeg = rowBeg + i * shardLength, shardEnd = Math.min(rowEnd, shardBeg + shardLength);
-//            List<Pli> plis = new ArrayList<>();
-//            for (int col = 0; col < intInput.length; col++)
-//                plis.add(buildPli(isNum[col], intInput[col], shardBeg, shardEnd));
-//            pliShards[i] = new PliShard(plis, shardBeg, shardEnd);
-//        });
         return pliShards;
     }
 }

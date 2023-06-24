@@ -1,6 +1,5 @@
 package ddfinder.differentialfunction;
 
-import ddfinder.predicate.Predicate;
 import ddfinder.predicate.PredicateSet;
 
 /**
@@ -20,11 +19,11 @@ public class DifferentialFunction {
     public String toString(){
         StringBuilder sb = new StringBuilder();
         int count = 0;
-        for (Predicate predicate : this.predicates) {
+        for (ddfinder.predicate.DifferentialFunction differentialFunction : this.predicates) {
             if (count == 0) {
-                sb.append(predicate.toString());
+                sb.append(differentialFunction.toString());
             } else {
-                sb.append(AND + predicate.toString());
+                sb.append(AND + differentialFunction.toString());
             }
             count++;
         }

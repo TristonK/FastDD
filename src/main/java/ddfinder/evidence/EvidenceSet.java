@@ -2,7 +2,7 @@ package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.evidence.longclueimpl.LongClueSetBuilder;
-import ddfinder.predicate.PredicateBuilder;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,23 +25,22 @@ public class EvidenceSet implements Iterable<Evidence>{
      * example: predicates:{<=2, <=1, <=0, <=0, >0, >1, >2}
      *          clue: 0010 => {<=2, >0, >1}
      * */
-    private List<List<LongBitSet>> countToPredicateSets;
+    private final List<List<LongBitSet>> offsetToPredicateSets;
 
-    public EvidenceSet(PredicateBuilder predicateBuilder){
-        clueToEvidence = new HashMap<LongBitSet, Evidence>();
+    public EvidenceSet(DifferentialFunctionBuilder differentialFunctionBuilder){
+        clueToEvidence = new HashMap<>();
         longClueToEvidence = new HashMap<>();
         evidences = new ArrayList<>();
-        this.countToPredicateSets = new ArrayList<>();
-        for(int i = 0; i < predicateBuilder.getColSize(); i++){
-            // colMap : bit in clue => colIndex
-            countToPredicateSets.add(predicateBuilder.getColPredicateSet(i));
+        this.offsetToPredicateSets = new ArrayList<>();
+        for(int i = 0; i < differentialFunctionBuilder.getColSize(); i++){
+            offsetToPredicateSets.add(differentialFunctionBuilder.getOffset2SatisfiedPredicates(i));
         }
     }
 
     public void build(HashMap<LongBitSet, Long> clueSet){
         for (var entry : clueSet.entrySet()) {
             LongBitSet clue = entry.getKey();
-            Evidence evi = new Evidence(clue, entry.getValue(), countToPredicateSets);
+            Evidence evi = new Evidence(clue, entry.getValue(), offsetToPredicateSets);
             clueToEvidence.put(clue, evi);
             evidences.add(evi);
         }
@@ -51,7 +50,7 @@ public class EvidenceSet implements Iterable<Evidence>{
     public void buildFromLong(HashMap<Long, Long> clueSet){
         for(var entry: clueSet.entrySet()){
             long clue = entry.getKey();
-            Evidence evi = new Evidence(clue, entry.getValue(), countToPredicateSets, LongClueSetBuilder.bases);
+            Evidence evi = new Evidence(clue, entry.getValue(), offsetToPredicateSets, LongClueSetBuilder.bases);
             //if(evi==null){System.out.println("xxxxxx");}
             longClueToEvidence.put(clue, evi);
             evidences.add(evi);

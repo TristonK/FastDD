@@ -2,7 +2,6 @@ package thresholds;
 
 import ddfinder.utils.StringCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
-import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
 import java.util.*;
 
@@ -63,7 +62,7 @@ public class Determination {
         //int -> double -> string
 
         double[][] dInput = input.getDoubleInput();//二维数组第一位表示该类型属性数量，第二位表示行数
-        int[][] iInput = input.getIntInput();
+        long[][] iInput = input.getLongInput();
         String[][] sInput = input.getStringInput();
 
         int index = 0;//
