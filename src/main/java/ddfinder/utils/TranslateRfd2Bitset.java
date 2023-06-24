@@ -1,6 +1,6 @@
 package ddfinder.utils;
 
-import ddfinder.predicate.PredicateBuilder;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 
 import java.util.BitSet;
 import java.util.List;
@@ -17,7 +17,7 @@ public class TranslateRfd2Bitset {
         return null;
     }
 
-    public static List<BitSet> translate2PredicateSet(String rfdPath, PredicateBuilder predicateBuilder){
+    public static List<BitSet> translate2PredicateSet(String rfdPath, DifferentialFunctionBuilder differentialFunctionBuilder){
         return null;
     }
 }

@@ -6,24 +6,25 @@ import de.metanome.algorithms.dcfinder.predicates.operands.ColumnOperand;
 /**
  * @author tristonK 2022/12/29
  */
-public class Predicate {
+public class DifferentialFunction {
     private final Operator operator;
     private final double distance;
     private final ColumnOperand operand;
+    private int index;
 
     private static PredicateProvider predicateProvider;
 
     public static void configure(PredicateProvider provider) {
-        Predicate.predicateProvider = provider;
+        DifferentialFunction.predicateProvider = provider;
     }
 
     private final boolean accepted;
 
-    public Predicate(Operator op, double distance, ColumnOperand<?> operand){
+    public DifferentialFunction(Operator op, double distance, ColumnOperand<?> operand){
         this(op, distance, operand, true);
     }
 
-    public Predicate(Operator op, double distance, ColumnOperand<?> operand, boolean accepted){
+    public DifferentialFunction(Operator op, double distance, ColumnOperand<?> operand, boolean accepted){
         if (op == null) {
             throw new IllegalArgumentException("Operator must not be null.");
         }
@@ -75,7 +76,7 @@ public class Predicate {
             return false;
         }
 
-        Predicate other = (Predicate) obj;
+        DifferentialFunction other = (DifferentialFunction) obj;
         if (operator != other.operator) {
             return false;
         }
@@ -90,7 +91,7 @@ public class Predicate {
         return distance == other.getDistance();
     }
 
-    public Predicate getInversePredicate(){
+    public DifferentialFunction getInversePredicate(){
         if(operator == Operator.LESS_EQUAL){
             return predicateProvider.getPredicate(Operator.GREATER, operand, distance);
         }
@@ -101,8 +102,9 @@ public class Predicate {
      * @return 0: not for a column or not the same operator
      * 1: this have a bigger distance
      * -1: p has a bigger distance
+     * 用此排序，表示范围大的在前
      * */
-    public int comparePredicate(Predicate p){
+    public int compare(DifferentialFunction p){
         if(p.operand.equals(this.operand)  && p.operator.equals(this.operator)){
             int flag = operator == Operator.LESS_EQUAL? 1 : -1;
             if(this.distance >= p.distance){
@@ -116,5 +118,16 @@ public class Predicate {
 
     public boolean isAccepted() {
         return accepted;
+    }
+
+    public void setIndex(int index){
+        this.index = index;
+    }
+    public int getIndex(){
+        return index;
+    }
+
+    public int operandWithOpHash(){
+        return operand.hashCode() * 31 + operator.hashCode();
     }
 }

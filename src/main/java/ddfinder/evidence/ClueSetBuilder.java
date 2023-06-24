@@ -1,9 +1,7 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.pli.DoublePli;
-import ddfinder.pli.IPli;
-import ddfinder.predicate.PredicateBuilder;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
 
@@ -58,7 +56,7 @@ abstract public class ClueSetBuilder{
 
     static ConcurrentHashMap<String, ConcurrentHashMap<String, Integer>> stringDistance;
 
-    public static void configure(PredicateBuilder pBuilder) {
+    public static void configure(DifferentialFunctionBuilder pBuilder) {
         strPacks = new ArrayList<>();
         doublePacks = new ArrayList<>();
         intPacks = new ArrayList<>();
@@ -71,12 +69,12 @@ abstract public class ClueSetBuilder{
         return bit2ColMap;
     }
 
-    private static void buildPredicateGroupsAndCorrectMap(PredicateBuilder pBuilder) {
+    private static void buildPredicateGroupsAndCorrectMap(DifferentialFunctionBuilder pBuilder) {
         List<Integer> strPredicatesGroup = pBuilder.getStrPredicatesGroup();
         List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
         List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
 
-        bit2ColMap = new int[PredicateBuilder.getIntervalCnt()];//getIntervalCnt()返回阈值+1，需要修改成getIntervalCnt()-1，与下面保持一致
+        bit2ColMap = new int[DifferentialFunctionBuilder.getIntervalCnt()];//getIntervalCnt()返回阈值+1，需要修改成getIntervalCnt()-1，与下面保持一致
         col2FirstBitMap = new int [strPredicatesGroup.size() + longPredicatesGroup.size() + doublePredicatesGroup.size()];
 
 

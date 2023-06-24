@@ -1,10 +1,7 @@
 package ddfinder.differentialdependency;
 
 import ch.javasoft.bitset.IBitSet;
-import ddfinder.differentialfunction.DifferentialFunction;
-import ddfinder.predicate.IntervalPredicate;
-import ddfinder.predicate.Predicate;
-import ddfinder.predicate.PredicateSet;
+import ddfinder.predicate.DifferentialFunction;
 
 import java.util.List;
 
@@ -13,13 +10,13 @@ import java.util.List;
  */
 public class DifferentialDependency {
 
-    private List<Predicate> left;
-    private Predicate right;
+    private List<DifferentialFunction> left;
+    private DifferentialFunction right;
 
     private IBitSet predicateSet;
     private IBitSet leftPredicateSet;
 
-    public DifferentialDependency(List<Predicate> left, Predicate right, IBitSet predicateSet, IBitSet leftPredicates){
+    public DifferentialDependency(List<DifferentialFunction> left, DifferentialFunction right, IBitSet predicateSet, IBitSet leftPredicates){
         if(left == null || right == null){
             throw new IllegalArgumentException("DifferentialFunction should not be null.");
         }
@@ -34,12 +31,12 @@ public class DifferentialDependency {
 
         StringBuilder sb = new StringBuilder("{ ");
         boolean first = true;
-        for(Predicate predicate : left){
+        for(DifferentialFunction differentialFunction : left){
             if(first){
-                sb.append(predicate.toString());
+                sb.append(differentialFunction.toString());
                 first = false;
             }else{
-                sb.append(AND).append(predicate.toString());
+                sb.append(AND).append(differentialFunction.toString());
             }
         }
         sb.append(" -> ").append(right.toString()).append("}");
@@ -50,7 +47,7 @@ public class DifferentialDependency {
     public int hashCode() {
         int result = 0;
         int prime1 = 23;
-        for(Predicate p : left){
+        for(DifferentialFunction p : left){
             result += p.hashCode();
         }
         result += right.hashCode() * prime1;

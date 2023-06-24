@@ -46,7 +46,7 @@ public class LinearCalOffset implements IClueOffset {
         return posTothreshold;
     }
 
-    public int[] countInt(IPli probePli, int isSingle, Integer[] keys, int startPos, int key, List<Double> thresholds) {
+    public int[] countInt(IPli probePli, int isSingle, Long[] keys, int startPos, long key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
         int thresholdsId = thresholds.size() - 1;

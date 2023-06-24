@@ -1,14 +1,8 @@
 package ddfinder.differentialdependency;
 
 import ch.javasoft.bitset.IBitSet;
-import ch.javasoft.bitset.LongBitSet;
-import ddfinder.evidence.Evidence;
-import ddfinder.predicate.IntervalPredicate;
-import ddfinder.predicate.Predicate;
-import ddfinder.predicate.PredicateBuilder;
-import ddfinder.predicate.PredicateProvider;
+import ddfinder.predicate.DifferentialFunction;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
-import de.metanome.algorithms.dcfinder.predicates.Operator;
 
 import java.util.*;
 
@@ -22,7 +16,7 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
         dependencies = new HashSet<>();
     }
 
-    public DifferentialDependencySet(Set<IBitSet> covers, IndexProvider<Predicate> indexProvider){
+    public DifferentialDependencySet(Set<IBitSet> covers, IndexProvider<DifferentialFunction> indexProvider){
         dependencies = new HashSet<>();
         for(IBitSet cover: covers){
             IBitSet newCover = cover.clone();
@@ -31,10 +25,10 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
                 System.out.println("bad cover");
                 assert false;
             }
-            List<Predicate> left = new ArrayList<>();
-            Predicate right = null;
+            List<DifferentialFunction> left = new ArrayList<>();
+            DifferentialFunction right = null;
             for(int i = cover.nextSetBit(0); i>=0; i = cover.nextSetBit(i+1)){
-                Predicate p = indexProvider.getObject(i);
+                DifferentialFunction p = indexProvider.getObject(i);
                 if(right == null && !p.isAccepted()){
                     right = p.getInversePredicate();
                     newCover.clear(i);
@@ -45,7 +39,7 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
                 }
             }
             if(right == null){
-                Predicate chooseRight = left.get(left.size() - 1);
+                DifferentialFunction chooseRight = left.get(left.size() - 1);
                 right = chooseRight.getInversePredicate();
                 left.remove(left.size() - 1);
                 lCover.clear(indexProvider.getIndex(chooseRight));
@@ -56,7 +50,7 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
         }
     }
 
-    public DifferentialDependencySet(Set<IBitSet> covers, int rightID, IndexProvider<Predicate> indexProvider){
+    public DifferentialDependencySet(Set<IBitSet> covers, int rightID, IndexProvider<DifferentialFunction> indexProvider){
         dependencies = new HashSet<>();
         for(IBitSet cover: covers){
             IBitSet newCover = cover.clone();
@@ -65,14 +59,14 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
                 System.out.println("bad cover");
                 assert false;
             }
-            List<Predicate> left = new ArrayList<>();
-            Predicate right = indexProvider.getObject(rightID);
+            List<DifferentialFunction> left = new ArrayList<>();
+            DifferentialFunction right = indexProvider.getObject(rightID);
             for(int i = cover.nextSetBit(0); i>=0; i = cover.nextSetBit(i+1)){
                 if(i == rightID){
                     System.out.println("right ID exists in Left");
                     assert false;
                 }
-                Predicate p = indexProvider.getObject(i);
+                DifferentialFunction p = indexProvider.getObject(i);
                 left.add(p);
             }
             newCover.set(rightID);

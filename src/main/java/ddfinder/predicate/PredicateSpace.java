@@ -1,6 +1,5 @@
 package ddfinder.predicate;
 
-import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
@@ -15,11 +14,11 @@ public class PredicateSpace {
     private PredicateSet acceptPredicateSet;
     private PredicateSet rejectPredicateSet;
 
-    private IndexProvider<Predicate> predicateIndexProvider;
+    private IndexProvider<DifferentialFunction> predicateIndexProvider;
 
     private List<BitSet> colPredicateGroup;
 
-    public PredicateSpace(LongBitSet predicateSet, LongBitSet acceptPredicateSet, LongBitSet rejectPredicateSet, IndexProvider<Predicate> indexProvider, List<BitSet> colPredicates){
+    public PredicateSpace(LongBitSet predicateSet, LongBitSet acceptPredicateSet, LongBitSet rejectPredicateSet, IndexProvider<DifferentialFunction> indexProvider, List<BitSet> colPredicates){
         this.predicateSet = new PredicateSet(predicateSet);
         this.acceptPredicateSet = new PredicateSet(acceptPredicateSet);
         this.rejectPredicateSet = new PredicateSet(rejectPredicateSet);
@@ -39,7 +38,7 @@ public class PredicateSpace {
         return rejectPredicateSet;
     }
 
-    public IndexProvider<Predicate> getPredicateIndexProvider() {
+    public IndexProvider<DifferentialFunction> getPredicateIndexProvider() {
         return predicateIndexProvider;
     }
 

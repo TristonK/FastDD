@@ -1,17 +1,14 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.evidence.ClueSetBuilder;
-import ddfinder.pli.Cluster;
 import ddfinder.pli.DoublePli;
 import ddfinder.pli.IPli;
 import ddfinder.pli.PliShard;
-import ddfinder.predicate.PredicateBuilder;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 import ddfinder.utils.StringCalculation;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * To build the clue set of two Pli shards
@@ -36,7 +33,7 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
     public HashMap<LongBitSet, Long> buildClueSet() {
         LongBitSet[] forwardClues = new LongBitSet[evidenceCount];   // plis1 -> plis2
         for (int i = 0; i < evidenceCount; i++) {
-            forwardClues[i] = new LongBitSet(PredicateBuilder.getIntervalCnt());//TODO: n个阈值有n+1个interval，这里需要修改（eg:54 => 45）
+            forwardClues[i] = new LongBitSet(DifferentialFunctionBuilder.getIntervalCnt());//TODO: n个阈值有n+1个interval，这里需要修改（eg:54 => 45）
         }
         for (PredicatePack strPack : strPacks) {
             correctStr(forwardClues, plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.pos, strPack.thresholds);
@@ -181,12 +178,8 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
             int[] offsets;
             if (pivotPli.getClass() == DoublePli.class) {
                 offsets = calUtils.countDouble(probePli, 0, (Double[]) probePli.getKeys(), 0, (Double) pivotPli.getKeys()[i], thresholds);
-//                offsets = calUtils.linerCountDouble((Double[]) probePli.getKeys(), 0 , (Double) pivotPli.getKeys()[i], thresholds);
-//                offsets = calUtils.binaryCountCrossDouble(probePli, 0, (Double) pivotPli.getKeys()[i], thresholds);
             } else {
-                offsets = calUtils.countInt(probePli, 0, (Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
-//                offsets = calUtils.linerCountInt((Integer[]) probePli.getKeys(), 0, (Integer) pivotPli.getKeys()[i], thresholds);
-//                offsets = calUtils.binaryCountCrossInt(probePli, 0, (Integer) pivotPli.getKeys()[i], thresholds);
+                offsets = calUtils.countInt(probePli, 0, (Long[])  probePli.getKeys(), 0, (Long) pivotPli.getKeys()[i], thresholds);
             }
             for (int j = 0; j < probePli.size(); j++) {
                 setNumMask(forwardArray, pivotPli, i, probePli, j, pos + offsets[j]);

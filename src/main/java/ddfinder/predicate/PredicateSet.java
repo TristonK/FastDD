@@ -8,10 +8,10 @@ import java.util.Iterator;
 /**
  * @author tristonK 2022/12/29
  */
-public class PredicateSet implements Iterable<Predicate>{
-    public static IndexProvider<Predicate> indexProvider = new IndexProvider<>();
+public class PredicateSet implements Iterable<DifferentialFunction>{
+    public static IndexProvider<DifferentialFunction> indexProvider = new IndexProvider<>();
 
-    public static void configure(IndexProvider<Predicate> indexProvider) {
+    public static void configure(IndexProvider<DifferentialFunction> indexProvider) {
         PredicateSet.indexProvider = indexProvider;
     }
 
@@ -35,12 +35,12 @@ public class PredicateSet implements Iterable<Predicate>{
         this.bitset = pS.getBitset().clone();
     }
 
-    public void remove(Predicate predicate) {
-        this.bitset.clear(indexProvider.getIndex(predicate));
+    public void remove(DifferentialFunction differentialFunction) {
+        this.bitset.clear(indexProvider.getIndex(differentialFunction));
     }
 
-    public boolean containsPredicate(Predicate predicate) {
-        return bitset.get(indexProvider.getIndex(predicate));
+    public boolean containsPredicate(DifferentialFunction differentialFunction) {
+        return bitset.get(indexProvider.getIndex(differentialFunction));
     }
 
     public boolean isSubsetOf(PredicateSet superset) {
@@ -63,20 +63,20 @@ public class PredicateSet implements Iterable<Predicate>{
         return bitset.cardinality();
     }
 
-    public boolean add(Predicate predicate) {
-        int index = indexProvider.getIndex(predicate);
+    public boolean add(DifferentialFunction differentialFunction) {
+        int index = indexProvider.getIndex(differentialFunction);
         boolean newAdded = !bitset.get(index);
         bitset.set(index);
         return newAdded;
     }
 
     @Override
-    public Iterator<Predicate> iterator() {
+    public Iterator<DifferentialFunction> iterator() {
         return new Iterator<>() {
             private int currentIndex = bitset.nextSetBit(0);
 
             @Override
-            public Predicate next() {
+            public DifferentialFunction next() {
                 int lastIndex = currentIndex;
                 currentIndex = bitset.nextSetBit(currentIndex + 1);
                 return indexProvider.getObject(lastIndex);
