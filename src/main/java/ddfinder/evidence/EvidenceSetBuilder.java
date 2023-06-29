@@ -78,6 +78,7 @@ public class EvidenceSetBuilder {
         HashMap<Long, Long> clueSet = new HashMap<>();
 
         IClueOffset binaryCalOffsetUtils = new BinaryCalOffset();
+
         System.out.println("[LongClueOffset] Using Strategy: " + binaryCalOffsetUtils.getClass().getSimpleName());
 
         for (int i = 0; i < pliShards.length; i++) {

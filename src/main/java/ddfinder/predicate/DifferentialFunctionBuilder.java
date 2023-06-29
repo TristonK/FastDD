@@ -236,7 +236,7 @@ public class DifferentialFunctionBuilder {
         PredicateSet mask = new PredicateSet();
         double threshold = thresholds.get(thresholds.size() - 1);
         for(DifferentialFunction df: differentialFunctionsOfCol){
-            if(df.getOperator() == Operator.GREATER && df.getDistance() < threshold){
+            if(df.getOperator() == Operator.GREATER){
                 mask.add(df);
             }
         }
