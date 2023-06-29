@@ -1,8 +1,11 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 
 import java.util.List;
+import java.util.BitSet;
+import java.util.Objects;
 
 /**
  * @author tristonK 2022/12/31
@@ -18,6 +21,9 @@ public class Evidence {
 
     public Evidence(LongBitSet clue, Long count, List<List<LongBitSet>> countToPredicateSets){
         this.clue = clue;
+//        if(Objects.equals(clue.toString(), "{001000010000000010000001000001}")) {
+//            System.out.println(clue);
+//        }
         this.count = count;
         this.bitset = buildEvidenceFromClue(countToPredicateSets);
     }
