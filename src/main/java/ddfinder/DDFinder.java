@@ -1,10 +1,15 @@
 package ddfinder;
 
+import bruteforce.ValidateDD;
 import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.enumeration.Enumeration;
 import ddfinder.enumeration.HybridEvidenceInversion;
 import ddfinder.evidence.*;
+import ddfinder.evidence.longclueimpl.LongCrossClueSetBuilder;
+import ddfinder.evidence.longclueimpl.LongSingleClueSetBuilder;
+import ddfinder.evidence.offsetimpl.BinaryCalOffset;
+import ddfinder.evidence.offsetimpl.BruteCalOffset;
 import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
 import ddfinder.predicate.DifferentialFunctionBuilder;
@@ -43,11 +48,16 @@ public class DDFinder {
         System.out.println("[PLIs] build PLIs cost: " + buildPliTime + "ms");
 
         t0 = System.currentTimeMillis();
+        LongCrossClueSetBuilder.setMaskTimeCnt = 0;
+        LongSingleClueSetBuilder.setMaskTimecnt = 0;
+        LongSingleClueSetBuilder.cntStrTime =0;
+        LongCrossClueSetBuilder.cntStrTime = 0;
         EvidenceSetBuilder evidenceSetBuilder = new EvidenceSetBuilder(differentialFunctionBuilder);
         evidenceSetBuilder.buildEvidenceSetFromLongClue(pliShards);
         EvidenceSet evidenceSet = evidenceSetBuilder.getEvidenceSet();
         System.out.println("[EvidenceSet] build long clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
-
+        System.out.println("[countOffset]: " + (BinaryCalOffset.cntTime/1000000+LongSingleClueSetBuilder.cntStrTime+LongCrossClueSetBuilder.cntStrTime/1000000) +
+                "; [SetMask]: " + (LongCrossClueSetBuilder.setMaskTimeCnt + LongSingleClueSetBuilder.setMaskTimecnt)/1000000);
         long enmurationTime = System.currentTimeMillis();
         Enumeration ddfinder = new HybridEvidenceInversion(evidenceSet, differentialFunctionBuilder);
         DifferentialDependencySet dds = ddfinder.buildDifferentialDenpendency();
@@ -58,6 +68,9 @@ public class DDFinder {
             for (DifferentialDependency dd : dds) {
                 System.out.println(dd.toString());
             }
+        }
+        if(Config.DebugFlag) {
+            new ValidateDD().validate(evidenceSet, dds);
         }
         return dds;
     }

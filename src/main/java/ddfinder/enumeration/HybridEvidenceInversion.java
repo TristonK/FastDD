@@ -77,9 +77,9 @@ public class HybridEvidenceInversion implements Enumeration{
                 if (p1.operandWithOpHash() == p2.operandWithOpHash()){
                     // 表示范围越来越小
                     if (p1.getOperator().equals(Operator.LESS_EQUAL)){
-                        return p2.getDistance() - p1.getDistance() > 0 ? 1 : -1;
+                        return p2.getDistance() - p1.getDistance() < 0 ? 1 : -1;
                     }
-                    return p1.getDistance() - p2.getDistance() > 0 ? 1 : -1;
+                    return p1.getDistance() - p2.getDistance() < 0 ? 1 : -1;
                 }
                 return dfNotSatisfiedDFSet.get(o1).cardinality() - dfNotSatisfiedDFSet.get(o2).cardinality();//predSatisfiedEvidenceSet.get(o1).cardinality() - predSatisfiedEvidenceSet.get(o2).cardinality();
             }
@@ -98,7 +98,7 @@ public class HybridEvidenceInversion implements Enumeration{
             currPredicateSpace.removeAll(pred2PredGroupMap.get(rightPid));
 
             Set<Integer> predsNotSatisfied = new HashSet<>();
-            for(int j = 0; j < i; j++){predsNotSatisfied.add(preds.get(j));}
+            //for(int j = 0; j < i; j++){predsNotSatisfied.add(preds.get(j));}
 
             LongBitSet currEvidenceSet = dfNotSatisfiedDFSet.get(rightPid);//predSatisfiedEvidenceSet.get(rightPid);
             List<LongBitSet> currEvidences = new ArrayList<>();
@@ -122,7 +122,8 @@ public class HybridEvidenceInversion implements Enumeration{
             }
             //System.out.println("before "+ partialCovers.size());
             Set<IBitSet> ret1 = minimizeTree.minimize(new ArrayList<>(partialCovers));
-           // System.out.println("after " + ret1.size());
+            //Set<IBitSet> ret1 = partialCovers;
+            // System.out.println("after " + ret1.size());
             ret.addAll(new DifferentialDependencySet(ret1, rightPid, predicateIndexProvider));
             minimizeTreeMap.put(predicateIndexProvider.getObject(rightPid).operandWithOpHash(), minimizeTree);
         }
