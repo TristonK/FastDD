@@ -1,6 +1,7 @@
 package ddfinder.predicate;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.Config;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
@@ -13,13 +14,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+import static ddfinder.Config.OutputPredicateFlag;
+
 /**
  * @author tristonK 2022/12/29
  */
 public class DifferentialFunctionBuilder {
     private List<DifferentialFunction> differentialFunctions;
     private final PredicateProvider predicateProvider;
-    private final IndexProvider<DifferentialFunction> predicateIdProvider;
+    public static IndexProvider<DifferentialFunction> predicateIdProvider;
     private Map<Integer, List<Double>> col2Thresholds;
 
     // 属性为long的谓词的列的序号
@@ -173,6 +176,13 @@ public class DifferentialFunctionBuilder {
         } else {
             strPredicatesGroup.add(column.getIndex());
         }
+        if (Config.OutputPredicateFlag){
+            StringBuilder sb = new StringBuilder();
+            for(DifferentialFunction df: partialDifferentialFunctions){
+                sb.append(df.toString()).append("; ");
+            }
+            System.out.println(sb.toString());
+        }
     }
 
 
@@ -303,6 +313,11 @@ public class DifferentialFunctionBuilder {
         String[] thresholdString = s.split(",");
         List<Double> thresholds = new ArrayList<>();
         boolean hasZero = false;
+        if(s.equals("")){
+            if(needZero){thresholds.add(0.0);}
+            return thresholds;
+        }
+        //System.out.println("thresholds size: " + thresholdString.length + " " + thresholdString[0]);
         for (int i = 0; i < thresholdString.length; i++) {
             if (Double.parseDouble(thresholdString[i]) == 0) {
                 hasZero = true;

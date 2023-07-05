@@ -1,6 +1,7 @@
 package ddfinder.evidence;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.predicate.DifferentialFunctionBuilder;
 
 import java.util.List;
 
@@ -76,5 +77,14 @@ public class Evidence {
     @Override
     public String toString() {
         return bitset.toString();
+    }
+
+    public String toDFString(){
+        StringBuilder sb = new StringBuilder();
+        for(int i = bitset.nextSetBit(0); i >= 0; i = bitset.nextSetBit(i + 1)){
+            sb.append(DifferentialFunctionBuilder.predicateIdProvider.getObject(i).toString());
+            sb.append(",");
+        }
+        return sb.toString();
     }
 }
