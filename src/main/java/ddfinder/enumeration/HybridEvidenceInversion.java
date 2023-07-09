@@ -232,17 +232,19 @@ public class HybridEvidenceInversion implements Enumeration{
             BitSet bs = colPredicateGroup.get(i);
             //System.out.println(bs.toString());
             col2Interval[i] = intervalSize;
-            intervalLength[i] = bs.cardinality()/2;
+            intervalLength[i] = differentialFunctionBuilder.getColThresholdsSize(i);
+            //intervalLength[i] = bs.cardinality()/2;
             intervalSize += intervalLength[i];
             int cnt = 0;
             for(int j = bs.nextSetBit(0); j >= 0; j = bs.nextSetBit(j + 1)){
-                if(cnt == 0){
-                    col2PredicateId[i] = j;
-                }
-                if(cnt < intervalLength[i]){
+                DifferentialFunction df = predicateIndexProvider.getObject(j);
+                if(df.getOperator() == Operator.LESS_EQUAL){
                     predicateId2NodeId[j] = i;
                 }else{
                     predicateId2NodeId[j] = i + colSize;
+                }
+                if(cnt == 0){
+                    col2PredicateId[i] = j;
                 }
                 cnt++;
             }

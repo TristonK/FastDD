@@ -18,7 +18,7 @@ public class ValidateDD {
                 if(dd.getLeftPredicateSet().isSubSetOf(evi.getBitset())){
                    flag = true;left++;
                     if(!dd.getPredicateSet().isSubSetOf(evi.getBitset())){
-                        System.out.printf("Bad DD: %s Evidence is %s", dd.toString(), evi.toDFString());
+                        System.out.printf("Bad DD: %s DFSet is %s", dd.toString(), evi.toDFString());
                     }
                 }
             }
