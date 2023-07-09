@@ -21,13 +21,12 @@ public class TranslateRFD {
         // 替换属性名并获取约束值
         var constraintValues = replaceAttributeNames(text, attributeMappings);
 
-        // 按约束值的大小排序
-        //Collections.sort(constraintValues);
-
         // 输出结果
+        System.out.println("**********[Thresholds]**********");
         for(String key: constraintValues.keySet()){
             System.out.println(key + " " + constraintValues.get(key).toString());
         }
+        System.out.println("**********[RFD]**********");
         for(String line: FullRFD){
             System.out.println(line);
         }
@@ -91,10 +90,11 @@ public class TranslateRFD {
             }
             lines[i] = String.join(", ", attributes) + " -> " + parts[1];
         }
-        FullRFD = lines;
+        FullRFD = Arrays.copyOfRange(lines, 1, lines.length);
         return thresholds;
     }
-    public void README(){
+
+    public void TranslateREADME(){
         System.out.print(
                 "RFDFilesSample:\n" +
                 "****** DISCOVERED RFDs *******\n" +
@@ -106,4 +106,41 @@ public class TranslateRFD {
                 "Mapping FileSample:\n" + "COL1:col1\n"
         );
     }
+
+    public static boolean matchDD(String[] rfds, String[] dds){
+        if(rfds.length != dds.length) {
+            System.out.println("Size diff: #rfd: " + rfds.length + "; #dd: " + dds.length);
+            return false;
+        }
+        HashSet<String> rfdSet = new HashSet<>();
+        for(String rfd: rfds){
+            String parsedRFD = parseAndConvert(rfd);
+            rfdSet.add(parsedRFD);
+        }
+        boolean flag = true;
+        for(String dd: dds){
+            String parsedDD = parseAndConvert(dd);
+            if(!rfdSet.contains(parsedDD)){
+                System.out.println("DD not Exist in RFDs " + parsedDD);
+                flag = false;
+            }else{
+                rfdSet.remove(dd);
+            }
+        }
+        if (!flag){
+            System.out.println("RFD left: " + rfdSet.toString());
+        }
+        return flag;
+    }
+
+    public static String parseAndConvert(String expression) {
+        String parsedExpression = expression.replaceAll("[{}\\[\\]]", "");
+        parsedExpression = parsedExpression.replaceAll("->", ",");
+        parsedExpression = parsedExpression.replaceAll("\\),", "\\), ");
+        parsedExpression = parsedExpression.replaceAll(" ∧ ", " , ");
+        parsedExpression = parsedExpression.replaceAll("\\s*,\\s*", ",");
+        parsedExpression = parsedExpression.trim();
+        return parsedExpression;
+    }
+
 }
