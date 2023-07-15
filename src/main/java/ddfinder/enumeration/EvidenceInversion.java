@@ -17,9 +17,6 @@ public class EvidenceInversion {
     List<LongBitSet> evidenceBitSets;
     TranslatingTreeSearch posCover;
 
-    // predicate id in predicates set -> index of {same column, same op}
-    int[] predicateIdToGroupId;
-
     int predicateSetSize;
     public EvidenceInversion(Integer mustTruePredicate, List<BitSet> preidcatesGroupsBiteset, Set<Integer> notMatchPredicates, List<LongBitSet> evidenceBitSets, int predicatesSize){
         colPredicatesBitSet = new ArrayList<>();
@@ -45,6 +42,13 @@ public class EvidenceInversion {
         sortedNegCover = minimizeEvidenceSet(sortedNegCover);
 
         posCover.add(new LongBitSet());
+        /*for(IBitSet bs: colPredicatesBitSet){
+            for(int i = bs.nextSetBit(0); i >= 0;i = bs.nextSetBit(i+1)){
+                LongBitSet pred = new LongBitSet();
+                pred.set(i);
+                posCover.add(pred);
+            }
+        }*/
 
         Collections.sort(sortedNegCover, posCover.getComparator());
 

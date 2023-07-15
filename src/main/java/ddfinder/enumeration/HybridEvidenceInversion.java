@@ -90,6 +90,7 @@ public class HybridEvidenceInversion implements Enumeration{
         for(int i = 0; i < preds.size(); i++){
             int rightPid = preds.get(i);
             if (dfNotSatisfiedDFSet.get(rightPid).cardinality() == 0){
+                System.out.println("All match " + predicateIndexProvider.getObject(rightPid).toString());
                 // dd must have at least two predicates
                 continue;
             }

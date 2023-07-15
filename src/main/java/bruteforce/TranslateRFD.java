@@ -1,5 +1,10 @@
 package bruteforce;
 
+import ch.javasoft.bitset.LongBitSet;
+import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.utils.StringCalculation;
+import de.metanome.algorithms.dcfinder.input.Input;
+
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -89,6 +94,7 @@ public class TranslateRFD {
                 thresholds.get(mappedAttributeName).add(threshold);
             }
             lines[i] = String.join(", ", attributes) + " -> " + parts[1];
+            lines[i] = lines[i].trim();
         }
         FullRFD = Arrays.copyOfRange(lines, 1, lines.length);
         return thresholds;
@@ -108,10 +114,10 @@ public class TranslateRFD {
     }
 
     public static boolean matchDD(String[] rfds, String[] dds){
-        if(rfds.length != dds.length) {
+       /* if(rfds.length != dds.length) {
             System.out.println("Size diff: #rfd: " + rfds.length + "; #dd: " + dds.length);
             return false;
-        }
+        }*/
         HashSet<String> rfdSet = new HashSet<>();
         for(String rfd: rfds){
             String parsedRFD = parseAndConvert(rfd);
@@ -124,11 +130,11 @@ public class TranslateRFD {
                 System.out.println("DD not Exist in RFDs " + parsedDD);
                 flag = false;
             }else{
-                rfdSet.remove(dd);
+                rfdSet.remove(parsedDD);
             }
         }
         if (!flag){
-            System.out.println("RFD left: " + rfdSet.toString());
+            System.out.println("RFD left: #" + rfdSet.size() + " " + rfdSet.toString());
         }
         return flag;
     }
@@ -141,6 +147,21 @@ public class TranslateRFD {
         parsedExpression = parsedExpression.replaceAll("\\s*,\\s*", ",");
         parsedExpression = parsedExpression.trim();
         return parsedExpression;
+    }
+
+    public void validatByInput(Input input){
+        double[] col2Input = input.getDoubleInput()[0];
+        double[] col5Input = input.getDoubleInput()[3];
+        int rows = col2Input.length;
+        for (int i = 0; i < rows - 1; i++) {
+            for (int j = i + 1; j < rows; j++) {
+                if (Math.abs(col2Input[i] - col2Input[j]) <= 0.4){
+                    if (Math.abs(col5Input[i]-col5Input[j])!=0){
+                        System.out.println(i+" "+j+": "+col5Input[i]+" "+col5Input[j]);
+                    }
+                }
+            }
+        }
     }
 
 }
