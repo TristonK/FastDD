@@ -1,5 +1,7 @@
 package ddfinder;
 
+import bruteforce.EvidenceCount;
+import bruteforce.TranslateRFD;
 import bruteforce.ValidateDD;
 import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
@@ -69,9 +71,12 @@ public class DDFinder {
                 System.out.println(dd.toString());
             }
         }
+        // ValidateDD.printAllDF(differentialFunctionBuilder);
+        // ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
         if(Config.DebugFlag) {
             new ValidateDD().validate(evidenceSet, dds);
         }
+        // new TranslateRFD().validatByInput(input);
         return dds;
     }
 }
