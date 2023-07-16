@@ -1,6 +1,7 @@
 package ddfinder.differentialdependency;
 
 import ch.javasoft.bitset.IBitSet;
+import ch.javasoft.bitset.LongBitSet;
 import ddfinder.predicate.DifferentialFunction;
 
 import java.util.List;
@@ -24,6 +25,10 @@ public class DifferentialDependency {
         this.right = right;
         this.predicateSet = predicateSet;
         this.leftPredicateSet = leftPredicates;
+    }
+
+    public DifferentialDependency(LongBitSet left, LongBitSet right){
+
     }
 
     public static final String AND = " ∧ ";
