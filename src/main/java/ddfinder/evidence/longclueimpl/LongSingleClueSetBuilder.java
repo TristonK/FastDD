@@ -47,10 +47,12 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
     }
 
 
+    public static long setMaskTimecnt = 0;
     private void setNumMask(Cluster cluster1, Cluster cluster2, long base, int offset) {
+        long time1  = System.nanoTime();
         List<Integer> rawCluster1 = cluster1.getRawCluster();
         List<Integer> rawCluster2 = cluster2.getRawCluster();
-
+        long diff = base * offset;
         for (Integer value : rawCluster1) {
             for (Integer integer : rawCluster2) {
                 int tid1 = value;
@@ -61,20 +63,23 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
                     tid2 = temp;
                 }
                 int t1 = tid1 - tidBeg;
-                forwardClues[(tid2 - tid1 - 1) + t1 * (2 * tidRange - t1 - 1) / 2] += base * offset;
+                forwardClues[(tid2 - tid1 - 1) + t1 * (2 * tidRange - t1 - 1) / 2] += diff;
             }
         }
+        setMaskTimecnt += System.nanoTime()- time1;
     }
 
     private void setSelfNumMask(Cluster cluster, long base) {
         return;
     }
 
+    public static long cntStrTime = 0;
     private void correctStr(IPli pli, long base, List<Double> thresholds) {
         for (int i = 0; i < pli.size(); i++) {
             // index为0的情况
             setSelfNumMask(pli.get(i), base);
             for (int j = i + 1; j < pli.size(); j++) {
+                long time1 = System.currentTimeMillis();
                 int diff = StringCalculation.getDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
@@ -90,6 +95,7 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
                         c++;
                     }
                 }
+                cntStrTime += System.currentTimeMillis() - time1;
                 setNumMask(pli.get(i), pli.get(j), base, c);
             }
         }
