@@ -90,6 +90,8 @@ public class HybridEvidenceInversion implements Enumeration{
 
         DifferentialDependencySet ret = new DifferentialDependencySet();
 
+        long minimizeTime = System.currentTimeMillis();
+
         for(int i = 0; i < preds.size(); i++){
             int rightPid = preds.get(i);
             if (dfNotSatisfiedDFSet.get(rightPid).cardinality() == 0){
@@ -131,6 +133,7 @@ public class HybridEvidenceInversion implements Enumeration{
             ret.addAll(new DifferentialDependencySet(ret1, rightPid, predicateIndexProvider));
             minimizeTreeMap.put(predicateIndexProvider.getObject(rightPid).operandWithOpHash(), minimizeTree);
         }
+        System.out.println("[Minimize TIME]: " + (System.currentTimeMillis() - minimizeTime) +" ms");
 
        // System.out.println("[Minimize] # before: " + covers.size());
         //long minimizeTime = System.currentTimeMillis();
