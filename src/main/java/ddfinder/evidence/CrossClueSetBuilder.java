@@ -162,6 +162,9 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
                 int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] - thresholds.get(index).intValue(), start, 1);
                 for (int j = start; j < end; j++) {
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index);
+                    // setmask {
+                    // list<Integer> xxx
+                    // }
                 }
                 start = end;
             }

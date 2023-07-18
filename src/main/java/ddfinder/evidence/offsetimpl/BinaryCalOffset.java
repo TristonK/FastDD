@@ -9,13 +9,14 @@ import java.util.List;
  * @author tristonK 2023/6/2
  */
 public class BinaryCalOffset implements IClueOffset {
+    public static long cntTime = 0;
 
     @Override
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
+        long time1 = System.nanoTime();
         int[] posTothreshold = new int[probePli.size()];
         //SinglePli
         if(1 == isSingle){
-
             int start = startPos + 1;
             for (int index = 1; index < thresholds.size() && start < probePli.size(); index++) {
                 int end = probePli.getFirstIndexWhereKeyIsLT(key - thresholds.get(index), start, 1);
@@ -28,9 +29,6 @@ public class BinaryCalOffset implements IClueOffset {
             for (int correct = start; correct < probePli.size(); correct++) {
                 posTothreshold[correct - startPos] = thresholds.size();
             }
-
-            return posTothreshold;
-
         }
         //CrossPli
         else{
@@ -64,13 +62,14 @@ public class BinaryCalOffset implements IClueOffset {
                     posTothreshold[j] = thresholds.size();
                 }
             }
-            return posTothreshold;
-
         }
+        cntTime += System.nanoTime() - time1;
+        return posTothreshold;
     }
 
     @Override
     public int[] countInt(IPli probePli, int isSingle, Long[] keys, int startPos, long key, List<Double> thresholds) {
+        long time1  = System.nanoTime();
         int[] posTothreshold = new int[probePli.size()];
         //SinglePli
         if(isSingle == 1){
@@ -86,8 +85,6 @@ public class BinaryCalOffset implements IClueOffset {
             for (int correct = start; correct < probePli.size(); correct++) {
                 posTothreshold[correct - startPos] = thresholds.size();
             }
-
-            return posTothreshold;
         }
         //CrossPli
         else{
@@ -122,7 +119,8 @@ public class BinaryCalOffset implements IClueOffset {
                     posTothreshold[j] = thresholds.size();
                 }
             }
-            return posTothreshold;
         }
+        cntTime += System.nanoTime() - time1;
+        return posTothreshold;
     }
 }

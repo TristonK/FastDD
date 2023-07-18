@@ -82,7 +82,6 @@ public class TranslatingTreeSearch implements ITreeSearch {
     public void handleInvalid(IBitSet invalidDCU) {
 
 
-
         IBitSet invalidDC = translator.bitsetTransform(invalidDCU);
 
 //		start = System.currentTimeMillis();

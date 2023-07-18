@@ -41,24 +41,29 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder {
         return accumulateClues(forwardClues);
     }
 
-
+    public static long setMaskTimeCnt = 0;
     private void setNumMask(IPli pli1, int i, IPli pli2, int j, long base, int offset) {
+        long time1 = System.nanoTime();
         int beg1 = pli1.getPliShard().beg, beg2 = pli2.getPliShard().beg;
         int range2 = pli2.getPliShard().end - beg2;
+        long diff = base * offset;
         for (int tid1 : pli1.get(i).getRawCluster()) {
             int t1 = tid1 - beg1;
             int r1 = t1 * range2 - beg2;
             for (int tid2 : pli2.get(j).getRawCluster()) {
-                forwardClues[r1 + tid2] += base * offset;
+                forwardClues[r1 + tid2] += diff;
             }
         }
+        setMaskTimeCnt += System.nanoTime() - time1;
     }
 
+    public static long cntStrTime = 0;
     private void correctStr(IPli pivotPli, IPli probePli, long base, List<Double> thresholds) {
         final String[] pivotKeys = (String[]) pivotPli.getKeys();
         final String[] probeKeys = (String[]) probePli.getKeys();
         for (int i = 0; i < pivotKeys.length; i++) {
             for (int j = 0; j < probeKeys.length; j++) {
+                long time1 = System.nanoTime();
                 int diff = StringCalculation.getDistance(pivotKeys[i], probeKeys[j]);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
@@ -74,6 +79,7 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder {
                         c++;
                     }
                 }
+                cntStrTime += System.nanoTime() - time1;
                 setNumMask(pivotPli, i, probePli, j, base, c);
             }
         }
