@@ -74,11 +74,11 @@ abstract public class ClueSetBuilder{
         List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
         List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
 
-        bit2ColMap = new int[DifferentialFunctionBuilder.getIntervalCnt()];//getIntervalCnt()返回阈值+1，需要修改成getIntervalCnt()-1，与下面保持一致
+        bit2ColMap = new int[DifferentialFunctionBuilder.getIntervalCnt()];
         col2FirstBitMap = new int [strPredicatesGroup.size() + longPredicatesGroup.size() + doublePredicatesGroup.size()];
 
 
-        //TODO: 修改interval来减少clue'的长度，对应地修改postothreshold
+
         int count = 0;
         for(Integer colIndex: longPredicatesGroup){
             intPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
