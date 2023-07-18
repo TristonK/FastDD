@@ -58,7 +58,6 @@ public class ValidateDD {
             }
         }
         if (flag)  {System.out.println("rfd is true and SUPPORT = "+ left);}
-
     }
 
     public static void printAllDF(DifferentialFunctionBuilder builder){
