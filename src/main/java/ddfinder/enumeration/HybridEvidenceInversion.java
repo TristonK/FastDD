@@ -70,19 +70,22 @@ public class HybridEvidenceInversion implements Enumeration{
         buildClueIndexes();
 
         List<Integer> preds = new ArrayList<>(differentialFunctions);
-        preds.sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                DifferentialFunction p1 = predicateIndexProvider.getObject(o1), p2 = predicateIndexProvider.getObject(o2);
-                if (p1.operandWithOpHash() == p2.operandWithOpHash()){
-                    // 表示范围越来越小
-                    if (p1.getOperator().equals(Operator.LESS_EQUAL)){
-                        return p2.getDistance() - p1.getDistance() < 0 ? 1 : -1;
-                    }
-                    return p1.getDistance() - p2.getDistance() < 0 ? 1 : -1;
+        preds.sort((o1, o2) -> {
+            if (Objects.equals(o1, o2)){return 0;}
+            DifferentialFunction p1 = predicateIndexProvider.getObject(o1), p2 = predicateIndexProvider.getObject(o2);
+            if (p1.operandWithOpHash() == p2.operandWithOpHash()){
+                // 表示范围越来越小
+                if (p1.getOperator().equals(Operator.LESS_EQUAL)){
+                    return Double.compare(p2.getDistance(), p1.getDistance());
+                    //return p2.getDistance() - p1.getDistance() < 0 ? 1 : -1;
                 }
-                return dfNotSatisfiedDFSet.get(o1).cardinality() - dfNotSatisfiedDFSet.get(o2).cardinality();//predSatisfiedEvidenceSet.get(o1).cardinality() - predSatisfiedEvidenceSet.get(o2).cardinality();
+                return Double.compare(p1.getDistance(), p2.getDistance());
+                //return p1.getDistance() - p2.getDistance() < 0 ? 1 : -1;
             }
+            if (dfNotSatisfiedDFSet.get(o1).cardinality() == dfNotSatisfiedDFSet.get(o2).cardinality()){
+                return o1 - o2 > 0? 1 : -1;
+            }
+            return dfNotSatisfiedDFSet.get(o1).cardinality() - dfNotSatisfiedDFSet.get(o2).cardinality() > 0 ? 1: -1 ;//predSatisfiedEvidenceSet.get(o1).cardinality() - predSatisfiedEvidenceSet.get(o2).cardinality();
         });
 
         DifferentialDependencySet ret = new DifferentialDependencySet();

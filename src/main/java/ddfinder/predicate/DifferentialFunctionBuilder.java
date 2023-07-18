@@ -144,6 +144,8 @@ public class DifferentialFunctionBuilder {
         ColumnOperand<?> operand = new ColumnOperand<>(column, 0);
 
         // 确定所有的Differential Function
+        smallThresholds = dedup(smallThresholds);
+        bigThresholds = dedup(bigThresholds);
         Collections.sort(smallThresholds);
         Collections.sort(bigThresholds);
         // <=, 阈值降序
@@ -344,5 +346,10 @@ public class DifferentialFunctionBuilder {
         strPredicatesGroup = new ArrayList<>();
         colToPredicatesGroup = new HashMap<>();
         col2Thresholds = new HashMap<>();
+    }
+
+    private List<Double> dedup(List<Double> list){
+        Set<Double> ret = new HashSet<>(list);
+        return new ArrayList<>(ret);
     }
 }
