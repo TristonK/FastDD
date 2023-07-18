@@ -65,13 +65,15 @@ public class DDFinder {
         evidenceSetBuilder.buildEvidenceSetFromLongClue(pliShards);
         EvidenceSet evidenceSet = evidenceSetBuilder.getEvidenceSet();
 
+        ValidateDD.printAllDF(differentialFunctionBuilder);
+
         System.out.println("[EvidenceSet] build long clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
         System.out.println("[countOffset]: " + (BinaryCalOffset.cntTime/1000000+LongSingleClueSetBuilder.cntStrTime+LongCrossClueSetBuilder.cntStrTime/1000000) +
                 "; [SetMask]: " + (LongCrossClueSetBuilder.setMaskTimeCnt + LongSingleClueSetBuilder.setMaskTimecnt)/1000000);
         long enmurationTime = System.currentTimeMillis();
         Enumeration ddfinder = new HybridEvidenceInversion(evidenceSet, differentialFunctionBuilder);
         DifferentialDependencySet dds = ddfinder.buildDifferentialDenpendency();
-        System.out.println("[Enumeration] cost: " + (System.currentTimeMillis() - enmurationTime));
+        System.out.println("[Enumeration] cost: " + (System.currentTimeMillis() - enmurationTime)+ " ms");
         System.out.println("[Enumeration] # dds: " + dds.size());
 
         if(Config.OutputDDFlag) {
@@ -79,8 +81,8 @@ public class DDFinder {
                 System.out.println(dd.toString());
             }
         }
-        // ValidateDD.printAllDF(differentialFunctionBuilder);
-        // ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
+//         ValidateDD.printAllDF(differentialFunctionBuilder);
+//         ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
         if(Config.DebugFlag) {
             new ValidateDD().validate(evidenceSet, dds);
         }
