@@ -36,6 +36,8 @@ public class DifferentialFunctionBuilder {
     private Map<Integer, List<DifferentialFunction>> colToPredicatesGroup;
 
     private List<BitSet> colPredicateGroup;
+    // df在dfset中的序号 -> 这个df的阈值在属性阈值集中的序号（从0开始）
+    private Map<Integer, Integer> bitsetIndex2ThresholdsIndex;
 
     private LongBitSet differentialFunctionsBitSet;
     public DifferentialFunctionBuilder(Input input) {
@@ -50,6 +52,7 @@ public class DifferentialFunctionBuilder {
         DifferentialFunction.configure(predicateProvider);
         PredicateSet.configure(predicateIdProvider);
         differentialFunctionsBitSet = new LongBitSet.LongBitSetFactory().createAllSet(differentialFunctions.size());
+        buildBitSetIndexMap();
     }
 
     /**
@@ -89,6 +92,7 @@ public class DifferentialFunctionBuilder {
         DifferentialFunction.configure(predicateProvider);
         PredicateSet.configure(predicateIdProvider);
         differentialFunctionsBitSet = new LongBitSet.LongBitSetFactory().createAllSet(differentialFunctions.size());
+        buildBitSetIndexMap();
     }
 
     public List<DifferentialFunction> getPredicates() {
@@ -351,5 +355,22 @@ public class DifferentialFunctionBuilder {
     private List<Double> dedup(List<Double> list){
         Set<Double> ret = new HashSet<>(list);
         return new ArrayList<>(ret);
+    }
+
+    private void buildBitSetIndexMap(){
+        bitsetIndex2ThresholdsIndex = new HashMap<>();
+        for(int col: colToPredicatesGroup.keySet()){
+            List<DifferentialFunction> dfs = colToPredicatesGroup.get(col);
+            for(int i =0; i <  dfs.size(); i++){
+                DifferentialFunction df = dfs.get(i);
+                int index = predicateIdProvider.getIndex(df);
+                assert col2Thresholds.get(col).get(i) == df.getDistance();
+                bitsetIndex2ThresholdsIndex.put(index, i);
+            }
+        }
+    }
+
+    public Map<Integer, Integer> getBitsetIndex2ThresholdsIndex() {
+        return bitsetIndex2ThresholdsIndex;
     }
 }

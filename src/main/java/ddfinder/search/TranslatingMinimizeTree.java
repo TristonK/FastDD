@@ -22,15 +22,17 @@ public class TranslatingMinimizeTree {
     // col -> first predicate index in predicate bitset
     int[] col2PredicateId;
     MinimizeTree search;
+    Map<Integer, Integer> index2Diff;
 
     public TranslatingMinimizeTree(int intervalSize, int[] predicateId2NodeId, int[] col2Interval,
-                                   int[] col2PredicateId, int colSize, int[] intervalLength){
+                                   int[] col2PredicateId, int colSize, int[] intervalLength, Map<Integer, Integer> index2Diff){
         this.intervalSize = intervalSize;
         this.predicateId2NodeId = predicateId2NodeId.clone();
         this.colSize = colSize;
         this.col2Interval = col2Interval.clone();
         this.col2PredicateId = col2PredicateId.clone();
         this.intervalLength = intervalLength;
+        this.index2Diff = index2Diff;
         search = new MinimizeTree();
         /*for(int i = 0; i < predicateId2NodeId.length; i++){
             System.out.println("predicate " + i + " to node " + predicateId2NodeId[i]);
@@ -50,21 +52,18 @@ public class TranslatingMinimizeTree {
 
     private IBitSet transform2Bitset(IBitSet candidate){
         LongBitSet transformed = LongBitSet.FACTORY.createAllSet(intervalSize);
-       // LongBitSet bss = new LongBitSet("00001000000000000100");
-       // if(candidate.equals(bss)){System.out.println("ssssssssssssss");}
         for(int i = candidate.nextSetBit(0); i >= 0; i = candidate.nextSetBit(i + 1)){
             // <=, <=, <= , > , >
             int nodeId = predicateId2NodeId[i];
             boolean isGreater = nodeId >= colSize;
             int col = nodeId % colSize;
-            int diff = (i - col2PredicateId[col]) % intervalLength[col];
+            int diff = index2Diff.get(i); //(i - col2PredicateId[col]) % intervalLength[col];
             if(isGreater){
                 for(int j = col2Interval[col] ; j < col2Interval[col] + diff + 1; j++){
                     transformed.clear(j);
                 }
             }else{
                 diff = intervalLength[col] - diff - 1;
-                if(diff<0){assert false;}
                 for(int j = col2Interval[col] + diff; j < col2Interval[col] + intervalLength[col]; j++){
                     transformed.clear(j);
                 }
