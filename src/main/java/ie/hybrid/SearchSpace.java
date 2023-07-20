@@ -40,7 +40,6 @@ public class SearchSpace {
         BitSet curColDFs = colDfs.get(currIndex);
         getPhis(colDfs, currIndex + 1, bs, rightCol);
         if(curColDFs.get(rightCol)){return;}
-
         for(int i = curColDFs.nextSetBit(0); i >= 0; i = curColDFs.nextSetBit(i+1)){
             bs.set(i);
             getPhis(colDfs, currIndex + 1, bs, rightCol);
