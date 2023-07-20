@@ -87,7 +87,7 @@ public class LongBitSet implements IBitSet, Serializable {
 
         public LongBitSet createAllSet(int capacity){
             LongBitSet longBitSet = new LongBitSet(capacity);
-            longBitSet.setUntil(capacity);
+            longBitSet.setUntil(capacity - 1);
             return longBitSet;
         }
 

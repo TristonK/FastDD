@@ -16,7 +16,9 @@ import ddfinder.evidence.offsetimpl.BruteCalOffset;
 import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
 import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.search.MinimizeTree;
 import de.metanome.algorithms.dcfinder.input.Input;
+import ie.hybrid.Analyzer;
 
 import java.io.File;
 import java.io.IOException;
@@ -87,6 +89,8 @@ public class DDFinder {
             new ValidateDD().validate(evidenceSet, dds);
         }
         // new TranslateRFD().validatByInput(input);
+        DifferentialDependencySet ies = new Analyzer(evidenceSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
+        new ValidateDD().validate(evidenceSet, ies);
         return dds;
     }
 }

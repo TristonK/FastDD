@@ -21,9 +21,9 @@ public class SearchSpace {
         dfBuilder = builder;
     }
     public SearchSpace(int right){
-        int col = dfBuilder.getPredicateIdProvider().getObject(right).getOperand().getIndex();
+        //int col = dfBuilder.getPredicateIdProvider().getObject(right).getOperand().getIndex();
         phis = new ArrayList<>();
-        getPhis(dfBuilder.getColPredicateGroup(), 0, new LongBitSet(dfBuilder.size()), col);
+        getPhis(dfBuilder.getColPredicateGroup(), 0, new LongBitSet(dfBuilder.size()), right);
     }
 
     public SearchSpace(List<LongBitSet> phis){
@@ -31,20 +31,22 @@ public class SearchSpace {
     }
 
     private void getPhis(List<BitSet> colDfs, int currIndex, LongBitSet bs, int rightCol){
-        if(currIndex == colDfs.size() && bs.cardinality() != 0){
-            phis.add(bs.clone());
+        if(currIndex == colDfs.size()){
+            if(bs.cardinality() != 0){
+                phis.add(bs.clone());
+            }
             return;
         }
         BitSet curColDFs = colDfs.get(currIndex);
         getPhis(colDfs, currIndex + 1, bs, rightCol);
-        if(currIndex == rightCol){
-            return;
-        }
+        if(curColDFs.get(rightCol)){return;}
+
         for(int i = curColDFs.nextSetBit(0); i >= 0; i = curColDFs.nextSetBit(i+1)){
             bs.set(i);
             getPhis(colDfs, currIndex + 1, bs, rightCol);
             bs.clear(i);
         }
+
     }
 
     /* 返回值：
@@ -55,10 +57,11 @@ public class SearchSpace {
         List<LongBitSet> phi1 = new ArrayList<>();
         List<LongBitSet> phi2 = new ArrayList<>();
         for(LongBitSet bs: phis){
+            if(bs == pivot){continue;}
             if(isLeftReduce(pivot, bs)){
-                    phi1.add(bs.clone());
+                    phi1.add(bs);
             }else{
-                phi2.add(bs.clone());
+                phi2.add(bs);
             }
         }
         return List.of(new SearchSpace(phi1), new SearchSpace(phi2));
@@ -73,9 +76,9 @@ public class SearchSpace {
         List<LongBitSet> phi2 = new ArrayList<>();
         for(LongBitSet bs: phis){
             if(isLeftReduce(bs, pivot)){
-                phi1.add(bs.clone());
+                phi1.add(bs);
             }else{
-                phi2.add(bs.clone());
+                phi2.add(bs);
             }
         }
         return List.of(new SearchSpace(phi1), new SearchSpace(phi2));
@@ -84,8 +87,19 @@ public class SearchSpace {
     // 在a的属性上，a表示的范围更大，返回true
     // 也就是 a subsumes b on projection of Attrs(a)
     private boolean isLeftReduce(LongBitSet a, LongBitSet b){
+        if (a.cardinality() > b.cardinality()){
+            return false;
+        }
+        int last = b.nextSetBit(0);
         for(int i = a.nextSetBit(0); i >= 0; i  = a.nextSetBit(i + 1)){
-
+            int opHash = dfBuilder.getPredicateIdProvider().getObject(i).operandWithOpHash();
+            for(; last >= 0; last = b.nextSetBit(last + 1)){
+                if(dfBuilder.getPredicateIdProvider().getObject(last).operandWithOpHash() == opHash){
+                    break;
+                }
+            }
+            if(last < 0){return false;}
+            if(last < i){return false;}
         }
         return true;
     }
