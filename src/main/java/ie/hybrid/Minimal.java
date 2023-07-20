@@ -9,6 +9,6 @@ import ddfinder.differentialdependency.DifferentialDependencySet;
 public class Minimal {
     public DifferentialDependencySet minimize(DifferentialDependencySet ddSet){
         //TODO
-        return null;
+        return ddSet;
     }
 }

@@ -100,6 +100,7 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
     }
 
     public void addAll(DifferentialDependencySet dds){
+        if(dds == null){return;}
         dependencies.addAll(dds.getDependencies());
     }
 

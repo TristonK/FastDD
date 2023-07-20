@@ -30,7 +30,7 @@ public class ValidateDD {
                     }
                 }
             }
-           if (flag)  {System.out.println("dd SUPPORT = "+ left +" " + dd.toString());count++;}
+           //if (flag)  {System.out.println("dd SUPPORT = "+ left +" " + dd.toString());count++;}
         }
         System.out.println("count :: " + count);
     }

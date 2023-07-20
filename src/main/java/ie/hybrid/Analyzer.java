@@ -5,9 +5,9 @@ import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.evidence.Evidence;
 import ddfinder.evidence.EvidenceSet;
+import ddfinder.predicate.DifferentialFunction;
 import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.predicate.PredicateSet;
-import de.metanome.algorithms.dcfinder.predicates.Predicate;
+import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,7 @@ import java.util.List;
  */
 public class Analyzer {
     private final List<LongBitSet> fullEvidenceSet;
+    private final DifferentialFunctionBuilder differentialFunctionBuilder;
 
     public Analyzer(EvidenceSet evidenceSet, DifferentialFunctionBuilder dfBuilder){
         List<LongBitSet> evis = new ArrayList<>();
@@ -24,12 +25,13 @@ public class Analyzer {
             evis.add(evi.getBitset().clone());
         }
         fullEvidenceSet = evis;
+        this.differentialFunctionBuilder = dfBuilder;
         SearchSpace.configure(dfBuilder);
     }
 
-    public void run(PredicateSet predicateSet){
-        LongBitSet pSpace = predicateSet.getLongBitSet();
+    public DifferentialDependencySet run(LongBitSet pSpace){
         DifferentialDependencySet dds = new DifferentialDependencySet();
+        //System.out.println("pspacesize = " + pSpace.cardinality());
         for(int i = pSpace.nextSetBit(0); i >= 0; i = pSpace.nextSetBit(i + 1)){
             LongBitSet dfSpace = pSpace.clone();
             dfSpace.clear(i);
@@ -39,8 +41,9 @@ public class Analyzer {
         }
         dds = new Minimal().minimize(dds);
         for(DifferentialDependency dd:dds){
-            System.out.println(dd);
+           System.out.println(dd);
         }
+        return dds;
     }
 
     public DifferentialDependencySet reduce(List<LongBitSet> D, LongBitSet right, SearchSpace dfSpace){
@@ -53,15 +56,20 @@ public class Analyzer {
         List<SearchSpace> splitSpace = dfSpace.extractPositive(W);
         SearchSpace phi1 = splitSpace.get(0);
         SearchSpace phi2 = splitSpace.get(1);
-
         List<LongBitSet> D1 = exclude(D, W, right);
         if (D1.size() > 0){
             ret.addAll(reduce(D1, right, phi1));
         }else{
-            ret.add(new DifferentialDependency(W, right));
+            IndexProvider<DifferentialFunction> p = differentialFunctionBuilder.getPredicateIdProvider();
+            List<DifferentialFunction> leftDf = new ArrayList<>();
+            DifferentialFunction rightDf = p.getObject(right.nextSetBit(0));
+            for(int i = W.nextSetBit(0); i>=0; i = W.nextSetBit(i+1)){
+                leftDf.add(p.getObject(i));
+            }
+            ret.add(new DifferentialDependency(leftDf, rightDf, W.clone(), W.clone().getOr(right)));
         }
         ret.addAll(reduce(D, right, phi2));
-        return null;
+        return ret;
     }
 
     public List<LongBitSet> exclude(List<LongBitSet> evidenceSet, LongBitSet left, LongBitSet right){

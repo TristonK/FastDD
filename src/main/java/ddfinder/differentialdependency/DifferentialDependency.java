@@ -27,10 +27,6 @@ public class DifferentialDependency {
         this.leftPredicateSet = leftPredicates;
     }
 
-    public DifferentialDependency(LongBitSet left, LongBitSet right){
-
-    }
-
     public static final String AND = " ∧ ";
     public String toString(){
 
