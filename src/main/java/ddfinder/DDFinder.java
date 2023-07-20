@@ -89,7 +89,9 @@ public class DDFinder {
             new ValidateDD().validate(evidenceSet, dds);
         }
         // new TranslateRFD().validatByInput(input);
+        long t1 = System.currentTimeMillis();
         DifferentialDependencySet ies = new Analyzer(evidenceSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
+        System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
         new ValidateDD().validate(evidenceSet, ies);
         return dds;
     }
