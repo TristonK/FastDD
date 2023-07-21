@@ -54,6 +54,22 @@ public class DifferentialFunctionBuilder {
         differentialFunctionsBitSet = new LongBitSet.LongBitSetFactory().createAllSet(differentialFunctions.size());
         buildBitSetIndexMap();
     }
+    public DifferentialFunctionBuilder(Input input, List<List<List<Double>>> thresholds) {
+        init();
+        predicateProvider = new PredicateProvider();
+        predicateIdProvider = new IndexProvider<>();
+        int index =0;
+        for (ParsedColumn<?> column : input.getColumns()) {
+            List<List<Double>> thresholdsAll = thresholds.get(index);
+            addPredicates(column, thresholdsAll.get(0), thresholdsAll.get(1));
+            index++;
+        }
+        predicateIdProvider.addAll(differentialFunctions);
+        DifferentialFunction.configure(predicateProvider);
+        PredicateSet.configure(predicateIdProvider);
+        differentialFunctionsBitSet = new LongBitSet.LongBitSetFactory().createAllSet(differentialFunctions.size());
+        buildBitSetIndexMap();
+    }
 
     /**
      * @param index: file contents:

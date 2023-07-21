@@ -79,4 +79,8 @@ public class DifferentialDependency {
     public IBitSet getLeftPredicateSet() {
         return leftPredicateSet;
     }
+
+    public DifferentialFunction getRight() {
+        return right;
+    }
 }

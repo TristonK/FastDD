@@ -19,9 +19,9 @@ public class Analyzer {
     private final List<LongBitSet> fullEvidenceSet;
     private final DifferentialFunctionBuilder differentialFunctionBuilder;
 
-    public Analyzer(EvidenceSet evidenceSet, DifferentialFunctionBuilder dfBuilder){
+    public Analyzer(EvidenceSet evidenceSet, DifferentialFunctionBuilder dfBuilder) {
         List<LongBitSet> evis = new ArrayList<>();
-        for(Evidence evi : evidenceSet){
+        for (Evidence evi : evidenceSet) {
             evis.add(evi.getBitset().clone());
         }
         fullEvidenceSet = evis;
@@ -29,10 +29,10 @@ public class Analyzer {
         SearchSpace.configure(dfBuilder);
     }
 
-    public DifferentialDependencySet run(LongBitSet pSpace){
+    public DifferentialDependencySet run(LongBitSet pSpace) {
         DifferentialDependencySet dds = new DifferentialDependencySet();
         //System.out.println("pspacesize = " + pSpace.cardinality());
-        for(int i = pSpace.nextSetBit(0); i >= 0; i = pSpace.nextSetBit(i + 1)){
+        for (int i = pSpace.nextSetBit(0); i >= 0; i = pSpace.nextSetBit(i + 1)) {
             LongBitSet dfSpace = pSpace.clone();
             dfSpace.clear(i);
             LongBitSet right = new LongBitSet();
@@ -40,16 +40,16 @@ public class Analyzer {
             dds.addAll(reduce(fullEvidenceSet, right, new SearchSpace(i)));
         }
         dds = new Minimal().minimize(dds);
-        for(DifferentialDependency dd:dds){
-          // System.out.println(dd);
+        for (DifferentialDependency dd : dds) {
+            // System.out.println(dd);
         }
         return dds;
     }
 
-    public DifferentialDependencySet reduce(List<LongBitSet> D, LongBitSet right, SearchSpace dfSpace){
+    public DifferentialDependencySet reduce(List<LongBitSet> D, LongBitSet right, SearchSpace dfSpace) {
         DifferentialDependencySet ret = new DifferentialDependencySet();
         // the first element removed from Phi(X)
-        if(dfSpace.phis.size() == 0){
+        if (dfSpace.phis.size() == 0) {
             return ret;
         }
         LongBitSet W = dfSpace.phis.get(0);
@@ -57,25 +57,25 @@ public class Analyzer {
         SearchSpace phi1 = splitSpace.get(0);
         SearchSpace phi2 = splitSpace.get(1);
         List<LongBitSet> D1 = exclude(D, W, right);
-        if (D1.size() > 0){
+        if (D1.size() > 0) {
             ret.addAll(reduce(D1, right, phi1));
-        }else{
+        } else {
             IndexProvider<DifferentialFunction> p = differentialFunctionBuilder.getPredicateIdProvider();
             List<DifferentialFunction> leftDf = new ArrayList<>();
             DifferentialFunction rightDf = p.getObject(right.nextSetBit(0));
-            for(int i = W.nextSetBit(0); i>=0; i = W.nextSetBit(i+1)){
+            for (int i = W.nextSetBit(0); i >= 0; i = W.nextSetBit(i + 1)) {
                 leftDf.add(p.getObject(i));
             }
-            ret.add(new DifferentialDependency(leftDf, rightDf, W.clone(), W.clone().getOr(right)));
+            ret.add(new DifferentialDependency(leftDf, rightDf, W.clone().getOr(right), W.clone()));
         }
         ret.addAll(reduce(D, right, phi2));
         return ret;
     }
 
-    public List<LongBitSet> exclude(List<LongBitSet> evidenceSet, LongBitSet left, LongBitSet right){
+    public List<LongBitSet> exclude(List<LongBitSet> evidenceSet, LongBitSet left, LongBitSet right) {
         List<LongBitSet> D1 = new ArrayList<>();
-        for(LongBitSet bs: evidenceSet){
-            if(left.isSubSetOf(bs) && !right.isSubSetOf(bs)){
+        for (LongBitSet bs : evidenceSet) {
+            if (left.isSubSetOf(bs) && !right.isSubSetOf(bs)) {
                 D1.add(bs.clone());
             }
         }

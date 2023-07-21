@@ -19,6 +19,8 @@ import ddfinder.predicate.DifferentialFunctionBuilder;
 import ddfinder.search.MinimizeTree;
 import de.metanome.algorithms.dcfinder.input.Input;
 import ie.hybrid.Analyzer;
+import thresholds.Determination;
+import thresholds.ExtremaStrategy;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,7 +41,18 @@ public class DDFinder {
 
         long t0 = System.currentTimeMillis();
         if(Objects.equals(predicatesPath, "")){
-            this.differentialFunctionBuilder = new DifferentialFunctionBuilder(input);
+            ExtremaStrategy strategy = new ExtremaStrategy();
+            int sampleNum = Math.min(input.getRowCount() / 5, 200);
+            Determination determination = new Determination(Math.min(input.getRowCount() / 5, 200), 6, 2, this.input.getColCount(), strategy);
+            determination.sampleAndCalculate(this.input);
+            long sampleAndCalculateTime =System.currentTimeMillis() - t0;
+            System.out.println("sample Size: " + sampleNum);
+            System.out.println("[Time] sampleAndCalculate cost: " + sampleAndCalculateTime + "ms");
+            long t1 = System.currentTimeMillis();
+            List<List<List<Double>>> thresholds = determination.determine();
+            long determineTime = System.currentTimeMillis() - t1;
+            System.out.println("[Time] determine cost: " + determineTime + "ms");
+            this.differentialFunctionBuilder = new DifferentialFunctionBuilder(input, thresholds);
         }else{
             this.differentialFunctionBuilder = new DifferentialFunctionBuilder(new File(predicatesPath), input);
         }
@@ -67,7 +80,7 @@ public class DDFinder {
         evidenceSetBuilder.buildEvidenceSetFromLongClue(pliShards);
         EvidenceSet evidenceSet = evidenceSetBuilder.getEvidenceSet();
 
-        ValidateDD.printAllDF(differentialFunctionBuilder);
+//        ValidateDD.printAllDF(differentialFunctionBuilder);
 
         System.out.println("[EvidenceSet] build long clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
         System.out.println("[countOffset]: " + (BinaryCalOffset.cntTime/1000000+LongSingleClueSetBuilder.cntStrTime+LongCrossClueSetBuilder.cntStrTime/1000000) +
@@ -83,8 +96,8 @@ public class DDFinder {
                 System.out.println(dd.toString());
             }
         }
-//         ValidateDD.printAllDF(differentialFunctionBuilder);
-//         ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
+         ValidateDD.printAllDF(differentialFunctionBuilder);
+         ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
         if(Config.DebugFlag) {
             new ValidateDD().validate(evidenceSet, dds);
         }
