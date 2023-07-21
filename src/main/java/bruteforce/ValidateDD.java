@@ -40,8 +40,14 @@ public class ValidateDD {
         LongBitSet leftBs = new LongBitSet();
         LongBitSet allBs = new LongBitSet();
         {
-            leftBs.set(4);
-            allBs.set(4);
+            leftBs.set(0);
+            allBs.set(0);
+            leftBs.set(8);
+            allBs.set(8);
+            leftBs.set(9);
+            allBs.set(9);
+            leftBs.set(16);
+            allBs.set(16);
         }
         {
             allBs.set(13);
