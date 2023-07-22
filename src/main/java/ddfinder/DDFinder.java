@@ -97,7 +97,7 @@ public class DDFinder {
             }
         }
          ValidateDD.printAllDF(differentialFunctionBuilder);
-         ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
+//         ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
         if(Config.DebugFlag) {
             new ValidateDD().validate(evidenceSet, dds);
         }
