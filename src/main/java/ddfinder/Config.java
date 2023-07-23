@@ -6,8 +6,9 @@ package ddfinder;
 public class Config {
     public static int PliShardLength = 350;
     public static boolean DebugFlag = false;
+    public static boolean OutputDD2File = false;
     public static boolean OutputDDFlag = false;
-    public static boolean OutputIEFlag = true;
+    public static boolean OutputIEFlag = false;
     public static boolean OutputPredicateFlag = false;
     public static boolean OutputDFSetTime = false;
 

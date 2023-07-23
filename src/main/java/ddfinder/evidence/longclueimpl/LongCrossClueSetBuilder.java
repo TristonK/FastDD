@@ -1,5 +1,6 @@
 package ddfinder.evidence.longclueimpl;
 
+import ddfinder.Config;
 import ddfinder.evidence.IClueOffset;
 import ddfinder.pli.DoublePli;
 import ddfinder.pli.IPli;
@@ -64,7 +65,12 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder {
         for (int i = 0; i < pivotKeys.length; i++) {
             for (int j = 0; j < probeKeys.length; j++) {
                 long time1 = System.nanoTime();
-                int diff = DistanceCalculation.StringDistance(pivotKeys[i], probeKeys[j]);
+                double diff;
+                if(Config.TestMD){
+                    diff = DistanceCalculation.MDLevenstheinDistance(pivotKeys[i], probeKeys[j]);
+                }else{
+                    diff = DistanceCalculation.StringDistance(pivotKeys[i], probeKeys[j]);
+                }
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
                     c = 0;

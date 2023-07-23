@@ -33,6 +33,7 @@ public class Analyzer {
     public DifferentialDependencySet run(LongBitSet pSpace) {
         DifferentialDependencySet dds = new DifferentialDependencySet();
         //System.out.println("pspacesize = " + pSpace.cardinality());
+        long t1 = System.currentTimeMillis();
         for (int i = pSpace.nextSetBit(0); i >= 0; i = pSpace.nextSetBit(i + 1)) {
             //LongBitSet dfSpace = pSpace.clone();
             //dfSpace.clear(i);
@@ -40,7 +41,10 @@ public class Analyzer {
             right.set(i);
             dds.addAll(reduce(fullEvidenceSet, right, new SearchSpace(i)));
         }
+        System.out.println("[IE] reduce time: " + (System.currentTimeMillis() - t1));
+        t1 = System.currentTimeMillis();
         dds = new Minimal().minimize(dds);
+        System.out.println("[IE] minimize Time: " + (System.currentTimeMillis() - t1));
         if(Config.OutputIEFlag){
             System.out.println("==============[IE dds]=======================");
             for (DifferentialDependency dd : dds) {
@@ -91,4 +95,16 @@ public class Analyzer {
         }
         return D1;
     }
+
+    public List<LongBitSet> excludeV2(List<List<Integer>> evidenceSet, LongBitSet left, LongBitSet right){
+        List<LongBitSet> D1 = new ArrayList<>();
+        /*for (List<Integer> list: evidenceSet) {
+            differentialFunctionBuilder.getBitsetIndex2ThresholdsIndex()
+            if (left.isSubSetOf(bs) && !right.isSubSetOf(bs)) {
+                D1.add(bs.clone());
+            }
+        }*/
+        return D1;
+    }
+
 }

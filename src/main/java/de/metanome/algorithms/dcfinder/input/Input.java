@@ -4,6 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import com.csvreader.CsvReader;
+import ddfinder.Config;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
 public class Input {
@@ -122,6 +123,14 @@ public class Input {
         int iid = 0, did = 0, sid = 0;
         for (int col = 0; col < colCount; col++) {
             ParsedColumn<?> pColumn = pColumns.get(col);
+            if(Config.TestMD){
+                for (int row = 0; row < rowCount; ++row){
+                    stringInput[sid][row] = (String) pColumn.getValue(row);
+                }
+                colIndex[2][sid] = col;
+                sid++;
+                continue;
+            }
             if(pColumn.getType() ==String.class){
                 for (int row = 0; row < rowCount; ++row){
                     stringInput[sid][row] = (String) pColumn.getValue(row);

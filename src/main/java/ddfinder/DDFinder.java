@@ -17,6 +17,7 @@ import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
 import ddfinder.predicate.DifferentialFunctionBuilder;
 import ddfinder.search.MinimizeTree;
+import ddfinder.utils.PrintResult;
 import de.metanome.algorithms.dcfinder.input.Input;
 import ie.hybrid.Analyzer;
 import thresholds.Determination;
@@ -96,6 +97,10 @@ public class DDFinder {
                 System.out.println(dd.toString());
             }
         }
+        if(Config.OutputDD2File){
+            PrintResult.PrintDD(dds);
+        }
+
         //ValidateDD.printAllDF(differentialFunctionBuilder);
         //ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
         if(Config.DebugFlag) {
