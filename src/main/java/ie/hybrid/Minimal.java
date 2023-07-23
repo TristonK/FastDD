@@ -34,14 +34,14 @@ public class Minimal {
                 //先判断右边单属性是否满足删除条件
                 if (isRightReduce(pivotRight, laterRight)) {
                     //进行leftReduce判断，记录需要被删去的dd下标
-                    if (laterLeftPredicate.isSubSetOf(pivotLeftPredicate) && isLeftReduce(pivotLeftPredicate, laterLeftPredicate)) {//pivot的LHS属性被later的所包含，并且pivot对应的属性范围更大
+                    if (isLeftReduce(pivotLeftPredicate, laterLeftPredicate)) {//pivot的LHS属性被later的所包含，并且pivot对应的属性范围更大
                         minimizeIndex.add(j);
                         continue;//跳过反向判断
                     }
                 }
                 ////反过来判断一遍，保证不被dd的顺序影响
                 if (isRightReduce(laterRight, pivotRight)) {
-                    if (pivotLeftPredicate.isSubSetOf(laterLeftPredicate) && isLeftReduce(laterLeftPredicate, pivotLeftPredicate)) {//later的LHS属性被pivot的所包含，并且later对应的属性范围更大
+                    if (isLeftReduce(laterLeftPredicate, pivotLeftPredicate)) {//later的LHS属性被pivot的所包含，并且later对应的属性范围更大
                         minimizeIndex.add(i);
                     }
                 }
