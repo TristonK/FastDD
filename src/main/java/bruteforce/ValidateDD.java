@@ -30,7 +30,7 @@ public class ValidateDD {
                     }
                 }
             }
-           //if (flag)  {System.out.println("dd SUPPORT = "+ left +" " + dd.toString());count++;}
+           if (flag)  {System.out.println("dd SUPPORT = "+ left +" " + dd.toString());count++;}
         }
         System.out.println("count :: " + count);
     }
@@ -40,25 +40,24 @@ public class ValidateDD {
         LongBitSet leftBs = new LongBitSet();
         LongBitSet allBs = new LongBitSet();
         {
-            leftBs.set(0);
-            allBs.set(0);
-            leftBs.set(8);
-            allBs.set(8);
+            leftBs.set(2);
+            allBs.set(2);
             leftBs.set(9);
             allBs.set(9);
             leftBs.set(16);
             allBs.set(16);
         }
         {
-            allBs.set(13);
+            allBs.set(4);
         }
         // validate
-        boolean flag = false;
+        boolean flag = true;
         int left = 0;
         for(Evidence evi: evidenceSet){
             if(leftBs.isSubSetOf(evi.getBitset())){
-                flag = true;left++;
+                left++;
                 if(!allBs.isSubSetOf(evi.getBitset())){
+                    flag = false;
                     System.out.printf("Bad RFD as %s", evi.toDFString());
                 }
             }

@@ -2,6 +2,7 @@ package ddfinder.enumeration;
 
 import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.Config;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.evidence.EvidenceSet;
 import ddfinder.predicate.DifferentialFunction;
@@ -34,6 +35,7 @@ public class HybridEvidenceInversion implements Enumeration{
     Map<Integer, TranslatingMinimizeTree> minimizeTreeMap = new HashMap<>();
 
     Map<Integer, Integer> index2Diff;
+    List<DifferentialFunction> highestDFofAttr;
     public HybridEvidenceInversion(EvidenceSet evidenceSet, DifferentialFunctionBuilder differentialFunctionBuilder){
         this.predicates = new PredicateSet(differentialFunctionBuilder.getPredicates().size());
         this.pred2PredGroupMap = new HashMap<>();
@@ -45,6 +47,7 @@ public class HybridEvidenceInversion implements Enumeration{
             colToPredicatesGroup.add((BitSet) bs.clone());
         }
         predicateIndexProvider = differentialFunctionBuilder.getPredicateIdProvider();
+        highestDFofAttr = differentialFunctionBuilder.HighestDfOfAttr;
 
         this.differentialFunctions = new ArrayList<>();
         for(DifferentialFunction df: differentialFunctionBuilder.getPredicates()){
@@ -77,23 +80,18 @@ public class HybridEvidenceInversion implements Enumeration{
             if (Objects.equals(o1, o2)){return 0;}
             DifferentialFunction p1 = predicateIndexProvider.getObject(o1), p2 = predicateIndexProvider.getObject(o2);
             if (p1.operandWithOpHash() == p2.operandWithOpHash()){
-                // 表示范围越来越小
+                // 表示范围越来越大
                 if (p1.getOperator().equals(Operator.LESS_EQUAL)){
-                    return Double.compare(p2.getDistance(), p1.getDistance());
+                    return Double.compare(p1.getDistance(), p2.getDistance());
                     //return p2.getDistance() - p1.getDistance() < 0 ? 1 : -1;
                 }
-                return Double.compare(p1.getDistance(), p2.getDistance());
+                return Double.compare(p2.getDistance(), p1.getDistance());
                 //return p1.getDistance() - p2.getDistance() < 0 ? 1 : -1;
             }
-            if (dfNotSatisfiedDFSet.get(o1).cardinality() == dfNotSatisfiedDFSet.get(o2).cardinality()){
-                return o1 - o2 > 0? 1 : -1;
-            }
-            return dfNotSatisfiedDFSet.get(o1).cardinality() - dfNotSatisfiedDFSet.get(o2).cardinality() > 0 ? 1: -1 ;//predSatisfiedEvidenceSet.get(o1).cardinality() - predSatisfiedEvidenceSet.get(o2).cardinality();
+            return Integer.compare(dfNotSatisfiedDFSet.get(o1).cardinality(), dfNotSatisfiedDFSet.get(o2).cardinality());
         });
 
         DifferentialDependencySet ret = new DifferentialDependencySet();
-        long beforeMinimizeSize = 0;
-        long minimizeTime = 0;
         /*System.out.println("Minimize Tree: " + intervalSize + " === " + Arrays.toString(predicateId2NodeId)+ "==" +
                 Arrays.toString(col2Interval) + " == "+ Arrays.toString(col2PredicateId) + " == " + colSize + " == " +
                 Arrays.toString(intervalLength) + " == " + index2Diff.toString());*/
@@ -101,14 +99,23 @@ public class HybridEvidenceInversion implements Enumeration{
         for(int i = 0; i < preds.size(); i++){
             int rightPid = preds.get(i);
             if (dfNotSatisfiedDFSet.get(rightPid).cardinality() == 0){
-                System.out.println("All match " + predicateIndexProvider.getObject(rightPid).toString());
+                if(Config.NeedRightAlwaysTrueDD){
+                    DifferentialFunction rightDF = predicateIndexProvider.getObject(rightPid);
+                    Set<IBitSet> pCovers = new HashSet<>();
+                    for(DifferentialFunction df: highestDFofAttr){
+                        if (!df.getOperand().equals(rightDF.getOperand())){
+                            LongBitSet c = new LongBitSet(); c.set(predicateIndexProvider.getIndex(df));
+                            pCovers.add(c);
+                        }
+                    }
+                    ret.addAll(partialMinimize(rightPid, pCovers));
+                }
                 // dd must have at least two predicates
                 continue;
             }
-            //List<Integer> currPredicateSpace = new ArrayList<>(predicates);
+
             List<Integer> currPredicateSpace = new ArrayList<>(differentialFunctions);
             currPredicateSpace.removeAll(pred2PredGroupMap.get(rightPid));
-
             Set<Integer> predsNotSatisfied = new HashSet<>();
             //for(int j = 0; j < i; j++){predsNotSatisfied.add(preds.get(j));}
 
@@ -125,34 +132,10 @@ public class HybridEvidenceInversion implements Enumeration{
             Set<IBitSet> partialCovers =
                 new EvidenceInversion(satisfiedCol, colToPredicatesGroup, predsNotSatisfied, currEvidences, predicates.size()).getCovers();
 
-            long t1 = System.currentTimeMillis();
-            TranslatingMinimizeTree minimizeTree;
-            if (!minimizeTreeMap.containsKey(predicateIndexProvider.getObject(rightPid).operandWithOpHash())){
-                minimizeTree = new TranslatingMinimizeTree(intervalSize,predicateId2NodeId, col2Interval,
-                                  col2PredicateId, colSize, intervalLength, index2Diff);
-            } else{
-                minimizeTree = minimizeTreeMap.get(predicateIndexProvider.getObject(rightPid).operandWithOpHash());
-            }
-            //System.out.println("before "+ partialCovers.size());
-            beforeMinimizeSize += partialCovers.size();
-            Set<IBitSet> ret1 = minimizeTree.minimize(new ArrayList<>(partialCovers));
-            //Set<IBitSet> ret1 = partialCovers;
-            // System.out.println("after " + ret1.size());
-            ret.addAll(new DifferentialDependencySet(ret1, rightPid, predicateIndexProvider));
-            minimizeTreeMap.put(predicateIndexProvider.getObject(rightPid).operandWithOpHash(), minimizeTree);
-            minimizeTime += System.currentTimeMillis() - t1;
+            ret.addAll(partialMinimize(rightPid, partialCovers));
         }
-        System.out.println("[Minimize TIME]: " + minimizeTime +" ms");
-
-       // System.out.println("[Minimize] # before: " + covers.size());
-        //long minimizeTime = System.currentTimeMillis();
-       // TranslatingMinimizeTree minimizeTree = new TranslatingMinimizeTree(intervalSize,predicateId2NodeId, col2Interval,
-        //        col2PredicateId, colSize, intervalLength);
-        //covers = minimizeTree.minimize(new ArrayList<>(covers));
-       // System.out.println("[Minimize TIME]: " + (System.currentTimeMillis() - minimizeTime));
-       // System.out.println("[Minimize] # after: " + covers.size());
-        //return new DifferentialDependencySet(covers, predicateIndexProvider);
-        System.out.println("[Minimize] # before " + beforeMinimizeSize);
+        System.out.println("[Minimize TIME]: " + MinimizeTime +" ms");
+        System.out.println("[Minimize] # before " + BeforeMinimizeSize);
         return ret;
     }
 
@@ -276,4 +259,23 @@ public class HybridEvidenceInversion implements Enumeration{
         }
     }
 
+    private long MinimizeTime = 0;
+    private long BeforeMinimizeSize = 0;
+    private DifferentialDependencySet partialMinimize(int rightPid, Set<IBitSet> partialCovers){
+        long t1 = System.currentTimeMillis();
+        TranslatingMinimizeTree minimizeTree;
+        if (!minimizeTreeMap.containsKey(predicateIndexProvider.getObject(rightPid).operandWithOpHash())){
+            minimizeTree = new TranslatingMinimizeTree(intervalSize,predicateId2NodeId, col2Interval,
+                    col2PredicateId, colSize, intervalLength, index2Diff);
+        } else{
+            minimizeTree = minimizeTreeMap.get(predicateIndexProvider.getObject(rightPid).operandWithOpHash());
+        }
+        //System.out.println("before "+ partialCovers.size());
+        BeforeMinimizeSize += partialCovers.size();
+        Set<IBitSet> ret1 = minimizeTree.minimize(new ArrayList<>(partialCovers));
+        //Set<IBitSet> ret1 = partialCovers;
+        minimizeTreeMap.put(predicateIndexProvider.getObject(rightPid).operandWithOpHash(), minimizeTree);
+        MinimizeTime += System.currentTimeMillis() - t1;
+        return new DifferentialDependencySet(ret1, rightPid, predicateIndexProvider);
+    }
 }

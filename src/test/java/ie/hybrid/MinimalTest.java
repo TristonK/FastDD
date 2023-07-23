@@ -37,7 +37,15 @@ class MinimalTest {
                 System.out.println(str);
             }
         }
-        System.out.println(cnt);
+        System.out.println("DD have but ie not have count : " + cnt);
+        int count2 = 0;
+        for(String str : ies){
+            if(!ddfinders.contains(str)){
+                count2++;
+                System.out.println(str);
+            }
+        }
+        System.out.println("Ie have but dd not have count : " + count2);
         return flag;
     }
 
