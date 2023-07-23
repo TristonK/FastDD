@@ -88,16 +88,18 @@ public class HybridEvidenceInversion implements Enumeration{
                 return Double.compare(p2.getDistance(), p1.getDistance());
                 //return p1.getDistance() - p2.getDistance() < 0 ? 1 : -1;
             }
-            return Integer.compare(dfNotSatisfiedDFSet.get(o1).cardinality(), dfNotSatisfiedDFSet.get(o2).cardinality());
+            return o1 - o2;
+            //return Integer.compare(dfNotSatisfiedDFSet.get(o1).cardinality(), dfNotSatisfiedDFSet.get(o2).cardinality());
         });
 
         DifferentialDependencySet ret = new DifferentialDependencySet();
-        /*System.out.println("Minimize Tree: " + intervalSize + " === " + Arrays.toString(predicateId2NodeId)+ "==" +
+        /*System.out.println("Minimize Tree: " + intervalSize + " === " + Arrays.toString(predicateId2NodeId)+ "==\n" +
                 Arrays.toString(col2Interval) + " == "+ Arrays.toString(col2PredicateId) + " == " + colSize + " == " +
-                Arrays.toString(intervalLength) + " == " + index2Diff.toString());*/
+                Arrays.toString(intervalLength) + " ==\n " + index2Diff.toString());*/
 
         for(int i = 0; i < preds.size(); i++){
             int rightPid = preds.get(i);
+            //System.out.println("Cal " +predicateIndexProvider.getObject(rightPid).toString());
             if (dfNotSatisfiedDFSet.get(rightPid).cardinality() == 0){
                 if(Config.NeedRightAlwaysTrueDD){
                     DifferentialFunction rightDF = predicateIndexProvider.getObject(rightPid);
