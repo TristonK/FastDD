@@ -96,16 +96,16 @@ public class DDFinder {
                 System.out.println(dd.toString());
             }
         }
-         ValidateDD.printAllDF(differentialFunctionBuilder);
-         ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
+        // ValidateDD.printAllDF(differentialFunctionBuilder);
+        // ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
         if(Config.DebugFlag) {
             new ValidateDD().validate(evidenceSet, dds);
         }
         // new TranslateRFD().validatByInput(input);
-        long t1 = System.currentTimeMillis();
-        DifferentialDependencySet ies = new Analyzer(evidenceSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
-        System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
-        new ValidateDD().validate(evidenceSet, ies);
+        //long t1 = System.currentTimeMillis();
+        //DifferentialDependencySet ies = new Analyzer(evidenceSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
+        //System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
+        //new ValidateDD().validate(evidenceSet, ies);
         return dds;
     }
 }

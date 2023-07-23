@@ -5,7 +5,7 @@ import ddfinder.pli.Cluster;
 import ddfinder.pli.DoublePli;
 import ddfinder.pli.IPli;
 import ddfinder.pli.PliShard;
-import ddfinder.utils.StringCalculation;
+import ddfinder.utils.DistanceCalculation;
 
 import java.util.HashMap;
 import java.util.List;
@@ -80,7 +80,7 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder {
             setSelfNumMask(pli.get(i), base);
             for (int j = i + 1; j < pli.size(); j++) {
                 long time1 = System.currentTimeMillis();
-                int diff = StringCalculation.getDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
+                int diff = DistanceCalculation.StringDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
                     c = 0;

@@ -1,11 +1,8 @@
 package bruteforce;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.evidence.ClueSetBuilder;
-import ddfinder.evidence.Evidence;
-import ddfinder.evidence.EvidenceSet;
 import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.utils.StringCalculation;
+import ddfinder.utils.DistanceCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
@@ -56,7 +53,7 @@ public class EvidenceCount {
                     cnt += th.size() + 1;
                 }
                 for (int k = 0; k < sInput.length; k++) {
-                    double diff = StringCalculation.getDistance(sInput[k][i], sInput[k][j]);
+                    double diff = DistanceCalculation.StringDistance(sInput[k][i], sInput[k][j]);
                     List<Double> th = columns.get(k + iInput.length + dInput.length).getThresholds();
                     clue.set(findMaskPos(diff, th) + cnt);
                     cnt += th.size() + 1;
@@ -129,7 +126,7 @@ public class EvidenceCount {
                     evidence.or(mask);
                 }
                 for (int k = 0; k < sInput.length; k++) {
-                    double diff = StringCalculation.getDistance(sInput[k][i], sInput[k][j]);
+                    double diff = DistanceCalculation.StringDistance(sInput[k][i], sInput[k][j]);
                     List<Double> th = columns.get(k + iInput.length + dInput.length).getThresholds();
                     LongBitSet mask = countToPredicateSets.get(k + iInput.length + dInput.length).get(findMaskPos(diff, th));
                     evidence.or(mask);

@@ -89,16 +89,14 @@ public class TranslatingMinimizeTree {
         });
         Set<IBitSet> list = new HashSet<>();
         for(IBitSet candidate: candidates){
+           // System.out.println("测试Bitset：" + candidate);
             IBitSet removedBy = search.addTree(transform2Bitset(candidate), transform2Nodes(candidate));
             if(removedBy == null){
                 list.add(candidate);
-            }//else{
-               // LongBitSet bss = new LongBitSet("000010 000000 0000 0100");
-                //100000 0011 11 11 1111
-//                //110000 0011 11 11 1111
-                 //if(candidate.equals(bss))
-               // System.out.println("candidate " + candidate + " transform to " + transform2Bitset(candidate) + "removed by " + removedBy);
-            //}
+            }
+            /*else{
+                System.out.println("Bitset " + candidate +" Removed By " + removedBy);
+            }*/
         }
         return list;
     }

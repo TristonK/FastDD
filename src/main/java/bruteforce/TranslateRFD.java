@@ -1,12 +1,8 @@
 package bruteforce;
 
-import ch.javasoft.bitset.LongBitSet;
-import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.utils.StringCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
 
 import java.io.BufferedReader;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;

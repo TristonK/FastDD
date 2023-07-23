@@ -3,9 +3,6 @@ package ddfinder.evidence;
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.evidence.longclueimpl.LongClueSetBuilder;
 import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.utils.StringCalculation;
-import de.metanome.algorithms.dcfinder.input.Input;
-import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
 import java.util.*;
 

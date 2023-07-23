@@ -1,6 +1,6 @@
 package thresholds;
 
-import ddfinder.utils.StringCalculation;
+import ddfinder.utils.DistanceCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
 
 import java.util.*;
@@ -89,7 +89,7 @@ public class Determination {
                     this.columnsDiff.set(k + iInput.length, tmpmap);//存入hashmap中
                 }
                 for (int k = 0; k < sInput.length; k++) {
-                    double diff = StringCalculation.getDistance(sInput[k][arr[i]], sInput[k][arr[j]]);
+                    double diff = DistanceCalculation.StringDistance(sInput[k][arr[i]], sInput[k][arr[j]]);
                     HashMap<Double, Integer> tmpmap = this.columnsDiff.get(k + iInput.length + dInput.length);//获取对应属性的hashmap
                     if (tmpmap.containsKey(diff)) {
                         tmpmap.put(diff, tmpmap.get(diff) + 1);//更新差值频率
