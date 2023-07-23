@@ -43,7 +43,7 @@ public class DDFinder {
         if(Objects.equals(predicatesPath, "")){
             ExtremaStrategy strategy = new ExtremaStrategy();
             int sampleNum = Math.min(input.getRowCount() / 5, 200);
-            Determination determination = new Determination(Math.min(input.getRowCount() / 5, 200), 6, 2, this.input.getColCount(), strategy);
+            Determination determination = new Determination(Math.min(input.getRowCount() / 5, 200), 4, 2, this.input.getColCount(), strategy);
             determination.sampleAndCalculate(this.input);
             long sampleAndCalculateTime =System.currentTimeMillis() - t0;
             System.out.println("sample Size: " + sampleNum);
@@ -96,16 +96,20 @@ public class DDFinder {
                 System.out.println(dd.toString());
             }
         }
-        // ValidateDD.printAllDF(differentialFunctionBuilder);
-        // ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
+        //ValidateDD.printAllDF(differentialFunctionBuilder);
+        //ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
         if(Config.DebugFlag) {
             new ValidateDD().validate(evidenceSet, dds);
         }
         // new TranslateRFD().validatByInput(input);
-        //long t1 = System.currentTimeMillis();
-        //DifferentialDependencySet ies = new Analyzer(evidenceSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
-        //System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
-        //new ValidateDD().validate(evidenceSet, ies);
+        if(Config.TestIE){
+            long t1 = System.currentTimeMillis();
+            DifferentialDependencySet ies = new Analyzer(evidenceSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
+            System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
+            System.out.println("ie #dd : " + ies.size());
+            System.out.println("ies == dds: " + dds.haveSameDDs(ies));
+            //new ValidateDD().validate(evidenceSet, ies);
+        }
         return dds;
     }
 }

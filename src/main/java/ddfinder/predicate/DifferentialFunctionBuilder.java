@@ -14,8 +14,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-import static ddfinder.Config.OutputPredicateFlag;
-
 /**
  * @author tristonK 2022/12/29
  */
@@ -40,13 +38,14 @@ public class DifferentialFunctionBuilder {
     private Map<Integer, Integer> bitsetIndex2ThresholdsIndex;
 
     private LongBitSet differentialFunctionsBitSet;
+    public List<DifferentialFunction> HighestDfOfAttr = new ArrayList<>();
     public DifferentialFunctionBuilder(Input input) {
         init();
         predicateProvider = new PredicateProvider();
         predicateIdProvider = new IndexProvider<>();
         for (ParsedColumn<?> column : input.getColumns()) {
             List<List<Double>> thresholdsAll = CalculateThresholds(column, 0, 5);
-            addPredicates(column, thresholdsAll.get(0), thresholdsAll.get(1));
+            addDifferentialFunctions(column, thresholdsAll.get(0), thresholdsAll.get(1));
         }
         predicateIdProvider.addAll(differentialFunctions);
         DifferentialFunction.configure(predicateProvider);
@@ -61,7 +60,7 @@ public class DifferentialFunctionBuilder {
         int index =0;
         for (ParsedColumn<?> column : input.getColumns()) {
             List<List<Double>> thresholdsAll = thresholds.get(index);
-            addPredicates(column, thresholdsAll.get(0), thresholdsAll.get(1));
+            addDifferentialFunctions(column, thresholdsAll.get(0), thresholdsAll.get(1));
             index++;
         }
         predicateIdProvider.addAll(differentialFunctions);
@@ -102,7 +101,7 @@ public class DifferentialFunctionBuilder {
             }
         }
         for (ParsedColumn<?> column : input.getColumns()) {
-            addPredicates(column, smallerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()), biggerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()));
+            addDifferentialFunctions(column, smallerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()), biggerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()));
         }
         predicateIdProvider.addAll(differentialFunctions);
         DifferentialFunction.configure(predicateProvider);
@@ -155,7 +154,7 @@ public class DifferentialFunctionBuilder {
         return thresholds;
     }
 
-    private void addPredicates(ParsedColumn<?> column, List<Double> smallThresholds, List<Double> bigThresholds) {
+    private void addDifferentialFunctions(ParsedColumn<?> column, List<Double> smallThresholds, List<Double> bigThresholds) {
         if (smallThresholds == null || smallThresholds.size() == 0) {
             throw new IllegalArgumentException("Null or empty thresholds is not supported");
         }
@@ -164,19 +163,27 @@ public class DifferentialFunctionBuilder {
         ColumnOperand<?> operand = new ColumnOperand<>(column, 0);
 
         // 确定所有的Differential Function
+        smallThresholds = roundList(smallThresholds, true);
+        bigThresholds = roundList(bigThresholds, false);
         smallThresholds = dedup(smallThresholds);
         bigThresholds = dedup(bigThresholds);
         Collections.sort(smallThresholds);
         Collections.sort(bigThresholds);
+
+        System.out.println(column.getColumnName() + smallThresholds.toString()+bigThresholds.toString());
+
         // <=, 阈值降序
         for (int i = smallThresholds.size() - 1; i >= 0; i--) {
             DifferentialFunction p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
             partialDifferentialFunctions.add(p);
+            if(i == smallThresholds.size() - 1){HighestDfOfAttr.add(p);}
         }
         // >, 阈值升序
-        for (Double bigThreshold : bigThresholds) {
+        for (int i = 0; i < bigThresholds.size(); i++) {
+            Double bigThreshold = bigThresholds.get(i);
             DifferentialFunction p = predicateProvider.getPredicate(Operator.GREATER, operand, bigThreshold);
             partialDifferentialFunctions.add(p);
+            if(i == 0){HighestDfOfAttr.add(p);}
         }
         differentialFunctions.addAll(partialDifferentialFunctions);
 
@@ -388,5 +395,18 @@ public class DifferentialFunctionBuilder {
 
     public Map<Integer, Integer> getBitsetIndex2ThresholdsIndex() {
         return bitsetIndex2ThresholdsIndex;
+    }
+
+    private List<Double> roundList(List<Double> thresholds, boolean isSmaller){
+        List<Double> ret = new ArrayList<>();
+        for(Double t: thresholds){
+            ret.add(Math.round(t*1000)*1.0/1000);
+            /*if(isSmaller && t - ((int)(t*1000))/1000 > 0.0001){
+                ret.add(((int)(t*1000))*1.0/1000 + 0.001);
+            }else{
+                ret.add(((int)(t*1000))*1.0/1000);
+            }*/
+        }
+        return ret;
     }
 }

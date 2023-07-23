@@ -102,4 +102,8 @@ public class SearchSpace {
         }
         return true;
     }
+
+    public int size(){
+        return phis.size();
+    }
 }

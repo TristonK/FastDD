@@ -95,13 +95,17 @@ public class DifferentialDependencySet implements Iterable<DifferentialDependenc
         }
     }
 
-    public void minimize(){
-
-    }
-
     public void addAll(DifferentialDependencySet dds){
         if(dds == null){return;}
         dependencies.addAll(dds.getDependencies());
+    }
+
+    public boolean haveSameDDs(DifferentialDependencySet o){
+        if (o.dependencies.size() != dependencies.size()){return false;}
+        for(DifferentialDependency dd : dependencies){
+            if(!o.contains(dd)){return false;}
+        }
+        return true;
     }
 
 }

@@ -1,6 +1,7 @@
 package ie.hybrid;
 
 import ch.javasoft.bitset.LongBitSet;
+import ddfinder.Config;
 import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.evidence.Evidence;
@@ -33,15 +34,18 @@ public class Analyzer {
         DifferentialDependencySet dds = new DifferentialDependencySet();
         //System.out.println("pspacesize = " + pSpace.cardinality());
         for (int i = pSpace.nextSetBit(0); i >= 0; i = pSpace.nextSetBit(i + 1)) {
-            LongBitSet dfSpace = pSpace.clone();
-            dfSpace.clear(i);
+            //LongBitSet dfSpace = pSpace.clone();
+            //dfSpace.clear(i);
             LongBitSet right = new LongBitSet();
             right.set(i);
             dds.addAll(reduce(fullEvidenceSet, right, new SearchSpace(i)));
         }
         dds = new Minimal().minimize(dds);
-        for (DifferentialDependency dd : dds) {
-            System.out.println(dd);
+        if(Config.OutputIEFlag){
+            System.out.println("==============[IE dds]=======================");
+            for (DifferentialDependency dd : dds) {
+                System.out.println(dd);
+            }
         }
         return dds;
     }
@@ -53,22 +57,28 @@ public class Analyzer {
             return ret;
         }
         LongBitSet W = dfSpace.phis.get(0);
-        List<SearchSpace> splitSpace = dfSpace.extractPositive(W);
-        SearchSpace phi1 = splitSpace.get(0);
-        SearchSpace phi2 = splitSpace.get(1);
         List<LongBitSet> D1 = exclude(D, W, right);
-        if (D1.size() > 0) {
-            ret.addAll(reduce(D1, right, phi1));
-        } else {
-            IndexProvider<DifferentialFunction> p = differentialFunctionBuilder.getPredicateIdProvider();
-            List<DifferentialFunction> leftDf = new ArrayList<>();
-            DifferentialFunction rightDf = p.getObject(right.nextSetBit(0));
-            for (int i = W.nextSetBit(0); i >= 0; i = W.nextSetBit(i + 1)) {
-                leftDf.add(p.getObject(i));
+        // transfer to negative pruning
+        if(D1.size() == D.size()){
+            List<SearchSpace> splitSpace = dfSpace.extractNegative(W);
+            ret.addAll(reduce(D1, right, splitSpace.get(1)));
+        } else{
+            List<SearchSpace> splitSpace = dfSpace.extractPositive(W);
+            SearchSpace phi1 = splitSpace.get(0);
+            SearchSpace phi2 = splitSpace.get(1);
+            if (D1.size() > 0) {
+                ret.addAll(reduce(D1, right, phi1));
+            } else {
+                IndexProvider<DifferentialFunction> p = differentialFunctionBuilder.getPredicateIdProvider();
+                List<DifferentialFunction> leftDf = new ArrayList<>();
+                DifferentialFunction rightDf = p.getObject(right.nextSetBit(0));
+                for (int i = W.nextSetBit(0); i >= 0; i = W.nextSetBit(i + 1)) {
+                    leftDf.add(p.getObject(i));
+                }
+                ret.add(new DifferentialDependency(leftDf, rightDf, W.clone().getOr(right), W.clone()));
             }
-            ret.add(new DifferentialDependency(leftDf, rightDf, W.clone().getOr(right), W.clone()));
+            ret.addAll(reduce(D, right, phi2));
         }
-        ret.addAll(reduce(D, right, phi2));
         return ret;
     }
 
