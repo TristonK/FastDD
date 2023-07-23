@@ -5,7 +5,7 @@ import ddfinder.pli.DoublePli;
 import ddfinder.pli.IPli;
 import ddfinder.pli.PliShard;
 import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.utils.StringCalculation;
+import ddfinder.utils.DistanceCalculation;
 
 import java.util.HashMap;
 import java.util.List;
@@ -76,7 +76,7 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         final String[] probeKeys = (String[]) probePli.getKeys();
         for (int i = 0; i < pivotKeys.length; i++) {
             for (int j = 0; j < probeKeys.length; j++) {
-                int diff = StringCalculation.getDistance(pivotKeys[i], probeKeys[j]);
+                int diff = DistanceCalculation.StringDistance(pivotKeys[i], probeKeys[j]);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
                     c = 0;

@@ -3,7 +3,7 @@ package ddfinder.evidence;
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.pli.*;
 import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.utils.StringCalculation;
+import ddfinder.utils.DistanceCalculation;
 
 import java.util.HashMap;
 import java.util.List;
@@ -102,7 +102,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
                     setNumMask(clues, pli.get(i), pli.get(j), pos + ClueSetBuilder.stringDistance.get(smallOne).get(biggerOne));
                     continue;
                 }*/
-                int diff = StringCalculation.getDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
+                int diff = DistanceCalculation.StringDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
                     c = 0;

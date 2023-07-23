@@ -94,6 +94,9 @@ public class HybridEvidenceInversion implements Enumeration{
         DifferentialDependencySet ret = new DifferentialDependencySet();
         long beforeMinimizeSize = 0;
         long minimizeTime = 0;
+        /*System.out.println("Minimize Tree: " + intervalSize + " === " + Arrays.toString(predicateId2NodeId)+ "==" +
+                Arrays.toString(col2Interval) + " == "+ Arrays.toString(col2PredicateId) + " == " + colSize + " == " +
+                Arrays.toString(intervalLength) + " == " + index2Diff.toString());*/
 
         for(int i = 0; i < preds.size(); i++){
             int rightPid = preds.get(i);

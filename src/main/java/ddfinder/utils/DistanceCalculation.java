@@ -1,14 +1,18 @@
 package ddfinder.utils;
 
+import java.util.Objects;
+import org.apache.commons.text.similarity.LevenshteinDistance;
+
 /**
  * @author tristonK 2023/2/26
  */
-public class StringCalculation {
+public class DistanceCalculation {
     public static boolean flag = true;
 
-    public static int getDistance(String s1, String s2){
+    public static int StringDistance(String s1, String s2){
         if(flag){
-            return getLevenshteinDistance(s1,s2);
+            return LEVENSHTEIN.apply(s1, s2);
+            //return getLevenshteinDistance(s1,s2);
         }else{
             return getQGramDistance(s1, s2);
         }
@@ -88,4 +92,27 @@ public class StringCalculation {
     private static int getQGramDistance(String a, String b){
         return 0;
     }
+
+    private static double MinMDDiff = 0.0;
+    private static double MaxMDDiff = 1.0;
+
+    public static double MDLongDistance(long x, long y){
+        if (Math.max(x,y) == 0){return MinMDDiff;}
+        return Math.abs(x-y)*1.0 / Math.max(x,y);
+    }
+    private static final LevenshteinDistance LEVENSHTEIN = LevenshteinDistance.getDefaultInstance();
+    public static double MDDoubleDistance(double x, double y){
+        if (Math.max(x,y) == 0.0){return MinMDDiff;}
+        return Math.abs(x - y) / Math.max(x,y);
+    }
+
+    public static double MDLevenstheinDistance(String x, String y){
+        if(x.length()== 0 && y.length() == 0){return MinMDDiff;}
+
+        return Math.max(0.0, (double) getLevenshteinDistance(x, y) /Math.max(x.length(), y.length()));
+    }
+
+    public static long MDDiffLong(long x, double diff, boolean XIsBigger){return 0;}
+
+    public static long MDDiffDouble(double x, double y, boolean XISBigger){return 0;}
 }

@@ -41,7 +41,7 @@ public class Analyzer {
         }
         dds = new Minimal().minimize(dds);
         for (DifferentialDependency dd : dds) {
-            // System.out.println(dd);
+            System.out.println(dd);
         }
         return dds;
     }

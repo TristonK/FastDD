@@ -9,4 +9,6 @@ public class Config {
     public static boolean OutputDDFlag = false;
     public static boolean OutputPredicateFlag = false;
     public static boolean OutputDFSetTime = false;
+
+    public static boolean TestMD = false;
 }
