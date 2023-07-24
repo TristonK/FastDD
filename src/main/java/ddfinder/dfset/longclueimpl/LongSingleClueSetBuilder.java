@@ -1,6 +1,6 @@
-package ddfinder.evidence.longclueimpl;
+package ddfinder.dfset.longclueimpl;
 
-import ddfinder.evidence.IClueOffset;
+import ddfinder.dfset.IClueOffset;
 import ddfinder.pli.Cluster;
 import ddfinder.pli.DoublePli;
 import ddfinder.pli.IPli;

@@ -4,14 +4,10 @@ import ch.javasoft.bitset.LongBitSet;
 import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.predicate.DifferentialFunction;
-import ddfinder.evidence.Evidence;
-import ddfinder.evidence.EvidenceSet;
+import ddfinder.dfset.Evidence;
+import ddfinder.dfset.EvidenceSet;
 import ddfinder.predicate.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
-import de.metanome.algorithms.dcfinder.predicates.Operator;
-import de.metanome.algorithms.dcfinder.predicates.Predicate;
-
-import java.util.BitSet;
 
 /**
  * @author tristonK 2023/6/30

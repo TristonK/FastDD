@@ -1,4 +1,4 @@
-package ddfinder.evidence;
+package ddfinder.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.pli.DoublePli;

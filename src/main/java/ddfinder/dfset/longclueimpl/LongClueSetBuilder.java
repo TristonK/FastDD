@@ -1,4 +1,4 @@
-package ddfinder.evidence.longclueimpl;
+package ddfinder.dfset.longclueimpl;
 
 import ddfinder.predicate.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
@@ -6,7 +6,6 @@ import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author tristonK 2023/6/2

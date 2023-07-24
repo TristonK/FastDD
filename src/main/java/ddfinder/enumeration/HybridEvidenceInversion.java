@@ -4,7 +4,7 @@ import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.Config;
 import ddfinder.differentialdependency.DifferentialDependencySet;
-import ddfinder.evidence.EvidenceSet;
+import ddfinder.dfset.EvidenceSet;
 import ddfinder.predicate.DifferentialFunction;
 import ddfinder.predicate.DifferentialFunctionBuilder;
 import ddfinder.predicate.PredicateSet;

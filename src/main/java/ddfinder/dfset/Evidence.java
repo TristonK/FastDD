@@ -1,11 +1,9 @@
-package ddfinder.evidence;
+package ddfinder.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.predicate.DifferentialFunctionBuilder;
 
 import java.util.List;
-import java.util.BitSet;
-import java.util.Objects;
 
 /**
  * @author tristonK 2022/12/31

@@ -1,22 +1,17 @@
 package ddfinder;
 
-import bruteforce.EvidenceCount;
-import ch.javasoft.bitset.LongBitSet;
-import bruteforce.TranslateRFD;
 import bruteforce.ValidateDD;
 import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.enumeration.Enumeration;
 import ddfinder.enumeration.HybridEvidenceInversion;
-import ddfinder.evidence.*;
-import ddfinder.evidence.longclueimpl.LongCrossClueSetBuilder;
-import ddfinder.evidence.longclueimpl.LongSingleClueSetBuilder;
-import ddfinder.evidence.offsetimpl.BinaryCalOffset;
-import ddfinder.evidence.offsetimpl.BruteCalOffset;
+import ddfinder.dfset.*;
+import ddfinder.dfset.longclueimpl.LongCrossClueSetBuilder;
+import ddfinder.dfset.longclueimpl.LongSingleClueSetBuilder;
+import ddfinder.dfset.offsetimpl.BinaryCalOffset;
 import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
 import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.search.MinimizeTree;
 import ddfinder.utils.PrintResult;
 import de.metanome.algorithms.dcfinder.input.Input;
 import ie.hybrid.Analyzer;
@@ -25,10 +20,8 @@ import thresholds.ExtremaStrategy;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * @author tristonk

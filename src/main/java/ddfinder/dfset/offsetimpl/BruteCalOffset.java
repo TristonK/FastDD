@@ -1,6 +1,6 @@
-package ddfinder.evidence.offsetimpl;
+package ddfinder.dfset.offsetimpl;
 
-import ddfinder.evidence.IClueOffset;
+import ddfinder.dfset.IClueOffset;
 import ddfinder.pli.IPli;
 
 import java.util.List;
