@@ -1,7 +1,7 @@
-package ddfinder.evidence.longclueimpl;
+package ddfinder.dfset.longclueimpl;
 
 import ddfinder.Config;
-import ddfinder.evidence.IClueOffset;
+import ddfinder.dfset.IClueOffset;
 import ddfinder.pli.DoublePli;
 import ddfinder.pli.IPli;
 import ddfinder.pli.PliShard;

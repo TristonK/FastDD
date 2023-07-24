@@ -90,6 +90,15 @@ public class Input {
         });
         for (int i = 0; i < colCount; i++) {
             Column c = columns[i];
+            if (Config.TestMD){
+                ParsedColumn<String> pColumn = new ParsedColumn<>(c.getName(), String.class, i, providerS);
+                pColumns.add(pColumn);
+                for (int l = 0; l < c.getLineCount(); ++l) {
+                    pColumn.addLine(c.getString(l));
+                }
+                stringCnt++;
+                continue;
+            }
             if (c.getType() == Column.Type.LONG) {
                 ParsedColumn<Long> pColumn = new ParsedColumn<>(c.getName(), Long.class, i, providerL);
                 pColumns.add(pColumn);

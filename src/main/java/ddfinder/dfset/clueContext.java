@@ -1,9 +1,7 @@
-package ddfinder.evidence;
+package ddfinder.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
 import org.roaringbitmap.RoaringBitmap;
-import java.util.BitSet;
-import java.util.List;
 
 /**
  * @author tristonK 2023/3/13

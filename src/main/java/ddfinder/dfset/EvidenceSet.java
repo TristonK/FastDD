@@ -1,7 +1,7 @@
-package ddfinder.evidence;
+package ddfinder.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.evidence.longclueimpl.LongClueSetBuilder;
+import ddfinder.dfset.longclueimpl.LongClueSetBuilder;
 import ddfinder.predicate.DifferentialFunctionBuilder;
 
 import java.util.*;
