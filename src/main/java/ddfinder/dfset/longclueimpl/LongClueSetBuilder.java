@@ -1,6 +1,6 @@
 package ddfinder.dfset.longclueimpl;
 
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
 import java.util.ArrayList;

@@ -1,15 +1,13 @@
 package ddfinder.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
-import com.koloboke.collect.map.hash.HashLongLongMap;
-import com.koloboke.collect.map.hash.HashLongLongMaps;
 import ddfinder.Config;
 import ddfinder.dfset.longclueimpl.LongClueSetBuilder;
 import ddfinder.dfset.longclueimpl.LongCrossClueSetBuilder;
 import ddfinder.dfset.longclueimpl.LongSingleClueSetBuilder;
 import ddfinder.dfset.offsetimpl.BinaryCalOffset;
 import ddfinder.pli.PliShard;
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 
 import java.util.HashMap;
 import java.util.Set;

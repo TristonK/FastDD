@@ -1,4 +1,4 @@
-package ddfinder.predicate;
+package ddfinder.differentialfunction;
 
 import de.metanome.algorithms.dcfinder.predicates.Operator;
 import de.metanome.algorithms.dcfinder.predicates.operands.ColumnOperand;

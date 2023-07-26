@@ -11,7 +11,7 @@ import ddfinder.dfset.longclueimpl.LongSingleClueSetBuilder;
 import ddfinder.dfset.offsetimpl.BinaryCalOffset;
 import ddfinder.pli.PliShard;
 import ddfinder.pli.PliShardBuilder;
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 import ddfinder.utils.PrintResult;
 import de.metanome.algorithms.dcfinder.input.Input;
 import ie.hybrid.Analyzer;

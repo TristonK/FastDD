@@ -2,7 +2,7 @@ package ddfinder.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.dfset.longclueimpl.LongClueSetBuilder;
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 
 import java.util.*;
 

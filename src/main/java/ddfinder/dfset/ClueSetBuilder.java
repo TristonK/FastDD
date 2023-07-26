@@ -1,7 +1,7 @@
 package ddfinder.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
 

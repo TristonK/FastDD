@@ -1,8 +1,7 @@
 package ddfinder.differentialdependency;
 
 import ch.javasoft.bitset.IBitSet;
-import ch.javasoft.bitset.LongBitSet;
-import ddfinder.predicate.DifferentialFunction;
+import ddfinder.differentialfunction.DifferentialFunction;
 
 import java.util.List;
 

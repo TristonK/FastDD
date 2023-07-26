@@ -1,4 +1,4 @@
-package ddfinder.predicate;
+package ddfinder.differentialfunction;
 
 import ch.javasoft.bitset.LongBitSet;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;

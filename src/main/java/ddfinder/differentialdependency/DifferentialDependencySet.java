@@ -1,7 +1,7 @@
 package ddfinder.differentialdependency;
 
 import ch.javasoft.bitset.IBitSet;
-import ddfinder.predicate.DifferentialFunction;
+import ddfinder.differentialfunction.DifferentialFunction;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
 import java.util.*;
