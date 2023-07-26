@@ -1,6 +1,6 @@
 package ddfinder.utils;
 
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 
 import java.util.BitSet;
 import java.util.List;

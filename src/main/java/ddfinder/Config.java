@@ -7,7 +7,7 @@ public class Config {
     public static int PliShardLength = 350;
     public static boolean DebugFlag = false;
     public static boolean OutputDD2File = false;
-    public static boolean OutputDDFlag = true;
+    public static boolean OutputDDFlag = false;
     public static boolean OutputIEFlag = false;
     public static boolean OutputPredicateFlag = false;
     public static boolean OutputDFSetTime = false;
@@ -17,5 +17,5 @@ public class Config {
 
     public static boolean TestIE = false;
     public static boolean TestMultiThread = true;
-    public static int ThreadSize = 3;
+    public static int ThreadSize = 6;
 }

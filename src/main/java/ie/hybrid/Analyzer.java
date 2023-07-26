@@ -6,8 +6,8 @@ import ddfinder.differentialdependency.DifferentialDependency;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.dfset.Evidence;
 import ddfinder.dfset.EvidenceSet;
-import ddfinder.predicate.DifferentialFunction;
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunction;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
 import java.util.ArrayList;

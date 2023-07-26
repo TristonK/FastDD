@@ -2,7 +2,7 @@ package ddfinder.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.pli.*;
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 import ddfinder.utils.DistanceCalculation;
 
 import java.util.HashMap;

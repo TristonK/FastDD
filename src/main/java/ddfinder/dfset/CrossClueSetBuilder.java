@@ -4,7 +4,7 @@ import ch.javasoft.bitset.LongBitSet;
 import ddfinder.pli.DoublePli;
 import ddfinder.pli.IPli;
 import ddfinder.pli.PliShard;
-import ddfinder.predicate.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 import ddfinder.utils.DistanceCalculation;
 
 import java.util.HashMap;

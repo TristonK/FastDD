@@ -5,9 +5,9 @@ import ch.javasoft.bitset.LongBitSet;
 import ddfinder.Config;
 import ddfinder.differentialdependency.DifferentialDependencySet;
 import ddfinder.dfset.EvidenceSet;
-import ddfinder.predicate.DifferentialFunction;
-import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.predicate.PredicateSet;
+import ddfinder.differentialfunction.DifferentialFunction;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
+import ddfinder.differentialfunction.PredicateSet;
 import ddfinder.search.TranslatingMinimizeTree;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 import de.metanome.algorithms.dcfinder.predicates.Operator;
@@ -161,19 +161,6 @@ public class HybridEvidenceInversion implements Enumeration{
                 }
             }
         }
-    }
-
-    private Set<LongBitSet> hybridEI(List<Integer> predicateSpace, Set<Integer> notMatchPredicates, List<LongBitSet> evidenceBitSets){
-        Set<LongBitSet> evidenceInversionCovers = new HashSet<>();
-        for(int predicate : predicateSpace){
-            LongBitSet bs = new LongBitSet();
-            bs.set(predicate);
-            evidenceInversionCovers.add(bs);
-        }
-        for(LongBitSet evidenceBitSet: evidenceBitSets){
-            handleEvidence(evidenceBitSet, evidenceInversionCovers, predicateSpace);
-        }
-        return evidenceInversionCovers;
     }
 
     private void handleEvidence(LongBitSet evidenceBitSet, Set<LongBitSet> covers, List<Integer> predicateSpace){

@@ -1,10 +1,8 @@
 package ie.hybrid;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.predicate.DifferentialFunctionBuilder;
-import ddfinder.predicate.PredicateSet;
+import ddfinder.differentialfunction.DifferentialFunctionBuilder;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;

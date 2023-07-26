@@ -1,4 +1,4 @@
-package ddfinder.predicate;
+package ddfinder.differentialfunction;
 
 import ch.javasoft.bitset.LongBitSet;
 import ddfinder.Config;
@@ -170,7 +170,7 @@ public class DifferentialFunctionBuilder {
         Collections.sort(smallThresholds);
         Collections.sort(bigThresholds);
 
-        //System.out.println(column.getColumnName() + smallThresholds.toString()+bigThresholds.toString());
+        System.out.println(column.getColumnName() + smallThresholds.toString()+bigThresholds.toString());
 
         // <=, 阈值降序
         for (int i = smallThresholds.size() - 1; i >= 0; i--) {

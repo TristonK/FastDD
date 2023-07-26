@@ -1,7 +1,4 @@
-package ddfinder.predicate;
-
-import de.metanome.algorithms.dcfinder.predicates.Operator;
-import de.metanome.algorithms.dcfinder.predicates.operands.ColumnOperand;
+package ddfinder.differentialfunction;
 
 import java.util.Objects;
 
