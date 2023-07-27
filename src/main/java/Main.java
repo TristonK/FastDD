@@ -1,6 +1,6 @@
-import ddfinder.Config;
-import ddfinder.DDFinder;
-import ddfinder.differentialdependency.DifferentialDependencySet;
+import fastdd.Config;
+import fastdd.FastDD;
+import fastdd.differentialdependency.DifferentialDependencySet;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.RelationalInput;
 
@@ -33,8 +33,8 @@ public class Main {
         }
 
 
-        DDFinder dDFinder = new DDFinder(new Input(new RelationalInput(fp), rowLimit), dfp);
-        DifferentialDependencySet dds = dDFinder.buildDDs();
+        FastDD dDFast = new FastDD(new Input(new RelationalInput(fp), rowLimit), dfp);
+        DifferentialDependencySet dds = dDFast.buildDDs();
     }
 
 }

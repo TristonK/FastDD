@@ -1,9 +1,9 @@
 package ie.hybrid;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.differentialdependency.DifferentialDependency;
-import ddfinder.differentialdependency.DifferentialDependencySet;
-import ddfinder.differentialfunction.DifferentialFunction;
+import fastdd.differentialdependency.DifferentialDependency;
+import fastdd.differentialdependency.DifferentialDependencySet;
+import fastdd.differentialfunction.DifferentialFunction;
 import de.metanome.algorithms.dcfinder.predicates.Operator;
 
 import java.util.ArrayList;

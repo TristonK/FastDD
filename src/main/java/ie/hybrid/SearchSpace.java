@@ -1,7 +1,7 @@
 package ie.hybrid;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.differentialfunction.DifferentialFunctionBuilder;
+import fastdd.differentialfunction.DifferentialFunctionBuilder;
 
 import java.util.ArrayList;
 import java.util.BitSet;

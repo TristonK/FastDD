@@ -4,7 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import com.csvreader.CsvReader;
-import ddfinder.Config;
+import fastdd.Config;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
 public class Input {

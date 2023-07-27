@@ -1,6 +1,6 @@
 package thresholds;
 
-import ddfinder.utils.DistanceCalculation;
+import fastdd.utils.DistanceCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
 
 import java.util.*;
@@ -53,7 +53,7 @@ public class Determination {
 
         Random r = new Random();
         int[] arr = new int[this.rowLimit];//存储不重复的随机数
-        for (int i = 0; i < arr.length; ) {
+        for (int i = 0; i < arr.length; i++) {
             int num = 1 + r.nextInt(input.getRowCount()-1);//生成[1~行]数的随机整数
             if (!isRepeat(arr, num)) {//保证不重复
                 arr[i++] = num;
