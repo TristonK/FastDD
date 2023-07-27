@@ -1,13 +1,13 @@
 package ie.hybrid;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.Config;
-import ddfinder.differentialdependency.DifferentialDependency;
-import ddfinder.differentialdependency.DifferentialDependencySet;
-import ddfinder.dfset.Evidence;
-import ddfinder.dfset.EvidenceSet;
-import ddfinder.differentialfunction.DifferentialFunction;
-import ddfinder.differentialfunction.DifferentialFunctionBuilder;
+import fastdd.Config;
+import fastdd.differentialdependency.DifferentialDependency;
+import fastdd.differentialdependency.DifferentialDependencySet;
+import fastdd.dfset.Evidence;
+import fastdd.dfset.DFSet;
+import fastdd.differentialfunction.DifferentialFunction;
+import fastdd.differentialfunction.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
 import java.util.ArrayList;
@@ -20,9 +20,9 @@ public class Analyzer {
     private final List<LongBitSet> fullEvidenceSet;
     private final DifferentialFunctionBuilder differentialFunctionBuilder;
 
-    public Analyzer(EvidenceSet evidenceSet, DifferentialFunctionBuilder dfBuilder) {
+    public Analyzer(DFSet DFSet, DifferentialFunctionBuilder dfBuilder) {
         List<LongBitSet> evis = new ArrayList<>();
-        for (Evidence evi : evidenceSet) {
+        for (Evidence evi : DFSet) {
             evis.add(evi.getBitset().clone());
         }
         fullEvidenceSet = evis;

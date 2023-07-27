@@ -1,24 +1,24 @@
 package bruteforce;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.differentialdependency.DifferentialDependency;
-import ddfinder.differentialdependency.DifferentialDependencySet;
-import ddfinder.differentialfunction.DifferentialFunction;
-import ddfinder.dfset.Evidence;
-import ddfinder.dfset.EvidenceSet;
-import ddfinder.differentialfunction.DifferentialFunctionBuilder;
+import fastdd.differentialdependency.DifferentialDependency;
+import fastdd.differentialdependency.DifferentialDependencySet;
+import fastdd.differentialfunction.DifferentialFunction;
+import fastdd.dfset.Evidence;
+import fastdd.dfset.DFSet;
+import fastdd.differentialfunction.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 
 /**
  * @author tristonK 2023/6/30
  */
 public class ValidateDD {
-    public void validate(EvidenceSet evidenceSet, DifferentialDependencySet dds){
+    public void validate(DFSet DFSet, DifferentialDependencySet dds){
         int count = 0;
         for(DifferentialDependency dd: dds){
             boolean flag = false;
             int left = 0;
-            for(Evidence evi: evidenceSet){
+            for(Evidence evi: DFSet){
                 if(dd.getLeftPredicateSet().isSubSetOf(evi.getBitset())){
                    flag = true;left++;
                     if(!dd.getPredicateSet().isSubSetOf(evi.getBitset())){
@@ -32,7 +32,7 @@ public class ValidateDD {
     }
 
     // 最后一个string为right,string格式，
-    public static void translateRFDToDD(DifferentialFunctionBuilder builder, EvidenceSet evidenceSet){
+    public static void translateRFDToDD(DifferentialFunctionBuilder builder, DFSet DFSet){
         LongBitSet leftBs = new LongBitSet();
         LongBitSet allBs = new LongBitSet();
         {
@@ -49,7 +49,7 @@ public class ValidateDD {
         // validate
         boolean flag = true;
         int left = 0;
-        for(Evidence evi: evidenceSet){
+        for(Evidence evi: DFSet){
             if(leftBs.isSubSetOf(evi.getBitset())){
                 left++;
                 if(!allBs.isSubSetOf(evi.getBitset())){

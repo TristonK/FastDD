@@ -1,8 +1,8 @@
 package bruteforce;
 
 import ch.javasoft.bitset.LongBitSet;
-import ddfinder.differentialfunction.DifferentialFunctionBuilder;
-import ddfinder.utils.DistanceCalculation;
+import fastdd.differentialfunction.DifferentialFunctionBuilder;
+import fastdd.utils.DistanceCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 
