@@ -10,8 +10,8 @@ public class DistanceCalculation {
 
     public static int StringDistance(String s1, String s2){
         if(flag){
-            return LEVENSHTEIN.apply(s1, s2);
-            //return getLevenshteinDistance(s1,s2);
+            //return LEVENSHTEIN.apply(s1, s2);
+            return getLevenshteinDistance(s1,s2);
         }else{
             return getQGramDistance(s1, s2);
         }
@@ -99,7 +99,7 @@ public class DistanceCalculation {
         if (Math.max(x,y) == 0){return MinMDDiff;}
         return Math.abs(x-y)*1.0 / Math.max(x,y);
     }
-    private static final LevenshteinDistance LEVENSHTEIN = LevenshteinDistance.getDefaultInstance();
+    //private static final LevenshteinDistance LEVENSHTEIN = LevenshteinDistance.getDefaultInstance();
     public static double MDDoubleDistance(double x, double y){
         if (Math.max(x,y) == 0.0){return MinMDDiff;}
         return Math.abs(x - y) / Math.max(x,y);

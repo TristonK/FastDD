@@ -35,8 +35,6 @@ public class Analyzer {
         //System.out.println("pspacesize = " + pSpace.cardinality());
         long t1 = System.currentTimeMillis();
         for (int i = pSpace.nextSetBit(0); i >= 0; i = pSpace.nextSetBit(i + 1)) {
-            //LongBitSet dfSpace = pSpace.clone();
-            //dfSpace.clear(i);
             LongBitSet right = new LongBitSet();
             right.set(i);
             dds.addAll(reduce(fullEvidenceSet, right, new SearchSpace(i)));
