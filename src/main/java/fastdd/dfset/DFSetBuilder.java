@@ -1,6 +1,8 @@
 package fastdd.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
+import com.koloboke.collect.map.hash.HashLongLongMap;
+import com.koloboke.collect.map.hash.HashLongLongMaps;
 import fastdd.Config;
 import fastdd.dfset.longclueimpl.LongClueSetBuilder;
 import fastdd.dfset.longclueimpl.LongCrossClueSetBuilder;
@@ -73,8 +75,15 @@ public class DFSetBuilder {
     private HashMap<Long, Long> buildLongClueSet(PliShard[] pliShards) {
         int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
         System.out.println("  [CLUE] task count: " + taskCount);
-        return Config.TestMultiThread? new ClueSetTask(null, pliShards, 0, taskCount).invoke() : linerBuild(pliShards);
-    }
+        var exec = new Executor(pliShards);
+        return exec.res;
+        /*if (Config.TestMultiThread){
+            HashLongLongMap res = new ClueSetTask(null, pliShards, 0, taskCount).invoke();
+            return new HashMap<>(res);
+        } else{
+            return linerBuild(pliShards);
+        }*/
+}
 
     private HashMap<Long, Long> linerBuild(PliShard[] pliShards){
         HashMap<Long, Long> clueSet = new HashMap<>();
@@ -95,7 +104,7 @@ public class DFSetBuilder {
 }
 
 
-class ClueSetTask extends CountedCompleter<HashMap<Long, Long>> {
+class ClueSetTask extends CountedCompleter<HashLongLongMap> {
 
     private static int[] searchIndexes;
 
@@ -112,7 +121,7 @@ class ClueSetTask extends CountedCompleter<HashMap<Long, Long>> {
     PliShard[] pliShards;
 
     ClueSetTask sibling;
-    HashMap<Long, Long> partialClueSet;
+    HashLongLongMap partialClueSet;
 
     public ClueSetTask(ClueSetTask parent, PliShard[] _pliShards, int _beg, int _end) {
         super(parent);
@@ -138,7 +147,7 @@ class ClueSetTask extends CountedCompleter<HashMap<Long, Long>> {
         } else {
             if (taskEnd > taskBeg) {
                 LongClueSetBuilder builder = getClueSetBuilder(taskBeg);
-                partialClueSet = builder.buildClueSet();
+                partialClueSet = HashLongLongMaps.newMutableMap(builder.buildClueSet());
             }
 
             tryComplete();
@@ -172,14 +181,15 @@ class ClueSetTask extends CountedCompleter<HashMap<Long, Long>> {
 
             partialClueSet = child.partialClueSet;
             if (childSibling != null && childSibling.partialClueSet != null) {
-                for (var e : childSibling.partialClueSet.entrySet())
-                    partialClueSet.put(e.getKey(), e.getValue()+partialClueSet.getOrDefault(e.getKey(),0L));
+                for (var e : childSibling.partialClueSet.entrySet()){
+                    partialClueSet.addValue(e.getKey(), e.getValue(), 0L);
+                }
             }
         }
     }
 
     @Override
-    public HashMap<Long, Long> getRawResult() {
-        return partialClueSet == null ? new HashMap<>() : partialClueSet;
+    public HashLongLongMap getRawResult() {
+        return partialClueSet == null ? HashLongLongMaps.newMutableMap(): partialClueSet;
     }
 }

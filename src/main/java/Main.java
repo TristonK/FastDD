@@ -27,6 +27,9 @@ public class Main {
         if(args.length > 2){
             dfp = args[2];
         }
+        if (args.length > 3){
+            Config.ThreadSize = Integer.parseInt(args[3]);
+        }
         if (Config.TestMultiThread && Config.ThreadSize > 0){
             System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", Integer.toString(Config.ThreadSize));
             System.out.println("Paralism: "+ ForkJoinPool.commonPool().getParallelism());

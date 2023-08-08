@@ -6,10 +6,7 @@ import fastdd.differentialdependency.DifferentialDependencySet;
 import fastdd.differentialfunction.DifferentialFunction;
 import de.metanome.algorithms.dcfinder.predicates.Operator;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static ie.hybrid.SearchSpace.dfBuilder;
 
@@ -20,6 +17,13 @@ public class Minimal {
     public DifferentialDependencySet minimize(DifferentialDependencySet ddSet) {
         Set<Integer> minimizeIndex = new HashSet<>();
         List<DifferentialDependency> dds = new ArrayList<>(ddSet.getDependencies());
+        /* TODO
+        dds.sort(new Comparator<DifferentialDependency>() {
+            @Override
+            public int compare(DifferentialDependency o1, DifferentialDependency o2) {
+                return 0;
+            }
+        });*/
         //LongBitSet bs = new LongBitSet();bs.set(2);bs.set(9);bs.set(16);
         for (int i = 0; i < dds.size(); i++) {
             DifferentialDependency pivot = dds.get(i);

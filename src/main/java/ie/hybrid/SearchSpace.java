@@ -1,11 +1,10 @@
 package ie.hybrid;
 
+import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
 import fastdd.differentialfunction.DifferentialFunctionBuilder;
 
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author tristonK 2023/7/16
@@ -22,6 +21,15 @@ public class SearchSpace {
         //int col = dfBuilder.getPredicateIdProvider().getObject(right).getOperand().getIndex();
         phis = new ArrayList<>();
         getPhis(dfBuilder.getColPredicateGroup(), 0, new LongBitSet(dfBuilder.size()), right);
+        phis.sort(new Comparator<IBitSet>() {
+            @Override
+            public int compare(IBitSet o1, IBitSet o2) {
+                if (o1.cardinality() == o2.cardinality()) {
+                    return o2.compareTo(o1);
+                }
+                return o1.cardinality() - o2.cardinality();
+            }
+        });
     }
 
     public SearchSpace(List<LongBitSet> phis){
