@@ -120,7 +120,7 @@ public class FastDD {
             System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
             System.out.println("ie #dd : " + ies.size());
             System.out.println("ies == dds: " + dds.haveSameDDs(ies));
-            //new ValidateDD().validate(evidenceSet, ies);
+            //new ValidateDD().validate(dfSet, ies);
         }
         return dds;
     }

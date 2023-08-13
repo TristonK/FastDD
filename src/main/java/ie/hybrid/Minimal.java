@@ -1,5 +1,6 @@
 package ie.hybrid;
 
+import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
 import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialdependency.DifferentialDependencySet;
@@ -17,11 +18,30 @@ public class Minimal {
     public DifferentialDependencySet minimize(DifferentialDependencySet ddSet) {
         Set<Integer> minimizeIndex = new HashSet<>();
         List<DifferentialDependency> dds = new ArrayList<>(ddSet.getDependencies());
-        /* TODO
-        dds.sort(new Comparator<DifferentialDependency>() {
+
+       /* dds.sort(new Comparator<DifferentialDependency>() {
             @Override
             public int compare(DifferentialDependency o1, DifferentialDependency o2) {
-                return 0;
+                assert o1 == o2;
+                if (o1.getRight().operandWithOpHash() != o2.getRight().operandWithOpHash()){
+                    return Integer.compare(o1.getRight().operandWithOpHash(),o2.getRight().operandWithOpHash());
+                    //return  - o2.getRight().operandWithOpHash();
+                } else if (o1.getRight().getDistance() == o2.getRight().getDistance()){
+                    assert o1.getRight().operandWithOpHash() != o2.getRight().operandWithOpHash();
+                    IBitSet l1 = o1.getLeftPredicateSet();
+                    IBitSet l2 = o2.getLeftPredicateSet();
+                    if (l1.cardinality() == l2.cardinality()){
+                        return l2.compareTo(l1);
+                    }
+                    return l1.cardinality() - l2.cardinality();
+                } else{
+                    assert o1.getRight().getDistance() == o2.getRight().getDistance();
+                    if (o1.getRight().getOperator() == Operator.LESS_EQUAL){
+                        return Double.compare(o1.getRight().getDistance(), o2.getRight().getDistance());
+                    } else{
+                        return Double.compare(o2.getRight().getDistance(), o1.getRight().getDistance());
+                    }
+                }
             }
         });*/
         //LongBitSet bs = new LongBitSet();bs.set(2);bs.set(9);bs.set(16);
@@ -32,8 +52,11 @@ public class Minimal {
 
             for (int j = i + 1; j < dds.size(); j++) {
                 DifferentialDependency later = dds.get(j);
-                LongBitSet laterLeftPredicate = new LongBitSet(later.getLeftPredicateSet());
                 DifferentialFunction laterRight = later.getRight();
+                if (pivotRight.operandWithOpHash() != laterRight.operandWithOpHash() || minimizeIndex.contains(j)){
+                    continue;
+                }
+                LongBitSet laterLeftPredicate = new LongBitSet(later.getLeftPredicateSet());
                 //先判断右边单属性是否满足删除条件
                 if (isRightReduce(pivotRight, laterRight)) {
                     //进行leftReduce判断，记录需要被删去的dd下标
@@ -46,10 +69,8 @@ public class Minimal {
                 ////反过来判断一遍，保证不被dd的顺序影响
                 if (isRightReduce(laterRight, pivotRight)) {
                     if (isLeftReduce(laterLeftPredicate, pivotLeftPredicate)) {//later的LHS属性被pivot的所包含，并且later对应的属性范围更大
-/*                        if(pivotRight.toString().equals("[col2(<=4.0)]") && pivotLeftPredicate.equals(bs)){
-                            System.out.println(laterRight.toString() +" " + laterLeftPredicate);
-                        }*/
                         minimizeIndex.add(i);
+                        break;
                     }
                 }
             }
