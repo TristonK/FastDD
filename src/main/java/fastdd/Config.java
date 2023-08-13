@@ -14,10 +14,10 @@ public class Config {
 
     public static boolean OutputDFSet = false;
 
-    public static boolean NeedRightAlwaysTrueDD = false;
+    public static boolean NeedRightAlwaysTrueDD = true;
     public static boolean TestMD = false;
 
-    public static boolean TestIE = false;
+    public static boolean TestIE = true;
     public static boolean TestMultiThread = true;
     public static int ThreadSize = 3;
 }
