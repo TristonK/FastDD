@@ -1,6 +1,7 @@
 package fastdd.dfset.longclueimpl;
 
 import fastdd.Config;
+import fastdd.dfset.Executor;
 import fastdd.dfset.IClueOffset;
 import fastdd.pli.DoublePli;
 import fastdd.pli.IPli;
@@ -15,7 +16,7 @@ import java.util.concurrent.Callable;
 /**
  * @author tristonK 2023/6/2
  */
-public class LongCrossClueSetBuilder extends LongClueSetBuilder implements Callable<HashMap<Long, Long>> {
+public class LongCrossClueSetBuilder extends LongClueSetBuilder implements Runnable {
     private final List<IPli> plis1, plis2;
     private final int evidenceCount;
 
@@ -108,15 +109,6 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder implements Calla
         }
     }
 
-    /**
-     * @return
-     * @throws Exception
-     */
-    @Override
-    public HashMap<Long, Long> call() throws Exception {
-        return buildClueSet();
-    }
-
     private int getLevenshteinDistance(String s1, String s2){
         if (s1 == null) {
             throw new NullPointerException("s1 must not be null");
@@ -189,5 +181,10 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder implements Calla
         return v0[s2.length()];
     }
 
+    @Override
+    public void run(){
+        HashMap<Long, Long> result = buildClueSet();
+        result.forEach((k,v)-> Executor.res.merge(k,v, Long::sum));
+    }
 }
 

@@ -1,5 +1,7 @@
 package fastdd.dfset;
 
+import com.koloboke.collect.map.hash.HashLongLongMap;
+import com.koloboke.collect.map.hash.HashLongLongMaps;
 import fastdd.Config;
 import fastdd.dfset.longclueimpl.LongClueSetBuilder;
 import fastdd.dfset.longclueimpl.LongCrossClueSetBuilder;
@@ -17,10 +19,10 @@ import java.util.concurrent.*;
  */
 public class Executor {
     int numThreads = Config.TestMultiThread ? Config.ThreadSize : 1;
-    HashMap<Long, Long> res = new HashMap<>();
+    public static ConcurrentHashMap<Long, Long> res = new ConcurrentHashMap<Long, Long>();
     public Executor(PliShard[] pliShards){
         ExecutorService executor = Executors.newFixedThreadPool(numThreads);
-        List<Callable<HashMap<Long, Long>>> tasks = new ArrayList<>();
+        List<Runnable> tasks = new ArrayList<>();
 
         for (int i = 0; i < pliShards.length; i++) {
             IClueOffset util = new BinaryCalOffset();
@@ -32,32 +34,20 @@ public class Executor {
         }
 
         // 运行所有任务并获取结果
-        List<Future<HashMap<Long, Long>>> futures;
-        try {
-            long t1 = System.currentTimeMillis();
-            futures = executor.invokeAll(tasks);
-            System.out.println("true multi time: " + (System.currentTimeMillis() - t1));
-        } catch (InterruptedException e) {
-            System.err.println("Tasks execution interrupted.");
-            e.printStackTrace();
-            return;
-        }
-
-        // 处理每个任务的返回值
-        try {
-            for (Future<HashMap<Long, Long>> future : futures) {
-                var result = future.get();
-                //for (var e : result.entrySet()) {
-                    result.forEach((k, v) -> res.merge(k, v, Long::sum));
-                    //res.put(e.getKey(), res.getOrDefault(e.getKey(), 0L) + e.getValue());
-                //}
-            }
-        } catch (ExecutionException | InterruptedException e) {
-            System.err.println("Task execution failed.");
-            e.printStackTrace();
+        for(var task: tasks){
+            executor.execute(task);
         }
 
         // 关闭Executor
         executor.shutdown();
+        try{
+            executor.awaitTermination(1000, TimeUnit.MINUTES);
+        }
+        catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
     }
 }

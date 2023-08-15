@@ -76,7 +76,7 @@ public class DFSetBuilder {
         int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
         System.out.println("  [CLUE] task count: " + taskCount);
         var exec = new Executor(pliShards);
-        return exec.res;
+        return new HashMap<>(Executor.res);
         /*if (Config.TestMultiThread){
             HashLongLongMap res = new ClueSetTask(null, pliShards, 0, taskCount).invoke();
             return new HashMap<>(res);
