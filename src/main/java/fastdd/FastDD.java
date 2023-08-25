@@ -39,8 +39,8 @@ public class FastDD {
         long t0 = System.currentTimeMillis();
         if (Objects.equals(predicatesPath, "")) {
             ExtremaStrategy strategy = new ExtremaStrategy();
-            int sampleNum = Math.min(input.getRowCount() / 5, 200);
-            Determination determination = new Determination(input.getRowCount(), 5, 3, this.input.getColCount(), strategy);
+            int sampleNum = Math.min(input.getRowCount(), 200);
+            Determination determination = new Determination(sampleNum, 5, 3, this.input.getColCount(), strategy);
             determination.sampleAndCalculate(this.input);
             long sampleAndCalculateTime = System.currentTimeMillis() - t0;
             System.out.println("sample Size: " + sampleNum);
