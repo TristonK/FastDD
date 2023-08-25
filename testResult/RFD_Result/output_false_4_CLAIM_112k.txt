@@ -1,0 +1,49 @@
+****** DISCOVERED RFDs *******
+AirportName(String)@2.0->AirportCode(String)@0.0	 cc:0.9911222130045465	
+AirportCode(String)@0.0->AirportName(String)@0.0	 cc:0.9911222130045465	
+ClaimNumber(String)@0.0->AirportCode(String)@0.0	 cc:0.9900124896389015	
+ClaimNumber(String)@0.0->AirportName(String)@0.0	 cc:0.9900124896389015	
+ClaimNumber(String)@0.0->IncidentDate(Integer)@0.0	 cc:0.9846295634853189	
+ClaimNumber(String)@0.0->YearReceived(Integer)@0.0	 cc:0.9839911508292067	
+ClaimNumber(String)@0.0->ItemCategory(String)@0.0	 cc:0.9482097440254011	
+ClaimNumber(String)@0.0->AirlineName(String)@0.0	 cc:0.9395373278767192	
+ClaimNumber(String)@1.0, AirportName(String)@3.0, ClaimSite(String)@4.0, ItemCategory(String)@4.0->AirportCode(String)@0.0	 cc:0.8673640548739738	
+ClaimNumber(String)@1.0, AirportName(String)@3.0, AirlineName(String)@1.0, ClaimType(String)@4.0->AirportCode(String)@0.0	 cc:0.8559815229133323	
+ClaimNumber(String)@0.0->Disposition(String)@0.0	 cc:0.8493703204973273	
+ClaimNumber(String)@1.0, AirportName(String)@3.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@0.0	 cc:0.8469552062288028	
+ClaimNumber(String)@1.0, AirportName(String)@3.0, AirlineName(String)@4.0, ItemCategory(String)@4.0->AirportCode(String)@0.0	 cc:0.8389315163544993	
+ClaimNumber(String)@1.0, IncidentDate(Integer)@100.0, AirportName(String)@3.0, ItemCategory(String)@4.0->AirportCode(String)@0.0	 cc:0.8335114229722114	
+ClaimNumber(String)@1.0, AirportName(String)@3.0, ItemCategory(String)@4.0->AirportCode(String)@2.0	 cc:0.8208324220670018	
+ClaimNumber(String)@1.0, AirportName(String)@3.0, AirlineName(String)@4.0, CloseAmount(Double)@400.0->AirportCode(String)@2.0	 cc:0.8200555486296348	
+ClaimNumber(String)@1.0, AirportName(String)@3.0, AirlineName(String)@4.0, ClaimType(String)@4.0, Disposition(String)@4.0->AirportCode(String)@0.0	 cc:0.8191530831490097	
+ClaimNumber(String)@2.0, AirportName(String)@3.0, ClaimType(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@0.0	 cc:0.8162407905371196	
+ClaimNumber(String)@1.0, IncidentDate(Integer)@0.0, AirportName(String)@3.0, AirlineName(String)@4.0, ClaimType(String)@4.0->AirportCode(String)@0.0	 cc:0.8041242783725663	
+ClaimNumber(String)@2.0, AirportName(String)@3.0, ClaimType(String)@4.0, ClaimSite(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@0.0	 cc:0.7978307146835639	
+ClaimNumber(String)@3.0, AirportName(String)@3.0, AirlineName(String)@4.0, ItemCategory(String)@4.0, CloseAmount(Double)@400.0, Disposition(String)@4.0->AirportCode(String)@0.0	 cc:0.796596749048271	
+ClaimNumber(String)@1.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimType(String)@4.0->AirportCode(String)@2.0	 cc:0.7930645088484465	
+ClaimNumber(String)@2.0, IncidentDate(Integer)@0.0, AirportName(String)@3.0, ItemCategory(String)@4.0, CloseAmount(Double)@400.0, Disposition(String)@4.0->AirportCode(String)@0.0	 cc:0.7894183109043755	
+ClaimNumber(String)@1.0, AirportName(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.7820477074295129	
+ClaimNumber(String)@0.0->ClaimType(String)@0.0	 cc:0.7768449361567384	
+ClaimNumber(String)@1.0, AirportName(String)@4.0, AirlineName(String)@4.0, ItemCategory(String)@4.0->AirportCode(String)@2.0	 cc:0.7740240175552092	
+ClaimNumber(String)@3.0, AirportName(String)@3.0, AirlineName(String)@4.0, ClaimType(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@0.0	 cc:0.7695714994058449	
+ClaimNumber(String)@2.0, IncidentDate(Integer)@100.0, AirportName(String)@3.0, ClaimType(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@0.0	 cc:0.7639780827818013	
+ClaimNumber(String)@1.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimSite(String)@4.0, CloseAmount(Double)@400.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.7628607581385902	
+ClaimNumber(String)@1.0, IncidentDate(Integer)@0.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimSite(String)@4.0, CloseAmount(Double)@400.0->AirportCode(String)@2.0	 cc:0.7478319533621467	
+ClaimNumber(String)@1.0, IncidentDate(Integer)@100.0, AirportName(String)@4.0, ClaimType(String)@4.0, ItemCategory(String)@4.0->AirportCode(String)@2.0	 cc:0.7378433757120378	
+ClaimNumber(String)@2.0, AirportName(String)@3.0, AirlineName(String)@4.0, ClaimType(String)@4.0, ClaimSite(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.7358474314041266	
+ClaimNumber(String)@2.0, AirportName(String)@4.0, AirlineName(String)@2.0, ClaimType(String)@4.0, ClaimSite(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.7343692225492173	
+ClaimNumber(String)@2.0, AirportName(String)@4.0, AirlineName(String)@4.0, ItemCategory(String)@4.0, CloseAmount(Double)@400.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.7315159270072253	
+ClaimNumber(String)@2.0, IncidentDate(Integer)@400.0, AirportName(String)@3.0, AirlineName(String)@4.0, ClaimSite(String)@4.0, CloseAmount(Double)@400.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.714473410292642	
+ClaimNumber(String)@2.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimSite(String)@4.0, ItemCategory(String)@4.0, CloseAmount(Double)@400.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.7131058511536696	
+ClaimNumber(String)@2.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimType(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.7044906773647992	
+ClaimNumber(String)@2.0, IncidentDate(Integer)@0.0, AirportName(String)@4.0, ClaimType(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.6974855624626595	
+ClaimNumber(String)@3.0, AirportName(String)@3.0, AirlineName(String)@4.0, ClaimType(String)@4.0, ClaimSite(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.6862197148917615	
+ClaimNumber(String)@2.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimType(String)@4.0, ClaimSite(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.6860806015112435	
+ClaimNumber(String)@2.0, IncidentDate(Integer)@400.0, AirportName(String)@4.0, ClaimType(String)@4.0, ClaimSite(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.6845239451303632	
+ClaimNumber(String)@2.0, IncidentDate(Integer)@0.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimType(String)@4.0, ClaimSite(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.6820339119901941	
+ClaimNumber(String)@3.0, IncidentDate(Integer)@0.0, AirportName(String)@4.0, AirlineName(String)@4.0, ItemCategory(String)@4.0, CloseAmount(Double)@400.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.6778415209738109	
+ClaimNumber(String)@0.0->CloseAmount(Double)@0.0	 cc:0.6688865248366136	
+ClaimNumber(String)@0.0->ClaimSite(String)@0.0	 cc:0.6656906826907881	
+ClaimNumber(String)@2.0, IncidentDate(Integer)@100.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimType(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.652227969609481	
+ClaimNumber(String)@3.0, IncidentDate(Integer)@0.0, AirportName(String)@4.0, AirlineName(String)@4.0, ClaimType(String)@4.0, ItemCategory(String)@4.0, Disposition(String)@4.0->AirportCode(String)@2.0	 cc:0.6508162713313848	
+AirportName(String)@4.0->AirportCode(String)@3.0	 cc:0.5566883302145909	

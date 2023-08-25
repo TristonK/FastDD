@@ -82,8 +82,10 @@ public class EvidenceCount {
         return c;
     }
 
+    boolean TestDup = true;
 
-    public Set<LongBitSet> calculateEvidence(Input input, DifferentialFunctionBuilder differentialFunctionBuilder) {
+    //    LongBitSet DDLeft = null;
+    public Set<LongBitSet> calculateEvidence(Input input, DifferentialFunctionBuilder differentialFunctionBuilder, List<LongBitSet> DDLeft) {
         List<List<LongBitSet>> countToPredicateSets = new ArrayList<>();
         for (int i = 0; i < differentialFunctionBuilder.getColSize(); i++) {
             countToPredicateSets.add(differentialFunctionBuilder.getOffset2SatisfiedPredicates(i));
@@ -108,6 +110,9 @@ public class EvidenceCount {
         } else {
             rows = dInput[0].length;
         }
+
+        Map<Integer,List<String>> duplist = new HashMap<>();
+
         for (int i = 0; i < rows - 1; i++) {
             for (int j = i + 1; j < rows; j++) {
                 LongBitSet evidence = new LongBitSet();
@@ -132,10 +137,39 @@ public class EvidenceCount {
                     evidence.or(mask);
                 }
                 evidenceSet.add(evidence);
-
+//                if (TestDup && DDLeft.isSubSetOf(evidence)) {
+//                    System.out.println("dup " + i + " " + j);
+//                }
+                if (TestDup) {
+                    for (int k = 0; k < DDLeft.size(); k++) {
+                        LongBitSet left = DDLeft.get(k);
+                        if (left.isSubSetOf(evidence)) {
+//                            System.out.println("dup for DD " + (k+1) + ": " + i + "," + j);
+                            String temp = Integer.toString(i) + ":" + Integer.toString(j);
+                            addValue(duplist,k,temp);
+                        }
+                    }
+                }
             }
         }
-
+        for (Map.Entry<Integer, List<String>> entry : duplist.entrySet()) {
+            int key = entry.getKey();
+            List<String> values = entry.getValue();
+            System.out.println("Dup for DD" + (key+1) + ":");
+            printList(values);
+        }
         return evidenceSet;
     }
+
+    private static void addValue(Map<Integer, List<String>> map, int key, String value) {
+        List<String> values = map.getOrDefault(key, new ArrayList<>());
+        values.add(value);
+        map.put(key, values);
+    }
+    private static void printList(List<String> list) {
+        for (String value : list) {
+            System.out.println(value);
+        }
+    }
 }
+

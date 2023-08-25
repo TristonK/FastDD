@@ -1,0 +1,1068 @@
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=3.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=3.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [REL-L(<=1.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=3.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] -> [ID(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [ID(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LANES(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=1.0)] -> [ID(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [REL-L(<=1.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=3.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] ∧ [REL-L(<=2.0)] -> [LENGTH(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [SPAN(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=3.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=3.0)]}
+{ [LOCATION(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] -> [ID(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=3.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=3.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [LANES(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [ID(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=4.0)]}
+{ [ERECTED(<=4.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [LENGTH(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [LOCATION(<=1.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=2.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=2.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=0.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [SPAN(<=4.0)] -> [ID(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=2.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ID(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] -> [REL-L(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [ID(<=0.0)]}
+{ [LENGTH(<=0.0)] -> [REL-L(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=1.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=3.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [RIVER(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] -> [T-OR-D(<=4.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=3.0)] ∧ [LOCATION(<=1.0)] ∧ [SPAN(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [SPAN(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=1.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [REL-L(<=1.0)] -> [ID(<=3.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=1.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=2.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=4.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=1.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [SPAN(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=3.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] -> [LOCATION(<=3.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] -> [LANES(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=0.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=3.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=1.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=2.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=3.0)]}
+{ [ERECTED(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=2.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=0.0)] -> [LENGTH(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] -> [RIVER(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=4.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=2.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [TYPE(<=3.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=1.0)] -> [SPAN(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] -> [REL-L(<=1.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [T-OR-D(<=0.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=3.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=0.0)] -> [REL-L(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [LENGTH(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=1.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=2.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [LANES(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=3.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=1.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=2.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=2.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [ID(<=3.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] -> [LOCATION(<=3.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [ID(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [ID(<=2.0)]}
+{ [ID(<=0.0)] -> [LOCATION(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LANES(<=0.4)] -> [ID(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LANES(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=4.0)]}
+{ [ERECTED(<=3.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=3.0)] -> [LANES(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=1.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] -> [ID(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=3.0)] -> [ID(<=3.0)]}
+{ [ID(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] -> [ID(<=2.0)]}
+{ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=2.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=2.0)] ∧ [TYPE(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=1.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=3.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=1.0)] -> [ID(<=3.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] -> [SPAN(<=0.0)]}
+{ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=2.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=2.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] -> [ID(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [ERECTED(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [PURPOSE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [ID(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [MATERIAL(<=2.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LENGTH(<=0.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=3.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [ID(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [ID(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=1.0)] -> [ID(<=3.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=2.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [ID(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [ID(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=1.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=1.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [LENGTH(<=0.0)] -> [ID(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=1.0)]}
+{ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [ID(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=1.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=2.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [ID(<=3.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=2.0)] ∧ [TYPE(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [LENGTH(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [LENGTH(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=2.0)] ∧ [SPAN(<=4.0)] -> [ID(<=3.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=3.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=4.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=4.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=1.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [TYPE(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [SPAN(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=3.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [T-OR-D(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [ID(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=3.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [ID(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=2.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=2.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [ID(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=3.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=2.0)] ∧ [REL-L(<=1.0)] -> [ID(<=3.0)]}
+{ [ID(<=2.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LENGTH(<=0.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=0.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=3.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [LENGTH(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] -> [ID(<=3.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=1.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [LOCATION(<=2.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=3.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [ID(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=0.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=4.0)]}
+{ [ERECTED(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=0.0)]}
+{ [LOCATION(<=2.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [ID(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [SPAN(<=0.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [TYPE(<=3.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=3.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] -> [LENGTH(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [LENGTH(<=0.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [RIVER(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=2.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=3.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [MATERIAL(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=3.0)] ∧ [RIVER(<=0.0)] -> [ID(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=1.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=0.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [ID(<=1.0)]}
+{ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] -> [ID(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [LOCATION(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [REL-L(<=1.0)] -> [ID(<=2.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=2.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [LENGTH(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [TYPE(<=4.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [LENGTH(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] -> [REL-L(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [LANES(<=0.0)]}
+{ [ID(<=2.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=2.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] -> [ID(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=3.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [ID(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=3.0)] ∧ [PURPOSE(<=4.0)] ∧ [REL-L(<=1.0)] -> [ID(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [LOCATION(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] -> [ID(<=2.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [REL-L(<=1.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] -> [RIVER(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=3.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=3.0)] -> [T-OR-D(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=4.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] -> [PURPOSE(<=0.0)]}
+{ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] -> [RIVER(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [LOCATION(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=0.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=2.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=3.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=0.0)] -> [ERECTED(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=2.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=2.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] -> [LOCATION(<=3.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] -> [TYPE(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=0.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [REL-L(<=0.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=3.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [ID(<=3.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=0.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [LENGTH(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=2.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=2.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] -> [REL-L(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=1.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=1.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=3.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [TYPE(<=4.0)] -> [RIVER(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LANES(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] ∧ [SPAN(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [T-OR-D(<=0.0)] -> [LOCATION(<=3.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] -> [SPAN(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=2.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=3.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=4.0)]}
+{ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] -> [REL-L(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ID(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [T-OR-D(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=3.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=3.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=2.0)] ∧ [REL-L(<=0.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] -> [ID(<=2.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [SPAN(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [ID(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [ID(<=1.0)]}
+{ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [ID(<=2.0)]}
+{ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [ID(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] -> [SPAN(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] -> [ID(<=2.0)]}
+{ [ERECTED(<=2.0)] ∧ [LOCATION(<=1.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=3.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=2.0)] ∧ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [SPAN(<=4.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=2.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [LOCATION(<=3.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=1.0)] -> [ID(<=3.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [CLEAR-G(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=4.0)] -> [T-OR-D(<=0.0)]}
+{ [ERECTED(<=0.0)] ∧ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [REL-L(<=0.0)] -> [PURPOSE(<=0.0)]}
+{ [ID(<=3.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [ID(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=2.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] -> [CLEAR-G(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LANES(<=0.4)] ∧ [TYPE(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [MATERIAL(<=2.0)] -> [TYPE(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LOCATION(<=0.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [PURPOSE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=2.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=0.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [LENGTH(<=0.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [RIVER(<=0.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [T-OR-D(<=4.0)] ∧ [REL-L(<=0.0)] ∧ [TYPE(<=3.0)] -> [MATERIAL(<=0.0)]}
+{ [ERECTED(<=4.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [TYPE(<=4.0)] -> [ID(<=2.0)]}
+{ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] -> [TYPE(<=0.0)]}
+{ [ERECTED(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=1.0)] ∧ [TYPE(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [LANES(<=0.4)] ∧ [MATERIAL(<=4.0)] -> [REL-L(<=0.0)]}
+{ [LOCATION(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [SPAN(<=4.0)] -> [ID(<=1.0)]}
+{ [ID(<=1.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [TYPE(<=4.0)] -> [LOCATION(<=1.0)]}
+{ [ID(<=1.0)] ∧ [LOCATION(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] -> [REL-L(<=0.0)]}
+{ [ID(<=3.0)] ∧ [RIVER(<=0.0)] ∧ [PURPOSE(<=4.0)] ∧ [CLEAR-G(<=0.0)] ∧ [T-OR-D(<=0.0)] -> [LOCATION(<=3.0)]}
+{ [ERECTED(<=0.0)] ∧ [LOCATION(<=1.0)] ∧ [SPAN(<=4.0)] ∧ [TYPE(<=4.0)] -> [REL-L(<=1.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=3.0)] ∧ [LENGTH(<=0.0)] ∧ [SPAN(<=4.0)] -> [LANES(<=0.0)]}
+{ [ID(<=1.0)] ∧ [PURPOSE(<=4.0)] ∧ [LENGTH(<=0.0)] ∧ [CLEAR-G(<=0.0)] ∧ [SPAN(<=4.0)] ∧ [REL-L(<=0.0)] -> [TYPE(<=0.0)]}
+{ [RIVER(<=0.0)] ∧ [LANES(<=0.4)] ∧ [T-OR-D(<=4.0)] ∧ [MATERIAL(<=4.0)] ∧ [REL-L(<=1.0)] -> [LOCATION(<=3.0)]}

@@ -1,0 +1,10 @@
+****** DISCOVERED RFDs *******
+julday@0.0->id@20.0	 cc:0.9959913950811435	
+id@10.0->julday@1.0	 cc:0.9953582887331176	
+julday@1.0->id@40.0	 cc:0.9941306333146283	
+id@30.0->julday@2.0	 cc:0.9926824765827285	
+id@40.0->julday@3.0	 cc:0.9895006010009391	
+id@40.0, LNOx@0.0, LNOxEm@0.0, sqrtWS@0.3->julday@2.0	 cc:0.6044028274819302	
+id@20.0, LNOx@0.0, LNOxEm@0.0, sqrtWS@0.1->julday@1.0	 cc:0.5560320568458356	
+id@20.0, LNOx@0.0, LNOxEm@0.1, sqrtWS@0.0->julday@1.0	 cc:0.5455724064444906	
+id@40.0, LNOx@0.1, LNOxEm@0.0, sqrtWS@0.0->julday@2.0	 cc:0.539365755606587	

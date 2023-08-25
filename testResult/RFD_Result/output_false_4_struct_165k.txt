@@ -1,0 +1,27 @@
+****** DISCOVERED RFDs *******
+col4(Integer)@0.0->col6(Integer)@0.0	 cc:0.9983076096096224	
+col4(Integer)@400.0->col6(Integer)@100.0	 cc:0.9970777254596326	
+col2(Integer)@0.0->col6(Integer)@200.0	 cc:0.9963173017531627	
+col2(Integer)@10.0->col6(Integer)@400.0	 cc:0.9943324651787018	
+col4(Integer)@300.0->col2(Integer)@10.0	 cc:0.9942277754546517	
+col4(Integer)@400.0->col2(Integer)@20.0	 cc:0.9914429615431909	
+col6(Integer)@100.0->col2(Integer)@30.0	 cc:0.9893193606428335	
+col6(Integer)@300.0->col2(Integer)@40.0	 cc:0.987263159881159	
+col4(Integer)@100.0, col5(String)@2.0->col6(Integer)@0.0	 cc:0.963769151958495	
+col4(Integer)@400.0, col5(String)@2.0->col2(Integer)@10.0	 cc:0.9596809653894736	
+col3(Integer)@40.0, col4(Integer)@100.0->col6(Integer)@0.0	 cc:0.952224777752416	
+col3(Integer)@40.0, col4(Integer)@300.0->col1(Integer)@400.0	 cc:0.94665679264241	
+col3(Integer)@20.0, col4(Integer)@200.0->col6(Integer)@0.0	 cc:0.9224390571019405	
+col3(Integer)@40.0, col4(Integer)@200.0, col5(String)@2.0->col6(Integer)@0.0	 cc:0.9176816333352289	
+col4(Integer)@0.0, col5(String)@0.0->col2(Integer)@0.0	 cc:0.8922360884432421	
+col4(Integer)@0.0, col5(String)@0.0->col1(Integer)@400.0	 cc:0.887982683911567	
+col2(Integer)@0.0, col4(Integer)@100.0->col6(Integer)@0.0	 cc:0.8741270964903272	
+col1(Integer)@0.0, col6(Integer)@400.0->col2(Integer)@30.0	 cc:0.8656961210354157	
+col1(Integer)@100.0, col6(Integer)@400.0->col2(Integer)@40.0	 cc:0.8633320853882551	
+col3(Integer)@0.0, col4(Integer)@200.0, col5(String)@0.0->col2(Integer)@0.0	 cc:0.7836868808297779	
+col2(Integer)@0.0, col4(Integer)@200.0, col5(String)@1.0->col6(Integer)@0.0	 cc:0.7779731991834495	
+col3(Integer)@40.0->col5(String)@3.0	 cc:0.5788784371926603	
+col2(Integer)@40.0->col5(String)@3.0	 cc:0.503547828686976	
+col1(Integer)@400.0->col5(String)@3.0	 cc:0.5018441070634905	
+col6(Integer)@400.0->col5(String)@3.0	 cc:0.5017873217208908	
+col4(Integer)@400.0->col5(String)@3.0	 cc:0.5001851622397939	

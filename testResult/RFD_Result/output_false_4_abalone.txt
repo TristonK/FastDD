@@ -1,0 +1,334 @@
+****** DISCOVERED RFDs *******
+length@0.3->diameter@0.4	 cc:0.5686097165400905	
+length@0.4, shellWeight@0.3->diameter@0.4	 cc:0.565983364540013	
+length@0.4, shuckedWeight@0.0, visceraWeight@0.2->diameter@0.4	 cc:0.5558248958019252	
+length@0.2, shellWeight@0.2->diameter@0.3	 cc:0.5532769699945448	
+length@0.4, rings@4.0->diameter@0.4	 cc:0.5514954603879587	
+length@0.1->diameter@0.3	 cc:0.5513365441553879	
+shuckedWeight@0.0, shellWeight@0.2->diameter@0.4	 cc:0.5497960869850653	
+height@0.1, visceraWeight@0.1->diameter@0.4	 cc:0.5473978310473113	
+length@0.4, visceraWeight@0.1->diameter@0.4	 cc:0.5472612158300616	
+length@0.2, wholeWeight@4.0->diameter@0.3	 cc:0.5472255571371831	
+height@0.0->diameter@0.4	 cc:0.5463147207732706	
+shuckedWeight@0.0, rings@4.0->diameter@0.4	 cc:0.5443718461630591	
+length@0.2, visceraWeight@0.1->diameter@0.3	 cc:0.5436184846146417	
+length@0.4, wholeWeight@4.0, visceraWeight@0.2->diameter@0.4	 cc:0.5432786459694898	
+visceraWeight@0.1, shellWeight@0.3->diameter@0.4	 cc:0.5427064279601366	
+length@0.2, height@0.0->diameter@0.3	 cc:0.5420862091241962	
+wholeWeight@0.0->visceraWeight@0.3	 cc:0.5414317975820622	
+length@0.2, rings@3.0->diameter@0.3	 cc:0.5401912943912233	
+shuckedWeight@0.0, visceraWeight@0.1->diameter@0.4	 cc:0.540137601605162	
+shellWeight@0.1->diameter@0.4	 cc:0.5400009372486938	
+shellWeight@0.2, rings@4.0->diameter@0.4	 cc:0.5378770091879856	
+rings@2.0->diameter@0.4	 cc:0.5343781903637599	
+shuckedWeight@0.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.533923013782961	
+length@0.0, height@0.0->diameter@0.2	 cc:0.5316033887846482	
+length@0.2, shuckedWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.5304028603480445	
+sex@3.0, length@0.4, visceraWeight@0.2->diameter@0.4	 cc:0.5303843840018954	
+wholeWeight@0.0->diameter@0.4	 cc:0.529627623657533	
+visceraWeight@0.1, rings@4.0->diameter@0.4	 cc:0.5282185238080823	
+length@0.1, shellWeight@0.0->diameter@0.2	 cc:0.5279226238141232	
+diameter@0.2, wholeWeight@0.0->length@0.4	 cc:0.5277797351566473	
+wholeWeight@4.0, visceraWeight@0.1->diameter@0.4	 cc:0.5275913517727266	
+length@0.3, height@0.0, visceraWeight@0.1->diameter@0.3	 cc:0.5254353685618287	
+diameter@0.0->length@0.4	 cc:0.5252266661110658	
+visceraWeight@0.0->diameter@0.3	 cc:0.5247294263592464	
+sex@2.0, length@0.4->diameter@0.4	 cc:0.523609043987987	
+sex@3.0, visceraWeight@0.3, shellWeight@0.2->diameter@0.4	 cc:0.522629101503149	
+diameter@0.0, shuckedWeight@4.0->visceraWeight@0.4	 cc:0.5221211412118307	
+length@0.3, height@0.0, rings@3.0->diameter@0.3	 cc:0.5220081783384103	
+visceraWeight@0.4, shellWeight@0.0->diameter@0.3	 cc:0.5207999596141142	
+height@0.1, shellWeight@0.0->diameter@0.3	 cc:0.5206240248322092	
+height@0.0, shuckedWeight@0.0, rings@4.0->visceraWeight@0.4	 cc:0.5206083248519042	
+length@0.4, shellWeight@0.0->diameter@0.3	 cc:0.5204874096149594	
+diameter@0.1, shuckedWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.5203288619265273	
+sex@2.0, length@0.2->diameter@0.3	 cc:0.5199663127725671	
+length@0.3, shellWeight@0.3, rings@1.0->diameter@0.3	 cc:0.5197943664572287	
+wholeWeight@1.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.519325299857339	
+length@0.0, shuckedWeight@4.0->visceraWeight@0.4	 cc:0.5183228516104363	
+length@0.3, height@0.0, shellWeight@0.1->diameter@0.3	 cc:0.5175893095468067	
+length@0.3, visceraWeight@0.2, rings@1.0->diameter@0.3	 cc:0.5173452923776947	
+sex@4.0, shuckedWeight@0.0, shellWeight@0.2, rings@4.0->visceraWeight@0.4	 cc:0.5154431296099957	
+height@0.1, shuckedWeight@4.0, shellWeight@0.0->visceraWeight@0.4	 cc:0.515254459580634	
+sex@4.0, wholeWeight@4.0, shuckedWeight@0.0, shellWeight@0.2->visceraWeight@0.4	 cc:0.5148159575746402	
+sex@4.0, length@0.2, shuckedWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.5140469042357875	
+wholeWeight@0.0, rings@4.0->length@0.4	 cc:0.5138184723888042	
+shuckedWeight@0.0, shellWeight@0.0->diameter@0.3	 cc:0.5133637953900598	
+length@0.3, shuckedWeight@4.0, shellWeight@0.0->visceraWeight@0.4	 cc:0.5126036280598827	
+length@0.1, visceraWeight@0.0, rings@4.0->diameter@0.2	 cc:0.5119503876691224	
+length@0.2, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.511064890762207	
+height@0.0, wholeWeight@0.0->diameter@0.3	 cc:0.5103159926928016	
+sex@4.0, length@0.2, wholeWeight@1.0, shellWeight@0.2->visceraWeight@0.4	 cc:0.5101620149516883	
+diameter@0.2, shuckedWeight@4.0, shellWeight@0.0->visceraWeight@0.4	 cc:0.5100364151092482	
+sex@2.0, shellWeight@0.2->diameter@0.4	 cc:0.509990592788014	
+length@0.1, height@0.0, rings@1.0->diameter@0.2	 cc:0.5094893727594973	
+sex@4.0, diameter@0.1, shuckedWeight@0.0, rings@4.0->visceraWeight@0.4	 cc:0.509261489633787	
+sex@4.0, diameter@0.1, wholeWeight@4.0, shuckedWeight@0.0->visceraWeight@0.4	 cc:0.5086343175984315	
+height@0.0, wholeWeight@0.0->length@0.4	 cc:0.5080519523404616	
+shuckedWeight@0.0, visceraWeight@0.2, shellWeight@0.3, rings@1.0->diameter@0.3	 cc:0.5075953261527175	
+length@0.2, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.5067357583734211	
+sex@4.0, diameter@0.0->visceraWeight@0.4	 cc:0.5066828600047252	
+shuckedWeight@0.0, shellWeight@0.2, rings@1.0->diameter@0.3	 cc:0.5061213052057827	
+height@0.0, wholeWeight@4.0, shuckedWeight@0.0, shellWeight@0.2->visceraWeight@0.4	 cc:0.5057769211829213	
+diameter@0.1, height@0.0, wholeWeight@1.0->visceraWeight@0.4	 cc:0.5052532117720794	
+sex@4.0, height@0.1, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.5045716426218643	
+height@0.1, shellWeight@0.0, rings@1.0->diameter@0.2	 cc:0.5041718459402946	
+length@0.0, visceraWeight@0.0->diameter@0.2	 cc:0.5039347328313795	
+sex@4.0, length@0.1, shuckedWeight@0.0, rings@4.0->visceraWeight@0.4	 cc:0.5031908305825199	
+sex@4.0, length@0.0->visceraWeight@0.4	 cc:0.5028845704033308	
+length@0.2, height@0.0, shuckedWeight@4.0, shellWeight@0.2, rings@4.0->visceraWeight@0.4	 cc:0.5028839397833603	
+diameter@0.0, wholeWeight@4.0->visceraWeight@0.4	 cc:0.5027831716259932	
+height@0.0, rings@1.0->diameter@0.3	 cc:0.5026399389939878	
+sex@4.0, length@0.1, wholeWeight@4.0, shuckedWeight@0.0->visceraWeight@0.4	 cc:0.5025636585471643	
+wholeWeight@4.0, visceraWeight@0.0->length@0.4	 cc:0.5022097415159172	
+sex@4.0, diameter@0.1, wholeWeight@4.0, shellWeight@0.2->visceraWeight@0.4	 cc:0.5021394806233579	
+diameter@0.1, visceraWeight@0.0->length@0.4	 cc:0.5020795143970702	
+sex@3.0, wholeWeight@1.0, shellWeight@0.2->diameter@0.4	 cc:0.5020484666008596	
+sex@3.0, length@0.3, height@0.0, shellWeight@0.2->diameter@0.3	 cc:0.5019439474831482	
+sex@4.0, diameter@0.1, shuckedWeight@4.0, shellWeight@0.2, rings@4.0->visceraWeight@0.4	 cc:0.501848977753562	
+sex@2.0, length@0.3, height@0.0->diameter@0.3	 cc:0.501783196719754	
+shellWeight@0.0, rings@4.0->diameter@0.3	 cc:0.5014447175929801	
+height@0.1, shuckedWeight@0.0, visceraWeight@0.2, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.5012994293036683	
+length@0.1, height@0.0, wholeWeight@4.0->visceraWeight@0.4	 cc:0.501234016813999	
+height@0.0, shuckedWeight@0.0, visceraWeight@0.1, rings@4.0->diameter@0.3	 cc:0.5011974981847973	
+length@0.2, height@0.0, wholeWeight@1.0, shellWeight@0.2->visceraWeight@0.4	 cc:0.5011229785599693	
+height@0.0, shellWeight@0.1, rings@4.0->diameter@0.3	 cc:0.501060833828329	
+diameter@0.3, visceraWeight@0.1, rings@1.0->length@0.4	 cc:0.5009989593623905	
+diameter@0.1, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.5009908923406896	
+length@0.1, height@0.0, shuckedWeight@4.0, rings@4.0->visceraWeight@0.4	 cc:0.5009435139442032	
+sex@4.0, length@0.3, shuckedWeight@0.0, rings@1.0->diameter@0.3	 cc:0.500869583989997	
+wholeWeight@4.0, shellWeight@0.0->diameter@0.3	 cc:0.5008175455576245	
+sex@4.0, length@0.0, wholeWeight@1.0, shellWeight@0.0, rings@0.0->diameter@0.1	 cc:0.5006685554471872	
+height@0.0, rings@1.0->length@0.4	 cc:0.5003758986416479	
+sex@2.0, visceraWeight@0.1->diameter@0.4	 cc:0.5003321074081106	
+height@0.0, shuckedWeight@0.0, visceraWeight@0.2, rings@2.0->diameter@0.3	 cc:0.4997675223573616	
+diameter@0.1, height@0.0, wholeWeight@4.0, shuckedWeight@0.0->visceraWeight@0.4	 cc:0.4995952812067124	
+sex@3.0, diameter@0.1, wholeWeight@4.0->visceraWeight@0.4	 cc:0.4995497619106586	
+sex@4.0, diameter@0.2, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.49935359815047836	
+sex@3.0, diameter@0.1, shuckedWeight@4.0, rings@4.0->visceraWeight@0.4	 cc:0.4992592590408627	
+visceraWeight@0.1, shellWeight@0.3, rings@1.0->diameter@0.3	 cc:0.49903164618085405	
+length@0.0, wholeWeight@4.0->visceraWeight@0.4	 cc:0.4989848820245987	
+shuckedWeight@0.0, visceraWeight@0.2, rings@0.0->diameter@0.3	 cc:0.4985165279433769	
+length@0.2, visceraWeight@0.0, rings@1.0->diameter@0.2	 cc:0.497965374279013	
+diameter@0.0, height@0.0->visceraWeight@0.4	 cc:0.49764382361300624	
+sex@3.0, length@0.2, shuckedWeight@0.0, shellWeight@0.3, rings@4.0->visceraWeight@0.4	 cc:0.4974009694053984	
+visceraWeight@0.2, shellWeight@0.0, rings@1.0->diameter@0.2	 cc:0.497031368773586	
+visceraWeight@0.1, shellWeight@0.3, rings@1.0->length@0.4	 cc:0.4967676058285141	
+sex@3.0, length@0.3, height@0.0, rings@4.0->diameter@0.3	 cc:0.4965197066611421	
+shuckedWeight@0.0, visceraWeight@0.1, rings@1.0->diameter@0.3	 cc:0.4964628198258794	
+wholeWeight@4.0, shellWeight@0.0->visceraWeight@0.4	 cc:0.49636565521120096	
+shellWeight@0.1, rings@1.0->diameter@0.3	 cc:0.4963261554694112	
+sex@2.0, wholeWeight@4.0, shuckedWeight@0.0->diameter@0.4	 cc:0.49622978527209827	
+shuckedWeight@4.0, shellWeight@0.0, rings@4.0->visceraWeight@0.4	 cc:0.4960751523414051	
+sex@4.0, length@0.1, wholeWeight@4.0, shellWeight@0.2->visceraWeight@0.4	 cc:0.4960688215720907	
+sex@4.0, length@0.1, shuckedWeight@4.0, shellWeight@0.2, rings@4.0->visceraWeight@0.4	 cc:0.49577831870229483	
+sex@3.0, length@0.0, height@0.0, wholeWeight@0.0, rings@0.0->diameter@0.1	 cc:0.4954245163292244	
+sex@3.0, height@0.0, visceraWeight@0.1->diameter@0.3	 cc:0.49538545884040086	
+wholeWeight@4.0, shuckedWeight@0.0, shellWeight@0.3, rings@1.0->diameter@0.3	 cc:0.49492932404484163	
+shuckedWeight@0.0, visceraWeight@0.1, rings@1.0->length@0.4	 cc:0.49419877947353946	
+shellWeight@0.1, rings@1.0->length@0.4	 cc:0.49406211511707127	
+length@0.0, height@0.0->visceraWeight@0.4	 cc:0.49384553401161174	
+sex@3.0, length@0.1, wholeWeight@4.0->visceraWeight@0.4	 cc:0.49347910285939145	
+sex@2.0, shuckedWeight@0.0, shellWeight@0.3, rings@4.0->visceraWeight@0.4	 cc:0.49334786019669574	
+sex@3.0, length@0.1, shuckedWeight@4.0, rings@4.0->visceraWeight@0.4	 cc:0.4931885999895956	
+height@0.0, shuckedWeight@0.0, shellWeight@0.2, rings@2.0->diameter@0.3	 cc:0.49315293310684744	
+diameter@0.1, height@0.0, wholeWeight@4.0, shellWeight@0.2->visceraWeight@0.4	 cc:0.49310044423163885	
+diameter@0.1, height@0.0, shuckedWeight@4.0, shellWeight@0.2, rings@4.0->visceraWeight@0.4	 cc:0.492809941361843	
+height@0.1, visceraWeight@0.1, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.4927357493318048	
+sex@3.0, wholeWeight@4.0, shuckedWeight@0.0, rings@4.0->visceraWeight@0.4	 cc:0.4925977664063074	
+sex@4.0, length@0.1, shuckedWeight@4.0, rings@2.0->visceraWeight@0.4	 cc:0.4922794998780692	
+diameter@0.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.49133004008842956	
+sex@4.0, diameter@0.1, height@0.0, wholeWeight@4.0->visceraWeight@0.4	 cc:0.49094871975300924	
+visceraWeight@0.0, shellWeight@0.1->length@0.4	 cc:0.4907566099783538	
+sex@4.0, diameter@0.1, height@0.0, shuckedWeight@4.0, rings@4.0->visceraWeight@0.4	 cc:0.49065821688321337	
+diameter@0.3, wholeWeight@4.0, shellWeight@0.2, rings@1.0->length@0.4	 cc:0.4904018002513046	
+shellWeight@0.0, rings@0.0->diameter@0.2	 cc:0.4904016446437793	
+visceraWeight@0.1, rings@0.0->diameter@0.3	 cc:0.4899528479715134	
+sex@4.0, length@0.1, diameter@0.1, wholeWeight@4.0->visceraWeight@0.4	 cc:0.4898871815958819	
+sex@4.0, length@0.1, diameter@0.1, shuckedWeight@4.0, rings@4.0->visceraWeight@0.4	 cc:0.4895966787260861	
+shuckedWeight@0.0, visceraWeight@0.2, shellWeight@0.0, rings@1.0->diameter@0.2	 cc:0.48932197411503214	
+sex@4.0, length@0.2, shuckedWeight@0.0, rings@1.0->visceraWeight@0.4	 cc:0.48920581719241046	
+sex@3.0, length@0.2, diameter@0.1, shuckedWeight@4.0, rings@4.0->visceraWeight@0.4	 cc:0.48894738585254377	
+height@0.1, wholeWeight@4.0, shuckedWeight@0.0, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.4886334271957925	
+sex@4.0, length@0.3, wholeWeight@4.0, rings@1.0->diameter@0.3	 cc:0.48832333415756185	
+sex@3.0, length@0.2, wholeWeight@1.0, rings@4.0->visceraWeight@0.4	 cc:0.4879438237833555	
+sex@3.0, shellWeight@0.0->diameter@0.3	 cc:0.48792328359003	
+sex@4.0, visceraWeight@0.1, rings@1.0->diameter@0.3	 cc:0.4878162583721762	
+visceraWeight@0.1, rings@0.0->length@0.4	 cc:0.48768880761917344	
+sex@3.0, diameter@0.2, wholeWeight@4.0, shuckedWeight@0.0, rings@4.0->visceraWeight@0.4	 cc:0.48693055671851704	
+sex@4.0, length@0.2, height@0.0, wholeWeight@4.0, shellWeight@0.2->visceraWeight@0.4	 cc:0.4868184865408991	
+wholeWeight@0.0, rings@1.0->diameter@0.3	 cc:0.48595284187825033	
+length@0.2, height@0.0, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.4856698982582309	
+diameter@0.2, wholeWeight@4.0, rings@0.0->length@0.4	 cc:0.48562867045392455	
+sex@4.0, visceraWeight@0.1, rings@1.0->length@0.4	 cc:0.4855522180198362	
+shuckedWeight@0.0, visceraWeight@0.1, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.48547551988965554	
+sex@4.0, shuckedWeight@0.0, rings@0.0->visceraWeight@0.4	 cc:0.4852983238678094	
+diameter@0.3, wholeWeight@4.0, shellWeight@0.3, rings@0.0->length@0.4	 cc:0.48524609706843286	
+diameter@0.1, wholeWeight@4.0, rings@1.0->length@0.4	 cc:0.4851293750447986	
+sex@2.0, diameter@0.2, rings@2.0->length@0.4	 cc:0.485015413007269	
+length@0.2, height@0.0, visceraWeight@0.0, rings@2.0->diameter@0.2	 cc:0.4849970021800778	
+sex@4.0, wholeWeight@4.0, shuckedWeight@4.0, shellWeight@0.1, rings@4.0->visceraWeight@0.4	 cc:0.4844746604774838	
+wholeWeight@4.0, shellWeight@0.0, rings@1.0->diameter@0.2	 cc:0.48436536666571006	
+height@0.0, visceraWeight@0.2, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.48406299667465075	
+wholeWeight@4.0, shellWeight@0.1, rings@2.0->visceraWeight@0.4	 cc:0.4840452410370393	
+wholeWeight@4.0, visceraWeight@0.1, rings@1.0->diameter@0.3	 cc:0.4839165699934441	
+wholeWeight@4.0, shuckedWeight@0.0, shellWeight@0.2, rings@1.0->length@0.4	 cc:0.4836016203624535	
+wholeWeight@4.0, shuckedWeight@0.0, rings@0.0->length@0.4	 cc:0.483586485483161	
+length@0.2, height@0.0, wholeWeight@4.0, shellWeight@0.2, rings@4.0->visceraWeight@0.4	 cc:0.48354597019752266	
+sex@3.0, height@0.1, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.4834485598867518	
+sex@3.0, length@0.2, shuckedWeight@0.0, shellWeight@0.4, rings@2.0->visceraWeight@0.4	 cc:0.48320472289477434	
+diameter@0.3, wholeWeight@4.0, visceraWeight@0.2, rings@0.0->length@0.4	 cc:0.48279702298889887	
+sex@4.0, length@0.3, wholeWeight@4.0, shellWeight@0.1, rings@4.0->visceraWeight@0.4	 cc:0.4822923386454794	
+sex@3.0, length@0.2, wholeWeight@4.0, shuckedWeight@0.0, rings@4.0->visceraWeight@0.4	 cc:0.48228589321798854	
+sex@2.0, diameter@0.3, shuckedWeight@0.0, rings@2.0->length@0.4	 cc:0.4820640132668028	
+sex@3.0, height@0.0, rings@2.0->diameter@0.3	 cc:0.4819166529404449	
+sex@4.0, length@0.2, shuckedWeight@4.0, shellWeight@0.2, rings@1.0->visceraWeight@0.4	 cc:0.48179330531218545	
+wholeWeight@4.0, visceraWeight@0.1, rings@1.0->length@0.4	 cc:0.48165252964110417	
+shellWeight@0.0, rings@2.0->length@0.4	 cc:0.4814776267827872	
+diameter@0.0, wholeWeight@2.0, shellWeight@0.1->visceraWeight@0.3	 cc:0.4807849685489346	
+sex@3.0, height@0.0, visceraWeight@0.2, shellWeight@0.1->diameter@0.3	 cc:0.4799497574422656	
+sex@3.0, height@0.0, shuckedWeight@0.0, shellWeight@0.1->diameter@0.3	 cc:0.47983000516682495	
+sex@4.0, wholeWeight@4.0, shuckedWeight@0.0, rings@1.0->visceraWeight@0.4	 cc:0.47926204588974025	
+sex@2.0, shuckedWeight@0.0, shellWeight@0.4, rings@2.0->visceraWeight@0.4	 cc:0.4791516136860717	
+diameter@0.0, rings@0.0->length@0.3	 cc:0.4788486704041301	
+length@0.2, height@0.0, wholeWeight@1.0, rings@2.0->visceraWeight@0.4	 cc:0.47799568728011016	
+sex@3.0, length@0.2, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.4779149843036232	
+sex@4.0, wholeWeight@4.0, shellWeight@0.1, rings@3.0->visceraWeight@0.4	 cc:0.47773090060131984	
+length@0.0, wholeWeight@2.0, shellWeight@0.1->visceraWeight@0.3	 cc:0.47698667894754015	
+wholeWeight@0.0, shellWeight@0.0->length@0.4	 cc:0.4767270600765602	
+sex@2.0, height@0.1, visceraWeight@0.1, rings@3.0->length@0.4	 cc:0.4764123561416619	
+height@0.0, wholeWeight@1.0, rings@1.0->visceraWeight@0.4	 cc:0.47588094006338827	
+sex@2.0, shuckedWeight@0.0, visceraWeight@0.2, rings@2.0->length@0.4	 cc:0.4753835856533924	
+sex@2.0, height@0.0, rings@3.0->length@0.4	 cc:0.4753292458676211	
+wholeWeight@0.0, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.47496554194202645	
+sex@2.0, visceraWeight@0.0->length@0.4	 cc:0.4749504971513012	
+sex@2.0, diameter@0.2, wholeWeight@4.0, rings@3.0->length@0.4	 cc:0.4748013841928176	
+sex@2.0, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.4	 cc:0.47386187509492056	
+sex@4.0, diameter@0.2, wholeWeight@4.0, shuckedWeight@0.0, rings@1.0->visceraWeight@0.4	 cc:0.47359483620194986	
+sex@3.0, shellWeight@0.1, rings@2.0->length@0.4	 cc:0.47333882906352837	
+diameter@0.0, rings@1.0->visceraWeight@0.4	 cc:0.4732806727984549	
+sex@2.0, height@0.0, shellWeight@0.1->diameter@0.3	 cc:0.4731744174283573	
+sex@4.0, length@0.1, wholeWeight@4.0, rings@2.0->visceraWeight@0.4	 cc:0.47294153029223157	
+wholeWeight@4.0, visceraWeight@0.1, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.47292927005722024	
+visceraWeight@0.0, rings@1.0->length@0.4	 cc:0.47270724268837916	
+shellWeight@0.0, rings@0.0->length@0.3	 cc:0.47243115398933794	
+sex@2.0, length@0.3, shellWeight@0.3, rings@1.0->diameter@0.3	 cc:0.4722794776016235	
+sex@4.0, wholeWeight@4.0, shuckedWeight@4.0, shellWeight@0.2, rings@1.0->visceraWeight@0.4	 cc:0.4718495340095152	
+length@0.0, wholeWeight@4.0, rings@2.0->visceraWeight@0.3	 cc:0.4718260618428203	
+sex@4.0, diameter@0.1, shuckedWeight@4.0, rings@0.0->visceraWeight@0.4	 cc:0.47170417201137566	
+height@0.0, wholeWeight@4.0, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.4713969945667748	
+sex@2.0, shellWeight@0.0->length@0.4	 cc:0.4712942608406685	
+sex@2.0, diameter@0.2, visceraWeight@0.1, rings@3.0->length@0.4	 cc:0.47119431167027603	
+sex@4.0, wholeWeight@1.0, shellWeight@0.2, rings@1.0->visceraWeight@0.4	 cc:0.4707157448214799	
+sex@2.0, shuckedWeight@0.0, rings@1.0->length@0.4	 cc:0.47054660763146483	
+sex@2.0, diameter@0.3, visceraWeight@0.2, rings@1.0->length@0.4	 cc:0.4697571451372026	
+sex@2.0, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.46953274270613476	
+sex@4.0, wholeWeight@4.0, shuckedWeight@0.0, rings@0.0->diameter@0.3	 cc:0.469494569723244	
+length@0.0, rings@1.0->visceraWeight@0.4	 cc:0.4694823831970605	
+sex@2.0, shellWeight@0.1, rings@3.0->length@0.4	 cc:0.4690154623430444	
+length@0.0, diameter@0.0->visceraWeight@0.4	 cc:0.46893815816250245	
+sex@4.0, length@0.4, wholeWeight@4.0, shuckedWeight@0.0, rings@0.0->diameter@0.3	 cc:0.4689087892895897	
+sex@2.0, shuckedWeight@0.0, shellWeight@0.2, rings@2.0->length@0.4	 cc:0.4687689964028782	
+sex@3.0, wholeWeight@4.0, shellWeight@0.1, rings@4.0->visceraWeight@0.4	 cc:0.46859838503630863	
+sex@2.0, shuckedWeight@0.0, rings@1.0->visceraWeight@0.4	 cc:0.46835875763738116	
+diameter@0.0, shuckedWeight@4.0, rings@0.0->visceraWeight@0.3	 cc:0.4683163341120917	
+sex@2.0, shuckedWeight@4.0, shellWeight@0.0->visceraWeight@0.4	 cc:0.46818873594143334	
+sex@3.0, height@0.0, shellWeight@0.1, rings@4.0->diameter@0.3	 cc:0.46791092736974527	
+sex@3.0, length@0.0, wholeWeight@0.0, visceraWeight@0.0, rings@0.0->diameter@0.1	 cc:0.4677558603759557	
+visceraWeight@0.1, shellWeight@0.0, rings@3.0->length@0.4	 cc:0.4676565254457942	
+sex@2.0, visceraWeight@0.1, rings@2.0->length@0.4	 cc:0.46681990568152887	
+sex@3.0, length@0.4, shellWeight@0.2, rings@0.0->diameter@0.3	 cc:0.4658756464591786	
+sex@4.0, wholeWeight@1.0, shellWeight@0.3, rings@0.0->visceraWeight@0.4	 cc:0.46556004163860815	
+sex@2.0, shuckedWeight@0.0, visceraWeight@0.2, rings@1.0->diameter@0.3	 cc:0.4652210056006916	
+sex@4.0, diameter@0.2, wholeWeight@1.0, shellWeight@0.2, rings@1.0->visceraWeight@0.4	 cc:0.46504853513368954	
+sex@4.0, diameter@0.2, wholeWeight@1.0, rings@0.0->visceraWeight@0.4	 cc:0.46503340025439704	
+sex@3.0, length@0.2, visceraWeight@0.0, rings@1.0->diameter@0.2	 cc:0.4648154678204293	
+visceraWeight@0.0, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.4639839831044952	
+sex@3.0, visceraWeight@0.2, shellWeight@0.0, rings@1.0->diameter@0.2	 cc:0.46388146231500227	
+sex@3.0, shuckedWeight@0.0, shellWeight@0.0, rings@1.0->diameter@0.2	 cc:0.4637617100395617	
+height@0.0, wholeWeight@4.0, shellWeight@0.2, rings@1.0->visceraWeight@0.4	 cc:0.46372817252294773	
+sex@2.0, diameter@0.3, shellWeight@0.2, rings@1.0->length@0.4	 cc:0.46314255588668846	
+sex@3.0, wholeWeight@1.0, shellWeight@0.3, rings@1.0->visceraWeight@0.4	 cc:0.4629854578052014	
+sex@4.0, shellWeight@0.0, rings@2.0->visceraWeight@0.4	 cc:0.46293382067644645	
+sex@2.0, length@0.2, visceraWeight@0.0, rings@2.0->diameter@0.2	 cc:0.46287710582844854	
+sex@2.0, wholeWeight@4.0, shuckedWeight@0.0, rings@2.0->length@0.4	 cc:0.46271758354551645	
+sex@3.0, height@0.1, wholeWeight@1.0, shellWeight@0.3, rings@1.0->visceraWeight@0.4	 cc:0.46253629258879686	
+length@0.0, shellWeight@0.0->visceraWeight@0.4	 cc:0.4625206417477103	
+visceraWeight@0.0, shellWeight@0.1, rings@0.0->diameter@0.2	 cc:0.46234910492585934	
+sex@3.0, visceraWeight@0.1, shellWeight@0.0->length@0.4	 cc:0.46179652622415945	
+sex@4.0, length@0.2, height@0.0, wholeWeight@1.0, rings@2.0->visceraWeight@0.4	 cc:0.4616397311678531	
+sex@2.0, diameter@0.3, visceraWeight@0.3, rings@0.0->length@0.4	 cc:0.4614009473255096	
+sex@3.0, wholeWeight@4.0, visceraWeight@0.1, rings@2.0->length@0.4	 cc:0.4609292435875613	
+sex@3.0, visceraWeight@0.0, rings@0.0->diameter@0.2	 cc:0.4609079744958283	
+sex@4.0, wholeWeight@0.0, rings@0.0->shellWeight@0.4	 cc:0.4604493663596055	
+sex@4.0, length@0.2, wholeWeight@1.0, rings@0.0->visceraWeight@0.4	 cc:0.4603887367538685	
+sex@3.0, visceraWeight@0.1, shellWeight@0.1, rings@3.0->length@0.4	 cc:0.4595177277265354	
+height@0.0, wholeWeight@4.0, shellWeight@0.1, rings@2.0->visceraWeight@0.4	 cc:0.4586502485330633	
+sex@4.0, wholeWeight@4.0, shellWeight@0.2, rings@0.0->visceraWeight@0.4	 cc:0.4585478424017468	
+sex@2.0, length@0.4, visceraWeight@0.2, rings@0.0->diameter@0.3	 cc:0.45812525331267123	
+sex@2.0, diameter@0.3, shellWeight@0.3, rings@0.0->length@0.4	 cc:0.4579868527038167	
+length@0.0, shuckedWeight@0.0, rings@0.0->visceraWeight@0.3	 cc:0.4577263247572949	
+sex@3.0, wholeWeight@4.0, visceraWeight@0.2, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.456052438229054	
+diameter@0.0, height@0.0, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.3	 cc:0.4558521058251726	
+sex@4.0, length@0.0, shuckedWeight@0.0, rings@1.0->visceraWeight@0.3	 cc:0.45558973515795775	
+sex@2.0, diameter@0.3, wholeWeight@4.0, visceraWeight@0.3, rings@1.0->length@0.4	 cc:0.4553646693474404	
+sex@2.0, diameter@0.3, wholeWeight@1.0, rings@1.0->length@0.4	 cc:0.4550396789361399	
+sex@2.0, diameter@0.3, height@0.1, wholeWeight@4.0, visceraWeight@0.3, rings@1.0->length@0.4	 cc:0.4549155041310358	
+sex@3.0, length@0.4, wholeWeight@4.0, shellWeight@0.3, rings@0.0->diameter@0.3	 cc:0.45468366529823767	
+height@0.0, shellWeight@0.0, rings@2.0->visceraWeight@0.4	 cc:0.4538947842847275	
+sex@4.0, diameter@0.2, wholeWeight@4.0, shellWeight@0.2, rings@0.0->visceraWeight@0.4	 cc:0.4528806327139564	
+length@0.1, shellWeight@0.0, rings@2.0->visceraWeight@0.4	 cc:0.4528332461276002	
+shellWeight@0.0, rings@0.0->visceraWeight@0.4	 cc:0.45264378987074283	
+sex@2.0, wholeWeight@4.0, shuckedWeight@0.0, rings@1.0->diameter@0.3	 cc:0.45255500349281563	
+sex@4.0, diameter@0.1, wholeWeight@4.0, rings@0.0->visceraWeight@0.4	 cc:0.45236620242553804	
+sex@3.0, length@0.4, wholeWeight@4.0, visceraWeight@0.2, rings@0.0->diameter@0.3	 cc:0.4522345912187037	
+length@0.0, height@0.0, wholeWeight@4.0, shellWeight@0.1->visceraWeight@0.3	 cc:0.45205381622377816	
+sex@2.0, length@0.4, wholeWeight@4.0, shuckedWeight@0.0, rings@1.0->diameter@0.3	 cc:0.4519692230591614	
+sex@2.0, diameter@0.3, wholeWeight@4.0, shellWeight@0.3, rings@1.0->length@0.4	 cc:0.4519505747257475	
+sex@3.0, diameter@0.0, shuckedWeight@4.0, rings@1.0->visceraWeight@0.3	 cc:0.44938579416642793	
+diameter@0.0, wholeWeight@4.0, rings@0.0->visceraWeight@0.3	 cc:0.44897836452625406	
+sex@4.0, length@0.2, wholeWeight@4.0, shellWeight@0.2, rings@0.0->visceraWeight@0.4	 cc:0.44823596921342784	
+sex@2.0, diameter@0.2, wholeWeight@1.0, rings@1.0->visceraWeight@0.4	 cc:0.44809383402396863	
+sex@4.0, diameter@0.0, shuckedWeight@4.0, shellWeight@0.1, rings@2.0->visceraWeight@0.3	 cc:0.44689758888924264	
+diameter@0.0, wholeWeight@4.0, shellWeight@0.1, rings@2.0->visceraWeight@0.3	 cc:0.4439155754156621	
+diameter@0.0, height@0.0, rings@0.0->visceraWeight@0.3	 cc:0.4438390165132672	
+sex@2.0, length@0.4, wholeWeight@4.0, visceraWeight@0.3, rings@0.0->diameter@0.3	 cc:0.44373277752290896	
+sex@2.0, length@0.4, wholeWeight@1.0, rings@0.0->diameter@0.3	 cc:0.4434077871116085	
+sex@2.0, length@0.4, height@0.1, wholeWeight@4.0, shellWeight@0.4, rings@0.0->diameter@0.3	 cc:0.44337632163204055	
+sex@2.0, diameter@0.3, wholeWeight@4.0, visceraWeight@0.4, rings@0.0->length@0.4	 cc:0.4425985460819074	
+sex@2.0, diameter@0.3, wholeWeight@4.0, shuckedWeight@4.0, rings@0.0->length@0.4	 cc:0.4419541016112553	
+sex@2.0, diameter@0.3, wholeWeight@4.0, shellWeight@0.4, rings@0.0->length@0.4	 cc:0.4412380121600566	
+sex@4.0, length@0.1, diameter@0.0, shuckedWeight@4.0, rings@1.0->visceraWeight@0.3	 cc:0.43972321385165125	
+sex@2.0, wholeWeight@1.0, rings@0.0->visceraWeight@0.4	 cc:0.43954167719883913	
+sex@2.0, diameter@0.1, wholeWeight@2.0, shuckedWeight@4.0, shellWeight@0.0->visceraWeight@0.3	 cc:0.4372577927921022	
+length@0.1, diameter@0.0, wholeWeight@4.0, rings@1.0->visceraWeight@0.3	 cc:0.4367412003780706	
+sex@4.0, length@0.0, shuckedWeight@0.0, shellWeight@0.1, rings@2.0->visceraWeight@0.3	 cc:0.4363075795344459	
+wholeWeight@0.0, visceraWeight@0.0, shellWeight@0.1, rings@1.0->diameter@0.2	 cc:0.43448638181906574	
+height@0.1, wholeWeight@0.0, visceraWeight@0.0, shellWeight@0.1, rings@1.0->diameter@0.2	 cc:0.43403721660266115	
+sex@3.0, wholeWeight@0.0, visceraWeight@0.0, rings@1.0->diameter@0.2	 cc:0.4330452513890347	
+sex@2.0, length@0.1, wholeWeight@2.0, shellWeight@0.0->visceraWeight@0.3	 cc:0.4321048086459865	
+sex@2.0, wholeWeight@0.0, visceraWeight@0.0, rings@2.0->diameter@0.2	 cc:0.43110688939705394	
+sex@3.0, visceraWeight@0.0, shellWeight@0.0, rings@2.0->diameter@0.2	 cc:0.4308340766459115	
+sex@3.0, diameter@0.0, wholeWeight@4.0, rings@1.0->visceraWeight@0.3	 cc:0.4300478245805903	
+sex@2.0, height@0.0, wholeWeight@1.0, rings@1.0->visceraWeight@0.4	 cc:0.42836605120778304	
+height@0.0, wholeWeight@0.0, visceraWeight@0.1, rings@0.0->shellWeight@0.4	 cc:0.42754761295435595	
+sex@3.0, diameter@0.0, height@0.0, shuckedWeight@4.0, rings@1.0->visceraWeight@0.3	 cc:0.4239908016624519	
+length@0.1, diameter@0.0, height@0.0, wholeWeight@4.0, rings@2.0->visceraWeight@0.3	 cc:0.42377282827913537	
+height@0.0, wholeWeight@0.0, visceraWeight@0.0, shellWeight@0.1, rings@2.0->diameter@0.2	 cc:0.4215180097201305	
+sex@4.0, diameter@0.0, height@0.0, shuckedWeight@4.0, shellWeight@0.1, rings@2.0->visceraWeight@0.3	 cc:0.42150259638526666	
+sex@3.0, height@0.0, wholeWeight@0.0, visceraWeight@0.0, rings@2.0->diameter@0.2	 cc:0.42007687929009946	
+sex@3.0, diameter@0.0, height@0.0, wholeWeight@4.0, rings@2.0->visceraWeight@0.3	 cc:0.41707945248165507	
+length@0.0, diameter@0.0, rings@0.0->visceraWeight@0.3	 cc:0.4151333510627634	
+sex@4.0, diameter@0.0, height@0.0, shuckedWeight@4.0, shellWeight@0.0, rings@4.0->visceraWeight@0.3	 cc:0.41419453810379486	
+diameter@0.0, shellWeight@0.0, rings@0.0->visceraWeight@0.3	 cc:0.4125141242493657	
+sex@2.0, diameter@0.1, height@0.0, wholeWeight@4.0, shuckedWeight@4.0, shellWeight@0.0->visceraWeight@0.3	 cc:0.41232493006834015	
+sex@3.0, diameter@0.0, visceraWeight@0.0, rings@1.0->length@0.3	 cc:0.40685448200122154	
+sex@4.0, length@0.0, height@0.0, shuckedWeight@0.0, shellWeight@0.0, rings@4.0->visceraWeight@0.3	 cc:0.40360452874899805	
+sex@3.0, visceraWeight@0.0, shellWeight@0.0, rings@1.0->length@0.3	 cc:0.4004369655864294	
+sex@2.0, diameter@0.1, wholeWeight@4.0, shuckedWeight@4.0, shellWeight@0.0, rings@2.0->visceraWeight@0.3	 cc:0.4003883996588296	
+length@0.0, height@0.0, wholeWeight@0.0, rings@0.0->shellWeight@0.4	 cc:0.3973096720134067	
+sex@2.0, length@0.1, wholeWeight@4.0, shellWeight@0.0, rings@2.0->visceraWeight@0.3	 cc:0.39523541551271396	
+sex@4.0, length@0.0, diameter@0.0, shuckedWeight@4.0, shellWeight@0.1, rings@2.0->visceraWeight@0.3	 cc:0.39279693093476287	
+sex@4.0, length@0.0, wholeWeight@2.0, visceraWeight@0.0, rings@0.0->shellWeight@0.4	 cc:0.37464937529639136	
+sex@4.0, length@0.0, diameter@0.0, height@0.0, shuckedWeight@4.0, shellWeight@0.0, rings@4.0->visceraWeight@0.3	 cc:0.3600938801493151	
+length@0.0, diameter@0.0, height@0.0, wholeWeight@2.0, visceraWeight@0.0, rings@0.0->shellWeight@0.4	 cc:0.315307970551587	

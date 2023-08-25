@@ -1,0 +1,1309 @@
+****** DISCOVERED RFDs *******
+Car@0.0, Weight@0.0, Model@2.0->Displacement@0.0	 cc:0.8712554870864484	
+Car@1.0, MPG@4.0, Model@0.0->Horsepower@1.0	 cc:0.8686931089492946	
+Car@4.0, MPG@4.0, Weight@0.0->Displacement@0.0	 cc:0.8684498177053466	
+Car@1.0, Acceleration@0.0, Model@0.0->Weight@0.0	 cc:0.8669005738197768	
+Car@4.0, Weight@0.0, Model@2.0->Displacement@1.0	 cc:0.8635405479613931	
+Car@0.0, Horsepower@0.0, Model@1.0->Displacement@0.0	 cc:0.8629948804571095	
+Car@1.0, Acceleration@0.0, Model@0.0->Horsepower@0.0	 cc:0.8596261656257277	
+Car@1.0, Acceleration@0.0, Model@0.0->Displacement@0.0	 cc:0.858963196985969	
+Car@0.0, Weight@40.0, Acceleration@0.0->Displacement@0.0	 cc:0.8561219028155749	
+Car@1.0, Displacement@4.0, Model@0.0->Horsepower@0.0	 cc:0.8558473312688333	
+Car@3.0, Displacement@3.0, Model@0.0->Horsepower@0.0	 cc:0.8557543592577532	
+Car@3.0, MPG@1.0, Horsepower@0.0->Displacement@0.0	 cc:0.8552990570726502	
+Car@4.0, Weight@40.0, Model@0.0->Horsepower@0.0	 cc:0.8550331744989069	
+Car@0.0, Horsepower@4.0, Weight@40.0->Displacement@0.0	 cc:0.8543841082159453	
+Car@4.0, Weight@40.0, Model@0.0->Displacement@0.0	 cc:0.8543702058591482	
+Car@4.0, Weight@0.0, Acceleration@0.0->Displacement@0.0	 cc:0.8542555114155728	
+Car@1.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.8525768018323305	
+MPG@0.0, Horsepower@2.0, Weight@0.0->Displacement@0.0	 cc:0.8525489971187366	
+Car@4.0, MPG@0.0, Horsepower@0.0->Displacement@0.0	 cc:0.8503767538691996	
+Car@0.0, MPG@0.0, Weight@10.0->Horsepower@0.0	 cc:0.8502672728094229	
+Car@4.0, MPG@0.0, Weight@0.0->Horsepower@0.0	 cc:0.8500005213383799	
+Car@4.0, MPG@0.0, Model@0.0->Horsepower@1.0	 cc:0.8498145773162196	
+Car@0.0, MPG@0.0, Weight@10.0->Displacement@0.0	 cc:0.8496043041696644	
+Car@4.0, Weight@40.0, Model@0.0->MPG@0.0	 cc:0.8479838107055098	
+Car@0.0, Horsepower@4.0, Weight@0.0->MPG@0.0	 cc:0.8458602257047626	
+Car@2.0, Weight@40.0, Acceleration@0.0->Displacement@2.0	 cc:0.8452963113571828	
+Car@3.0, Horsepower@0.0, Model@0.0->Displacement@1.0	 cc:0.8451824858109072	
+Car@2.0, Horsepower@3.0, Weight@30.0->Displacement@1.0	 cc:0.8450929893890261	
+Car@2.0, Acceleration@0.0, Model@0.0->Displacement@4.0	 cc:0.8446455072796215	
+Car@4.0, Horsepower@4.0, Weight@0.0->Displacement@1.0	 cc:0.8445316817333459	
+Car@1.0, Horsepower@2.0, Weight@40.0->Displacement@1.0	 cc:0.8443796247058782	
+Car@0.0, Horsepower@0.0, Acceleration@2.0, Model@3.0->Displacement@0.0	 cc:0.8442336499595093	
+Car@4.0, Horsepower@3.0, Weight@10.0->Displacement@1.0	 cc:0.8441971562729171	
+Car@4.0, Weight@10.0, Acceleration@0.0->Displacement@2.0	 cc:0.8438878288341831	
+Car@4.0, Horsepower@1.0, Weight@30.0->Displacement@1.0	 cc:0.842701784019936	
+Car@3.0, Horsepower@0.0, Weight@40.0->Displacement@1.0	 cc:0.8423785542244049	
+Car@2.0, Horsepower@2.0, Weight@40.0->Displacement@2.0	 cc:0.8415027057461917	
+Car@2.0, Horsepower@4.0, Weight@30.0->Displacement@3.0	 cc:0.8411542779289659	
+Car@4.0, Horsepower@4.0, Weight@10.0->Displacement@3.0	 cc:0.8402584448128569	
+Car@3.0, Horsepower@1.0, Weight@40.0->Displacement@2.0	 cc:0.8401915397207712	
+Car@4.0, MPG@0.0, Weight@10.0->Displacement@2.0	 cc:0.8389698701172317	
+Car@0.0, Cylinders@1.0, Horsepower@0.0, Model@3.0->Displacement@0.0	 cc:0.837612652534921	
+Car@4.0, Weight@0.0, Acceleration@2.0, Model@2.0->Displacement@0.0	 cc:0.8347800473375249	
+Car@0.0, MPG@3.0, Horsepower@0.0, Model@4.0->Displacement@0.0	 cc:0.8341683436384553	
+Car@0.0, Horsepower@2.0, Acceleration@1.0, Model@3.0->Displacement@0.0	 cc:0.8335696733988829	
+Car@1.0, MPG@4.0, Acceleration@1.0, Model@0.0->Weight@0.0	 cc:0.8315529627660129	
+Car@0.0, MPG@4.0, Horsepower@0.0, Model@3.0->Displacement@0.0	 cc:0.8311784680297928	
+Car@0.0, Weight@0.0, Model@2.0->Acceleration@0.0	 cc:0.8304433809141495	
+Car@3.0, Cylinders@1.0, Horsepower@0.0, Model@3.0->Displacement@1.0	 cc:0.8297943146311879	
+Car@0.0, Weight@0.0, Model@2.0->MPG@1.0	 cc:0.8296891780579103	
+Car@0.0, MPG@1.0, Weight@10.0, Acceleration@3.0->Displacement@0.0	 cc:0.8286056631250412	
+Car@0.0, Horsepower@2.0, Acceleration@0.0, Model@4.0->Displacement@0.0	 cc:0.8266497753031583	
+Car@1.0, Displacement@4.0, Acceleration@2.0, Model@0.0->Weight@0.0	 cc:0.8263752037564168	
+Car@2.0, Weight@40.0, Acceleration@0.0, Model@4.0->Displacement@0.0	 cc:0.8256965949652615	
+Car@4.0, Weight@10.0, Acceleration@0.0, Model@4.0->Displacement@0.0	 cc:0.8242881124422617	
+Car@1.0, MPG@4.0, Acceleration@1.0, Model@0.0->Horsepower@0.0	 cc:0.8242785545719638	
+Car@1.0, Horsepower@0.0, Acceleration@2.0, Model@0.0->Weight@0.0	 cc:0.8242290274258743	
+Car@4.0, MPG@0.0, Acceleration@1.0, Model@2.0->Displacement@0.0	 cc:0.8240309188415167	
+Car@1.0, MPG@4.0, Acceleration@1.0, Model@0.0->Displacement@0.0	 cc:0.8236155859322052	
+Car@4.0, MPG@0.0, Acceleration@2.0, Model@1.0->Horsepower@1.0	 cc:0.8230620983522232	
+Car@1.0, MPG@0.0, Weight@10.0->Horsepower@4.0	 cc:0.820994122778664	
+MPG@0.0, Displacement@0.0, Weight@0.0, Model@4.0->Horsepower@0.0	 cc:0.8206700240858332	
+Car@1.0, MPG@0.0, Weight@10.0, Model@4.0->Horsepower@0.0	 cc:0.8197993889914188	
+Car@0.0, MPG@2.0, Acceleration@0.0, Model@2.0->Displacement@0.0	 cc:0.8192328679519396	
+Car@2.0, MPG@0.0, Weight@10.0, Model@4.0->Displacement@0.0	 cc:0.819178996319351	
+Car@4.0, Displacement@3.0, Acceleration@2.0, Model@0.0->Horsepower@0.0	 cc:0.8191112223299655	
+Car@0.0, MPG@1.0, Weight@30.0, Acceleration@2.0->Displacement@0.0	 cc:0.8189704609673955	
+Car@4.0, MPG@2.0, Weight@0.0->Acceleration@0.0	 cc:0.8184525981767059	
+Car@4.0, MPG@1.0, Weight@10.0, Acceleration@3.0->Displacement@2.0	 cc:0.8179712290726086	
+Car@2.0, Acceleration@0.0, Model@0.0->MPG@1.0	 cc:0.8174394639251219	
+Car@3.0, Horsepower@0.0, Acceleration@2.0, Model@0.0->Displacement@0.0	 cc:0.8164219851870389	
+Car@2.0, Horsepower@3.0, Weight@30.0, Acceleration@2.0->Displacement@0.0	 cc:0.816332488765158	
+Car@4.0, Horsepower@4.0, Weight@0.0, Acceleration@2.0->Displacement@0.0	 cc:0.8157711811094777	
+Car@1.0, Horsepower@4.0, Acceleration@1.0, Model@0.0->Weight@0.0	 cc:0.8156208618766096	
+Car@1.0, Horsepower@2.0, Weight@40.0, Acceleration@2.0->Displacement@0.0	 cc:0.81561912408201	
+Car@2.0, Horsepower@4.0, Weight@30.0, Model@4.0->Displacement@1.0	 cc:0.8154601158761439	
+Car@4.0, Horsepower@3.0, Weight@10.0, Acceleration@2.0->Displacement@0.0	 cc:0.8154366556490489	
+MPG@0.0, Horsepower@1.0, Weight@10.0, Acceleration@2.0->Displacement@0.0	 cc:0.8149413841881545	
+Car@3.0, Weight@40.0, Acceleration@0.0->MPG@1.0	 cc:0.814723290965901	
+Car@3.0, Weight@40.0, Acceleration@1.0, Model@1.0->Displacement@0.0	 cc:0.8147189464794019	
+Car@0.0, MPG@0.0, Weight@30.0, Acceleration@2.0->Horsepower@0.0	 cc:0.8146077276250256	
+Car@4.0, Horsepower@4.0, Weight@10.0, Model@4.0->Displacement@1.0	 cc:0.8145642827600349	
+Car@1.0, MPG@1.0, Acceleration@0.0, Model@2.0->Displacement@0.0	 cc:0.8143687808675766	
+MPG@0.0, Displacement@1.0, Weight@0.0, Model@3.0->Horsepower@0.0	 cc:0.8142766777537962	
+Car@1.0, Horsepower@4.0, Acceleration@2.0, Model@0.0->MPG@0.0	 cc:0.8140924715262354	
+Car@4.0, Horsepower@1.0, Weight@30.0, Acceleration@2.0->Displacement@0.0	 cc:0.8139412833960677	
+Car@3.0, Horsepower@0.0, Weight@40.0, Acceleration@2.0->Displacement@0.0	 cc:0.8136180536005366	
+Car@4.0, Weight@40.0, Model@0.0->Acceleration@0.0	 cc:0.8135580996868494	
+Car@1.0, MPG@0.0, Weight@30.0, Model@3.0->Horsepower@0.0	 cc:0.8133521710267932	
+Car@2.0, MPG@0.0, Weight@30.0, Model@3.0->Displacement@0.0	 cc:0.8127317783547255	
+Car@4.0, MPG@0.0, Acceleration@1.0, Model@0.0->Weight@0.0	 cc:0.8126744311329378	
+Car@1.0, Displacement@4.0, Acceleration@2.0, Model@0.0->MPG@0.0	 cc:0.8120514317689707	
+Car@0.0, Horsepower@4.0, Weight@10.0->Acceleration@0.0	 cc:0.8119723621146875	
+Car@0.0, Horsepower@4.0, Weight@20.0->MPG@1.0	 cc:0.8117533999951343	
+MPG@0.0, Horsepower@2.0, Weight@0.0->Acceleration@0.0	 cc:0.8117368909464378	
+Car@0.0, MPG@2.0, Weight@40.0, Acceleration@1.0->Displacement@0.0	 cc:0.8115891784054692	
+Car@1.0, MPG@2.0, Acceleration@0.0, Model@1.0->Displacement@0.0	 cc:0.8099704227359144	
+MPG@0.0, Displacement@0.0, Weight@0.0->Acceleration@0.0	 cc:0.809700195675672	
+Car@1.0, MPG@1.0, Acceleration@1.0, Model@0.0->Displacement@0.0	 cc:0.8095290229076084	
+Car@4.0, MPG@4.0, Acceleration@1.0, Model@0.0->Displacement@4.0	 cc:0.809489053631817	
+Car@4.0, Horsepower@4.0, Weight@0.0, Acceleration@2.0->MPG@0.0	 cc:0.8093847859558392	
+Car@0.0, Horsepower@1.0, Weight@40.0->MPG@1.0	 cc:0.8093630635233439	
+Car@1.0, MPG@0.0, Weight@10.0->Acceleration@0.0	 cc:0.8088295605812574	
+Car@3.0, MPG@3.0, Horsepower@0.0, Model@1.0->Displacement@0.0	 cc:0.8088165271217603	
+Car@4.0, MPG@1.0, Horsepower@0.0, Model@2.0->Displacement@0.0	 cc:0.80867750355379	
+Car@4.0, MPG@0.0, Acceleration@0.0, Model@1.0->Weight@0.0	 cc:0.8082143812929887	
+Car@3.0, Horsepower@4.0, Acceleration@1.0, Model@0.0->Displacement@0.0	 cc:0.8078138196377742	
+MPG@0.0, Horsepower@2.0, Weight@10.0, Model@2.0->Displacement@0.0	 cc:0.8063618922497837	
+Car@2.0, Horsepower@4.0, Weight@30.0, Acceleration@2.0->Displacement@2.0	 cc:0.8062993316441971	
+Car@4.0, MPG@4.0, Displacement@3.0, Model@0.0->Horsepower@0.0	 cc:0.8060560404002489	
+Car@4.0, Horsepower@2.0, Acceleration@1.0, Model@0.0->Displacement@0.0	 cc:0.8058614074050904	
+MPG@1.0, Weight@0.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.8054704036201737	
+Car@4.0, Horsepower@4.0, Weight@10.0, Acceleration@2.0->Displacement@2.0	 cc:0.805403498528088	
+Car@4.0, MPG@0.0, Acceleration@1.0, Model@0.0->Horsepower@0.0	 cc:0.8054000229388887	
+Car@3.0, MPG@4.0, Horsepower@0.0, Model@1.0->Displacement@1.0	 cc:0.8053748249171941	
+MPG@0.0, Horsepower@4.0, Weight@0.0, Acceleration@1.0->Displacement@0.0	 cc:0.8050628907865607	
+Car@4.0, MPG@4.0, Weight@40.0, Model@0.0->Displacement@0.0	 cc:0.804568488222966	
+Car@1.0, MPG@2.0, Displacement@4.0, Model@0.0->Weight@0.0	 cc:0.8041349084703584	
+Car@3.0, MPG@2.0, Displacement@3.0, Model@0.0->Weight@0.0	 cc:0.8040419364592782	
+Car@1.0, Horsepower@3.0, Weight@40.0, Acceleration@1.0->Displacement@0.0	 cc:0.8040071805672857	
+Horsepower@4.0, Weight@0.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.8036248657553673	
+Horsepower@4.0, Weight@0.0, Acceleration@0.0, Model@1.0->Displacement@0.0	 cc:0.8034980067495943	
+Car@4.0, MPG@0.0, Weight@30.0, Acceleration@2.0->Displacement@2.0	 cc:0.8033103249328343	
+Car@2.0, MPG@4.0, Horsepower@3.0, Weight@30.0->Displacement@0.0	 cc:0.8032773068354413	
+Car@4.0, MPG@0.0, Horsepower@2.0, Acceleration@1.0->Displacement@0.0	 cc:0.8029662416021076	
+Car@2.0, MPG@4.0, Horsepower@2.0, Weight@40.0->Displacement@0.0	 cc:0.8026065181199843	
+Car@4.0, MPG@4.0, Horsepower@3.0, Weight@10.0->Displacement@0.0	 cc:0.8023814737193323	
+Car@0.0, MPG@0.0, Weight@40.0, Acceleration@1.0->Horsepower@0.0	 cc:0.8023249953948443	
+Car@3.0, MPG@2.0, Horsepower@0.0, Model@0.0->Weight@0.0	 cc:0.8021190667347882	
+MPG@0.0, Weight@30.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.8020695395886988	
+Car@4.0, MPG@0.0, Weight@30.0, Model@3.0->Displacement@2.0	 cc:0.8020174057507099	
+Car@0.0, MPG@0.0, Weight@40.0, Acceleration@1.0->Displacement@0.0	 cc:0.8016620267550856	
+Displacement@4.0, Weight@0.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.8015838259981024	
+Car@3.0, Horsepower@4.0, Acceleration@0.0, Model@0.0->Weight@0.0	 cc:0.8012970898891634	
+Car@3.0, MPG@4.0, Horsepower@1.0, Weight@40.0->Displacement@0.0	 cc:0.8012953520945638	
+Car@4.0, MPG@0.0, Horsepower@0.0, Acceleration@1.0->Weight@20.0	 cc:0.8012605962025712	
+Car@3.0, Cylinders@1.0, Horsepower@0.0, Acceleration@2.0, Model@3.0->Displacement@0.0	 cc:0.8010338140073195	
+Car@4.0, MPG@0.0, Acceleration@0.0, Model@1.0->Horsepower@0.0	 cc:0.8009399730989396	
+Car@4.0, MPG@4.0, Horsepower@1.0, Weight@30.0->Displacement@0.0	 cc:0.8008861014663511	
+Car@4.0, Weight@40.0, Acceleration@0.0, Model@1.0->Displacement@0.0	 cc:0.8003682386756614	
+Car@2.0, MPG@1.0, Acceleration@0.0, Model@2.0->Displacement@4.0	 cc:0.8000510911612292	
+Horsepower@0.0, Weight@10.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.7999754970961452	
+Horsepower@0.0, Weight@10.0, Acceleration@0.0, Model@1.0->Displacement@0.0	 cc:0.7998486380903722	
+Car@4.0, Horsepower@2.0, Acceleration@0.0, Model@0.0->Weight@0.0	 cc:0.7993446776564797	
+Car@3.0, MPG@2.0, Weight@10.0, Acceleration@1.0->Displacement@2.0	 cc:0.7992517056453996	
+MPG@0.0, Horsepower@4.0, Weight@10.0, Model@0.0->Car@0.0	 cc:0.799244754467001	
+Car@4.0, Displacement@3.0, Acceleration@0.0, Model@0.0->Weight@0.0	 cc:0.7991361423045242	
+MPG@0.0, Horsepower@3.0, Weight@10.0, Model@1.0->Displacement@0.0	 cc:0.798245522572214	
+MPG@0.0, Horsepower@2.0, Weight@20.0, Model@0.0->Car@0.0	 cc:0.7977241841923253	
+Car@2.0, Horsepower@2.0, Weight@40.0, Model@2.0->Displacement@1.0	 cc:0.797697248376031	
+Car@3.0, MPG@3.0, Horsepower@0.0, Acceleration@2.0, Model@4.0->Displacement@0.0	 cc:0.7975895051108539	
+MPG@0.0, Displacement@4.0, Weight@10.0, Model@0.0->Car@0.0	 cc:0.7972037147097362	
+MPG@0.0, Displacement@4.0, Weight@0.0, Model@1.0->Horsepower@0.0	 cc:0.7972019769151365	
+Car@4.0, Horsepower@1.0, Weight@40.0, Model@2.0->Displacement@1.0	 cc:0.7964894811292884	
+Car@4.0, MPG@0.0, Horsepower@2.0, Acceleration@0.0->Weight@0.0	 cc:0.796449511853497	
+Car@4.0, MPG@0.0, Weight@40.0, Model@1.0->Horsepower@0.0	 cc:0.7961132485984687	
+MPG@1.0, Weight@0.0, Acceleration@0.0, Model@0.0->Horsepower@0.0	 cc:0.7960124565116902	
+Car@2.0, MPG@1.0, Weight@40.0, Acceleration@1.0->Displacement@2.0	 cc:0.7958621372788222	
+Car@4.0, MPG@2.0, Acceleration@0.0, Model@1.0->Displacement@4.0	 cc:0.7958438904355261	
+Car@4.0, Horsepower@0.0, Weight@40.0, Model@2.0->Displacement@1.0	 cc:0.7957570007055446	
+MPG@1.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->Displacement@0.0	 cc:0.7956344861862708	
+Car@4.0, MPG@0.0, Weight@40.0, Model@1.0->Displacement@0.0	 cc:0.79545027995871	
+MPG@1.0, Weight@0.0, Acceleration@0.0, Model@0.0->Displacement@0.0	 cc:0.7953494878719315	
+Car@3.0, MPG@4.0, Horsepower@0.0, Acceleration@2.0, Model@3.0->Displacement@0.0	 cc:0.7945996295021913	
+Car@3.0, MPG@0.0, Displacement@4.0, Model@0.0->Weight@0.0	 cc:0.7943380914149472	
+Car@1.0, Horsepower@4.0, Weight@40.0, Acceleration@1.0->Displacement@2.0	 cc:0.7939740234463248	
+Car@0.0, MPG@1.0, Horsepower@2.0, Acceleration@0.0->Displacement@0.0	 cc:0.7932667410442755	
+Car@4.0, Weight@0.0, Acceleration@2.0, Model@2.0->MPG@1.0	 cc:0.7932137383089868	
+Car@2.0, Horsepower@3.0, Weight@40.0, Acceleration@1.0->Displacement@2.0	 cc:0.7931442265250017	
+MPG@0.0, Weight@30.0, Acceleration@0.0, Model@0.0->Horsepower@0.0	 cc:0.7926115924802153	
+Car@4.0, MPG@4.0, Horsepower@4.0, Weight@10.0->Displacement@2.0	 cc:0.7923483165983713	
+Displacement@4.0, Weight@0.0, Acceleration@0.0, Model@0.0->Horsepower@0.0	 cc:0.7921258788896188	
+Car@3.0, MPG@1.0, Horsepower@1.0, Acceleration@0.0->Displacement@0.0	 cc:0.792035513570438	
+Car@4.0, MPG@0.0, Displacement@4.0, Model@1.0->Horsepower@1.0	 cc:0.7920337757758384	
+MPG@0.0, Weight@30.0, Acceleration@0.0, Model@0.0->Displacement@0.0	 cc:0.7919486238404565	
+Car@2.0, MPG@1.0, Weight@30.0, Acceleration@3.0, Model@3.0->Displacement@0.0	 cc:0.7917331373101025	
+Car@4.0, MPG@0.0, Weight@40.0, Acceleration@1.0->Displacement@2.0	 cc:0.791027592702653	
+Car@3.0, MPG@3.0, Cylinders@1.0, Horsepower@0.0, Model@4.0->Displacement@0.0	 cc:0.7909685076862655	
+Horsepower@0.0, Weight@30.0, Acceleration@0.0, Model@0.0->Displacement@0.0	 cc:0.7909415718699713	
+MPG@0.0, Horsepower@3.0, Weight@20.0, Acceleration@0.0->Displacement@0.0	 cc:0.7908094994803994	
+Car@3.0, Horsepower@4.0, Weight@40.0, Model@1.0->Displacement@1.0	 cc:0.7905410102147568	
+Car@2.0, Horsepower@3.0, Weight@40.0, Acceleration@0.0->Displacement@0.0	 cc:0.7895956499525583	
+MPG@0.0, Horsepower@1.0, Weight@40.0, Acceleration@0.0->Displacement@0.0	 cc:0.7892915358976231	
+MPG@0.0, Displacement@4.0, Weight@0.0, Acceleration@3.0, Model@3.0->Horsepower@0.0	 cc:0.7891629390972504	
+MPG@0.0, Horsepower@4.0, Weight@10.0, Model@0.0->Displacement@0.0	 cc:0.7891238387187588	
+MPG@0.0, Displacement@4.0, Weight@10.0, Model@0.0->Horsepower@0.0	 cc:0.7877457676012526	
+Car@0.0, Weight@30.0, Model@1.0->MPG@2.0	 cc:0.7877040605308615	
+MPG@0.0, Horsepower@2.0, Weight@20.0, Model@0.0->Displacement@0.0	 cc:0.787603268444083	
+MPG@0.0, Horsepower@1.0, Weight@40.0, Model@0.0->Displacement@0.0	 cc:0.7872687429836543	
+Car@4.0, MPG@0.0, Displacement@4.0, Model@0.0->Horsepower@0.0	 cc:0.787167081999576	
+Horsepower@4.0, Weight@0.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.7871175548534866	
+Car@3.0, Horsepower@1.0, Weight@40.0, Acceleration@0.0->Displacement@0.0	 cc:0.78710104580479	
+Car@4.0, Displacement@3.0, Weight@40.0, Model@0.0->Horsepower@0.0	 cc:0.787035009610004	
+Car@3.0, Horsepower@4.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.7869733179017173	
+Car@2.0, Horsepower@4.0, Weight@30.0, Acceleration@2.0, Model@4.0->Displacement@0.0	 cc:0.7866996152522756	
+MPG@0.0, Horsepower@2.0, Weight@10.0, Acceleration@2.0, Model@4.0->Displacement@0.0	 cc:0.78583506243896	
+Car@4.0, Horsepower@4.0, Weight@10.0, Acceleration@2.0, Model@4.0->Displacement@0.0	 cc:0.7858037821361666	
+Car@1.0, MPG@0.0, Weight@30.0, Acceleration@2.0->Horsepower@4.0	 cc:0.7853345775942666	
+Displacement@4.0, Weight@0.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.7850765150962218	
+Car@4.0, Horsepower@2.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.7850209056690336	
+Car@4.0, MPG@0.0, Horsepower@3.0, Weight@40.0->Displacement@0.0	 cc:0.784868848641566	
+Car@4.0, Displacement@3.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.784812370317078	
+Car@4.0, Horsepower@0.0, Weight@40.0, Model@0.0->Displacement@0.0	 cc:0.7844491712457554	
+Car@0.0, MPG@0.0, Displacement@4.0, Weight@40.0->Horsepower@0.0	 cc:0.7840920544555317	
+Horsepower@0.0, Weight@10.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.7834681861942645	
+Car@2.0, Cylinders@1.0, Horsepower@2.0, Acceleration@0.0, Model@4.0->Displacement@0.0	 cc:0.7833621807236872	
+MPG@0.0, Displacement@1.0, Weight@0.0, Model@4.0, Origin@4.0->Horsepower@0.0	 cc:0.7832613886369086	
+Car@1.0, MPG@0.0, Displacement@1.0, Weight@40.0->Horsepower@0.0	 cc:0.7832188126692177	
+Car@0.0, MPG@1.0, Horsepower@4.0, Weight@40.0->Displacement@1.0	 cc:0.7825097924725689	
+Car@4.0, Horsepower@4.0, Weight@40.0, Model@0.0->MPG@0.0	 cc:0.7822499921799243	
+Car@3.0, Cylinders@1.0, Horsepower@1.0, Acceleration@0.0, Model@4.0->Displacement@0.0	 cc:0.7820510146982667	
+MPG@0.0, Horsepower@4.0, Weight@20.0, Model@0.0->Displacement@1.0	 cc:0.7816730443728473	
+Car@1.0, Cylinders@1.0, Horsepower@2.0, Acceleration@1.0, Model@2.0->Displacement@0.0	 cc:0.7815540054427726	
+Car@2.0, MPG@1.0, Horsepower@3.0, Weight@30.0->Displacement@1.0	 cc:0.7812047087282472	
+Car@4.0, MPG@4.0, Weight@0.0, Model@2.0->Acceleration@0.0	 cc:0.7809127592355094	
+MPG@0.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0->Displacement@2.0	 cc:0.7807763423594385	
+Car@4.0, Cylinders@1.0, Horsepower@1.0, Acceleration@1.0, Model@2.0->Displacement@0.0	 cc:0.7803888141637211	
+Car@3.0, MPG@4.0, Cylinders@1.0, Horsepower@0.0, Model@3.0->Displacement@1.0	 cc:0.7799925969950056	
+Car@3.0, MPG@2.0, Weight@10.0, Acceleration@1.0, Model@4.0->Displacement@0.0	 cc:0.7796519892534782	
+Car@3.0, MPG@1.0, Horsepower@1.0, Weight@40.0->Displacement@1.0	 cc:0.7792227539873697	
+Car@2.0, MPG@1.0, Horsepower@4.0, Weight@30.0->Displacement@2.0	 cc:0.7791575866898837	
+Car@0.0, Horsepower@4.0, Weight@40.0->MPG@2.0	 cc:0.7785076515096221	
+Car@3.0, MPG@3.0, Horsepower@1.0, Acceleration@1.0, Model@3.0->Displacement@0.0	 cc:0.777992395410832	
+MPG@0.0, Horsepower@2.0, Weight@10.0, Acceleration@2.0, Origin@4.0->Displacement@0.0	 cc:0.777790811237275	
+Car@2.0, Horsepower@4.0, Weight@40.0, Acceleration@0.0->Displacement@3.0	 cc:0.7776709034099005	
+Car@2.0, MPG@4.0, Horsepower@2.0, Acceleration@0.0, Model@4.0->Displacement@0.0	 cc:0.7769279962185589	
+Car@3.0, MPG@4.0, Displacement@3.0, Acceleration@2.0, Model@0.0->Weight@0.0	 cc:0.7764805141091543	
+Car@4.0, Displacement@0.0, Horsepower@4.0, Weight@0.0->MPG@0.0	 cc:0.7763049968545919	
+Car@2.0, MPG@1.0, Weight@40.0, Acceleration@1.0, Model@4.0->Displacement@0.0	 cc:0.7762624208869009	
+Car@0.0, Weight@0.0->Acceleration@1.0	 cc:0.7759895871347591	
+Car@3.0, MPG@4.0, Horsepower@1.0, Acceleration@0.0, Model@4.0->Displacement@0.0	 cc:0.7756168301931384	
+Car@2.0, MPG@4.0, Horsepower@2.0, Acceleration@1.0, Model@2.0->Displacement@0.0	 cc:0.7751623969053354	
+Car@1.0, Horsepower@4.0, Weight@20.0, Acceleration@2.0->MPG@1.0	 cc:0.7750442268725606	
+Car@4.0, MPG@1.0, Weight@10.0, Acceleration@1.0, Model@4.0->Displacement@0.0	 cc:0.7748539383639012	
+Car@4.0, MPG@0.0, Horsepower@4.0, Weight@40.0->Displacement@2.0	 cc:0.7748356915206052	
+Car@4.0, Horsepower@4.0, Weight@10.0, Acceleration@2.0->MPG@1.0	 cc:0.7747427195095249	
+Car@3.0, MPG@4.0, Horsepower@0.0, Acceleration@2.0, Model@0.0->Weight@0.0	 cc:0.7745576443846642	
+Car@1.0, Horsepower@4.0, Weight@40.0, Acceleration@1.0, Model@4.0->Displacement@0.0	 cc:0.7743743070544034	
+Car@3.0, MPG@1.0, Weight@40.0, Acceleration@3.0, Model@1.0->Displacement@0.0	 cc:0.7743482401354089	
+Car@4.0, MPG@4.0, Horsepower@1.0, Acceleration@1.0, Model@2.0->Displacement@0.0	 cc:0.7739546296585929	
+Car@2.0, MPG@4.0, Horsepower@4.0, Weight@30.0, Model@4.0->Displacement@0.0	 cc:0.7736444333225589	
+Car@4.0, MPG@0.0, Weight@40.0, Acceleration@1.0->Horsepower@4.0	 cc:0.7732855787377355	
+Car@1.0, Weight@40.0, Acceleration@1.0, Model@1.0->MPG@1.0	 cc:0.7730223028558916	
+Car@4.0, MPG@1.0, Weight@10.0, Acceleration@3.0, Model@1.0->Displacement@0.0	 cc:0.7728519989851279	
+MPG@0.0, Displacement@1.0, Weight@0.0, Model@3.0->Acceleration@0.0	 cc:0.7728016029417387	
+Car@4.0, MPG@4.0, Horsepower@4.0, Weight@10.0, Model@4.0->Displacement@0.0	 cc:0.77274860020645	
+Car@1.0, Horsepower@1.0, Weight@40.0, Acceleration@2.0->MPG@1.0	 cc:0.7726538904007703	
+Car@4.0, Cylinders@1.0, Horsepower@2.0, Acceleration@1.0, Model@1.0->Displacement@0.0	 cc:0.7724879310165056	
+Car@4.0, MPG@0.0, Weight@40.0, Acceleration@1.0, Model@4.0->Horsepower@0.0	 cc:0.7720908449504902	
+MPG@2.0, Weight@0.0, Acceleration@0.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.7718223556848476	
+Car@3.0, Weight@10.0, Acceleration@1.0, Model@1.0->MPG@1.0	 cc:0.7715529975219049	
+Horsepower@0.0, Weight@20.0, Acceleration@0.0, Model@2.0, Origin@4.0->Displacement@0.0	 cc:0.7711341890233943	
+Horsepower@1.0, Weight@0.0, Acceleration@0.0, Model@2.0, Origin@4.0->Displacement@0.0	 cc:0.7707935812818668	
+Car@4.0->Origin@0.0	 cc:0.7702739806965776	
+Car@2.0, Horsepower@2.0, Weight@40.0, Acceleration@2.0, Model@2.0->Displacement@0.0	 cc:0.7689367477521627	
+Car@4.0, Horsepower@1.0, Weight@40.0, Acceleration@2.0, Model@2.0->Displacement@0.0	 cc:0.7677289805054202	
+Car@4.0, Weight@30.0, Acceleration@0.0, Model@2.0->MPG@1.0	 cc:0.76758908804015	
+Car@4.0, MPG@4.0, Horsepower@2.0, Acceleration@1.0, Model@1.0->Displacement@0.0	 cc:0.7660537465113773	
+Car@4.0, MPG@4.0, Horsepower@4.0, Acceleration@1.0, Model@0.0->Weight@0.0	 cc:0.7660528776140776	
+Car@3.0, MPG@4.0, Weight@40.0, Acceleration@1.0, Model@1.0->Displacement@0.0	 cc:0.7649172288432197	
+Car@4.0, Cylinders@1.0, Horsepower@4.0, Acceleration@1.0, Model@0.0->Displacement@0.0	 cc:0.764549685285398	
+Car@4.0, MPG@4.0, Displacement@3.0, Acceleration@1.0, Model@0.0->Weight@0.0	 cc:0.7637885312507603	
+Car@4.0, MPG@1.0, Weight@40.0, Acceleration@2.0, Model@1.0->Displacement@0.0	 cc:0.7637294462343729	
+Car@2.0, Horsepower@4.0, Weight@40.0, Acceleration@1.0, Model@4.0->Displacement@2.0	 cc:0.7635113530121194	
+Car@0.0, MPG@2.0, Weight@10.0->Model@1.0	 cc:0.7629205028482453	
+Car@4.0, MPG@2.0, Weight@0.0->Model@1.0	 cc:0.7626537513772023	
+Car@4.0, MPG@4.0, Horsepower@4.0, Weight@10.0->Acceleration@0.0	 cc:0.7624417404360474	
+Horsepower@0.0, Weight@30.0, Acceleration@0.0, Model@1.0, Origin@4.0->Displacement@0.0	 cc:0.7623861310088593	
+MPG@2.0, Weight@0.0, Acceleration@0.0, Model@0.0, Origin@4.0->Horsepower@0.0	 cc:0.7623644085763639	
+Car@2.0, MPG@1.0, Horsepower@3.0, Acceleration@1.0, Model@2.0->Displacement@0.0	 cc:0.7622592720030863	
+Car@0.0, Weight@40.0, Acceleration@3.0, Model@1.0->MPG@2.0	 cc:0.7621923669110007	
+Horsepower@0.0, Weight@20.0, Acceleration@0.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.7619612402292499	
+Car@4.0, Horsepower@4.0, Weight@40.0, Acceleration@2.0, Model@1.0->Displacement@0.0	 cc:0.7618839083695663	
+MPG@2.0, Weight@0.0, Acceleration@0.0, Model@0.0, Origin@4.0->Displacement@0.0	 cc:0.7617014399366053	
+Car@4.0, Displacement@0.0, Weight@0.0, Model@2.0->Acceleration@0.0	 cc:0.7608881520639786	
+MPG@0.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0, Model@4.0->Displacement@0.0	 cc:0.7601852141484285	
+Car@4.0, Displacement@0.0, Weight@0.0, Model@2.0->MPG@1.0	 cc:0.7601339492077395	
+Car@4.0, Horsepower@2.0, Weight@40.0, Acceleration@2.0, Model@1.0->Displacement@0.0	 cc:0.7598280973582047	
+Car@0.0, Weight@40.0, Acceleration@0.0->Model@1.0	 cc:0.7595109498437722	
+Car@4.0, Weight@40.0, Acceleration@0.0, Model@1.0->MPG@1.0	 cc:0.7588019296471235	
+MPG@0.0, Displacement@4.0, Weight@0.0, Acceleration@0.0, Model@4.0->Horsepower@0.0	 cc:0.7587254666847397	
+Car@4.0, MPG@1.0, Horsepower@4.0, Weight@10.0, Model@4.0->Displacement@0.0	 cc:0.7586620371818533	
+Car@2.0, Horsepower@4.0, Weight@40.0, Acceleration@1.0, Model@2.0->Displacement@0.0	 cc:0.7581971771264524	
+Car@4.0, MPG@4.0, Horsepower@4.0, Acceleration@1.0, Model@0.0->Displacement@0.0	 cc:0.7581155007802698	
+Car@4.0, Cylinders@1.0, Horsepower@4.0, Acceleration@0.0, Model@0.0->Weight@0.0	 cc:0.7580329555367874	
+MPG@0.0, Displacement@0.0, Weight@20.0, Acceleration@0.0, Model@4.0->Horsepower@0.0	 cc:0.7577470883251484	
+Car@3.0, Weight@0.0, Acceleration@0.0->Model@1.0	 cc:0.7575411596650922	
+MPG@0.0, Horsepower@3.0, Weight@0.0, Model@1.0->Acceleration@0.0	 cc:0.7568955689713299	
+Car@0.0, Horsepower@4.0, Weight@40.0, Model@1.0->MPG@1.0	 cc:0.7567930390899518	
+Car@0.0, Horsepower@4.0, Weight@20.0->Model@1.0	 cc:0.7567087560518697	
+MPG@2.0, Displacement@0.0->Cylinders@0.0	 cc:0.7565341076946069	
+Car@2.0, Horsepower@3.0, Weight@20.0->Model@1.0	 cc:0.7559163217144386	
+Car@4.0, Horsepower@4.0, Weight@0.0->Model@1.0	 cc:0.7559067638441407	
+Car@4.0, MPG@0.0, Horsepower@2.0->Model@1.0	 cc:0.7558972059738427	
+Car@3.0, MPG@2.0, Weight@40.0, Acceleration@1.0, Model@1.0->Displacement@0.0	 cc:0.7557321154868779	
+MPG@0.0, Displacement@4.0, Weight@0.0, Model@1.0->Acceleration@0.0	 cc:0.755726902103079	
+Car@4.0, Horsepower@3.0, Weight@10.0->Model@1.0	 cc:0.755572238383712	
+Car@3.0, MPG@2.0, Displacement@4.0, Model@0.0->Acceleration@0.0	 cc:0.755515760059224	
+Car@4.0, MPG@0.0, Horsepower@4.0, Weight@40.0, Model@4.0->Displacement@0.0	 cc:0.7552359751286837	
+Car@1.0, MPG@0.0, Displacement@4.0, Weight@40.0->Horsepower@4.0	 cc:0.7548189044247726	
+Car@0.0, Displacement@4.0, Weight@40.0, Model@1.0->MPG@1.0	 cc:0.7547519993326868	
+Car@4.0, MPG@4.0, Horsepower@1.0, Weight@40.0, Model@2.0->Displacement@0.0	 cc:0.7546737985757035	
+Car@4.0, MPG@2.0, Weight@40.0, Model@0.0->Acceleration@0.0	 cc:0.7545712686943254	
+Car@1.0, Horsepower@1.0, Weight@40.0->Model@1.0	 cc:0.7543557821639714	
+Car@4.0, Horsepower@1.0, Weight@30.0->Model@1.0	 cc:0.7540768661307309	
+Car@0.0, Displacement@4.0, Weight@10.0, Model@1.0->Acceleration@0.0	 cc:0.7539065622599671	
+Car@3.0, Horsepower@0.0, Weight@40.0->Model@1.0	 cc:0.7537536363351997	
+MPG@0.0, Displacement@0.0, Weight@40.0, Acceleration@0.0, Model@4.0->Horsepower@1.0	 cc:0.7536841245512146	
+Car@1.0, MPG@0.0, Displacement@4.0, Weight@40.0, Model@4.0->Horsepower@0.0	 cc:0.7536241706375273	
+Car@4.0, MPG@3.0, Horsepower@4.0, Acceleration@1.0, Model@0.0->Displacement@0.0	 cc:0.7535711679022387	
+Car@3.0, MPG@2.0, Horsepower@0.0, Model@0.0->Acceleration@0.0	 cc:0.7533695837286816	
+MPG@0.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0, Model@4.0->Displacement@1.0	 cc:0.7531905908849198	
+Car@4.0, MPG@1.0, Horsepower@3.0, Acceleration@1.0, Model@1.0->Displacement@0.0	 cc:0.7531506216091283	
+Car@4.0, Cylinders@1.0, Horsepower@1.0, Weight@40.0, Model@2.0->Displacement@1.0	 cc:0.7531219479982344	
+Car@4.0, MPG@0.0, Weight@10.0, Model@1.0->Acceleration@0.0	 cc:0.7530385338574522	
+Car@1.0, Displacement@0.0, Weight@40.0, Model@1.0->MPG@1.0	 cc:0.7527378953917163	
+Car@0.0, MPG@2.0, Horsepower@3.0, Acceleration@0.0, Model@2.0->Displacement@0.0	 cc:0.75262667653734	
+Horsepower@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->MPG@1.0	 cc:0.7524754884071723	
+Car@4.0, Displacement@0.0, Weight@10.0, Model@1.0->Acceleration@0.0	 cc:0.7521261916926467	
+Car@4.0, MPG@0.0, Horsepower@4.0, Acceleration@0.0, Model@2.0->Weight@0.0	 cc:0.7517803705673205	
+Displacement@0.0, Acceleration@0.0->Cylinders@0.0	 cc:0.7515249147611749	
+Car@1.0, Weight@40.0, Acceleration@2.0, Model@1.0->MPG@2.0	 cc:0.7515075368151786	
+Car@4.0, Displacement@0.0, Weight@10.0, Model@1.0->MPG@1.0	 cc:0.7513719888364074	
+Car@3.0, MPG@4.0, Cylinders@1.0, Horsepower@0.0, Acceleration@2.0, Model@3.0->Displacement@0.0	 cc:0.7512320963711373	
+Car@1.0, MPG@2.0, Displacement@4.0, Weight@10.0->Acceleration@0.0	 cc:0.7509818539487907	
+MPG@0.0, Horsepower@4.0, Weight@20.0, Acceleration@1.0, Model@0.0->Car@0.0	 cc:0.7502380778601493	
+Car@4.0, Weight@10.0, Acceleration@2.0, Model@1.0->MPG@2.0	 cc:0.7501416302598698	
+MPG@0.0, Horsepower@2.0, Weight@40.0, Model@0.0, Origin@4.0->Displacement@0.0	 cc:0.7501181700327748	
+Car@0.0, Acceleration@0.0->Cylinders@0.0	 cc:0.7500790696542832	
+Car@4.0, Displacement@4.0, Acceleration@0.0, Model@0.0->MPG@1.0	 cc:0.7498557630482308	
+Displacement@0.0, Model@0.0->Cylinders@0.0	 cc:0.7495021218472062	
+Car@0.0, Horsepower@4.0, Model@0.0->MPG@3.0	 cc:0.7488261197479503	
+Horsepower@0.0, Weight@20.0, Acceleration@0.0, Model@0.0->MPG@1.0	 cc:0.7488235130560508	
+Car@3.0, MPG@4.0, Horsepower@4.0, Weight@40.0, Model@1.0->Displacement@0.0	 cc:0.7487253276611718	
+Car@4.0, Horsepower@4.0, Weight@30.0, Acceleration@0.0->MPG@1.0	 cc:0.7485802218121027	
+MPG@0.0, Horsepower@4.0, Weight@10.0, Model@0.0->Acceleration@0.0	 cc:0.7483117325464599	
+Displacement@0.0, Horsepower@2.0->Cylinders@0.0	 cc:0.7477313091501837	
+Car@3.0, Cylinders@1.0, Horsepower@4.0, Weight@40.0, Model@1.0->Displacement@1.0	 cc:0.7471734770837026	
+MPG@1.0, Displacement@4.0, Horsepower@0.0, Weight@0.0->Acceleration@0.0	 cc:0.7468563295692703	
+MPG@0.0, Horsepower@2.0, Weight@20.0, Model@0.0->Acceleration@0.0	 cc:0.7467911622717842	
+Car@0.0, Displacement@4.0, Model@0.0->MPG@3.0	 cc:0.7467850799906854	
+Displacement@1.0, Horsepower@0.0->Cylinders@0.0	 cc:0.7467407662283949	
+Car@4.0, Displacement@4.0->Cylinders@0.0	 cc:0.746571331254931	
+MPG@1.0, Horsepower@0.0, Weight@30.0, Acceleration@0.0, Model@2.0->Displacement@0.0	 cc:0.7463471557515788	
+MPG@0.0, Displacement@4.0, Weight@10.0, Model@0.0->Acceleration@0.0	 cc:0.7462706927891951	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Weight@0.0->Acceleration@0.0	 cc:0.7460178436749489	
+MPG@4.0, Displacement@4.0, Horsepower@0.0, Weight@0.0, Model@0.0->Car@0.0	 cc:0.7458570976744833	
+Horsepower@0.0, Weight@20.0, Acceleration@0.0, Model@0.0, Origin@4.0->MPG@0.0	 cc:0.7454539293273692	
+Car@0.0, Cylinders@1.0, Weight@40.0, Model@1.0->MPG@2.0	 cc:0.744849176806698	
+Car@2.0, Weight@30.0->Cylinders@0.0	 cc:0.7448196342985045	
+Car@1.0, Displacement@0.0, Model@0.0->MPG@3.0	 cc:0.7447709760497148	
+MPG@2.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0, Model@1.0->Displacement@0.0	 cc:0.7445111757570702	
+Car@4.0, MPG@2.0, Horsepower@4.0, Acceleration@0.0, Model@1.0->Displacement@0.0	 cc:0.744470337583979	
+Car@2.0, MPG@4.0, Horsepower@4.0, Weight@40.0, Acceleration@1.0->Displacement@2.0	 cc:0.7442148817778333	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Model@0.0, Origin@4.0->Displacement@1.0	 cc:0.7441879459615391	
+Car@4.0, Cylinders@1.0, Horsepower@4.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.7437091835493412	
+Car@4.0, Weight@0.0->Cylinders@0.0	 cc:0.7433859537538101	
+Car@4.0, Displacement@0.0, Weight@40.0, Model@0.0->MPG@1.0	 cc:0.7429775720228973	
+Car@4.0, Displacement@0.0, Horsepower@4.0, Weight@10.0->Acceleration@0.0	 cc:0.7424171332645166	
+Car@1.0, Displacement@0.0, Horsepower@4.0, Weight@20.0->MPG@1.0	 cc:0.7419644377713133	
+MPG@2.0, Horsepower@0.0, Weight@30.0, Acceleration@0.0, Model@1.0->Displacement@0.0	 cc:0.7419487976199165	
+MPG@3.0, Displacement@4.0, Horsepower@0.0, Weight@10.0, Model@0.0->Car@0.0	 cc:0.7418506122250375	
+Car@0.0, Displacement@4.0, Weight@0.0->MPG@3.0	 cc:0.7418436610466389	
+Car@1.0, Horsepower@4.0, Weight@40.0, Acceleration@2.0->MPG@2.0	 cc:0.7417984783870486	
+MPG@0.0, Displacement@1.0, Weight@0.0, Model@4.0, Origin@4.0->Acceleration@0.0	 cc:0.7417863138248512	
+Car@4.0, Displacement@0.0, Horsepower@4.0, Weight@10.0->MPG@1.0	 cc:0.7416629304082776	
+MPG@0.0, Horsepower@4.0, Weight@10.0, Acceleration@1.0, Model@1.0->Displacement@1.0	 cc:0.741589943035093	
+Car@4.0, MPG@2.0, Weight@40.0, Acceleration@0.0, Model@1.0->Displacement@0.0	 cc:0.7413814076831375	
+Displacement@1.0, Model@0.0->Cylinders@1.0	 cc:0.7402970238529687	
+Car@2.0, MPG@1.0, Horsepower@3.0, Weight@40.0, Acceleration@1.0->Displacement@0.0	 cc:0.7401614758741976	
+MPG@0.0, Horsepower@4.0, Weight@20.0, Acceleration@1.0, Model@0.0->Displacement@0.0	 cc:0.740117162111907	
+Car@3.0, Displacement@0.0, Weight@0.0->MPG@3.0	 cc:0.7399598917006405	
+MPG@1.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.7397365850945882	
+Car@1.0, Displacement@0.0, Horsepower@1.0, Weight@40.0->MPG@1.0	 cc:0.7395741012995227	
+Car@3.0, MPG@2.0, Displacement@4.0, Horsepower@4.0, Model@0.0->Weight@0.0	 cc:0.7385314245397451	
+MPG@0.0, Displacement@4.0->Cylinders@1.0	 cc:0.7383124624201918	
+MPG@1.0, Displacement@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.7382333927659086	
+Displacement@1.0, Horsepower@1.0->Cylinders@1.0	 cc:0.7371272865032445	
+MPG@4.0, Horsepower@0.0, Weight@10.0, Acceleration@0.0, Model@4.0, Origin@4.0->Displacement@0.0	 cc:0.737016936546168	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.736848370470004	
+Displacement@4.0, Horsepower@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.7363878549011021	
+Displacement@0.0, Model@4.0, Origin@4.0->Cylinders@1.0	 cc:0.7361202345327593	
+MPG@1.0, Horsepower@0.0, Weight@10.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.7360872164353662	
+MPG@3.0, Horsepower@3.0, Weight@0.0, Acceleration@0.0, Model@4.0, Origin@4.0->Displacement@0.0	 cc:0.7352495994383448	
+MPG@0.0, Displacement@4.0, Weight@40.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.7348073307127391	
+MPG@0.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0, Model@0.0->Car@0.0	 cc:0.7347925594586423	
+Car@3.0, MPG@3.0, Cylinders@1.0, Horsepower@1.0, Acceleration@1.0, Model@3.0->Displacement@0.0	 cc:0.734624862279778	
+Car@4.0, MPG@0.0, Displacement@1.0, Weight@40.0, Acceleration@1.0->Horsepower@0.0	 cc:0.7339106286993302	
+Car@4.0, Displacement@4.0, Horsepower@4.0, Acceleration@0.0, Model@0.0->Weight@0.0	 cc:0.7336256303849911	
+Displacement@0.0, Acceleration@3.0, Model@1.0->Cylinders@0.0	 cc:0.733471835562924	
+Car@4.0, MPG@1.0, Horsepower@1.0, Weight@40.0, Model@2.0->Displacement@1.0	 cc:0.7326012004685094	
+MPG@0.0, Displacement@4.0, Weight@40.0, Acceleration@0.0, Model@4.0->Horsepower@4.0	 cc:0.7315524414276331	
+Displacement@0.0, Acceleration@4.0, Model@1.0->Cylinders@1.0	 cc:0.7315159477410409	
+MPG@3.0, Displacement@0.0, Model@4.0->Cylinders@0.0	 cc:0.7306696417710212	
+Car@4.0, MPG@4.0, Cylinders@1.0, Horsepower@1.0, Acceleration@1.0, Model@2.0->Displacement@0.0	 cc:0.7305870965275388	
+Car@0.0, MPG@0.0, Displacement@4.0, Horsepower@4.0, Acceleration@0.0->Weight@0.0	 cc:0.730459368624466	
+MPG@4.0, Horsepower@0.0, Weight@20.0, Acceleration@0.0, Model@3.0, Origin@4.0->Displacement@0.0	 cc:0.7300179687961601	
+MPG@0.0, Displacement@0.0, Horsepower@4.0, Weight@20.0, Model@0.0->Car@0.0	 cc:0.7299536703959739	
+Displacement@0.0, Acceleration@2.0, Origin@4.0->Cylinders@1.0	 cc:0.72987894522819	
+Car@4.0, MPG@0.0, Displacement@4.0, Horsepower@3.0, Acceleration@0.0->Weight@0.0	 cc:0.7298580916929942	
+Car@4.0, MPG@0.0, Displacement@1.0, Horsepower@4.0, Acceleration@0.0->Weight@0.0	 cc:0.7298198602118025	
+MPG@4.0, Horsepower@1.0, Weight@0.0, Acceleration@0.0, Model@3.0, Origin@4.0->Displacement@0.0	 cc:0.7296773610546328	
+MPG@1.0, Displacement@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->Horsepower@0.0	 cc:0.7287754456574251	
+MPG@3.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0, Model@3.0, Origin@4.0->Displacement@0.0	 cc:0.728587763840665	
+MPG@1.0, Displacement@1.0, Weight@20.0, Acceleration@0.0, Model@0.0->Horsepower@0.0	 cc:0.7284000820239052	
+Car@0.0, MPG@0.0, Acceleration@4.0->Cylinders@0.0	 cc:0.7275268402375913	
+Displacement@0.0, Acceleration@1.0, Origin@4.0->Cylinders@0.0	 cc:0.7274295237400121	
+Car@1.0, Weight@20.0, Acceleration@2.0, Model@2.0->MPG@3.0	 cc:0.7272574820746487	
+MPG@4.0, Displacement@0.0, Origin@4.0->Cylinders@0.0	 cc:0.7271697234473674	
+Car@4.0, MPG@0.0, Displacement@4.0, Horsepower@4.0, Acceleration@0.0->Weight@10.0	 cc:0.726965532581911	
+Car@4.0, Weight@10.0, Acceleration@2.0, Model@2.0->MPG@3.0	 cc:0.726955974711613	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Acceleration@0.0, Model@0.0->Displacement@0.0	 cc:0.7267274547217617	
+Car@3.0, MPG@1.0, Horsepower@4.0, Weight@40.0, Model@1.0->Displacement@1.0	 cc:0.7266527295539776	
+Car@4.0, MPG@4.0, Weight@0.0->Acceleration@1.0	 cc:0.726458965456119	
+Car@4.0, Displacement@4.0, Weight@10.0, Acceleration@2.0, Model@2.0->MPG@1.0	 cc:0.7259767274547217	
+MPG@3.0, Horsepower@0.0, Weight@20.0, Acceleration@0.0, Model@3.0, Origin@4.0->Displacement@0.0	 cc:0.725473635918129	
+MPG@0.0, Displacement@4.0, Weight@40.0, Acceleration@0.0, Model@0.0->Horsepower@0.0	 cc:0.7253493836042555	
+MPG@3.0, Displacement@0.0, Acceleration@2.0->Cylinders@0.0	 cc:0.7244283524664519	
+MPG@1.0, Displacement@4.0, Weight@20.0, Acceleration@0.0, Model@0.0->Horsepower@1.0	 cc:0.7241833234279041	
+MPG@1.0, Horsepower@0.0, Weight@30.0, Acceleration@0.0, Model@4.0, Origin@4.0->Displacement@0.0	 cc:0.7240173640436395	
+MPG@0.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0, Model@4.0, Origin@4.0->Displacement@0.0	 cc:0.7226271283639359	
+Car@0.0, MPG@1.0, Weight@30.0, Acceleration@2.0->Model@1.0	 cc:0.7223595079955929	
+MPG@2.0, Horsepower@0.0, Weight@30.0, Acceleration@0.0, Model@3.0, Origin@4.0->Displacement@0.0	 cc:0.7213846052252008	
+MPG@0.0, Displacement@4.0, Weight@20.0, Acceleration@0.0, Model@4.0, Origin@4.0->Horsepower@0.0	 cc:0.7212490572464297	
+Displacement@0.0, Acceleration@3.0, Model@4.0, Origin@4.0->Cylinders@0.0	 cc:0.7204418516549018	
+Weight@0.0, Acceleration@0.0, Model@4.0->Cylinders@0.0	 cc:0.7198857573830204	
+Displacement@4.0, Horsepower@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.7198805439992214	
+Car@2.0, Weight@40.0, Acceleration@3.0->Cylinders@0.0	 cc:0.7193079406786436	
+Car@4.0, Displacement@4.0, Horsepower@4.0, Acceleration@0.0, Model@0.0->MPG@0.0	 cc:0.7193018583975449	
+Car@0.0, MPG@2.0, Acceleration@2.0->Cylinders@0.0	 cc:0.7183417268812495	
+Car@1.0, Displacement@4.0, Weight@40.0, Acceleration@2.0, Model@1.0->MPG@1.0	 cc:0.7180428262101133	
+Displacement@1.0, Weight@40.0, Model@4.0->Cylinders@0.0	 cc:0.7173338060134644	
+MPG@0.0, Displacement@4.0, Weight@40.0, Acceleration@0.0, Model@4.0, Origin@4.0->Horsepower@1.0	 cc:0.717186093472496	
+Car@1.0, Horsepower@4.0, Model@0.0->MPG@4.0	 cc:0.7170531521856243	
+Displacement@4.0, Weight@20.0, Acceleration@0.0, Model@0.0->MPG@2.0	 cc:0.7166595417088082	
+Displacement@4.0, Weight@0.0, Model@4.0->Cylinders@0.0	 cc:0.7161069230261261	
+Car@1.0, Weight@40.0, Acceleration@1.0, Model@2.0->MPG@3.0	 cc:0.7155264996298497	
+Car@1.0, Displacement@4.0, Model@0.0->MPG@4.0	 cc:0.7150121124283594	
+Car@2.0, MPG@4.0, Acceleration@1.0->Cylinders@0.0	 cc:0.7148113971521022	
+Car@0.0, MPG@2.0, Weight@20.0, Acceleration@1.0->Model@1.0	 cc:0.7139138262413935	
+Car@1.0, Displacement@4.0, Weight@20.0, Acceleration@1.0, Model@2.0->MPG@1.0	 cc:0.7134828531806854	
+Car@1.0, MPG@4.0, Displacement@4.0, Weight@10.0, Model@2.0->Acceleration@0.0	 cc:0.7134420150075942	
+Weight@20.0, Acceleration@0.0, Model@0.0, Origin@4.0->MPG@3.0	 cc:0.7133994390399032	
+MPG@4.0, Horsepower@0.0, Weight@30.0, Acceleration@0.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.71271127237845	
+Car@0.0, Horsepower@4.0, Weight@40.0->Acceleration@1.0	 cc:0.7123932559667178	
+Displacement@1.0, Acceleration@0.0, Model@4.0->Cylinders@1.0	 cc:0.7118145703650411	
+Car@0.0, Horsepower@4.0, Acceleration@2.0->Cylinders@0.0	 cc:0.7115947393481881	
+Car@2.0, Acceleration@2.0, Model@0.0->Cylinders@0.0	 cc:0.7113896795854318	
+Displacement@0.0, Horsepower@4.0, Origin@4.0->Cylinders@0.0	 cc:0.7112376225579642	
+Displacement@1.0, Acceleration@1.0, Model@1.0->Cylinders@0.0	 cc:0.7110951234007945	
+MPG@0.0, Horsepower@4.0, Weight@10.0, Acceleration@1.0, Model@1.0, Origin@4.0->Displacement@0.0	 cc:0.7110264805141091	
+Horsepower@1.0, Weight@20.0, Acceleration@0.0, Model@0.0, Origin@4.0->MPG@1.0	 cc:0.7110064958762135	
+Car@0.0, MPG@1.0, Weight@40.0, Acceleration@1.0->Model@1.0	 cc:0.7100767757654116	
+MPG@4.0, Displacement@0.0, Model@1.0->Cylinders@0.0	 cc:0.7096944609534932	
+Car@1.0, Displacement@0.0, Horsepower@4.0, Weight@40.0->MPG@2.0	 cc:0.7087186892858012	
+MPG@4.0, Displacement@4.0, Horsepower@0.0, Weight@20.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.7083806882361733	
+Car@1.0, Cylinders@1.0, Weight@40.0, Acceleration@2.0, Model@1.0->MPG@2.0	 cc:0.7081400036841246	
+Displacement@1.0, Horsepower@2.0, Model@4.0->Cylinders@1.0	 cc:0.7080209647540501	
+Car@4.0, MPG@4.0, Weight@0.0, Acceleration@0.0->Model@1.0	 cc:0.7078428408075879	
+Car@1.0, Displacement@4.0, Weight@40.0, Acceleration@2.0->MPG@3.0	 cc:0.7072719752816096	
+Car@4.0, Displacement@0.0, Weight@0.0->Acceleration@1.0	 cc:0.7064343582845882	
+Car@3.0, Displacement@4.0, Weight@10.0, Acceleration@2.0->MPG@3.0	 cc:0.7058026699476229	
+Car@3.0, MPG@2.0, Acceleration@1.0->Cylinders@0.0	 cc:0.7057140424230417	
+Car@3.0, MPG@4.0, Cylinders@1.0, Horsepower@4.0, Weight@40.0, Model@1.0->Displacement@0.0	 cc:0.7053577945301177	
+Car@3.0, MPG@4.0, Horsepower@1.0, Weight@40.0->Model@1.0	 cc:0.7046843991227613	
+Car@3.0, MPG@4.0, Acceleration@1.0->Cylinders@1.0	 cc:0.7045531956304893	
+MPG@3.0, Displacement@1.0, Acceleration@1.0->Cylinders@1.0	 cc:0.7024278728351425	
+Displacement@4.0, Weight@0.0, Acceleration@0.0, Model@2.0->MPG@3.0	 cc:0.7023948547377494	
+Horsepower@1.0, Weight@0.0, Acceleration@0.0, Model@2.0->MPG@3.0	 cc:0.7009811588309508	
+Car@4.0, MPG@1.0, Acceleration@1.0->Cylinders@0.0	 cc:0.7009159915334646	
+Car@0.0, MPG@2.0, Weight@40.0, Acceleration@0.0->Model@1.0	 cc:0.7005241188512483	
+Car@3.0, MPG@4.0, Acceleration@0.0->Cylinders@0.0	 cc:0.7004450491969652	
+Car@4.0, MPG@0.0, Displacement@4.0, Horsepower@4.0, Acceleration@0.0, Model@4.0->Weight@0.0	 cc:0.700225218180112	
+MPG@1.0, Displacement@4.0, Weight@20.0, Acceleration@0.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.7002191358990133	
+Displacement@3.0, Weight@30.0, Acceleration@4.0, Model@4.0->Cylinders@0.0	 cc:0.6998741836709869	
+Weight@0.0, Acceleration@0.0, Model@2.0, Origin@4.0->MPG@4.0	 cc:0.6998098852708005	
+MPG@4.0, Displacement@1.0, Horsepower@4.0, Weight@0.0, Acceleration@1.0, Model@0.0->Car@0.0	 cc:0.699591792048547	
+Displacement@4.0, Weight@10.0, Acceleration@4.0, Model@4.0->Cylinders@0.0	 cc:0.6990104997549709	
+Displacement@1.0, Weight@40.0, Origin@4.0->Cylinders@1.0	 cc:0.6989435946628852	
+Car@0.0, MPG@4.0, Horsepower@4.0->Cylinders@0.0	 cc:0.6985395574184714	
+Car@3.0, MPG@4.0, Model@0.0->Cylinders@0.0	 cc:0.6984222562829965	
+Displacement@4.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.6983735980342067	
+MPG@4.0, Displacement@3.0, Weight@30.0->Cylinders@0.0	 cc:0.6982119831364413	
+MPG@4.0, Displacement@1.0, Weight@40.0->Cylinders@0.0	 cc:0.6980373347791784	
+Car@4.0, Displacement@0.0, Weight@30.0, Acceleration@0.0, Model@2.0->MPG@1.0	 cc:0.697762763232437	
+Displacement@4.0, Weight@0.0, Origin@4.0->Cylinders@1.0	 cc:0.6977167116755468	
+MPG@4.0, Displacement@4.0, Weight@10.0->Cylinders@0.0	 cc:0.6973482992204254	
+MPG@4.0, Displacement@4.0, Horsepower@1.0, Weight@0.0, Acceleration@1.0, Model@0.0->Car@0.0	 cc:0.6970476607546895	
+Car@0.0, MPG@4.0, Acceleration@2.0, Model@4.0->Cylinders@0.0	 cc:0.697021593835695	
+MPG@3.0, Displacement@4.0, Horsepower@4.0, Weight@10.0, Acceleration@1.0, Model@0.0->Car@0.0	 cc:0.6964959109693071	
+Car@4.0, Weight@40.0, Acceleration@1.0->Cylinders@0.0	 cc:0.6959815237678166	
+MPG@0.0, Weight@0.0, Acceleration@1.0->Cylinders@0.0	 cc:0.6959311277244276	
+Car@3.0, Weight@0.0->Model@3.0	 cc:0.6956400471289894	
+Displacement@3.0, Horsepower@4.0, Model@1.0->Cylinders@0.0	 cc:0.6955905199829002	
+Car@3.0, Weight@20.0, Acceleration@2.0, Model@2.0->MPG@4.0	 cc:0.6955774865234029	
+MPG@3.0, Displacement@0.0, Horsepower@4.0->Cylinders@0.0	 cc:0.6954410696473319	
+Horsepower@4.0, Weight@0.0, Acceleration@0.0, Model@1.0->MPG@3.0	 cc:0.695136086695097	
+MPG@4.0, Displacement@4.0, Horsepower@0.0, Weight@0.0, Model@0.0->Acceleration@0.0	 cc:0.6949240757539421	
+Displacement@1.0, Acceleration@4.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6944592156985414	
+Car@1.0, MPG@2.0, Displacement@1.0, Weight@10.0->Model@1.0	 cc:0.6942724027790811	
+Car@0.0, MPG@1.0, Horsepower@4.0, Weight@40.0->Model@1.0	 cc:0.6938848745833637	
+Car@0.0, Horsepower@4.0, Weight@40.0, Acceleration@0.0->Model@1.0	 cc:0.6937771313181866	
+Car@2.0, Horsepower@3.0, Weight@40.0, Acceleration@0.0->Model@1.0	 cc:0.6929846969807556	
+Car@0.0, Horsepower@4.0, Weight@40.0->Model@2.0	 cc:0.6926745006447218	
+MPG@0.0, Displacement@4.0, Model@1.0->Cylinders@0.0	 cc:0.6926336624716305	
+Car@2.0, MPG@1.0, Horsepower@3.0, Weight@30.0->Model@1.0	 cc:0.692579790839042	
+MPG@4.0, Displacement@1.0, Acceleration@0.0->Cylinders@1.0	 cc:0.6925180991307551	
+Car@0.0, Horsepower@4.0, Model@1.0->Cylinders@0.0	 cc:0.6923165149571981	
+Car@2.0, MPG@1.0, Horsepower@2.0, Weight@40.0->Model@1.0	 cc:0.691909002123585	
+Car@1.0, Horsepower@3.0, Weight@40.0->Model@2.0	 cc:0.6918394903395999	
+Displacement@4.0, Weight@30.0, Acceleration@3.0, Model@4.0->Cylinders@0.0	 cc:0.691707417950028	
+Car@3.0, Horsepower@3.0, Weight@30.0->Model@2.0	 cc:0.6914571755276814	
+MPG@3.0, Displacement@4.0, Horsepower@0.0, Weight@20.0, Model@0.0->Acceleration@0.0	 cc:0.6914528310411823	
+Car@0.0, MPG@1.0, Displacement@4.0, Weight@30.0->Model@1.0	 cc:0.6913311854192081	
+Car@4.0, Displacement@4.0, Weight@40.0, Acceleration@0.0, Model@1.0->MPG@1.0	 cc:0.6910270713642731	
+Car@4.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0, Model@1.0->MPG@1.0	 cc:0.6910123001101762	
+Car@2.0, Displacement@1.0, Weight@40.0, Acceleration@0.0->Model@1.0	 cc:0.6909054257422989	
+MPG@1.0, Displacement@4.0, Weight@20.0, Acceleration@0.0, Model@0.0, Origin@4.0->Horsepower@0.0	 cc:0.6907611887905297	
+Displacement@0.0, Weight@40.0, Acceleration@4.0, Origin@4.0->Cylinders@0.0	 cc:0.6905144219573823	
+Car@3.0, Horsepower@1.0, Weight@40.0, Acceleration@0.0->Model@1.0	 cc:0.6904900928329875	
+Car@1.0, MPG@1.0, Displacement@1.0, Weight@30.0->Model@1.0	 cc:0.6904579436328944	
+MPG@4.0, Weight@0.0, Acceleration@0.0->Cylinders@1.0	 cc:0.6902433259998402	
+Car@3.0, Displacement@1.0, Weight@20.0, Acceleration@0.0->Model@1.0	 cc:0.6899287851773072	
+Car@0.0, MPG@0.0, Displacement@4.0, Horsepower@4.0->Model@1.0	 cc:0.6899070627448118	
+Car@2.0, MPG@0.0, Acceleration@4.0, Model@3.0->Cylinders@0.0	 cc:0.6895673239005842	
+Car@1.0, MPG@4.0, Acceleration@2.0, Model@3.0->Cylinders@0.0	 cc:0.6895247479328934	
+MPG@3.0, Displacement@0.0, Horsepower@0.0, Weight@20.0, Model@0.0->Acceleration@0.0	 cc:0.6894013645163196	
+Car@4.0, MPG@0.0, Displacement@4.0, Horsepower@3.0->Model@1.0	 cc:0.68930578581334	
+Car@4.0, MPG@0.0, Displacement@1.0, Horsepower@4.0->Model@1.0	 cc:0.6892675543321481	
+MPG@2.0, Displacement@4.0, Weight@30.0->Cylinders@0.0	 cc:0.6892501763861518	
+Car@4.0, Weight@30.0, Model@1.0->Cylinders@0.0	 cc:0.6889860316070082	
+Car@4.0, Displacement@0.0, Weight@40.0, Acceleration@0.0, Model@1.0->MPG@1.0	 cc:0.6889756048394104	
+Car@4.0, MPG@0.0, Horsepower@3.0, Weight@40.0->Model@1.0	 cc:0.6882578956697634	
+Car@3.0, Displacement@4.0, Horsepower@3.0, Weight@20.0->Model@1.0	 cc:0.6882292220588695	
+Car@4.0, Displacement@1.0, Horsepower@4.0, Weight@10.0->Model@1.0	 cc:0.6877591486196697	
+Displacement@1.0, Acceleration@1.0, Model@4.0, Origin@4.0->Cylinders@1.0	 cc:0.6877191793438784	
+Car@4.0, Weight@40.0, Acceleration@2.0, Model@1.0->MPG@4.0	 cc:0.6874454766944367	
+Car@1.0, Displacement@0.0, Horsepower@4.0, Weight@40.0, Model@1.0->MPG@1.0	 cc:0.6870040768661307	
+MPG@1.0, Weight@0.0, Acceleration@0.0->Cylinders@0.0	 cc:0.6865027231241376	
+Horsepower@4.0, Weight@20.0, Acceleration@0.0, Model@0.0->MPG@3.0	 cc:0.6862151181178989	
+Car@4.0, MPG@2.0, Weight@30.0->Cylinders@0.0	 cc:0.6860239607119396	
+Car@1.0, MPG@0.0, Displacement@1.0, Weight@40.0->Model@1.0	 cc:0.6859448910576564	
+Car@3.0, Displacement@1.0, Horsepower@1.0, Weight@40.0->Model@1.0	 cc:0.6858006541058873	
+Displacement@4.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0, Model@0.0->MPG@1.0	 cc:0.6852358708610078	
+MPG@1.0, Displacement@4.0, Weight@40.0->Cylinders@0.0	 cc:0.6848613761247876	
+Horsepower@4.0, Weight@0.0, Acceleration@0.0->Cylinders@0.0	 cc:0.6846571852593311	
+Car@4.0, MPG@1.0, Model@0.0->Cylinders@0.0	 cc:0.6844390920370775	
+Car@3.0, Weight@40.0, Acceleration@1.0, Model@2.0->MPG@4.0	 cc:0.6838465040786039	
+Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->MPG@3.0	 cc:0.6833859885097021	
+MPG@4.0, Displacement@1.0, Acceleration@4.0, Model@0.0->Cylinders@0.0	 cc:0.6832069956659403	
+Horsepower@4.0, Weight@10.0, Model@0.0->Cylinders@0.0	 cc:0.6831722397739477	
+Displacement@4.0, Weight@10.0, Acceleration@0.0->Cylinders@0.0	 cc:0.6831539929306516	
+Displacement@4.0, Horsepower@4.0, Weight@40.0->Cylinders@0.0	 cc:0.6830158382599809	
+Car@4.0, MPG@1.0, Horsepower@2.0->Cylinders@0.0	 cc:0.6826682793400551	
+MPG@0.0, Weight@20.0, Acceleration@0.0->Cylinders@0.0	 cc:0.6825501093072803	
+Car@3.0, Horsepower@4.0, Model@0.0->Cylinders@0.0	 cc:0.6824901553935931	
+Displacement@4.0, Weight@30.0, Model@0.0->Cylinders@0.0	 cc:0.682218190538751	
+Horsepower@2.0, Weight@20.0, Model@0.0->Cylinders@0.0	 cc:0.6816516694992718	
+Car@4.0, MPG@1.0, Weight@40.0->Cylinders@0.0	 cc:0.6816351604505755	
+MPG@0.0, Weight@40.0, Model@0.0->Cylinders@0.0	 cc:0.6815917155855846	
+Displacement@3.0, Weight@30.0, Acceleration@4.0, Origin@4.0->Cylinders@1.0	 cc:0.6814839723204076	
+Car@4.0, Cylinders@1.0, Weight@40.0, Acceleration@0.0, Model@1.0->MPG@2.0	 cc:0.6811242488382843	
+Car@4.0, MPG@4.0, Acceleration@4.0, Model@0.0->Cylinders@0.0	 cc:0.680891384361934	
+Car@2.0, MPG@4.0, Acceleration@2.0, Model@2.0->Cylinders@0.0	 cc:0.6808818264916361	
+Displacement@4.0, Weight@10.0, Acceleration@4.0, Origin@4.0->Cylinders@1.0	 cc:0.6806202884043917	
+Horsepower@0.0, Weight@40.0, Model@0.0->Cylinders@0.0	 cc:0.6805846636150994	
+Car@4.0, Horsepower@2.0, Model@0.0->Cylinders@0.0	 cc:0.6805377431609094	
+Car@3.0, MPG@2.0, Acceleration@2.0, Model@3.0->Cylinders@0.0	 cc:0.6804699691715239	
+Horsepower@4.0, Weight@20.0, Acceleration@0.0, Model@0.0, Origin@4.0->MPG@2.0	 cc:0.6801510838624918	
+Car@4.0, Horsepower@4.0, Weight@40.0->Cylinders@0.0	 cc:0.6797896225857689	
+MPG@0.0, Horsepower@4.0, Weight@0.0->Cylinders@0.0	 cc:0.6797392265423796	
+Car@4.0, Weight@40.0, Model@0.0->Cylinders@0.0	 cc:0.6795046242714295	
+MPG@1.0, Displacement@4.0, Acceleration@0.0->Cylinders@1.0	 cc:0.6793421404763642	
+MPG@0.0, Displacement@0.0, Horsepower@4.0, Weight@20.0, Model@0.0->Acceleration@0.0	 cc:0.6790206484754329	
+Car@4.0, Displacement@0.0, Horsepower@4.0, Weight@30.0, Acceleration@0.0->MPG@1.0	 cc:0.6787538970043897	
+MPG@0.0, Displacement@4.0, Horsepower@0.0->Cylinders@0.0	 cc:0.6787373879556933	
+MPG@0.0, Horsepower@2.0, Weight@10.0->Cylinders@0.0	 cc:0.6782212629596032	
+Car@3.0, Displacement@0.0, Weight@40.0, Acceleration@0.0->MPG@3.0	 cc:0.6781013551322288	
+Car@4.0, Displacement@0.0, Horsepower@4.0, Weight@40.0, Model@0.0->Acceleration@0.0	 cc:0.6779979563535509	
+Car@2.0, MPG@4.0, Weight@40.0, Acceleration@4.0->Cylinders@0.0	 cc:0.6778962953694725	
+MPG@0.0, Horsepower@1.0, Weight@20.0->Cylinders@0.0	 cc:0.6773575790435873	
+MPG@1.0, Displacement@4.0, Model@0.0->Cylinders@1.0	 cc:0.6773193475623955	
+Displacement@4.0, Horsepower@3.0, Acceleration@4.0, Model@1.0->Cylinders@0.0	 cc:0.6773071830001981	
+Car@3.0, Horsepower@4.0, Weight@30.0, Acceleration@2.0->MPG@4.0	 cc:0.677120370080738	
+MPG@1.0, Displacement@1.0, Horsepower@4.0->Cylinders@1.0	 cc:0.676693741506529	
+Car@4.0, MPG@1.0, Acceleration@2.0, Model@3.0->Cylinders@0.0	 cc:0.6756719182819468	
+Car@1.0, Cylinders@1.0, Displacement@0.0, Weight@40.0, Model@1.0->MPG@2.0	 cc:0.6750602145828771	
+Car@2.0, Displacement@4.0, Weight@30.0, Acceleration@2.0->MPG@4.0	 cc:0.6749915716961918	
+MPG@1.0, Horsepower@0.0, Weight@0.0, Origin@4.0->Acceleration@1.0	 cc:0.6749029441716108	
+Car@2.0, Displacement@1.0, Weight@40.0, Acceleration@2.0->MPG@4.0	 cc:0.6745936167328765	
+Displacement@4.0, Weight@30.0, Acceleration@0.0->Cylinders@1.0	 cc:0.6738950233038256	
+Horsepower@0.0, Weight@20.0, Model@0.0, Origin@4.0->Acceleration@1.0	 cc:0.6738454961577361	
+Car@4.0, Horsepower@1.0, Weight@30.0, Acceleration@2.0->MPG@4.0	 cc:0.6737690331953524	
+Car@3.0, Displacement@0.0, Weight@40.0, Acceleration@2.0->MPG@4.0	 cc:0.6735405132055011	
+Displacement@1.0, Weight@40.0, Acceleration@0.0->Cylinders@1.0	 cc:0.6734970683405105	
+Car@3.0, Horsepower@0.0, Weight@40.0, Acceleration@2.0->MPG@4.0	 cc:0.6734458033998214	
+Displacement@4.0, Weight@30.0, Acceleration@3.0, Origin@4.0->Cylinders@1.0	 cc:0.6733172065994488	
+MPG@4.0, Displacement@4.0, Weight@30.0, Acceleration@3.0->Cylinders@0.0	 cc:0.672410946715742	
+Displacement@4.0, Weight@10.0, Acceleration@2.0, Origin@4.0->Cylinders@0.0	 cc:0.6718539835465607	
+Car@4.0, MPG@4.0, Acceleration@2.0, Model@1.0->Cylinders@0.0	 cc:0.671773176097678	
+Displacement@1.0, Horsepower@4.0, Model@4.0, Origin@4.0->Cylinders@1.0	 cc:0.6715272781618304	
+MPG@0.0, Displacement@1.0, Weight@0.0, Origin@4.0->Acceleration@1.0	 cc:0.6711128141498188	
+Car@1.0, MPG@0.0, Weight@30.0, Model@3.0->Acceleration@1.0	 cc:0.6706983501378071	
+MPG@0.0, Horsepower@4.0, Weight@10.0->Cylinders@1.0	 cc:0.6699311138220707	
+MPG@1.0, Displacement@2.0, Acceleration@4.0, Model@0.0->Cylinders@0.0	 cc:0.6695375033452546	
+Car@4.0, MPG@2.0, Weight@40.0, Acceleration@4.0->Cylinders@0.0	 cc:0.66890233941909	
+MPG@4.0, Displacement@1.0, Acceleration@1.0, Origin@4.0->Cylinders@1.0	 cc:0.6684227081095924	
+Car@3.0, MPG@4.0, Acceleration@1.0, Model@2.0->Cylinders@0.0	 cc:0.6681742034818452	
+MPG@0.0, Horsepower@2.0, Weight@10.0, Model@2.0->Acceleration@1.0	 cc:0.6643710400005561	
+Car@4.0, Weight@40.0, Acceleration@3.0, Model@1.0->Cylinders@0.0	 cc:0.6634743379871473	
+Car@0.0, MPG@2.0, Weight@40.0, Acceleration@2.0->Model@2.0	 cc:0.6626749524713178	
+Car@4.0, MPG@4.0, Weight@40.0, Model@0.0->Acceleration@1.0	 cc:0.6625776359737385	
+Car@3.0, MPG@4.0, Horsepower@4.0, Weight@30.0->Acceleration@1.0	 cc:0.6622465861025091	
+MPG@4.0, Displacement@1.0, Horsepower@4.0, Weight@20.0, Acceleration@1.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.6621153826102371	
+MPG@4.0, Weight@0.0, Acceleration@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6620397885451532	
+MPG@4.0, Displacement@1.0, Acceleration@1.0, Model@1.0->Cylinders@0.0	 cc:0.6612934057646123	
+MPG@0.0, Horsepower@1.0, Weight@40.0, Acceleration@4.0->Cylinders@0.0	 cc:0.6607877075361202	
+Car@3.0, MPG@4.0, Horsepower@2.0, Weight@40.0->Acceleration@1.0	 cc:0.6607034244980381	
+Car@4.0, MPG@4.0, Horsepower@2.0, Acceleration@2.0->Cylinders@0.0	 cc:0.6600083066581863	
+Car@0.0, Weight@20.0, Acceleration@2.0->Model@3.0	 cc:0.6597989024089308	
+MPG@4.0, Displacement@4.0, Horsepower@1.0, Weight@20.0, Acceleration@1.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.6595712513163794	
+MPG@0.0, Weight@40.0, Acceleration@1.0, Origin@4.0->Cylinders@0.0	 cc:0.6595191174783905	
+Car@4.0, MPG@4.0, Horsepower@1.0, Weight@40.0->Acceleration@1.0	 cc:0.6594078986240143	
+Car@4.0, Weight@0.0, Acceleration@2.0->Model@3.0	 cc:0.6589969102012019	
+Car@1.0, MPG@4.0, Displacement@4.0, Weight@10.0->Acceleration@1.0	 cc:0.6589882212282037	
+MPG@3.0, Displacement@4.0, Horsepower@4.0, Weight@20.0, Acceleration@1.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.6584816541024118	
+MPG@1.0, Weight@0.0, Acceleration@3.0, Model@0.0->Cylinders@0.0	 cc:0.6584555871834172	
+MPG@4.0, Displacement@4.0, Horsepower@0.0, Weight@20.0, Model@0.0, Origin@4.0->Acceleration@0.0	 cc:0.6574476663156321	
+MPG@0.0, Horsepower@3.0, Weight@10.0, Model@1.0->Acceleration@1.0	 cc:0.6562546703229865	
+MPG@3.0, Displacement@1.0, Horsepower@4.0, Model@4.0->Cylinders@1.0	 cc:0.6557307252511984	
+Horsepower@4.0, Weight@20.0, Acceleration@0.0, Model@4.0->Cylinders@0.0	 cc:0.655225027022706	
+Car@0.0, MPG@1.0, Displacement@4.0, Weight@40.0, Acceleration@2.0->Model@1.0	 cc:0.6550972991196332	
+MPG@0.0, Displacement@4.0, Weight@10.0, Model@1.0->Acceleration@1.0	 cc:0.6550860034547357	
+Car@4.0, Horsepower@3.0, Weight@30.0, Acceleration@2.0->Model@2.0	 cc:0.6548140385998936	
+Car@4.0, Displacement@0.0, Weight@40.0, Model@1.0->MPG@4.0	 cc:0.6543656875931891	
+Car@0.0, Displacement@4.0, Weight@40.0, Model@1.0->Acceleration@1.0	 cc:0.6543274561119974	
+Car@1.0, MPG@1.0, Displacement@1.0, Weight@40.0, Acceleration@2.0->Model@1.0	 cc:0.6542240573333193	
+Car@4.0, MPG@0.0, Weight@40.0, Model@1.0->Acceleration@1.0	 cc:0.6534594277094825	
+MPG@0.0, Weight@0.0, Acceleration@2.0, Model@1.0->Cylinders@0.0	 cc:0.6527017492640441	
+Car@1.0, Displacement@0.0, Weight@40.0, Model@1.0->Acceleration@1.0	 cc:0.6523133521710267	
+MPG@4.0, Displacement@1.0, Horsepower@2.0, Acceleration@2.0->Cylinders@1.0	 cc:0.6519779578132983	
+MPG@4.0, Displacement@4.0, Horsepower@4.0, Weight@40.0, Acceleration@0.0, Model@0.0, Origin@4.0->Car@0.0	 cc:0.6496362795902976	
+Car@4.0, MPG@4.0, Horsepower@4.0, Acceleration@1.0->Cylinders@0.0	 cc:0.649268736032476	
+MPG@0.0, Horsepower@1.0, Weight@40.0, Model@4.0->Cylinders@0.0	 cc:0.6479167318339641	
+Horsepower@4.0, Weight@20.0, Acceleration@2.0, Model@0.0->Cylinders@0.0	 cc:0.646960944804168	
+Horsepower@0.0, Acceleration@0.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6468618905119891	
+Car@4.0, MPG@1.0, Horsepower@4.0, Model@3.0->Cylinders@0.0	 cc:0.6466846354628268	
+MPG@0.0, Horsepower@2.0, Weight@40.0, Model@0.0->Acceleration@1.0	 cc:0.6466768153871285	
+Horsepower@4.0, Weight@40.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6462223820993254	
+Displacement@4.0->Cylinders@2.0	 cc:0.6462162998182267	
+MPG@1.0, Displacement@4.0, Horsepower@0.0, Weight@10.0->Acceleration@1.0	 cc:0.6462154309209269	
+Car@0.0, MPG@4.0, Weight@10.0->Model@3.0	 cc:0.6462084797425283	
+Car@4.0, MPG@4.0, Weight@40.0, Acceleration@1.0->Cylinders@0.0	 cc:0.6461798061316344	
+Car@1.0, MPG@1.0, Displacement@4.0, Weight@30.0->Acceleration@1.0	 cc:0.6459886487256752	
+Car@4.0, MPG@4.0, Weight@0.0->Model@3.0	 cc:0.6459417282714852	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Weight@10.0->Acceleration@1.0	 cc:0.6453769450266056	
+Car@1.0, MPG@2.0, Displacement@1.0, Weight@20.0, Acceleration@1.0->Model@1.0	 cc:0.6452657261722293	
+MPG@0.0, Displacement@0.0, Weight@40.0, Model@0.0->Acceleration@1.0	 cc:0.6446401201163627	
+Car@3.0, Displacement@0.0, Horsepower@4.0, Weight@40.0->MPG@4.0	 cc:0.6445532303863812	
+Car@4.0, Cylinders@1.0, Weight@40.0, Acceleration@2.0, Model@1.0->MPG@4.0	 cc:0.6440779435633825	
+MPG@0.0, Horsepower@0.0, Acceleration@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6439667247090064	
+Car@4.0, MPG@0.0, Horsepower@4.0, Weight@40.0->Acceleration@1.0	 cc:0.6437503692813524	
+Car@2.0, MPG@1.0, Horsepower@3.0, Weight@40.0, Acceleration@1.0->Model@1.0	 cc:0.643550522902395	
+Displacement@4.0, Horsepower@0.0, Weight@0.0, Model@0.0->Acceleration@1.0	 cc:0.6435470473131957	
+Car@4.0, Displacement@0.0, Horsepower@4.0, Weight@40.0->Acceleration@1.0	 cc:0.6428380271165469	
+Car@4.0, MPG@4.0, Horsepower@4.0, Model@1.0->Cylinders@0.0	 cc:0.642785893278558	
+Car@1.0->Cylinders@2.0	 cc:0.6427563507703644	
+Car@4.0, Displacement@0.0, Weight@40.0, Model@0.0->Acceleration@1.0	 cc:0.6425530288022077	
+Car@3.0, MPG@4.0, Horsepower@3.0, Weight@40.0->Model@2.0	 cc:0.6421681072983898	
+Car@4.0, MPG@4.0, Horsepower@3.0, Weight@30.0->Model@2.0	 cc:0.6417588566701771	
+Car@1.0, MPG@0.0, Displacement@4.0, Weight@40.0->Acceleration@1.0	 cc:0.6414755961504375	
+MPG@0.0, Horsepower@2.0, Weight@40.0, Origin@4.0->Cylinders@0.0	 cc:0.641271405284981	
+Car@4.0, Displacement@0.0, Horsepower@1.0, Weight@30.0->MPG@4.0	 cc:0.640689244094105	
+MPG@3.0, Displacement@4.0, Horsepower@3.0, Model@1.0->Cylinders@0.0	 cc:0.640595403185725	
+Car@3.0, Cylinders@1.0, Weight@40.0, Acceleration@1.0, Model@2.0->MPG@4.0	 cc:0.6404789709475498	
+Car@4.0, MPG@4.0, Displacement@1.0, Weight@20.0, Acceleration@0.0->Model@1.0	 cc:0.6402304663198028	
+Car@4.0, MPG@4.0, Displacement@4.0, Horsepower@3.0, Weight@20.0->Model@1.0	 cc:0.6385309032013652	
+Car@4.0, MPG@4.0, Displacement@1.0, Horsepower@4.0, Weight@20.0->Model@1.0	 cc:0.6384926717201733	
+Car@3.0, Displacement@4.0, Weight@30.0, Acceleration@2.0, Model@3.0->MPG@4.0	 cc:0.637039875434883	
+MPG@1.0, Displacement@4.0, Horsepower@0.0, Model@2.0->Cylinders@0.0	 cc:0.6370381376402834	
+Car@4.0, MPG@4.0, Displacement@4.0, Horsepower@1.0, Weight@40.0->Model@1.0	 cc:0.6370129396185888	
+MPG@2.0, Displacement@4.0, Horsepower@4.0, Model@1.0->Cylinders@0.0	 cc:0.6368269955964285	
+Car@3.0, Displacement@1.0, Weight@40.0, Acceleration@2.0, Model@3.0->MPG@4.0	 cc:0.6366419204715679	
+Car@4.0, MPG@0.0, Displacement@1.0, Weight@40.0, Acceleration@1.0->Model@1.0	 cc:0.6366367070877691	
+MPG@1.0, Horsepower@3.0, Weight@0.0->Model@3.0	 cc:0.6362500477893516	
+MPG@4.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0->Cylinders@0.0	 cc:0.63592855578842	
+MPG@4.0, Displacement@4.0, Horsepower@3.0, Model@0.0->Cylinders@0.0	 cc:0.635145679321287	
+Car@0.0, Displacement@4.0, Acceleration@0.0->Model@3.0	 cc:0.63466170352529	
+Displacement@2.0, Horsepower@2.0, Weight@0.0->Origin@0.0	 cc:0.6342567973835764	
+MPG@0.0, Horsepower@1.0, Acceleration@2.0, Model@0.0->Cylinders@1.0	 cc:0.6341334139670027	
+MPG@1.0, Displacement@4.0, Acceleration@0.0, Model@1.0->Cylinders@0.0	 cc:0.6336633405278029	
+MPG@0.0, Horsepower@2.0, Weight@0.0->Origin@0.0	 cc:0.6336112066898141	
+Car@3.0, MPG@2.0, Horsepower@3.0, Weight@40.0->Model@2.0	 cc:0.6329829939420479	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Origin@4.0->Cylinders@1.0	 cc:0.6329812561474484	
+MPG@4.0, Horsepower@0.0, Weight@40.0, Acceleration@0.0->Cylinders@0.0	 cc:0.6328057388928858	
+Displacement@4.0, Horsepower@0.0, Weight@0.0->Origin@0.0	 cc:0.6326189259734256	
+Car@3.0, MPG@2.0, Model@0.0->Acceleration@2.0	 cc:0.6325442008056416	
+MPG@4.0, Displacement@4.0, Weight@30.0, Model@0.0->Cylinders@0.0	 cc:0.6324164729025687	
+MPG@0.0, Weight@0.0, Acceleration@2.0, Model@3.0, Origin@4.0->Cylinders@0.0	 cc:0.6321375568693283	
+MPG@0.0, Horsepower@4.0, Weight@0.0->Model@3.0	 cc:0.632096718696237	
+Displacement@4.0, Horsepower@4.0, Acceleration@0.0, Model@1.0->Cylinders@0.0	 cc:0.6318178026629964	
+Car@0.0, MPG@0.0, Horsepower@4.0->Model@3.0	 cc:0.6317847845656035	
+Car@0.0, MPG@2.0, Displacement@4.0, Weight@40.0->Model@2.0	 cc:0.631646629894933	
+MPG@0.0, Displacement@0.0, Weight@0.0->Origin@0.0	 cc:0.6315745114190483	
+MPG@1.0, Displacement@4.0, Acceleration@4.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6314815394079681	
+MPG@3.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0->Cylinders@0.0	 cc:0.631384222910389	
+Car@4.0, Horsepower@3.0, Weight@40.0->Model@3.0	 cc:0.6312747418506122	
+Car@3.0, Horsepower@4.0, Weight@40.0, Acceleration@2.0, Model@2.0->MPG@4.0	 cc:0.6309080671900904	
+MPG@1.0, Displacement@4.0, Horsepower@4.0, Model@2.0->Cylinders@1.0	 cc:0.6308793935791965	
+Car@1.0, MPG@2.0, Displacement@1.0, Weight@40.0->Model@2.0	 cc:0.630773388108619	
+MPG@0.0, Horsepower@4.0, Weight@10.0, Acceleration@1.0->Cylinders@0.0	 cc:0.6307351566274273	
+MPG@3.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0->Cylinders@0.0	 cc:0.6303928110913002	
+Car@4.0, MPG@2.0, Displacement@1.0, Weight@20.0->Model@2.0	 cc:0.6299427222899963	
+Displacement@0.0, Horsepower@1.0, Weight@40.0->Model@3.0	 cc:0.6298671282249124	
+Car@0.0, Displacement@4.0, Weight@40.0->Model@3.0	 cc:0.6298349790248192	
+Displacement@4.0, Horsepower@1.0, Weight@0.0->Model@3.0	 cc:0.6297811073922306	
+MPG@3.0, Horsepower@4.0, Weight@20.0, Model@0.0->Cylinders@0.0	 cc:0.6293614299964201	
+MPG@0.0, Horsepower@1.0, Weight@10.0->Model@3.0	 cc:0.6291798304607588	
+Car@2.0, Displacement@1.0, Weight@40.0->Model@3.0	 cc:0.6290043132061962	
+MPG@0.0, Horsepower@0.0, Weight@20.0->Model@3.0	 cc:0.6289825907737009	
+Car@3.0, Displacement@4.0, Weight@40.0, Acceleration@2.0, Model@2.0->MPG@4.0	 cc:0.6288670274328255	
+MPG@1.0, Horsepower@0.0, Weight@10.0, Model@2.0, Origin@4.0->Acceleration@1.0	 cc:0.6287158393026577	
+Car@4.0, Displacement@0.0, Weight@40.0->Model@3.0	 cc:0.6280546084574987	
+Car@3.0, Horsepower@3.0, Weight@40.0, Acceleration@0.0->Model@2.0	 cc:0.627973801008616	
+Car@4.0, Displacement@4.0, Weight@0.0->Model@3.0	 cc:0.6279685876248171	
+MPG@0.0, Horsepower@0.0, Acceleration@1.0, Model@4.0, Origin@4.0->Cylinders@0.0	 cc:0.6279155848895284	
+Car@4.0, MPG@1.0, Model@0.0->Acceleration@2.0	 cc:0.6277461499160646	
+Car@4.0, Displacement@1.0, Weight@10.0->Model@3.0	 cc:0.6275958306831966	
+Car@2.0, MPG@1.0, Displacement@1.0, Weight@40.0, Acceleration@0.0->Model@1.0	 cc:0.62701714508152	
+MPG@3.0, Horsepower@1.0, Weight@40.0, Model@0.0->Cylinders@0.0	 cc:0.6269710935246298	
+Car@0.0, MPG@0.0, Displacement@4.0, Acceleration@0.0->Model@2.0	 cc:0.6265462027450204	
+Car@4.0, MPG@1.0, Displacement@1.0, Weight@20.0, Acceleration@0.0->Model@1.0	 cc:0.6261439032952061	
+Car@4.0, MPG@0.0, Displacement@1.0, Acceleration@0.0->Model@2.0	 cc:0.6259066943323568	
+Car@3.0, Displacement@1.0, Weight@40.0, Acceleration@0.0->Model@2.0	 cc:0.6258945297701594	
+Car@4.0, MPG@1.0, Displacement@4.0, Horsepower@3.0, Weight@40.0->Model@1.0	 cc:0.6255087393690415	
+Car@4.0, MPG@1.0, Displacement@1.0, Horsepower@4.0, Weight@40.0->Model@1.0	 cc:0.6254705078878497	
+Car@4.0, Displacement@0.0, Weight@10.0, Acceleration@2.0, Model@2.0->MPG@4.0	 cc:0.6253193197576818	
+Car@3.0, Displacement@1.0, Horsepower@4.0, Weight@40.0, Acceleration@0.0->Model@1.0	 cc:0.6252593658439947	
+Car@4.0, Displacement@4.0, Horsepower@3.0, Weight@30.0, Acceleration@0.0->Model@1.0	 cc:0.6248883466969738	
+Car@4.0, Displacement@1.0, Horsepower@4.0, Weight@30.0, Acceleration@0.0->Model@1.0	 cc:0.6248501152157819	
+MPG@0.0, Horsepower@4.0, Acceleration@1.0, Model@0.0->Cylinders@1.0	 cc:0.6247927679939942	
+Car@4.0, Displacement@1.0, Horsepower@4.0, Weight@40.0->Model@2.0	 cc:0.6242601339492078	
+MPG@0.0, Horsepower@4.0, Weight@10.0, Model@1.0->Cylinders@0.0	 cc:0.6242523138735094	
+Car@4.0, MPG@4.0, Horsepower@4.0, Acceleration@2.0, Model@3.0->Cylinders@0.0	 cc:0.624024662780958	
+MPG@0.0, Weight@40.0, Acceleration@2.0, Model@3.0, Origin@4.0->Cylinders@1.0	 cc:0.6239290840779783	
+MPG@1.0, Horsepower@0.0, Weight@0.0->Acceleration@2.0	 cc:0.6238847703156878	
+Car@4.0, Displacement@4.0, Horsepower@3.0, Weight@30.0->Model@2.0	 cc:0.6237857160235089	
+Car@4.0, MPG@0.0, Horsepower@4.0->Acceleration@2.0	 cc:0.6230054462482753	
+MPG@4.0, Displacement@4.0, Horsepower@4.0, Weight@40.0->Cylinders@1.0	 cc:0.6228681604749046	
+Horsepower@0.0, Weight@0.0, Model@0.0->Acceleration@2.0	 cc:0.6217542341365421	
+MPG@1.0, Horsepower@0.0, Acceleration@0.0, Model@0.0->Cylinders@0.0	 cc:0.6215231074547913	
+Weight@0.0, Acceleration@4.0->Cylinders@3.0	 cc:0.6213823460922212	
+Car@4.0, Displacement@4.0, Horsepower@0.0, Weight@40.0->Model@2.0	 cc:0.6209835222316062	
+Car@4.0, MPG@0.0, Displacement@4.0->Acceleration@2.0	 cc:0.6209644064910104	
+MPG@1.0, Horsepower@4.0, Weight@40.0, Model@0.0->Cylinders@0.0	 cc:0.6208835990421276	
+MPG@1.0, Displacement@4.0, Horsepower@0.0, Acceleration@0.0->Cylinders@0.0	 cc:0.6197670660118657	
+Car@4.0, Horsepower@2.0, Weight@40.0, Acceleration@2.0, Model@1.0->MPG@4.0	 cc:0.6196558471574893	
+MPG@0.0, Displacement@0.0, Weight@10.0->Acceleration@2.0	 cc:0.6194916255678244	
+Car@4.0, MPG@0.0, Weight@10.0->Acceleration@2.0	 cc:0.6183168764184749	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Acceleration@0.0->Cylinders@0.0	 cc:0.6178806899739678	
+Horsepower@4.0, Weight@40.0, Acceleration@0.0, Model@4.0, Origin@4.0->Cylinders@0.0	 cc:0.6177399286113978	
+MPG@0.0, Horsepower@1.0, Acceleration@0.0, Model@0.0->Cylinders@0.0	 cc:0.6172298858964066	
+MPG@0.0, Horsepower@3.0, Weight@0.0, Acceleration@4.0->Origin@0.0	 cc:0.6171603741124214	
+Car@3.0, Acceleration@3.0->Cylinders@2.0	 cc:0.616862342338585	
+Car@1.0, Model@0.0->Acceleration@3.0	 cc:0.6163453484451952	
+MPG@0.0, Weight@40.0, Acceleration@2.0, Model@1.0, Origin@4.0->Cylinders@0.0	 cc:0.6162897390180071	
+MPG@2.0, Horsepower@0.0, Weight@30.0, Model@0.0, Origin@4.0->Acceleration@1.0	 cc:0.6154104149505946	
+Weight@40.0, Acceleration@3.0->Cylinders@3.0	 cc:0.6151297611227543	
+MPG@0.0, Displacement@0.0, Acceleration@1.0, Model@3.0->Origin@0.0	 cc:0.614953374970892	
+Displacement@0.0, Weight@0.0, Acceleration@1.0, Model@3.0->Origin@0.0	 cc:0.6129071218298283	
+Displacement@1.0, Horsepower@0.0, Weight@40.0, Acceleration@4.0->Model@3.0	 cc:0.6126412392560848	
+MPG@0.0, Horsepower@0.0, Weight@40.0, Acceleration@4.0->Model@3.0	 cc:0.6124127192662336	
+Car@3.0, Model@4.0->Cylinders@2.0	 cc:0.6123814389634403	
+Displacement@4.0, Horsepower@0.0, Weight@10.0, Acceleration@4.0->Model@3.0	 cc:0.6119522036973317	
+Car@4.0, Weight@0.0->Acceleration@3.0	 cc:0.6116376628747988	
+Car@0.0, MPG@4.0, Weight@40.0, Acceleration@2.0->Model@3.0	 cc:0.6110615839650216	
+MPG@1.0, Horsepower@0.0, Weight@40.0, Model@0.0, Origin@4.0->Acceleration@1.0	 cc:0.6110216146892302	
+Car@1.0, Displacement@4.0, Horsepower@4.0, Weight@40.0, Acceleration@2.0->MPG@4.0	 cc:0.6097278266098061	
+MPG@0.0, Horsepower@4.0, Weight@0.0, Acceleration@3.0->Origin@0.0	 cc:0.6096426746744243	
+Horsepower@4.0, Weight@40.0, Acceleration@2.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6094758463928598	
+MPG@0.0, Horsepower@4.0, Acceleration@2.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6093846121763793	
+Car@3.0, Displacement@1.0, Horsepower@4.0, Weight@40.0, Acceleration@2.0->MPG@4.0	 cc:0.6089475568345724	
+MPG@0.0, Horsepower@1.0, Weight@20.0, Acceleration@3.0->Origin@0.0	 cc:0.607261027175632	
+Car@3.0, MPG@4.0, Horsepower@4.0, Weight@40.0, Model@1.0->Acceleration@1.0	 cc:0.6067344754119443	
+Weight@40.0, Origin@4.0->Cylinders@2.0	 cc:0.6066189120710688	
+MPG@0.0, Horsepower@4.0, Acceleration@1.0, Model@1.0, Origin@4.0->Cylinders@0.0	 cc:0.6065832872817765	
+Displacement@4.0, Horsepower@0.0, Weight@20.0, Model@0.0, Origin@4.0->Acceleration@1.0	 cc:0.6060706378748857	
+Car@4.0, Displacement@4.0, Horsepower@1.0, Weight@30.0, Acceleration@2.0->MPG@4.0	 cc:0.6059941749125021	
+Displacement@0.0, Weight@0.0, Acceleration@0.0, Model@4.0->Origin@0.0	 cc:0.6059872237341035	
+Car@4.0, MPG@4.0, Displacement@4.0, Weight@10.0, Model@1.0->Acceleration@1.0	 cc:0.6031971945043983	
+MPG@2.0, Horsepower@1.0, Acceleration@1.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6030616465256273	
+MPG@1.0, Horsepower@0.0, Acceleration@0.0, Model@2.0, Origin@4.0->Cylinders@0.0	 cc:0.6022674743935965	
+MPG@3.0, Horsepower@4.0, Weight@40.0, Acceleration@0.0, Model@4.0->Cylinders@0.0	 cc:0.6019433757007657	
+MPG@1.0, Horsepower@4.0, Acceleration@1.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.6016149325214357	
+Car@4.0, Displacement@4.0, Weight@30.0, Acceleration@0.0, Model@2.0->MPG@4.0	 cc:0.6012082885851224	
+MPG@1.0, Horsepower@4.0, Weight@0.0, Origin@4.0->Model@3.0	 cc:0.5985729230747843	
+MPG@2.0, Horsepower@0.0, Weight@0.0, Model@4.0->Acceleration@2.0	 cc:0.5982809735820465	
+MPG@0.0, Displacement@0.0, Horsepower@2.0, Acceleration@2.0->Origin@0.0	 cc:0.5979985819596068	
+MPG@0.0, Displacement@4.0, Horsepower@0.0, Acceleration@2.0->Origin@0.0	 cc:0.5979186434080237	
+Displacement@1.0, Horsepower@4.0, Weight@0.0, Model@3.0->Origin@0.0	 cc:0.5978560828024372	
+MPG@4.0, Horsepower@1.0, Acceleration@0.0, Model@0.0, Origin@4.0->Cylinders@0.0	 cc:0.5977926532995506	
+MPG@4.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0, Origin@4.0->Cylinders@0.0	 cc:0.5963876463657503	
+Car@4.0, MPG@1.0, Horsepower@0.0, Acceleration@2.0->Model@3.0	 cc:0.5961478307110013	
+Displacement@1.0, Weight@0.0, Acceleration@1.0, Model@1.0->Origin@0.0	 cc:0.5960626787756196	
+MPG@0.0, Weight@0.0, Acceleration@1.0, Model@1.0->Origin@0.0	 cc:0.5958341587857683	
+MPG@0.0, Displacement@4.0, Weight@0.0, Model@3.0->Origin@0.0	 cc:0.595586523055321	
+Car@1.0, MPG@2.0, Displacement@4.0, Weight@40.0, Model@1.0->Acceleration@1.0	 cc:0.5953779877033654	
+Car@4.0, MPG@4.0, Displacement@4.0, Horsepower@4.0, Weight@40.0->Acceleration@1.0	 cc:0.5950877760052273	
+MPG@0.0, Cylinders@1.0, Horsepower@0.0, Acceleration@0.0->Origin@0.0	 cc:0.5950764803403297	
+Car@0.0, MPG@4.0, Weight@40.0->Model@4.0	 cc:0.5950686602646313	
+Horsepower@0.0, Weight@0.0, Acceleration@1.0, Model@1.0->Origin@0.0	 cc:0.594827106815283	
+MPG@4.0, Displacement@4.0, Horsepower@0.0, Weight@20.0, Model@0.0->Acceleration@1.0	 cc:0.5948184178422847	
+Car@0.0, Displacement@0.0, Acceleration@1.0->Model@4.0	 cc:0.5943248841759899	
+MPG@1.0, Cylinders@1.0, Horsepower@4.0, Weight@0.0->Model@3.0	 cc:0.5937548875473114	
+MPG@1.0, Horsepower@1.0, Acceleration@0.0, Model@1.0, Origin@4.0->Cylinders@0.0	 cc:0.5937001470174232	
+MPG@0.0, Horsepower@3.0, Weight@10.0, Origin@4.0->Model@3.0	 cc:0.593212695632227	
+Car@3.0, MPG@4.0->Cylinders@2.0	 cc:0.5930849677291543	
+MPG@4.0, Displacement@0.0, Horsepower@0.0, Weight@20.0, Model@0.0->Acceleration@1.0	 cc:0.5927669513174221	
+Displacement@4.0, Horsepower@0.0, Weight@40.0, Origin@4.0->Model@3.0	 cc:0.5926366167224498	
+MPG@0.0, Horsepower@0.0, Weight@40.0, Origin@4.0->Model@3.0	 cc:0.5914974923623928	
+MPG@4.0, Weight@30.0->Cylinders@3.0	 cc:0.5908397371064329	
+Car@4.0, MPG@1.0, Displacement@4.0, Weight@40.0, Model@1.0->Acceleration@1.0	 cc:0.5907102714087606	
+Displacement@2.0, Horsepower@4.0, Weight@0.0, Model@2.0->Origin@0.0	 cc:0.5895876560974	
+MPG@1.0, Horsepower@4.0, Weight@0.0, Origin@4.0->Acceleration@2.0	 cc:0.5895224887999138	
+Car@4.0, MPG@2.0, Cylinders@1.0, Model@0.0->Acceleration@2.0	 cc:0.5892800664532655	
+MPG@0.0, Horsepower@3.0, Weight@10.0, Model@2.0->Origin@0.0	 cc:0.5886075399432089	
+MPG@0.0, Displacement@1.0, Acceleration@1.0, Model@0.0->Origin@0.0	 cc:0.588114875174214	
+Car@4.0, MPG@0.0, Cylinders@1.0, Horsepower@3.0->Model@3.0	 cc:0.5878159745030775	
+Weight@0.0, Acceleration@4.0, Model@3.0->Cylinders@2.0	 cc:0.5873571967287754	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Model@1.0, Origin@4.0->Cylinders@0.0	 cc:0.5873024561988871	
+MPG@0.0, Displacement@0.0, Horsepower@4.0, Acceleration@1.0->Origin@0.0	 cc:0.5872590113338965	
+MPG@1.0, Displacement@0.0, Weight@0.0, Acceleration@1.0->Origin@0.0	 cc:0.5870582960576393	
+MPG@0.0, Displacement@0.0, Weight@40.0, Model@2.0->Origin@0.0	 cc:0.5869870464790545	
+MPG@1.0, Horsepower@0.0, Weight@0.0, Acceleration@1.0->Origin@0.0	 cc:0.5869635862519594	
+MPG@0.0, Weight@20.0, Acceleration@1.0, Model@0.0->Origin@0.0	 cc:0.5869131902085702	
+MPG@0.0, Cylinders@1.0, Horsepower@0.0, Weight@40.0->Model@3.0	 cc:0.5866794568349198	
+MPG@0.0, Horsepower@1.0, Weight@20.0, Model@2.0->Origin@0.0	 cc:0.5865604179048454	
+Displacement@1.0, Horsepower@4.0, Weight@0.0, Acceleration@1.0->Origin@0.0	 cc:0.5863536203474895	
+MPG@2.0, Displacement@4.0, Horsepower@0.0, Weight@30.0, Model@0.0->Acceleration@1.0	 cc:0.5861850542713254	
+MPG@0.0, Cylinders@1.0, Horsepower@1.0, Weight@10.0->Model@3.0	 cc:0.5858122973297049	
+Car@0.0, MPG@2.0, Displacement@0.0->Model@4.0	 cc:0.5848799705270036	
+Horsepower@0.0, Weight@30.0, Model@0.0, Origin@4.0->Acceleration@2.0	 cc:0.5848295744836144	
+MPG@0.0, Horsepower@1.0, Weight@40.0, Acceleration@1.0->Origin@0.0	 cc:0.5848078520511191	
+MPG@2.0, Displacement@0.0, Horsepower@0.0, Weight@40.0, Model@0.0->Acceleration@1.0	 cc:0.5846462371533534	
+Horsepower@4.0, Weight@0.0, Acceleration@0.0, Model@1.0->Origin@0.0	 cc:0.5845602163206718	
+MPG@1.0, Horsepower@4.0, Weight@0.0->Model@4.0	 cc:0.5843829612715095	
+MPG@2.0, Horsepower@2.0, Weight@0.0, Model@2.0->Acceleration@2.0	 cc:0.5841926727628501	
+MPG@0.0, Displacement@0.0, Weight@40.0, Acceleration@1.0->Origin@0.0	 cc:0.584170081433055	
+Car@0.0, MPG@1.0, Horsepower@4.0->Model@4.0	 cc:0.584071027140876	
+MPG@2.0, Horsepower@0.0, Weight@30.0, Model@2.0->Acceleration@2.0	 cc:0.5836861056370581	
+MPG@2.0, Horsepower@1.0, Weight@10.0, Model@2.0->Acceleration@2.0	 cc:0.5833315955387337	
+MPG@3.0, Displacement@0.0, Weight@10.0, Acceleration@0.0->Origin@0.0	 cc:0.5826842670503718	
+MPG@0.0, Displacement@1.0, Weight@10.0, Model@3.0->Acceleration@2.0	 cc:0.5825930328338912	
+Displacement@4.0, Weight@0.0, Acceleration@0.0, Model@1.0->Origin@0.0	 cc:0.582519176563407	
+MPG@0.0, Displacement@1.0, Weight@10.0, Origin@4.0->Acceleration@2.0	 cc:0.5820829901189	
+Car@4.0, MPG@0.0, Weight@40.0, Model@3.0->Acceleration@2.0	 cc:0.5818770614588438	
+MPG@1.0, Displacement@4.0, Horsepower@0.0, Weight@40.0, Model@0.0->Acceleration@1.0	 cc:0.581796254009961	
+Car@4.0, MPG@0.0, Horsepower@3.0, Acceleration@1.0->Model@3.0	 cc:0.581641590290594	
+Car@4.0, MPG@2.0, Displacement@1.0, Weight@40.0, Acceleration@1.0->Model@2.0	 cc:0.5814652041387316	
+Weight@40.0, Acceleration@0.0->Cylinders@2.0	 cc:0.581172385748694	
+Horsepower@0.0, Weight@10.0, Acceleration@0.0, Model@1.0->Origin@0.0	 cc:0.5809108476614498	
+Car@4.0, MPG@1.0, Horsepower@1.0->Model@4.0	 cc:0.5808873874343548	
+MPG@3.0, Horsepower@4.0, Weight@40.0, Acceleration@1.0, Model@0.0->Cylinders@0.0	 cc:0.5808839118451556	
+MPG@1.0, Weight@30.0->Cylinders@2.0	 cc:0.5807674796069804	
+Car@4.0, MPG@1.0, Displacement@0.0->Model@4.0	 cc:0.5802496168162907	
+MPG@3.0, Displacement@2.0, Horsepower@2.0, Weight@0.0->Origin@0.0	 cc:0.5799107468693632	
+MPG@3.0, Horsepower@1.0, Weight@30.0, Model@1.0->Acceleration@2.0	 cc:0.5797595587391953	
+MPG@0.0, Horsepower@4.0, Weight@0.0, Model@1.0->Origin@0.0	 cc:0.5796422576037203	
+MPG@3.0, Horsepower@2.0, Weight@0.0, Model@1.0->Acceleration@2.0	 cc:0.5795336454412434	
+MPG@1.0, Horsepower@1.0, Weight@30.0, Model@2.0->Acceleration@2.0	 cc:0.579517136392547	
+Weight@10.0, Acceleration@3.0, Model@3.0->Cylinders@2.0	 cc:0.5795049718303495	
+Car@4.0, MPG@4.0, Displacement@1.0, Weight@40.0->Model@3.0	 cc:0.5793937529759732	
+Car@4.0, MPG@1.0->Cylinders@2.0	 cc:0.5791018034832356	
+MPG@0.0, Displacement@0.0, Horsepower@4.0, Weight@40.0, Model@0.0->Acceleration@1.0	 cc:0.5789063015907772	
+MPG@0.0, Displacement@4.0, Horsepower@2.0, Weight@40.0, Model@0.0->Acceleration@1.0	 cc:0.5789019571042782	
+MPG@3.0, Horsepower@2.0, Weight@40.0, Acceleration@1.0, Model@0.0->Cylinders@0.0	 cc:0.5788281008337939	
+MPG@0.0, Horsepower@3.0, Weight@10.0, Acceleration@3.0, Model@4.0->Origin@0.0	 cc:0.5788029028120993	
+Car@4.0, MPG@0.0, Horsepower@3.0->Model@4.0	 cc:0.5784440482272757	
+MPG@0.0, Horsepower@1.0, Weight@40.0, Model@1.0->Origin@0.0	 cc:0.5783250092972012	
+MPG@3.0, Displacement@0.0, Horsepower@1.0, Weight@10.0->Origin@0.0	 cc:0.5774917367866788	
+MPG@2.0, Displacement@2.0, Horsepower@4.0, Weight@0.0->Origin@0.0	 cc:0.5773257774024142	
+Car@4.0, Horsepower@4.0->Cylinders@2.0	 cc:0.577256265618429	
+MPG@0.0, Horsepower@3.0, Weight@30.0, Model@2.0->Acceleration@2.0	 cc:0.5770737971854679	
+Car@0.0, MPG@0.0, Displacement@4.0->Model@4.0	 cc:0.5770042854014827	
+MPG@1.0, Weight@10.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5769495448715944	
+Car@3.0, MPG@2.0, Horsepower@4.0, Model@1.0->Acceleration@2.0	 cc:0.5768044390225253	
+MPG@1.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->Origin@0.0	 cc:0.5766966957573483	
+Car@4.0, MPG@0.0, Displacement@1.0->Model@4.0	 cc:0.576364776988819	
+Car@3.0, Displacement@1.0, Weight@40.0->Model@4.0	 cc:0.5763526124266216	
+MPG@0.0, Weight@40.0->Cylinders@2.0	 cc:0.5762544270317426	
+Car@4.0, MPG@4.0, Displacement@1.0, Weight@40.0, Acceleration@0.0->Model@2.0	 cc:0.576196210912655	
+MPG@4.0, Horsepower@4.0, Weight@0.0, Model@0.0->Acceleration@2.0	 cc:0.5761397325881671	
+MPG@2.0, Displacement@2.0, Horsepower@2.0, Weight@10.0->Origin@0.0	 cc:0.5758078138196379	
+MPG@4.0, Horsepower@2.0, Weight@30.0, Model@0.0->Acceleration@2.0	 cc:0.5757087595274589	
+Car@4.0, MPG@4.0, Acceleration@4.0->Cylinders@2.0	 cc:0.5755540958080918	
+Horsepower@4.0, Weight@40.0->Cylinders@3.0	 cc:0.5754202856239203	
+Car@4.0, Displacement@1.0, Weight@20.0->Model@4.0	 cc:0.5753916120130265	
+Horsepower@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5751040070067879	
+MPG@0.0, Displacement@1.0, Weight@30.0, Model@2.0->Acceleration@2.0	 cc:0.5749945259470112	
+Car@4.0, MPG@2.0, Displacement@4.0, Model@1.0->Acceleration@2.0	 cc:0.5748667980439384	
+MPG@1.0, Displacement@4.0, Weight@0.0, Acceleration@0.0->Origin@0.0	 cc:0.5746556560000835	
+MPG@0.0, Displacement@0.0, Weight@40.0, Model@2.0->Acceleration@2.0	 cc:0.5743663131992451	
+MPG@2.0, Displacement@4.0, Horsepower@0.0, Weight@10.0->Origin@0.0	 cc:0.574169942409487	
+Car@4.0, Weight@40.0->Cylinders@2.0	 cc:0.5741673357175876	
+MPG@0.0, Cylinders@1.0, Horsepower@3.0, Weight@0.0, Acceleration@4.0->Origin@0.0	 cc:0.5737928409813674	
+MPG@4.0, Weight@40.0, Acceleration@4.0->Cylinders@3.0	 cc:0.5737181158135833	
+MPG@0.0, Weight@40.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5735234828184248	
+Car@4.0, MPG@2.0, Horsepower@1.0, Model@1.0->Acceleration@2.0	 cc:0.5734531021371398	
+Car@3.0, MPG@4.0, Horsepower@4.0, Weight@40.0->Acceleration@2.0	 cc:0.5731915640498956	
+MPG@0.0, Horsepower@1.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5731576770552028	
+MPG@1.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->Model@3.0	 cc:0.5731263967524094	
+Displacement@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.573062967249523	
+Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->Origin@0.0	 cc:0.5728101181352769	
+MPG@1.0, Displacement@3.0, Horsepower@4.0, Weight@0.0->Origin@0.0	 cc:0.5726945547944016	
+MPG@0.0, Horsepower@3.0, Weight@30.0, Acceleration@0.0->Origin@0.0	 cc:0.5724234588368593	
+MPG@2.0, Displacement@4.0, Horsepower@0.0, Weight@40.0->Model@3.0	 cc:0.572199283333507	
+MPG@0.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0->Origin@0.0	 cc:0.5717526701214024	
+MPG@4.0, Displacement@4.0, Horsepower@4.0, Acceleration@0.0, Model@1.0->Cylinders@1.0	 cc:0.5716701248779199	
+MPG@2.0, Displacement@4.0, Horsepower@1.0, Weight@10.0->Model@3.0	 cc:0.571332123828292	
+Displacement@4.0, Horsepower@4.0, Weight@0.0, Model@0.0->Origin@0.0	 cc:0.5707873252213083	
+Car@0.0, MPG@1.0, Horsepower@2.0, Acceleration@0.0->Model@3.0	 cc:0.5707586516104142	
+Car@4.0, MPG@4.0, Displacement@4.0, Weight@30.0->Acceleration@2.0	 cc:0.570741273664418	
+MPG@0.0, Horsepower@4.0, Weight@20.0, Model@0.0->Origin@0.0	 cc:0.5707212890265223	
+Displacement@1.0, Horsepower@2.0, Weight@10.0, Acceleration@0.0->Origin@0.0	 cc:0.5703815501822946	
+Car@4.0, MPG@1.0, Displacement@1.0, Acceleration@0.0->Model@3.0	 cc:0.5701339144518475	
+MPG@0.0, Displacement@4.0, Weight@40.0, Model@0.0->Origin@0.0	 cc:0.5697446484615305	
+Car@4.0, MPG@1.0, Horsepower@1.0, Acceleration@0.0->Model@3.0	 cc:0.5696308229152547	
+MPG@1.0, Displacement@4.0, Horsepower@4.0, Weight@0.0->Model@3.0	 cc:0.5693475623955151	
+MPG@1.0, Displacement@4.0, Horsepower@0.0, Weight@10.0->Origin@0.0	 cc:0.5692684927412319	
+Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->Model@3.0	 cc:0.569239819130338	
+Displacement@4.0, Horsepower@0.0, Weight@10.0, Acceleration@0.0->Origin@0.0	 cc:0.5691607494760549	
+MPG@1.0, Displacement@1.0, Horsepower@4.0, Weight@10.0->Model@3.0	 cc:0.5689748054538946	
+MPG@1.0, Displacement@3.0, Horsepower@3.0, Weight@10.0->Model@3.0	 cc:0.568789730329034	
+MPG@0.0, Horsepower@4.0, Weight@30.0, Model@1.0->Acceleration@2.0	 cc:0.5686463622745646	
+MPG@1.0, Displacement@0.0, Horsepower@4.0, Weight@20.0->Model@3.0	 cc:0.5683691840359237	
+MPG@0.0, Horsepower@3.0, Weight@20.0, Acceleration@0.0->Model@3.0	 cc:0.5683014100465381	
+Car@2.0, Displacement@4.0, Horsepower@3.0, Acceleration@0.0->Model@3.0	 cc:0.5681354506622736	
+Car@2.0, Displacement@1.0, Horsepower@4.0, Acceleration@0.0->Model@3.0	 cc:0.5680972191810817	
+MPG@0.0, Displacement@4.0, Horsepower@3.0, Weight@20.0->Origin@0.0	 cc:0.5680928746945826	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Weight@0.0->Origin@0.0	 cc:0.5678921594183255	
+MPG@2.0, Horsepower@3.0, Weight@30.0, Model@0.0->Acceleration@2.0	 cc:0.5677070842934648	
+MPG@0.0, Displacement@4.0, Horsepower@2.0, Weight@30.0->Origin@0.0	 cc:0.5674611863576173	
+MPG@1.0, Displacement@0.0, Horsepower@2.0, Weight@40.0->Model@3.0	 cc:0.567377772216835	
+Displacement@0.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0->Model@3.0	 cc:0.5672700289516579	
+Car@4.0, Displacement@4.0, Horsepower@2.0, Acceleration@0.0->Model@3.0	 cc:0.5671431699458851	
+MPG@0.0, Displacement@0.0, Horsepower@4.0, Weight@20.0->Origin@0.0	 cc:0.5669137810587341	
+Car@4.0, MPG@2.0, Horsepower@4.0, Model@0.0->Acceleration@2.0	 cc:0.5669137810587339	
+MPG@0.0, Horsepower@1.0, Weight@40.0, Acceleration@0.0->Model@3.0	 cc:0.5667834464637618	
+Car@3.0, MPG@4.0, Model@0.0->Acceleration@3.0	 cc:0.5666739654039852	
+MPG@0.0, Displacement@3.0, Weight@30.0, Model@1.0->Acceleration@2.0	 cc:0.5663820159112474	
+MPG@0.0, Cylinders@1.0, Horsepower@4.0, Weight@0.0, Acceleration@3.0->Origin@0.0	 cc:0.5662751415433702	
+MPG@0.0, Displacement@4.0, Weight@20.0, Model@1.0->Acceleration@2.0	 cc:0.5660535727319174	
+MPG@0.0, Displacement@0.0, Horsepower@2.0, Weight@40.0->Origin@0.0	 cc:0.5659223692396453	
+MPG@2.0, Displacement@4.0, Horsepower@4.0, Weight@10.0->Acceleration@2.0	 cc:0.565736425217485	
+MPG@0.0, Displacement@2.0, Horsepower@0.0, Weight@40.0->Origin@0.0	 cc:0.5653488970217677	
+Car@4.0, Displacement@1.0, Weight@40.0, Acceleration@0.0->Model@3.0	 cc:0.5651994466861995	
+MPG@0.0, Displacement@0.0, Horsepower@0.0, Acceleration@0.0->Model@3.0	 cc:0.5650473896587318	
+MPG@0.0, Displacement@0.0, Horsepower@4.0, Weight@40.0->Model@3.0	 cc:0.5644078812460682	
+MPG@0.0, Displacement@4.0, Horsepower@2.0, Weight@40.0->Model@3.0	 cc:0.5644035367595692	
+MPG@1.0, Horsepower@4.0, Weight@40.0, Model@0.0->Acceleration@2.0	 cc:0.5641906569211146	
+MPG@0.0, Displacement@4.0, Horsepower@3.0, Weight@10.0->Model@3.0	 cc:0.5639873349529578	
+MPG@2.0, Horsepower@4.0, Weight@0.0, Model@4.0, Origin@4.0->Acceleration@2.0	 cc:0.5639186920662725	
+MPG@4.0, Displacement@4.0, Horsepower@0.0, Weight@40.0, Acceleration@4.0->Model@3.0	 cc:0.5637501259901084	
+MPG@1.0, Weight@40.0, Acceleration@4.0->Cylinders@2.0	 cc:0.5636458583141307	
+Weight@40.0, Acceleration@3.0, Model@1.0->Cylinders@2.0	 cc:0.563119306550443	
+Car@4.0, Displacement@0.0, Weight@40.0, Model@1.0->Acceleration@2.0	 cc:0.5629794140851728	
+MPG@2.0, Displacement@4.0, Horsepower@0.0, Weight@30.0->Acceleration@2.0	 cc:0.5626361996517459	
+Car@0.0, MPG@3.0, Horsepower@4.0->Acceleration@3.0	 cc:0.562246933661429	
+Displacement@0.0, Horsepower@0.0, Weight@0.0, Model@1.0->Acceleration@2.0	 cc:0.5619219660712982	
+Car@2.0, Displacement@4.0, Horsepower@3.0, Acceleration@4.0->Model@4.0	 cc:0.5617577444816332	
+Weight@40.0, Acceleration@4.0, Model@0.0->Cylinders@2.0	 cc:0.5615153221349849	
+MPG@3.0, Displacement@4.0, Horsepower@0.0, Weight@10.0, Acceleration@4.0->Origin@0.0	 cc:0.5611764521880571	
+MPG@2.0, Displacement@0.0, Horsepower@0.0, Weight@40.0->Acceleration@2.0	 cc:0.561097382533774	
+MPG@3.0, Displacement@1.0, Horsepower@1.0, Weight@10.0, Acceleration@4.0->Origin@0.0	 cc:0.5609983282415951	
+Horsepower@4.0, Weight@0.0, Model@1.0->Acceleration@3.0	 cc:0.5608801582088203	
+Displacement@4.0, Horsepower@0.0, Weight@40.0, Acceleration@4.0->Model@4.0	 cc:0.5608123842194348	
+Horsepower@4.0, Acceleration@4.0, Model@0.0->Cylinders@3.0	 cc:0.5605899465106823	
+Car@4.0, MPG@3.0, Displacement@4.0->Acceleration@3.0	 cc:0.5604769898617064	
+Displacement@4.0, Horsepower@1.0, Weight@10.0, Acceleration@4.0->Model@4.0	 cc:0.5599452247142196	
+MPG@1.0, Displacement@4.0, Horsepower@2.0, Weight@30.0->Acceleration@2.0	 cc:0.5598661550599365	
+MPG@3.0, Displacement@0.0, Weight@0.0, Acceleration@1.0, Model@3.0->Origin@0.0	 cc:0.5585610713156148	
+Car@4.0, MPG@3.0, Horsepower@0.0->Acceleration@3.0	 cc:0.5583308135311639	
+Car@4.0, MPG@2.0, Horsepower@4.0->Acceleration@3.0	 cc:0.5578772491406605	
+Car@3.0, Model@0.0->Acceleration@4.0	 cc:0.5577451767510888	
+MPG@0.0, Displacement@4.0, Weight@40.0, Model@0.0->Acceleration@2.0	 cc:0.5571239151817212	
+MPG@4.0, Weight@30.0, Model@3.0->Cylinders@2.0	 cc:0.5568145877429871	
+Displacement@0.0, Weight@0.0, Model@1.0->Acceleration@3.0	 cc:0.5567876519266929	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Weight@20.0->Acceleration@2.0	 cc:0.5563445143037874	
+Horsepower@4.0, Acceleration@1.0, Origin@4.0->Cylinders@3.0	 cc:0.5561516191032285	
+Horsepower@2.0, Weight@0.0->Acceleration@4.0	 cc:0.5561186010058354	
+MPG@0.0, Cylinders@1.0, Displacement@0.0, Horsepower@2.0, Acceleration@2.0->Origin@0.0	 cc:0.5546310488285526	
+MPG@0.0, Cylinders@0.0, Horsepower@0.0, Acceleration@1.0, Model@1.0->Origin@0.0	 cc:0.5520278325183077	
+Car@4.0, Acceleration@2.0, Model@1.0->Cylinders@2.0	 cc:0.5502187883400934	
+MPG@1.0, Displacement@0.0, Weight@20.0->Acceleration@3.0	 cc:0.5499972195286407	
+MPG@1.0, Horsepower@1.0, Weight@0.0->Acceleration@3.0	 cc:0.5495619019814335	
+MPG@0.0, Horsepower@1.0, Model@0.0->Acceleration@3.0	 cc:0.5494776189433515	
+Car@4.0, Horsepower@4.0, Weight@40.0->Acceleration@3.0	 cc:0.5480413317067576	
+MPG@4.0, Horsepower@4.0, Weight@0.0, Model@1.0, Origin@4.0->Acceleration@2.0	 cc:0.547584291727055	
+Displacement@0.0, Horsepower@4.0, Weight@0.0->Acceleration@3.0	 cc:0.5470785934985629	
+Car@4.0, MPG@4.0, Model@2.0->Cylinders@2.0	 cc:0.546463414210294	
+MPG@0.0, Displacement@1.0, Weight@20.0->Acceleration@3.0	 cc:0.5461123797011689	
+Car@4.0, Displacement@4.0, Weight@40.0->Acceleration@3.0	 cc:0.5460002919494926	
+MPG@2.0, Horsepower@1.0, Weight@30.0, Model@2.0, Origin@4.0->Acceleration@2.0	 cc:0.5458690884572207	
+MPG@4.0, Horsepower@1.0, Weight@30.0, Model@1.0, Origin@4.0->Acceleration@2.0	 cc:0.5457543940136451	
+Horsepower@4.0, Acceleration@0.0, Origin@4.0->Cylinders@2.0	 cc:0.5457118180459541	
+Horsepower@4.0, Acceleration@2.0, Model@0.0->Cylinders@2.0	 cc:0.5454919870291011	
+Car@4.0, MPG@0.0, Weight@40.0->Acceleration@3.0	 cc:0.5448611675894356	
+MPG@0.0, Displacement@0.0, Horsepower@4.0, Acceleration@2.0, Model@1.0->Origin@0.0	 cc:0.544029632873513	
+MPG@0.0, Cylinders@1.0, Displacement@0.0, Horsepower@4.0, Acceleration@1.0->Origin@0.0	 cc:0.5438914782028423	
+MPG@1.0, Cylinders@1.0, Horsepower@0.0, Weight@0.0, Acceleration@1.0->Origin@0.0	 cc:0.5435960531209054	
+MPG@3.0, Displacement@1.0, Horsepower@4.0, Weight@0.0, Model@3.0->Origin@0.0	 cc:0.5435100322882237	
+MPG@0.0, Displacement@4.0, Horsepower@3.0, Weight@30.0, Acceleration@3.0->Origin@0.0	 cc:0.5426202814532133	
+MPG@0.0, Displacement@0.0, Horsepower@4.0, Weight@40.0, Acceleration@3.0->Origin@0.0	 cc:0.5419538372242556	
+MPG@1.0, Displacement@1.0, Weight@0.0, Acceleration@1.0, Model@2.0->Origin@0.0	 cc:0.5414742059147577	
+MPG@0.0, Cylinders@1.0, Horsepower@1.0, Weight@40.0, Acceleration@1.0->Origin@0.0	 cc:0.541440318920065	
+Horsepower@4.0, Weight@40.0, Model@3.0->Cylinders@2.0	 cc:0.5413951362604745	
+MPG@3.0, Displacement@0.0, Weight@10.0, Acceleration@1.0, Model@1.0->Origin@0.0	 cc:0.5411136135353346	
+Displacement@1.0, Horsepower@3.0, Weight@10.0, Acceleration@0.0, Model@4.0->Origin@0.0	 cc:0.5410597419027461	
+MPG@3.0, Horsepower@0.0, Weight@10.0, Acceleration@1.0, Model@1.0->Origin@0.0	 cc:0.5410189037296548	
+Displacement@0.0, Horsepower@4.0, Weight@10.0, Acceleration@0.0, Model@4.0->Origin@0.0	 cc:0.5407912526371033	
+MPG@1.0, Horsepower@0.0, Weight@10.0, Acceleration@1.0, Model@2.0->Origin@0.0	 cc:0.5407764813830065	
+MPG@3.0, Displacement@4.0, Horsepower@0.0, Weight@10.0, Model@3.0->Origin@0.0	 cc:0.5407712679992076	
+Horsepower@2.0, Acceleration@1.0, Model@1.0->Cylinders@2.0	 cc:0.5406348511231367	
+Displacement@4.0, Horsepower@1.0, Weight@40.0, Origin@4.0->Model@4.0	 cc:0.5406296377393378	
+MPG@3.0, Displacement@1.0, Horsepower@1.0, Weight@10.0, Model@3.0->Origin@0.0	 cc:0.5405931440527456	
+MPG@0.0, Displacement@4.0, Horsepower@0.0, Weight@40.0, Acceleration@3.0->Origin@0.0	 cc:0.5398180876613108	
+MPG@4.0, Weight@40.0, Acceleration@4.0, Model@3.0->Cylinders@2.0	 cc:0.5396929664501375	
+MPG@0.0, Horsepower@4.0, Weight@30.0, Model@2.0, Origin@4.0->Acceleration@2.0	 cc:0.5393966724709007	
+Horsepower@4.0, Acceleration@1.0, Model@1.0->Cylinders@3.0	 cc:0.5386763566093542	
+MPG@0.0, Acceleration@2.0, Model@0.0->Cylinders@3.0	 cc:0.538297517386635	
+Origin@4.0->Cylinders@4.0	 cc:0.5354518787297418	
+MPG@3.0, Displacement@2.0, Horsepower@4.0, Weight@0.0, Model@2.0->Origin@0.0	 cc:0.5352416055831866	
+MPG@0.0, Displacement@1.0, Horsepower@4.0, Acceleration@2.0, Model@0.0->Origin@0.0	 cc:0.5351764382857005	
+MPG@1.0, Cylinders@1.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->Origin@0.0	 cc:0.5333291626262943	
+MPG@0.0, Displacement@4.0, Horsepower@3.0, Weight@40.0, Acceleration@2.0->Origin@0.0	 cc:0.53241073818039	
+MPG@3.0, Displacement@1.0, Weight@10.0, Acceleration@1.0, Model@0.0->Origin@0.0	 cc:0.5322604189475222	
+Car@4.0, MPG@3.0, Horsepower@4.0, Model@4.0->Acceleration@3.0	 cc:0.5320127832170749	
+MPG@3.0, Displacement@1.0, Horsepower@4.0, Weight@0.0, Acceleration@1.0->Origin@0.0	 cc:0.532007569833276	
+Car@4.0, MPG@1.0, Displacement@4.0, Horsepower@3.0, Acceleration@2.0->Model@3.0	 cc:0.5316878156269442	
+Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@1.0->Model@4.0	 cc:0.5309544663059005	
+MPG@1.0, Displacement@4.0, Horsepower@3.0, Weight@10.0, Origin@4.0->Model@3.0	 cc:0.5304635393315051	
+Car@2.0, Displacement@1.0, Horsepower@4.0, Acceleration@1.0->Model@4.0	 cc:0.529811866356644	
+MPG@0.0, Cylinders@1.0, Horsepower@1.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5297901439241488	
+Car@4.0, MPG@4.0, Displacement@4.0, Horsepower@3.0->Model@4.0	 cc:0.5297814549511506	
+Displacement@0.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0, Origin@4.0->Model@3.0	 cc:0.5297119431671654	
+MPG@0.0, Cylinders@0.0, Horsepower@2.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5297110742698656	
+Horsepower@4.0, Acceleration@1.0, Model@4.0, Origin@4.0->Cylinders@2.0	 cc:0.5296606782264763	
+MPG@1.0, Horsepower@3.0, Weight@10.0, Acceleration@0.0, Model@2.0->Origin@0.0	 cc:0.5296372179993813	
+Displacement@4.0, Horsepower@2.0, Weight@10.0, Acceleration@1.0->Model@4.0	 cc:0.529436502723124	
+MPG@4.0, Weight@40.0, Model@0.0->Cylinders@2.0	 cc:0.529347875198543	
+MPG@3.0, Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@1.0->Model@3.0	 cc:0.529347875198543	
+MPG@0.0, Cylinders@1.0, Horsepower@3.0, Weight@30.0, Acceleration@0.0->Origin@0.0	 cc:0.5290559257058053	
+Displacement@0.0, Horsepower@2.0, Weight@40.0, Acceleration@1.0->Model@4.0	 cc:0.5289846761272206	
+MPG@0.0, Cylinders@1.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0->Origin@0.0	 cc:0.5283851369903483	
+MPG@3.0, Displacement@0.0, Horsepower@4.0, Weight@20.0, Acceleration@1.0->Model@3.0	 cc:0.5283694968389516	
+MPG@3.0, Displacement@4.0, Weight@0.0, Acceleration@0.0, Model@1.0->Origin@0.0	 cc:0.5281731260491935	
+MPG@0.0, Displacement@4.0, Weight@30.0, Model@1.0, Origin@4.0->Acceleration@2.0	 cc:0.5280558249137185	
+MPG@3.0, Displacement@0.0, Weight@0.0, Model@4.0->Acceleration@3.0	 cc:0.5279611151080386	
+MPG@2.0, Displacement@2.0, Horsepower@3.0, Weight@10.0, Acceleration@1.0->Origin@0.0	 cc:0.5274493345984479	
+MPG@1.0, Horsepower@1.0, Weight@10.0, Acceleration@0.0, Model@2.0->Origin@0.0	 cc:0.5270548552243319	
+MPG@0.0, Horsepower@1.0, Acceleration@1.0->Cylinders@2.0	 cc:0.526346703924983	
+Horsepower@4.0, Acceleration@4.0, Model@0.0, Origin@4.0->Cylinders@2.0	 cc:0.5260547544322451	
+MPG@0.0, Horsepower@4.0, Acceleration@1.0->Cylinders@3.0	 cc:0.5257871340639022	
+Displacement@0.0, Horsepower@0.0, Weight@40.0, Model@1.0, Origin@4.0->Acceleration@2.0	 cc:0.5255099558252613	
+MPG@4.0, Displacement@0.0, Weight@10.0, Model@3.0->Acceleration@3.0	 cc:0.5255090869279615	
+MPG@2.0, Horsepower@3.0, Weight@10.0, Acceleration@0.0, Model@1.0->Origin@0.0	 cc:0.5252388598677191	
+MPG@3.0, Displacement@1.0, Horsepower@3.0, Weight@10.0, Model@1.0->Origin@0.0	 cc:0.5251902016189294	
+MPG@3.0, Displacement@0.0, Horsepower@4.0, Weight@10.0, Model@1.0->Origin@0.0	 cc:0.5249217123532868	
+MPG@3.0, Horsepower@1.0, Model@0.0->Cylinders@2.0	 cc:0.5244377365572899	
+MPG@2.0, Displacement@4.0, Horsepower@3.0, Weight@10.0, Acceleration@1.0->Model@3.0	 cc:0.5243725692598037	
+MPG@1.0, Cylinders@1.0, Displacement@0.0, Horsepower@2.0, Weight@40.0->Model@3.0	 cc:0.524010239085781	
+MPG@2.0, Horsepower@1.0, Weight@0.0, Model@4.0->Acceleration@3.0	 cc:0.5239581052477921	
+MPG@2.0, Displacement@0.0, Weight@10.0, Model@4.0->Acceleration@3.0	 cc:0.5238581820583135	
+MPG@0.0, Cylinders@1.0, Horsepower@1.0, Weight@40.0, Acceleration@0.0->Model@3.0	 cc:0.5234159133327076	
+Car@4.0, MPG@4.0, Cylinders@1.0, Model@0.0->Acceleration@3.0	 cc:0.5234098310516091	
+MPG@1.0, Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@1.0->Origin@0.0	 cc:0.5233759440569163	
+MPG@1.0, Displacement@4.0, Horsepower@3.0, Weight@10.0, Acceleration@1.0->Origin@0.0	 cc:0.5230414185964876	
+Car@0.0, MPG@2.0, Displacement@4.0, Acceleration@0.0->Model@4.0	 cc:0.5229354131259101	
+MPG@1.0, Displacement@1.0, Weight@10.0, Acceleration@1.0, Model@0.0->Origin@0.0	 cc:0.5227181888009564	
+MPG@0.0, Displacement@4.0, Horsepower@3.0, Weight@30.0, Model@2.0->Origin@0.0	 cc:0.5219196721824267	
+MPG@4.0, Displacement@1.0, Horsepower@3.0, Weight@10.0, Acceleration@0.0->Origin@0.0	 cc:0.5217632706684601	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Model@0.0, Origin@4.0->Acceleration@2.0	 cc:0.5216633474789814	
+MPG@4.0, Displacement@0.0, Horsepower@4.0, Weight@10.0, Acceleration@0.0->Origin@0.0	 cc:0.5214947814028174	
+Car@0.0, MPG@2.0, Displacement@4.0, Horsepower@4.0->Model@4.0	 cc:0.5211976185262807	
+MPG@0.0, Cylinders@1.0, Displacement@0.0, Horsepower@4.0, Weight@40.0->Model@3.0	 cc:0.5210403481150141	
+MPG@0.0, Cylinders@1.0, Displacement@4.0, Horsepower@2.0, Weight@40.0->Model@3.0	 cc:0.5210360036285151	
+MPG@2.0, Displacement@2.0, Horsepower@3.0, Weight@10.0, Model@1.0->Origin@0.0	 cc:0.52096649184453	
+MPG@3.0, Horsepower@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5207579564925744	
+MPG@0.0, Cylinders@1.0, Displacement@4.0, Horsepower@3.0, Weight@10.0->Model@3.0	 cc:0.5206198018219039	
+Car@4.0, MPG@2.0, Displacement@1.0, Horsepower@4.0->Model@4.0	 cc:0.520558110113617	
+Horsepower@1.0, Weight@20.0, Model@1.0, Origin@4.0->Acceleration@3.0	 cc:0.5199490131064468	
+Horsepower@4.0, Weight@0.0, Origin@4.0->Acceleration@4.0	 cc:0.519624914413616	
+MPG@4.0, Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->Model@3.0	 cc:0.5194381014941558	
+MPG@4.0, Displacement@4.0, Horsepower@4.0, Weight@20.0, Model@1.0->Acceleration@2.0	 cc:0.519432019213057	
+MPG@2.0, Displacement@1.0, Horsepower@1.0, Weight@40.0->Model@4.0	 cc:0.519281699980189	
+MPG@2.0, Displacement@4.0, Horsepower@1.0, Weight@20.0->Model@4.0	 cc:0.5191279051581219	
+MPG@0.0, Displacement@4.0, Horsepower@0.0, Weight@40.0, Model@2.0->Origin@0.0	 cc:0.5191174783905241	
+Displacement@0.0, Weight@10.0, Model@1.0, Origin@4.0->Acceleration@3.0	 cc:0.5187760017516969	
+Car@4.0, MPG@4.0, Displacement@4.0, Horsepower@3.0, Acceleration@0.0->Model@3.0	 cc:0.5185248904320505	
+MPG@3.0, Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@0.0->Origin@0.0	 cc:0.5184640676210635	
+MPG@4.0, Displacement@0.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0->Model@3.0	 cc:0.5184597231345645	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Weight@30.0, Origin@4.0->Acceleration@2.0	 cc:0.5183467664855885	
+MPG@4.0, Displacement@4.0, Horsepower@2.0, Weight@30.0, Model@1.0->Acceleration@2.0	 cc:0.5179279579870777	
+MPG@2.0, Displacement@3.0, Horsepower@2.0, Weight@30.0, Model@2.0->Acceleration@2.0	 cc:0.517819345824601	
+MPG@4.0, Displacement@3.0, Horsepower@2.0, Weight@30.0, Model@1.0->Acceleration@2.0	 cc:0.5177046513810254	
+MPG@0.0, Displacement@4.0, Horsepower@3.0, Acceleration@0.0->Model@4.0	 cc:0.5176742399755319	
+MPG@0.0, Displacement@1.0, Horsepower@4.0, Acceleration@0.0->Model@4.0	 cc:0.5176360084943401	
+Horsepower@0.0, Weight@40.0, Origin@4.0->Acceleration@4.0	 cc:0.517575185683353	
+MPG@3.0, Displacement@1.0, Horsepower@3.0, Weight@10.0, Acceleration@0.0->Origin@0.0	 cc:0.5172189377904289	
+Horsepower@1.0, Weight@10.0, Model@3.0->Acceleration@4.0	 cc:0.5172180688931292	
+MPG@3.0, Displacement@4.0, Horsepower@4.0, Weight@10.0, Model@0.0->Origin@0.0	 cc:0.5169791221356801	
+MPG@1.0, Displacement@4.0, Horsepower@4.0, Weight@0.0, Model@1.0->Origin@0.0	 cc:0.5168931013029985	
+MPG@1.0, Displacement@4.0, Horsepower@2.0, Weight@40.0->Model@4.0	 cc:0.5166897793348417	
+MPG@4.0, Displacement@0.0, Horsepower@2.0, Weight@40.0, Model@1.0->Acceleration@2.0	 cc:0.5163891408691059	
+MPG@1.0, Displacement@4.0, Horsepower@3.0, Weight@10.0->Model@4.0	 cc:0.5162735775282304	
+Displacement@3.0, Horsepower@2.0, Weight@30.0, Acceleration@0.0->Model@4.0	 cc:0.5158460800567216	
+MPG@1.0, Horsepower@4.0, Weight@40.0->Cylinders@2.0	 cc:0.5155463104882856	
+Displacement@4.0, Horsepower@2.0, Weight@20.0, Acceleration@0.0->Model@4.0	 cc:0.5155176368773916	
+Car@4.0, MPG@4.0, Displacement@4.0, Weight@40.0, Model@1.0->Acceleration@2.0	 cc:0.5152291629738532	
+Displacement@4.0, Horsepower@1.0, Weight@40.0, Acceleration@0.0->Model@4.0	 cc:0.5151831114169629	
+Car@4.0, Cylinders@1.0, Model@0.0->Acceleration@4.0	 cc:0.5144810423987127	
+MPG@1.0, Horsepower@4.0, Model@0.0->Cylinders@3.0	 cc:0.5143359365496436	
+MPG@4.0, Displacement@0.0, Horsepower@0.0, Weight@40.0, Model@1.0->Acceleration@2.0	 cc:0.5142577357926603	
+MPG@2.0, Displacement@4.0, Horsepower@3.0, Weight@10.0, Acceleration@0.0->Origin@0.0	 cc:0.5134887616823242	
+MPG@0.0, Horsepower@2.0, Acceleration@0.0->Cylinders@2.0	 cc:0.5132915219952663	
+MPG@0.0, Displacement@4.0, Horsepower@3.0, Weight@40.0, Model@1.0->Origin@0.0	 cc:0.5131325137894002	
+MPG@1.0, Horsepower@1.0, Weight@30.0, Origin@4.0->Acceleration@3.0	 cc:0.5126372423285057	
+MPG@1.0, Displacement@1.0, Weight@20.0, Origin@4.0->Acceleration@3.0	 cc:0.5125885840797162	
+Horsepower@3.0, Weight@20.0, Model@0.0, Origin@4.0->Acceleration@3.0	 cc:0.512537319139027	
+MPG@1.0, Horsepower@0.0, Weight@40.0, Origin@4.0->Acceleration@3.0	 cc:0.5124174113116526	
+Car@4.0, MPG@0.0, Cylinders@1.0->Acceleration@4.0	 cc:0.51158587659573	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Origin@4.0->Acceleration@3.0	 cc:0.5115789254173313	
+Horsepower@4.0, Weight@0.0, Model@2.0->Acceleration@4.0	 cc:0.511449459719659	
+MPG@4.0, Horsepower@4.0, Weight@0.0, Model@1.0->Acceleration@3.0	 cc:0.5110784405726381	
+MPG@4.0, Displacement@1.0, Horsepower@1.0, Weight@40.0, Acceleration@4.0->Model@4.0	 cc:0.5108325426367906	
+MPG@2.0, Displacement@4.0, Horsepower@4.0, Weight@30.0, Model@1.0->Acceleration@2.0	 cc:0.5107986556420977	
+MPG@4.0, Displacement@4.0, Horsepower@1.0, Weight@20.0, Acceleration@4.0->Model@4.0	 cc:0.5106787478147232	
+Displacement@0.0, Horsepower@4.0, Weight@40.0, Origin@4.0->Acceleration@3.0	 cc:0.5106665832525259	
+Horsepower@1.0, Weight@30.0, Model@0.0, Origin@4.0->Acceleration@3.0	 cc:0.51050670614936	
+MPG@2.0, Displacement@4.0, Horsepower@3.0, Weight@20.0, Acceleration@0.0->Model@3.0	 cc:0.5104537034140713	
+MPG@2.0, Displacement@1.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0->Model@3.0	 cc:0.5104154719328794	
+MPG@2.0, Displacement@4.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0->Model@3.0	 cc:0.5103346644839966	
+MPG@2.0, Horsepower@3.0, Weight@0.0, Model@2.0->Acceleration@3.0	 cc:0.5103207621271996	
+MPG@2.0, Displacement@3.0, Horsepower@3.0, Weight@20.0, Acceleration@0.0->Model@3.0	 cc:0.5102303968080188	
+MPG@2.0, Horsepower@1.0, Weight@30.0, Model@2.0->Acceleration@3.0	 cc:0.5093632373028036	
+MPG@4.0, Horsepower@1.0, Weight@30.0, Model@1.0->Acceleration@3.0	 cc:0.5092485428592282	
+MPG@1.0, Displacement@4.0, Weight@10.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.509174686588744	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5088375544364159	
+MPG@0.0, Displacement@1.0, Weight@40.0, Origin@4.0->Acceleration@3.0	 cc:0.5086272812898607	
+MPG@1.0, Cylinders@1.0, Horsepower@2.0, Weight@0.0->Acceleration@3.0	 cc:0.5075932935030811	
+MPG@0.0, Horsepower@3.0, Weight@40.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.5069172914038252	
+Weight@40.0->Cylinders@4.0	 cc:0.5051786279068959	
+MPG@1.0, Horsepower@1.0, Weight@40.0, Model@2.0->Acceleration@3.0	 cc:0.5049744370414395	
+MPG@1.0, Displacement@0.0, Weight@30.0, Model@2.0->Acceleration@3.0	 cc:0.5038240170164847	
+MPG@0.0, Acceleration@2.0, Model@0.0, Origin@4.0->Cylinders@2.0	 cc:0.503762325308198	
+Car@4.0->Cylinders@4.0	 cc:0.5030003023762604	
+MPG@4.0, Horsepower@3.0, Weight@30.0, Model@0.0->Acceleration@3.0	 cc:0.5018368488918084	
+MPG@0.0, Displacement@4.0, Horsepower@3.0, Weight@40.0, Acceleration@0.0->Model@3.0	 cc:0.5015909509559607	
+MPG@2.0, Horsepower@4.0, Acceleration@1.0, Origin@4.0->Cylinders@2.0	 cc:0.5011790936358487	
+Horsepower@2.0, Weight@20.0, Model@1.0->Acceleration@4.0	 cc:0.5011669290736511	
+Car@4.0, MPG@4.0, Horsepower@4.0, Model@0.0->Acceleration@3.0	 cc:0.5010435456570774	
+Horsepower@1.0, Weight@40.0, Model@1.0->Acceleration@4.0	 cc:0.5008324036132226	
+MPG@0.0, Displacement@1.0, Weight@40.0, Model@2.0->Acceleration@3.0	 cc:0.5004518265959037	
+MPG@2.0, Displacement@0.0, Horsepower@4.0->Acceleration@4.0	 cc:0.5003214920009316	
+MPG@0.0, Horsepower@0.0, Model@1.0->Acceleration@4.0	 cc:0.5000086889729982	
+MPG@2.0, Horsepower@0.0, Model@0.0->Acceleration@4.0	 cc:0.4999417838809124	
+Car@4.0, MPG@4.0, Displacement@4.0, Model@0.0->Acceleration@3.0	 cc:0.49900250589981265	
+Displacement@0.0, Weight@10.0, Model@1.0->Acceleration@4.0	 cc:0.49859499306619964	
+MPG@4.0, Displacement@0.0, Horsepower@4.0, Weight@20.0->Acceleration@3.0	 cc:0.4983499640276518	
+MPG@2.0, Horsepower@2.0, Weight@20.0->Acceleration@4.0	 cc:0.49820485817858273	
+MPG@4.0, Displacement@0.0, Horsepower@2.0, Weight@40.0->Acceleration@3.0	 cc:0.4973585522085631	
+MPG@2.0, Displacement@1.0, Horsepower@0.0->Acceleration@4.0	 cc:0.49727513806778095	
+MPG@1.0, Displacement@4.0, Horsepower@4.0, Weight@40.0, Model@0.0->Acceleration@2.0	 cc:0.4964157986382642	
+MPG@1.0, Displacement@1.0, Horsepower@4.0, Weight@40.0, Model@0.0->Acceleration@2.0	 cc:0.49550519426805834	
+MPG@1.0, Displacement@0.0, Weight@40.0, Model@1.0->Acceleration@3.0	 cc:0.49503685862345814	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Model@1.0->Acceleration@3.0	 cc:0.49410366292345703	
+MPG@1.0, Displacement@4.0, Weight@20.0->Acceleration@4.0	 cc:0.4933181797644246	
+Horsepower@4.0, Weight@10.0, Model@0.0->Acceleration@4.0	 cc:0.4926934426058578	
+Displacement@4.0, Horsepower@2.0, Weight@40.0, Acceleration@1.0, Origin@4.0->Model@4.0	 cc:0.4924866450485018	
+Horsepower@3.0, Weight@20.0, Model@0.0->Acceleration@4.0	 cc:0.4923563104535296	
+MPG@0.0, Displacement@3.0, Horsepower@4.0->Acceleration@4.0	 cc:0.49222250026935815	
+Car@4.0, Horsepower@4.0, Model@0.0->Acceleration@4.0	 cc:0.49211475700418117	
+Displacement@4.0, Horsepower@3.0, Weight@10.0, Acceleration@1.0, Origin@4.0->Model@4.0	 cc:0.49207044324189053	
+MPG@0.0, Displacement@3.0, Weight@40.0, Model@1.0->Acceleration@3.0	 cc:0.49183931656013985	
+Displacement@0.0, Horsepower@4.0, Weight@20.0, Acceleration@1.0, Origin@4.0->Model@4.0	 cc:0.49142659034272784	
+MPG@0.0, Horsepower@4.0, Acceleration@1.0, Origin@4.0->Cylinders@2.0	 cc:0.49125194198546507	
+MPG@3.0, Horsepower@4.0, Acceleration@2.0, Model@0.0->Cylinders@2.0	 cc:0.49114593651488764	
+MPG@2.0, Displacement@2.0, Horsepower@4.0, Weight@20.0->Acceleration@3.0	 cc:0.4907227835298779	
+Displacement@4.0, Horsepower@4.0, Weight@0.0->Acceleration@4.0	 cc:0.49039955373434685	
+MPG@2.0, Displacement@4.0, Horsepower@3.0, Weight@20.0->Acceleration@3.0	 cc:0.49034394430715866	
+Car@4.0, Displacement@4.0, Model@0.0->Acceleration@4.0	 cc:0.49007371724691634	
+MPG@2.0, Displacement@0.0, Weight@40.0, Model@0.0->Acceleration@3.0	 cc:0.48994425154924387	
+MPG@0.0, Displacement@4.0, Weight@40.0->Acceleration@4.0	 cc:0.48935687697456914	
+Horsepower@3.0, Weight@20.0, Model@4.0, Origin@4.0->Acceleration@4.0	 cc:0.4893203832879769	
+MPG@0.0, Displacement@4.0, Horsepower@1.0->Acceleration@4.0	 cc:0.48899107121134716	
+MPG@2.0, Displacement@4.0, Horsepower@1.0, Weight@30.0->Acceleration@3.0	 cc:0.4883133313174916	
+Horsepower@1.0, Weight@40.0, Model@4.0, Origin@4.0->Acceleration@4.0	 cc:0.4878024197052006	
+Displacement@0.0, Horsepower@2.0, Weight@20.0->Acceleration@4.0	 cc:0.4873653643633938	
+MPG@2.0, Horsepower@1.0, Weight@30.0, Model@4.0, Origin@4.0->Acceleration@3.0	 cc:0.4870334455948644	
+Displacement@0.0, Horsepower@1.0, Weight@40.0->Acceleration@4.0	 cc:0.4870308389029651	
+MPG@1.0, Displacement@4.0, Horsepower@4.0, Weight@20.0->Acceleration@3.0	 cc:0.48631486752791764	
+MPG@3.0, Cylinders@1.0, Displacement@4.0, Horsepower@4.0, Weight@0.0, Acceleration@1.0->Model@3.0	 cc:0.48598034206748897	
+MPG@2.0, Displacement@1.0, Weight@0.0, Model@4.0, Origin@4.0->Acceleration@3.0	 cc:0.48591169918080357	
+MPG@2.0, Displacement@1.0, Horsepower@4.0, Weight@10.0, Acceleration@1.0, Origin@4.0->Model@3.0	 cc:0.48578484017503065	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Model@0.0->Acceleration@3.0	 cc:0.4851574963245644	
+MPG@1.0, Displacement@2.0, Horsepower@0.0, Weight@40.0->Acceleration@3.0	 cc:0.4826985169660887	
+MPG@4.0, Displacement@4.0, Horsepower@3.0, Weight@10.0, Acceleration@1.0->Model@4.0	 cc:0.4808182232092895	
+MPG@4.0, Displacement@0.0, Horsepower@4.0, Weight@20.0, Acceleration@1.0->Model@4.0	 cc:0.48017437031012683	
+MPG@0.0, Displacement@2.0, Horsepower@2.0, Weight@40.0->Acceleration@3.0	 cc:0.4798042200604058	
+MPG@1.0, Horsepower@4.0, Model@0.0, Origin@4.0->Cylinders@2.0	 cc:0.4798007444712065	
+Displacement@4.0, Horsepower@3.0, Weight@20.0, Acceleration@0.0, Origin@4.0->Model@4.0	 cc:0.47815157739615805	
+Displacement@1.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0, Origin@4.0->Model@4.0	 cc:0.47811334591496624	
+Cylinders@1.0, Horsepower@1.0, Weight@30.0, Model@1.0, Origin@4.0->Acceleration@3.0	 cc:0.47713322976077516	
+MPG@0.0, Horsepower@4.0, Acceleration@2.0, Model@0.0->Cylinders@2.0	 cc:0.47657800438619363	
+MPG@2.0, Cylinders@1.0, Displacement@4.0, Horsepower@0.0, Weight@40.0->Model@4.0	 cc:0.4760922907955971	
+MPG@1.0, Displacement@0.0, Weight@30.0, Model@3.0, Origin@4.0->Acceleration@3.0	 cc:0.4739600168218517	
+MPG@1.0, Cylinders@1.0, Displacement@4.0, Horsepower@2.0, Weight@40.0->Model@4.0	 cc:0.47332224620378766	
+MPG@0.0, Horsepower@2.0, Acceleration@1.0, Model@1.0->Cylinders@2.0	 cc:0.4717208684802291	
+MPG@1.0, Cylinders@1.0, Horsepower@4.0, Weight@0.0, Origin@4.0->Acceleration@3.0	 cc:0.47109960691086156	
+MPG@4.0, Horsepower@3.0, Weight@40.0, Origin@4.0->Acceleration@4.0	 cc:0.471088311245964	
+MPG@4.0, Displacement@2.0, Weight@0.0, Model@1.0, Origin@4.0->Acceleration@3.0	 cc:0.46999436954549717	
+Cylinders@1.0, Horsepower@3.0, Weight@20.0, Model@0.0, Origin@4.0->Acceleration@3.0	 cc:0.46916978600797293	
+MPG@2.0, Horsepower@2.0, Weight@40.0, Model@4.0->Acceleration@4.0	 cc:0.4687640109689595	
+MPG@2.0, Displacement@4.0, Horsepower@0.0, Model@4.0->Acceleration@4.0	 cc:0.4676804960360905	
+MPG@2.0, Cylinders@1.0, Horsepower@3.0, Weight@0.0, Model@2.0->Acceleration@3.0	 cc:0.4669532289961455	
+MPG@3.0, Displacement@0.0, Horsepower@4.0, Model@3.0->Acceleration@4.0	 cc:0.4669228175906521	
+MPG@4.0, Displacement@4.0, Horsepower@3.0, Weight@20.0, Acceleration@0.0->Model@4.0	 cc:0.46689935736355703	
+MPG@4.0, Displacement@1.0, Horsepower@4.0, Weight@20.0, Acceleration@0.0->Model@4.0	 cc:0.4668611258823652	
+MPG@4.0, Displacement@4.0, Horsepower@2.0, Weight@40.0, Acceleration@0.0->Model@4.0	 cc:0.46678031843348244	
+MPG@2.0, Displacement@4.0, Weight@0.0, Model@4.0->Acceleration@4.0	 cc:0.4666412948655121	
+MPG@1.0, Displacement@1.0, Weight@30.0, Model@2.0, Origin@4.0->Acceleration@3.0	 cc:0.46641538156756024	
+MPG@3.0, Displacement@4.0, Weight@0.0, Model@1.0, Origin@4.0->Acceleration@3.0	 cc:0.4659435703337608	
+MPG@2.0, Displacement@0.0, Weight@20.0, Model@4.0->Acceleration@4.0	 cc:0.4656629165059207	
+MPG@3.0, Horsepower@1.0, Weight@40.0, Model@3.0->Acceleration@4.0	 cc:0.4644716583078746	
+MPG@0.0, Cylinders@0.0, Displacement@4.0, Horsepower@4.0, Acceleration@0.0, Model@0.0->Origin@0.0	 cc:0.46399202699837694	
+MPG@3.0, Displacement@1.0, Horsepower@0.0, Model@3.0->Acceleration@4.0	 cc:0.4638764636575015	
+MPG@2.0, Displacement@1.0, Horsepower@4.0, Origin@4.0->Acceleration@4.0	 cc:0.462912856552007	
+MPG@3.0, Displacement@0.0, Weight@10.0, Model@3.0->Acceleration@4.0	 cc:0.46223424776085165	
+MPG@0.0, Horsepower@1.0, Model@1.0, Origin@4.0->Acceleration@4.0	 cc:0.46219167179316084	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Model@4.0->Acceleration@4.0	 cc:0.4619405604735143	
+MPG@2.0, Displacement@4.0, Weight@10.0, Model@1.0, Origin@4.0->Acceleration@3.0	 cc:0.4618406372840355	
+MPG@3.0, Cylinders@1.0, Horsepower@0.0, Model@0.0->Acceleration@4.0	 cc:0.46121503122816904	
+MPG@4.0, Displacement@4.0, Weight@10.0, Model@0.0, Origin@4.0->Acceleration@3.0	 cc:0.461031693897908	
+MPG@2.0, Displacement@4.0, Horsepower@4.0, Weight@20.0, Model@4.0->Acceleration@3.0	 cc:0.46071107079427637	
+Displacement@0.0, Horsepower@4.0, Weight@40.0, Model@4.0->Acceleration@4.0	 cc:0.45998032816513224	
+MPG@2.0, Displacement@4.0, Horsepower@2.0, Weight@30.0, Model@4.0->Acceleration@3.0	 cc:0.459207009568297	
+MPG@2.0, Displacement@0.0, Weight@40.0, Model@3.0->Acceleration@4.0	 cc:0.4591931072115001	
+MPG@1.0, Displacement@4.0, Weight@40.0, Model@1.0, Origin@4.0->Acceleration@3.0	 cc:0.4585388275447395	
+MPG@4.0, Cylinders@1.0, Horsepower@3.0, Weight@30.0, Model@0.0->Acceleration@3.0	 cc:0.4584693157607543	
+MPG@1.0, Horsepower@4.0, Weight@40.0, Origin@4.0->Acceleration@4.0	 cc:0.4578741211103813	
+MPG@3.0, Displacement@1.0, Horsepower@2.0, Model@2.0->Acceleration@4.0	 cc:0.45732237132499887	
+MPG@3.0, Displacement@4.0, Weight@10.0, Model@0.0, Origin@4.0->Acceleration@3.0	 cc:0.45648736101987686	
+Displacement@4.0, Horsepower@4.0, Weight@30.0, Model@1.0, Origin@4.0->Acceleration@3.0	 cc:0.4561806402730422	
+MPG@2.0, Cylinders@1.0, Horsepower@2.0, Weight@40.0->Acceleration@4.0	 cc:0.45590172423980174	
+MPG@2.0, Cylinders@1.0, Displacement@4.0, Horsepower@0.0->Acceleration@4.0	 cc:0.4548182093069328	
+Displacement@4.0, Horsepower@4.0, Weight@40.0, Model@3.0->Acceleration@4.0	 cc:0.4544975862033011	
+Displacement@4.0, Horsepower@4.0, Weight@40.0, Origin@4.0->Acceleration@4.0	 cc:0.45398754348830983	
+MPG@0.0, Displacement@4.0, Horsepower@4.0, Origin@4.0->Acceleration@4.0	 cc:0.45389630927182933	
+MPG@2.0, Displacement@4.0, Weight@30.0, Model@0.0, Origin@4.0->Acceleration@3.0	 cc:0.4529335710636345	
+MPG@2.0, Displacement@2.0, Horsepower@4.0, Weight@30.0, Origin@4.0->Acceleration@3.0	 cc:0.452725035711679	
+MPG@4.0, Displacement@0.0, Horsepower@4.0, Weight@40.0, Model@2.0->Acceleration@3.0	 cc:0.4526894109223866	
+MPG@4.0, Horsepower@2.0, Weight@40.0, Model@1.0->Acceleration@4.0	 cc:0.452429610629742	
+MPG@2.0, Displacement@4.0, Horsepower@3.0, Weight@30.0, Origin@4.0->Acceleration@3.0	 cc:0.45234619648895974	
+MPG@2.0, Displacement@1.0, Horsepower@4.0, Weight@30.0, Origin@4.0->Acceleration@3.0	 cc:0.45230796500776793	
+MPG@1.0, Displacement@4.0, Horsepower@4.0, Model@2.0->Acceleration@4.0	 cc:0.4507465565600009	
+MPG@1.0, Horsepower@4.0, Weight@40.0, Model@2.0->Acceleration@4.0	 cc:0.44969866641642425	
+MPG@1.0, Displacement@4.0, Horsepower@4.0, Weight@30.0, Origin@4.0->Acceleration@3.0	 cc:0.44831711970971877	
+MPG@1.0, Displacement@4.0, Weight@40.0, Model@2.0->Acceleration@4.0	 cc:0.44765762665915937	
+MPG@2.0, Cylinders@1.0, Displacement@4.0, Horsepower@4.0, Weight@10.0->Acceleration@3.0	 cc:0.4473135433284327	
+MPG@2.0, Cylinders@1.0, Displacement@4.0, Horsepower@3.0, Weight@20.0->Acceleration@3.0	 cc:0.4469764111761046	
+MPG@3.0, Displacement@4.0, Horsepower@0.0, Model@1.0->Acceleration@4.0	 cc:0.4468017628188419	
+MPG@1.0, Cylinders@1.0, Horsepower@4.0, Weight@40.0, Model@0.0->Acceleration@3.0	 cc:0.4457677750320623	
+MPG@2.0, Displacement@4.0, Horsepower@4.0, Weight@30.0, Model@2.0->Acceleration@3.0	 cc:0.44504311468401675	
+MPG@4.0, Displacement@4.0, Horsepower@4.0, Weight@30.0, Model@1.0->Acceleration@3.0	 cc:0.4449284202404412	
+MPG@0.0, Horsepower@4.0, Weight@40.0, Model@2.0->Acceleration@4.0	 cc:0.44467296443429577	
+MPG@1.0, Model@0.0->Cylinders@4.0	 cc:0.4440942788326191	
+MPG@4.0, Horsepower@3.0, Weight@40.0, Model@0.0->Acceleration@4.0	 cc:0.44361899200962046	
+MPG@2.0, Displacement@4.0, Weight@40.0, Model@1.0->Acceleration@4.0	 cc:0.44325926852749714	
+MPG@1.0, Cylinders@1.0, Displacement@4.0, Horsepower@4.0, Weight@20.0->Acceleration@3.0	 cc:0.4429473343968636	
+MPG@1.0, Cylinders@1.0, Displacement@4.0, Horsepower@2.0, Weight@30.0->Acceleration@3.0	 cc:0.4414432731708842	
+MPG@3.0, Displacement@4.0, Horsepower@4.0, Model@0.0->Acceleration@4.0	 cc:0.44099492216417996	
+MPG@0.0, Acceleration@4.0, Model@2.0->Cylinders@4.0	 cc:0.4407281706931368	
+MPG@4.0, Displacement@0.0, Horsepower@4.0, Weight@40.0->Acceleration@4.0	 cc:0.4406838569308462	
+MPG@1.0, Displacement@1.0, Horsepower@4.0, Weight@40.0, Model@2.0->Acceleration@3.0	 cc:0.4397437100524466	
+MPG@0.0, Horsepower@4.0->Cylinders@4.0	 cc:0.43935357516482987	
+MPG@1.0, Cylinders@1.0, Displacement@2.0, Horsepower@0.0, Weight@40.0->Acceleration@3.0	 cc:0.4393309838350346	
+MPG@3.0, Horsepower@3.0, Weight@40.0, Model@0.0->Acceleration@4.0	 cc:0.4390746591315893	
+MPG@2.0, Horsepower@3.0, Weight@40.0, Model@0.0->Acceleration@4.0	 cc:0.43443387865327865	
+MPG@2.0, Horsepower@4.0, Weight@10.0, Model@0.0->Acceleration@4.0	 cc:0.43370661161333374	
+MPG@2.0, Displacement@4.0, Horsepower@4.0, Weight@40.0->Acceleration@4.0	 cc:0.4335502100993671	
+MPG@2.0, Displacement@4.0, Horsepower@4.0, Model@4.0, Origin@4.0->Acceleration@4.0	 cc:0.43331821452031655	
+MPG@3.0, Displacement@4.0, Weight@0.0, Model@4.0, Origin@4.0->Acceleration@4.0	 cc:0.4327325777402414	
+MPG@4.0, Displacement@4.0, Weight@0.0, Model@3.0, Origin@4.0->Acceleration@4.0	 cc:0.42974270213157884	
+MPG@3.0, Displacement@1.0, Horsepower@4.0, Model@3.0, Origin@4.0->Acceleration@4.0	 cc:0.4295141821417276	
+MPG@2.0, Displacement@4.0, Horsepower@4.0, Weight@30.0, Model@4.0, Origin@4.0->Acceleration@3.0	 cc:0.42271332297607744	
+MPG@1.0, Cylinders@1.0, Horsepower@4.0, Weight@40.0, Origin@4.0->Acceleration@4.0	 cc:0.4145065879793272	
+MPG@3.0, Cylinders@1.0, Displacement@1.0, Horsepower@2.0, Model@2.0->Acceleration@4.0	 cc:0.41395483819394485	
+MPG@3.0, Displacement@4.0, Horsepower@4.0, Model@1.0, Origin@4.0->Acceleration@4.0	 cc:0.4124394813030679	
+MPG@0.0, Acceleration@0.0, Model@4.0->Cylinders@4.0	 cc:0.41058612336256306	
+MPG@1.0, Cylinders@1.0, Displacement@4.0, Horsepower@4.0, Model@2.0->Acceleration@4.0	 cc:0.4073790234289468	
+MPG@3.0, Cylinders@1.0, Displacement@4.0, Horsepower@0.0, Model@1.0->Acceleration@4.0	 cc:0.4034342296877878	
+MPG@2.0, Acceleration@1.0, Model@0.0->Cylinders@4.0	 cc:0.39945381115733647	
+MPG@3.0, Cylinders@1.0, Displacement@4.0, Horsepower@4.0, Model@0.0->Acceleration@4.0	 cc:0.3976273890331259	
+MPG@1.0, Acceleration@0.0, Model@1.0->Cylinders@4.0	 cc:0.39009231164913233	
+MPG@3.0, Acceleration@0.0, Model@0.0->Cylinders@4.0	 cc:0.3896404850532286	
+MPG@1.0, Horsepower@4.0, Model@1.0->Cylinders@4.0	 cc:0.38835451704950286	
+MPG@3.0, Horsepower@4.0, Model@0.0->Cylinders@4.0	 cc:0.38790269045359915	
+MPG@2.0, Horsepower@4.0, Acceleration@1.0, Model@1.0->Cylinders@4.0	 cc:0.3437140493742201	

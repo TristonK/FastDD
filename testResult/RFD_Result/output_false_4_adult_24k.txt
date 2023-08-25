@@ -1,0 +1,802 @@
+****** DISCOVERED RFDs *******
+col3(Long)@0.0->col8(String)@0.0	 cc:0.9113355860352537	
+col8(String)@0.0->col3(Long)@0.0	 cc:0.9113355860352537	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7697753373384995	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@0.0	 cc:0.7640738731036197	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7638564447053643	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7616649584691488	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7598422728241285	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@0.0	 cc:0.7581549804704846	
+col8(String)@1.0->col3(Long)@2.0	 cc:0.7564921763938268	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7557460658360138	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7549789289808064	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7539233801909935	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7498197075497961	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@0.0	 cc:0.7492774647459267	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@0.0	 cc:0.7484083250332499	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7474280989402281	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7468685501114558	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7465112431536107	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7455897674766281	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7446885575085904	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7434132393908757	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7415905537458555	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7405923505204757	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7395293360775802	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7387696648754554	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@0.0	 cc:0.7384752605188791	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7376388677782746	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.736512167708636	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7364313323148453	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7356716611127203	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7335899243840887	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7320443815441313	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7317148347959179	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7309128878307345	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.73051243968171	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7298921491508975	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7295203975566522	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7293599843109206	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7286168310331828	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7271114829221813	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7267941453881624	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@1.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7267541759643362	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7257959421627826	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@1.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7252904574834842	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@0.0	 cc:0.723321545203341	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7229590090830491	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@1.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7228815428490133	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@0.0	 cc:0.7210640480365217	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7208752527550273	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7176344367916363	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@0.0	 cc:0.7165962618720172	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.7145635759532277	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7130180331132704	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7114860912508489	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@1.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.709570633848098	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7057065792890262	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@0.0	 cc:0.7054256598518012	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@0.0	 cc:0.7028380284339433	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@1.0	 cc:0.6974708403516949	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@1.0, col10(String)@4.0->col3(Long)@1.0	 cc:0.695391986113054	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@0.0	 cc:0.694774225490405	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@1.0, col10(String)@4.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6934937738347084	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6921867429849478	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6883345524036982	
+col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6853307979035248	
+col1(Long)@2.0, col2(Long)@200.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6852011010790702	
+col8(String)@2.0->col3(Long)@3.0	 cc:0.6850655622141364	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@1.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6826744319940019	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col5(Long)@40.0, col6(Long)@1.0->col3(Long)@1.0	 cc:0.680076429328277	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@1.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.67810401553664	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@1.0, col9(String)@4.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6775026929732519	
+col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6773769191558392	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6769000603814008	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@1.0, col9(String)@4.0, col6(Long)@1.0->col3(Long)@1.0	 cc:0.6759394896568125	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6747923319615299	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6731716616803236	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6729958126960178	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@1.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6716017774724746	
+col1(Long)@0.0, col2(Long)@0.0, col3(Long)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@1.0->col9(String)@0.0	 cc:0.6714250383526091	
+col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6713923407954141	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@1.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6709752040403454	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@1.0, col9(String)@4.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.670003680975644	
+col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6696331866561414	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6689461816337152	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6682149110313207	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6657517376596025	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.665280020970584	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6650152714167453	
+col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@300.0, col5(Long)@40.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6639252966174619	
+col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6634384620477285	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6626961538979459	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6625237737044722	
+col1(Long)@0.0, col2(Long)@0.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6622690667227896	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6618474899742195	
+col2(Long)@0.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6616793079084557	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@1.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6604913699846982	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6602217569385044	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6601750246212831	
+col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6599606158726913	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6593554899663965	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6588171620227918	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6587229118253541	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6587007567318983	
+col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6585947881301958	
+col2(Long)@200.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6585353991938098	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.658375850174216	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@300.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6580935978708411	
+col1(Long)@2.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6579073657523872	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6577978589119169	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@1.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6577758051857364	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6577285887362714	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6576264117247479	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@3.0, col6(Long)@2.0->col3(Long)@2.0	 cc:0.6573101605167071	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6567651641021892	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6566394778960184	
+col1(Long)@1.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6563427650633502	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6562233769836205	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0->col3(Long)@2.0	 cc:0.6556090317303147	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6554263144787269	
+col1(Long)@0.0, col2(Long)@0.0, col3(Long)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@2.0->col9(String)@0.0	 cc:0.6554189947998631	
+col1(Long)@1.0, col2(Long)@200.0, col8(String)@3.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.65536254978818	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col9(String)@0.0	 cc:0.655050159084039	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col9(String)@0.0	 cc:0.6548205850431607	
+col1(Long)@0.0, col2(Long)@300.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col9(String)@0.0	 cc:0.6548205850431607	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6547422751502604	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6546667275490008	
+col1(Long)@0.0, col2(Long)@100.0, col3(Long)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@1.0, col14(String)@4.0->col9(String)@0.0	 cc:0.654608467675784	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@1.0, col11(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.654590454483921	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6545724773515631	
+col1(Long)@1.0, col2(Long)@200.0, col8(String)@4.0, col6(Long)@2.0->col3(Long)@2.0	 cc:0.6542974356136609	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6541316982487859	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6538751334012709	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6537221640393649	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@2.0->col9(String)@0.0	 cc:0.6534291072398479	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@3.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6525869871814118	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col11(String)@4.0->col3(Long)@2.0	 cc:0.6525110279675795	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6524917078189891	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6523470333452281	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6522864495036877	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6522678781908189	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6513432829659883	
+col1(Long)@3.0, col2(Long)@100.0, col8(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6511654463016321	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@300.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6509902015143664	
+col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6508609968353789	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6507624798636178	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6506682296661801	
+col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6506409093825103	
+col2(Long)@200.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6505815204461243	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col4(Long)@300.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6504640324352031	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@1.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6499696206950293	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6496725329770624	
+col1(Long)@2.0, col2(Long)@200.0, col8(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6495980568773176	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@1.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6493430472628999	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col14(String)@4.0->col9(String)@0.0	 cc:0.6491658632755851	
+col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6490765632468684	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6488437481242546	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6487658120482236	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6482128056156506	
+col2(Long)@100.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6477629930726438	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6471928484921972	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@2.0->col3(Long)@1.0	 cc:0.6471476914411316	
+col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6469810317542497	
+col2(Long)@100.0, col8(String)@3.0, col10(String)@4.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6468617901829534	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6467128488013152	
+col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6466676486123974	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6466185986038775	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.646593536045885	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6456849488373293	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6456823691136273	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6455906986398914	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6453082740522149	
+col1(Long)@0.0, col2(Long)@300.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6453082740522149	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@300.0, col5(Long)@40.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.644898948186601	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6448615643628406	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6448571723151256	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6443085579302676	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.644119580882157	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6436419462941453	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6432886008068142	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@2.0->col3(Long)@1.0	 cc:0.6432434437557487	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0->col3(Long)@1.0	 cc:0.6431888345735337	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@2.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6430475985739097	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6429793968280434	
+col2(Long)@100.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6429494344510833	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6411954085076433	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6411381267818894	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6408331767562847	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.640811933300538	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6403291415355354	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.640258926867965	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@1.0, col9(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6402185205899129	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6402153331967742	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@300.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6402143211266657	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6398410844150273	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6395947736887646	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@3.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6392389697445116	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.639212053995067	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6391938126934461	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6388810173215262	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6387022403054105	
+col1(Long)@0.0, col2(Long)@100.0, col3(Long)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@2.0, col14(String)@4.0->col9(String)@0.0	 cc:0.638602424123038	
+col1(Long)@1.0, col2(Long)@200.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6384706099378683	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6382110697805256	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col9(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6380877850038372	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@1.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6377388156713282	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6377310700896436	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.637636819892206	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6376093740680371	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@300.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6374329641580971	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6373415495732937	
+col1(Long)@2.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@300.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6372254144615804	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@1.0, col11(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6371205168271779	
+col2(Long)@200.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6369539814788114	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6369289290709017	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.636685750980752	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@100.0, col3(Long)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@2.0, col14(String)@4.0->col9(String)@0.0	 cc:0.6366125365630226	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col9(String)@0.0	 cc:0.636168331673712	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6361657021344715	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6360445257703988	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.635690649941236	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@3.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6355505263105661	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6351349771085955	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.634999077782165	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@1.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6349897812411022	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6345868969386272	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6342687101364876	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6337924376628905	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.633730382192883	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6336361319954453	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6335336435366412	
+col2(Long)@300.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6335244913671523	
+col1(Long)@3.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6334582953310891	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6333884795884874	
+col7(String)@4.0, col2(Long)@200.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.633314326154536	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6332415297599578	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@1.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6329582977064755	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6328792980085992	
+col1(Long)@2.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.632871121181945	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6327517331022153	
+col1(Long)@4.0, col2(Long)@300.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6327025122784845	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6326886846602817	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6321402780850158	
+col2(Long)@100.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6320653818252604	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6319538899758141	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.63190107401943	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6318346484045179	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.631786402255853	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6316783842722802	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6316145609516493	
+col7(String)@4.0, col2(Long)@200.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6315551720152632	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6313461452145768	
+col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.631019150410891	
+col2(Long)@200.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6309251646498236	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6308758841275788	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6306826492532442	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@3.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6306557272267747	
+col1(Long)@1.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6304202909788051	
+col1(Long)@3.0, col2(Long)@200.0, col8(String)@3.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6303855473785829	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@300.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6303295678016223	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@3.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6303009028990754	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6302571910328401	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6299637166108328	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6297982503600141	
+col1(Long)@0.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6296554953203516	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6295823546242771	
+col7(String)@3.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0->col3(Long)@2.0	 cc:0.6292167521105186	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.6290667011645548	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.628855886213079	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6287366446417828	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6286941033739242	
+col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6285604505546583	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@300.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.628506882156602	
+col2(Long)@100.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6284412089833621	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@3.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6280906470227132	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6277367711935506	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6276699841822657	
+col2(Long)@300.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6274956745381645	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6274671533394227	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@2.0	 cc:0.6272692629158788	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@1.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6272629789461324	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6271839260938743	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.62718109836091	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@2.0	 cc:0.6271500213445826	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6267088712295645	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6266560206827663	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6266330181909416	
+col1(Long)@3.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6261290552227563	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6258385589152051	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6255101087766062	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6253721042428493	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6251165485272608	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6247714314183208	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6247095264633584	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6245719804195307	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6245613694427319	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.6244456375297067	
+col1(Long)@2.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6243960119046433	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@2.0	 cc:0.6241712591531439	
+col1(Long)@2.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@2.0	 cc:0.6241358352302596	
+col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6241343044374934	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@2.0	 cc:0.6240520175818476	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6237694335310263	
+col1(Long)@3.0, col2(Long)@300.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6235756195677515	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6233922664668913	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6232796784084914	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6232705468062758	
+col2(Long)@200.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6221575731211184	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.622046104910681	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@3.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6220185447645257	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6220081122155001	
+col7(String)@3.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6218371232511526	
+col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6217253898030226	
+col2(Long)@200.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6216314040419553	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6213144745145582	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@1.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6210766035822293	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6210088621960441	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6206925507552745	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6205981690074203	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6205039188099826	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@300.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.620456563197539	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6203691188977949	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col9(String)@0.0	 cc:0.6199698908955783	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@2.0	 cc:0.619422695519021	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6193662991208928	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6192300473461889	
+col7(String)@3.0, col2(Long)@100.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0->col3(Long)@2.0	 cc:0.6190153519913087	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6189481011479459	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6189434751141092	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.618754992481879	
+col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6187532208917512	
+col2(Long)@200.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6185334002792201	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6180867649792692	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@1.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6179785998194942	
+col7(String)@4.0, col2(Long)@300.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6179527659887547	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6177369196678948	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6175719406210556	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6175710191003709	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0->col3(Long)@2.0	 cc:0.6173614778507458	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@1.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6173417117662763	
+col1(Long)@3.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6161959907083855	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.615972729351304	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@0.0->col9(String)@0.0	 cc:0.6159168479363295	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@0.0->col9(String)@0.0	 cc:0.6159168479363295	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6157152722313696	
+col2(Long)@100.0, col8(String)@3.0, col13(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.6156382997454455	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6153166680585902	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@300.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6151275412967568	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6150995937112529	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@1.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6148954193179625	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6146284833561342	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0->col9(String)@0.0	 cc:0.6144376142524384	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6144319469002282	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6143621311576265	
+col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6143020460056856	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0->col3(Long)@2.0	 cc:0.6142634740880107	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0->col9(String)@0.0	 cc:0.6140383862502217	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6138699056918884	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@1.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6136761638476236	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6132895799105218	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6129838226862188	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6128747255885689	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6127617894891686	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6126684429162167	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6126442902597348	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6125500400622971	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col9(String)@0.0	 cc:0.6124152401501094	
+col1(Long)@2.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@300.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6121386346316716	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col5(Long)@40.0->col3(Long)@3.0	 cc:0.6120432344031304	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col9(String)@0.0	 cc:0.6120160121478928	
+col7(String)@4.0, col2(Long)@300.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6119239491597668	
+col2(Long)@0.0, col8(String)@3.0, col10(String)@4.0->col3(Long)@3.0	 cc:0.6119119068877252	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6114190754887485	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6113984803027702	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@3.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6113591989477218	
+col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6112040422429506	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.611171791422957	
+col7(String)@3.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@2.0	 cc:0.6109650330322456	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6107719019291532	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@3.0->col3(Long)@3.0	 cc:0.6107240143722332	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0->col3(Long)@2.0	 cc:0.6102580814942709	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6100129256070459	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6098122759635973	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6095001171087184	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@1.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@2.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6093203413778665	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0->col3(Long)@2.0	 cc:0.6087014395386596	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6086687686922091	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6083016997585786	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@0.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6082605319572013	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.6079737075756938	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@3.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.6079029787262922	
+col1(Long)@4.0, col2(Long)@300.0, col8(String)@1.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6076157324485756	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6076019048303727	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6075250869996593	
+col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6071231230158856	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.606998739492723	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@0.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6065493061087339	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6064837603457451	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col9(String)@0.0	 cc:0.6064837355047528	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6061841858574673	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col9(String)@0.0	 cc:0.6060845075025361	
+col2(Long)@400.0, col8(String)@3.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.6059043532804349	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6057946859083904	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6057084574817351	
+col1(Long)@3.0, col2(Long)@300.0, col8(String)@3.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6053239004894783	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.6052627774915607	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@2.0	 cc:0.6050502188626852	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.6047114705301053	
+col2(Long)@100.0, col8(String)@3.0, col11(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.6044899770236473	
+col2(Long)@200.0, col8(String)@3.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.6044382922672918	
+col2(Long)@100.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6040251192531505	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@3.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.6039987310409092	
+col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6031814955133538	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6031262848051732	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.6030889154052148	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@3.0, col13(String)@4.0, col14(String)@3.0->col3(Long)@3.0	 cc:0.6030330844735472	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.6027731201495822	
+col7(String)@3.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6024900597126333	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0->col3(Long)@1.0	 cc:0.6024306443326102	
+col7(String)@3.0, col2(Long)@200.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6023960739515659	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6022606403269655	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@2.0	 cc:0.6019270821591457	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6018107233449476	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.6016621772823276	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.6015462383610328	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.6015151618789203	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6006538408018143	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.6003796140087263	
+col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.6000638309064824	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.5996227466334494	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5991532179550652	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@2.0->col3(Long)@2.0	 cc:0.5990465399159893	
+col2(Long)@200.0, col8(String)@3.0, col10(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5979797465705183	
+col1(Long)@3.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.5979442716301124	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5976051196981834	
+col1(Long)@2.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5973151570713069	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5972816102459912	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@3.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5968953346844343	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.596515511103207	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.595789176379285	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5954159738573994	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5950201780522948	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5942674241316681	
+col2(Long)@200.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5934466204493112	
+col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col6(Long)@4.0, col14(String)@3.0->col3(Long)@3.0	 cc:0.5933244174577744	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.5929999851493604	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@3.0, col11(String)@4.0, col14(String)@3.0->col3(Long)@3.0	 cc:0.5919100412009868	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@4.0, col12(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5917542457087611	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col4(Long)@400.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5915763028691956	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5905407996917931	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.5900379468221483	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.5899019813866252	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@1.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.5898086394880535	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5896409069641194	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5889473591448329	
+col7(String)@4.0, col2(Long)@100.0, col8(String)@3.0, col9(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5885616323555214	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.5884987385687984	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5883125775009246	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5877046146464586	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5876720551838126	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@0.0, col14(String)@4.0->col3(Long)@1.0	 cc:0.5875229576778729	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5874930667521543	
+col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5874521022195425	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5873130738629497	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@3.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5870858615860984	
+col2(Long)@200.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@3.0	 cc:0.5868756623172828	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@3.0->col3(Long)@1.0	 cc:0.586085011593048	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5860497212238863	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0->col3(Long)@3.0	 cc:0.5856809494802953	
+col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5851667790011066	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.5850980939243189	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5848494278446081	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@4.0, col13(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5846508493522864	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5843822607966971	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@1.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@2.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.5842335615479576	
+col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5838279293776442	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5826609617922711	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@1.0	 cc:0.5825389348245403	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.58234767627819	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.5820000901615838	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5816870282164339	
+col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.580993556522769	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@2.0	 cc:0.5809329486415588	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0->col3(Long)@3.0	 cc:0.580777587599592	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5805686588273378	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.5804780131113141	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.5804250569235213	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5803896703956795	
+col1(Long)@0.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5800952549541443	
+col1(Long)@1.0, col8(String)@3.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5799680382223147	
+col1(Long)@3.0, col2(Long)@200.0, col8(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5796559619036361	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.5792749283256837	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5784925842423212	
+col1(Long)@1.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.578207334859862	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5780707305033309	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@3.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5779339652145643	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5769972511914091	
+col1(Long)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5769271053040058	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@2.0	 cc:0.5768905731523332	
+col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5757739205963385	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.5757731644151622	
+col1(Long)@3.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.575386299213921	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5752410757008072	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5751596019202232	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5750229975636921	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5749415012125292	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5748665141362423	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col4(Long)@400.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.574018509834351	
+col1(Long)@1.0, col8(String)@3.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5739392213933268	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.573803822092033	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@3.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5735202843340801	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.573397958740226	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5733746167548393	
+col1(Long)@4.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5725183398682745	
+col1(Long)@2.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5716501096564474	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.5712666217617384	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5707591857290018	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.570745921039739	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5705387054946356	
+col1(Long)@0.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5701168517556454	
+col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5698894722695336	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5697731682123617	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5694203361055394	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5691806443017593	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5688237898239257	
+col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5684257537886814	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5683245411685875	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5680595131552375	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5670691188160066	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5670192965998639	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0->col3(Long)@3.0	 cc:0.5666798804986721	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5658452386473682	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5655717642959524	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5654950526404481	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0->col3(Long)@3.0	 cc:0.5650983318422622	
+col1(Long)@1.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col12(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5650119416820492	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5647303689000139	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@2.0	 cc:0.5644613257275536	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5642749101062849	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5639212928371288	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5639108602881031	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col6(Long)@2.0->col3(Long)@3.0	 cc:0.5637363469745751	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5635651436565032	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5633391777029892	
+col1(Long)@1.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5629315773514689	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5626697718558867	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5622661996181877	
+col1(Long)@2.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5621377986655016	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.562025465961819	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.561451664680453	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5612211448121126	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col6(Long)@1.0->col3(Long)@3.0	 cc:0.5611242630721287	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5610515757909418	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5606296134727752	
+col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5601237141091686	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.559915900243389	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5598612292258006	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5593866929505948	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5592312572520973	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5579007568731449	
+col1(Long)@0.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5576754671021273	
+col1(Long)@1.0, col2(Long)@100.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5575214453368891	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5568178964806538	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5568074639316283	
+col1(Long)@1.0, col8(String)@3.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5564730316546955	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@1.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5564199431151637	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5564102216061564	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5561855147971373	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5561332534893622	
+col1(Long)@2.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5560690582216143	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@3.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5558618743287433	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5558401657053814	
+col1(Long)@1.0, col7(String)@4.0, col8(String)@3.0, col11(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5549898135290501	
+col1(Long)@1.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5548812583924057	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5548782797437349	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0->col3(Long)@3.0	 cc:0.5546030447535966	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5545731343290343	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col11(String)@4.0, col6(Long)@3.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5544579051122203	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.554371610309365	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5543482683239782	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.5542384193188712	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5542058804234984	
+col1(Long)@2.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5540874797064383	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5539005008891225	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@2.0	 cc:0.5538554092793809	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@3.0	 cc:0.5538284154010086	
+col1(Long)@1.0, col7(String)@4.0, col8(String)@3.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5534944804781379	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5530875110344022	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col6(Long)@1.0->col3(Long)@3.0	 cc:0.5528231359652009	
+col1(Long)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.552749323894564	
+col1(Long)@2.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@3.0	 cc:0.5526263508322637	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.552551632198959	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0->col3(Long)@3.0	 cc:0.5520119397369727	
+col1(Long)@1.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5517832546296706	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5515565955323375	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5513687873464053	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5513138102236852	
+col1(Long)@2.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5509894759437033	
+col1(Long)@2.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.550867196692991	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5507468197815006	
+col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5505366205126851	
+col1(Long)@4.0, col7(String)@4.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5503939876746784	
+col1(Long)@4.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5500985520162578	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5498508698268199	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5495497901880904	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5487675775215907	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col11(String)@4.0, col4(Long)@400.0, col6(Long)@3.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5484290882832324	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5480870088537084	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@3.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.547987538441923	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5479634819441215	
+col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5474386167499501	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5468848319662831	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5463315445366783	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5463278547144357	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.5458519934527499	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5454482358424841	
+col1(Long)@2.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.544920735499816	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@3.0	 cc:0.5446951181215177	
+col1(Long)@4.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5432634912646219	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col12(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5430031122563488	
+col1(Long)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.542939850796228	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.5428042605131111	
+col1(Long)@3.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5425267774131635	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5421064555353692	
+col1(Long)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5416010011727657	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5414994712290273	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5410973656783076	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.540645487059215	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col6(Long)@1.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5404555763370311	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@2.0->col3(Long)@3.0	 cc:0.5400248735955018	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5396418635560116	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@3.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5389167772922867	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5387485970962751	
+col1(Long)@1.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5382171737465651	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0->col3(Long)@3.0	 cc:0.537191832271239	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5370840716456893	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col13(String)@4.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5370427097907533	
+col1(Long)@4.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5369894429570023	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@3.0	 cc:0.536708174276793	
+col1(Long)@4.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5361600949081471	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5359752425331994	
+col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.535663909440986	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.535592232493709	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5353320981558554	
+col1(Long)@4.0, col7(String)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5341726000966225	
+col1(Long)@4.0, col7(String)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.533722975463703	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@3.0	 cc:0.5336502732244991	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5336101705140579	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@3.0	 cc:0.5335406165367523	
+col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@3.0	 cc:0.5325659056782508	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@100.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5321986704702362	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5319631275128422	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5318911190852263	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5312824670935528	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5309258478038243	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@3.0	 cc:0.5304426127740172	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5300228365967327	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.529033752686626	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5289371335132604	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5275419135346457	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0->col3(Long)@3.0	 cc:0.5272817791967921	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.5268759158449852	
+col1(Long)@2.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5259026961137945	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col11(String)@4.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.525894387068955	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5248186613834225	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5247261137288379	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@3.0	 cc:0.5244918380627162	
+col1(Long)@4.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.524237142833761	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0->col3(Long)@3.0	 cc:0.5237779120822501	
+col1(Long)@3.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5235506998053989	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5232342745768577	
+col1(Long)@4.0, col7(String)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5230242773748242	
+col1(Long)@4.0, col7(String)@4.0, col8(String)@3.0, col9(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5225746527419046	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.5208375821112926	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5197725194885104	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5180133653492377	
+col1(Long)@4.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5171337464772862	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5167683424243592	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.514481708776799	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.5124545246036041	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@3.0	 cc:0.5114570799633675	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col13(String)@4.0->col3(Long)@3.0	 cc:0.5106140843267275	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.509356520840869	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@3.0	 cc:0.507407448901065	
+col1(Long)@0.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0->col3(Long)@4.0	 cc:0.5032498142789916	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@4.0, col6(Long)@2.0->col3(Long)@4.0	 cc:0.501912962352109	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.5015157980220109	
+col1(Long)@2.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.5003924026056794	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0->col3(Long)@4.0	 cc:0.5001769483985485	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0->col3(Long)@4.0	 cc:0.4999464365434315	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.49883136673260103	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.49738273968882685	
+col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.4968114780650461	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.4961277659431996	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0->col3(Long)@4.0	 cc:0.49527339954263394	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0->col3(Long)@4.0	 cc:0.494948687172064	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.4920519833258519	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@4.0	 cc:0.49200503572003024	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4910623797582115	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.4905350062915796	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col5(Long)@40.0->col3(Long)@4.0	 cc:0.4901634221737022	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4895705406062312	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0->col3(Long)@4.0	 cc:0.48854811621130995	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4880023522635494	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.48770127262481994	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@4.0	 cc:0.4870684336533578	
+col7(String)@4.0, col2(Long)@200.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@4.0	 cc:0.48697444789229044	
+col1(Long)@0.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0->col3(Long)@4.0	 cc:0.4862384912904379	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0, col5(Long)@40.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.48611379111139963	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0->col3(Long)@4.0	 cc:0.4858554032555738	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0->col3(Long)@4.0	 cc:0.48474728705285397	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@4.0	 cc:0.48397042989062267	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.48309669766609364	
+col1(Long)@2.0, col7(String)@4.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.48144172237508953	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4812301213264037	
+col1(Long)@2.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.4802579379720987	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.4796509536657568	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.4792851851447214	
+col1(Long)@3.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@2.0->col3(Long)@4.0	 cc:0.47817635603223135	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0->col3(Long)@4.0	 cc:0.47793736418351024	
+col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0->col3(Long)@4.0	 cc:0.4778662835536038	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.47779334599274115	
+col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.47778512963418507	
+col1(Long)@1.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0->col3(Long)@4.0	 cc:0.4766969680937908	
+col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.47649681527018944	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.4759933013096188	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0->col3(Long)@4.0	 cc:0.4753433147079686	
+col1(Long)@3.0, col2(Long)@0.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.47523555408241874	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0->col3(Long)@4.0	 cc:0.4748393604207752	
+col1(Long)@3.0, col2(Long)@200.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4740764541468324	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4737437149304385	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.47352368330302597	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.47348358059258483	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0->col3(Long)@4.0	 cc:0.47307771724077796	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.4728009280859719	
+col1(Long)@2.0, col2(Long)@300.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.47228328721330654	
+col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.4718255043177002	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0->col3(Long)@4.0	 cc:0.4718017556612286	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@4.0	 cc:0.47169209897348185	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.4704256795402909	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.47004260152195587	
+col7(String)@4.0, col2(Long)@400.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0->col3(Long)@4.0	 cc:0.4699882578445411	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.4697430270336779	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col4(Long)@400.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.46943394953028234	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4687512970236693	
+col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.46872750055496515	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@2.0->col3(Long)@4.0	 cc:0.46859409521074674	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.46743631291618565	
+col1(Long)@1.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0->col3(Long)@4.0	 cc:0.466789041461712	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4656933959713753	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.46543326163352167	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0->col3(Long)@4.0	 cc:0.46502739828171485	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.46444365806588117	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col4(Long)@400.0->col3(Long)@4.0	 cc:0.4623753605812277	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4613857570135872	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4613836305712191	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0->col3(Long)@4.0	 cc:0.45792400192523997	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.4561648477859672	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.45266646345239103	
+col7(String)@4.0, col2(Long)@200.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.4514100354402805	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4506060070403336	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.4496085624000971	
+col1(Long)@4.0, col2(Long)@0.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.44861683239008854	
+col1(Long)@4.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@2.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.44750800327759854	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col11(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4455589313377945	
+col1(Long)@4.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.44235728214035813	
+col1(Long)@2.0, col2(Long)@400.0, col8(String)@4.0, col9(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.4415582434410339	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.4404615593033982	
+col1(Long)@4.0, col7(String)@4.0, col8(String)@3.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col3(Long)@4.0	 cc:0.4402642730768944	
+col1(Long)@1.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.42679526037476934	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.42652310219528755	
+col1(Long)@2.0, col7(String)@4.0, col8(String)@3.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0->col3(Long)@4.0	 cc:0.426001481688802	
+col1(Long)@0.0, col7(String)@4.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col14(String)@4.0->col3(Long)@4.0	 cc:0.4153747794734893	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@0.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3817308027727866	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@0.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3817308027727866	
+col1(Long)@0.0, col2(Long)@0.0, col3(Long)@1.0, col9(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.377748695270548	
+col1(Long)@1.0, col2(Long)@0.0, col3(Long)@0.0, col9(String)@2.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3769552034579764	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@0.0, col9(String)@2.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3769552034579764	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@1.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.37628497678969597	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.37606959937595535	
+col1(Long)@0.0, col2(Long)@0.0, col3(Long)@0.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3756703713737387	
+col1(Long)@1.0, col2(Long)@0.0, col3(Long)@0.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@1.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.37506225626802914	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@0.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@1.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.37506225626802914	
+col1(Long)@0.0, col2(Long)@0.0, col3(Long)@1.0, col10(String)@4.0, col11(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3746506915078129	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col14(String)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3746058808951033	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@1.0, col10(String)@4.0, col12(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.37387606215522506	
+col1(Long)@0.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.37297159561322024	
+col1(Long)@0.0, col2(Long)@0.0, col3(Long)@0.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3725723676110036	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3721969662606324	
+col1(Long)@1.0, col2(Long)@0.0, col3(Long)@0.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.367369244266811	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@0.0, col9(String)@4.0, col10(String)@4.0, col12(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.367369244266811	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@0.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.36026584791033617	
+col1(Long)@1.0, col2(Long)@0.0, col3(Long)@0.0, col9(String)@4.0, col10(String)@4.0, col13(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.36026584791033617	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@1.0, col9(String)@4.0, col10(String)@4.0, col4(Long)@400.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.358722346839687	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@0.0, col9(String)@2.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.3579288550271154	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.35704325094509437	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@0.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@1.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.35603590783716815	
+col1(Long)@1.0, col7(String)@4.0, col2(Long)@0.0, col3(Long)@0.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@1.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.35603590783716815	
+col1(Long)@0.0, col7(String)@4.0, col2(Long)@0.0, col8(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.35394524718235926	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@4.0, col3(Long)@1.0, col9(String)@4.0, col10(String)@4.0, col6(Long)@1.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.35249578769823336	
+col1(Long)@1.0, col2(Long)@0.0, col8(String)@0.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.34911752518853784	
+col1(Long)@1.0, col2(Long)@0.0, col3(Long)@0.0, col9(String)@4.0, col10(String)@4.0, col11(String)@4.0, col6(Long)@4.0, col15(String)@4.0->col5(Long)@0.0	 cc:0.34911752518853784	

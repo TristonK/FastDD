@@ -1,0 +1,45 @@
+****** DISCOVERED RFDs *******
+phone@0.0->addr@0.0	 cc:0.9995060262335793	
+name@0.0, city@4.0->class@0.0	 cc:0.9459720812432864	
+type@4.0, class@0.0->phone@2.0	 cc:0.9379157509879475	
+phone@0.0, type@4.0->class@1.0	 cc:0.9328491322814936	
+city@4.0, class@0.0->phone@4.0	 cc:0.9315643077468884	
+name@0.0, city@4.0->phone@4.0	 cc:0.9315347432321899	
+city@4.0, type@4.0, class@0.0->phone@1.0	 cc:0.8846762192898604	
+name@0.0, city@4.0, type@4.0->phone@1.0	 cc:0.8846466547751619	
+name@2.0, addr@4.0->class@0.0	 cc:0.8791094675430903	
+name@1.0, phone@4.0->class@0.0	 cc:0.8783136893557892	
+name@3.0, addr@3.0->class@0.0	 cc:0.8770424152237541	
+name@2.0, phone@3.0->class@0.0	 cc:0.8754200624796744	
+name@3.0, phone@2.0->class@0.0	 cc:0.8754052802223252	
+phone@0.0, class@0.0->name@0.0	 cc:0.8747129778364688	
+name@0.0, addr@0.0->phone@2.0	 cc:0.8742781330994451	
+addr@0.0, class@4.0->phone@4.0	 cc:0.8655935569067634	
+name@2.0, addr@4.0->phone@4.0	 cc:0.8646721295319937	
+addr@4.0, class@0.0->phone@4.0	 cc:0.8646290146147251	
+name@3.0, addr@3.0->phone@4.0	 cc:0.8626050772126576	
+name@0.0, addr@0.0, city@4.0->phone@1.0	 cc:0.821038601401358	
+addr@1.0, type@4.0, class@4.0->phone@2.0	 cc:0.81845170636524	
+name@2.0, type@4.0, class@4.0->phone@2.0	 cc:0.8184159825766459	
+name@2.0, addr@4.0, type@4.0->phone@2.0	 cc:0.8174391217368167	
+name@4.0, phone@2.0, type@4.0->class@0.0	 cc:0.816611315325259	
+name@3.0, addr@3.0, type@4.0->phone@2.0	 cc:0.8153720694174804	
+name@3.0, phone@3.0, type@4.0->class@0.0	 cc:0.8146908537246362	
+addr@2.0, phone@1.0, type@4.0->class@1.0	 cc:0.8085857814393977	
+name@4.0, phone@3.0, type@3.0->class@0.0	 cc:0.7985042819272121	
+addr@4.0, phone@1.0, type@2.0->class@1.0	 cc:0.7826047322933194	
+addr@1.0, city@4.0, type@4.0, class@4.0->phone@1.0	 cc:0.7652121746671527	
+name@2.0, city@4.0, type@4.0, class@4.0->phone@1.0	 cc:0.7651764508785588	
+name@2.0, addr@4.0, city@4.0, type@4.0->phone@1.0	 cc:0.7641995900387295	
+name@3.0, addr@3.0, city@4.0, type@4.0->phone@1.0	 cc:0.7621325377193933	
+name@3.0, city@4.0, phone@3.0, type@4.0->class@0.0	 cc:0.7611064026883999	
+name@3.0, addr@4.0, phone@4.0->class@0.0	 cc:0.7583938584648133	
+name@3.0, phone@0.0->type@0.0	 cc:0.7564142678347935	
+phone@0.0, class@0.0->type@0.0	 cc:0.7558340642338356	
+name@4.0, addr@1.0, class@4.0->phone@4.0	 cc:0.7438752180382959	
+name@3.0, city@4.0, type@1.0, class@4.0->phone@1.0	 cc:0.7319126762784188	
+phone@0.0->city@0.0	 cc:0.7144991771210076	
+name@4.0, addr@4.0, phone@4.0, type@4.0->class@0.0	 cc:0.6995998935677471	
+name@3.0, addr@4.0, type@4.0, class@4.0->phone@2.0	 cc:0.6984333270919358	
+name@3.0, addr@4.0, city@4.0, type@4.0, class@4.0->phone@1.0	 cc:0.6451937953938486	
+name@4.0, phone@0.0, class@4.0->type@0.0	 cc:0.6393437170478846	

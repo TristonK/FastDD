@@ -1,0 +1,176 @@
+****** DISCOVERED RFDs *******
+Date(String)@0.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@200.0->High(Double)@3.0	 cc:0.6070352559683647	
+Open(Double)@1.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.6040764867690771	
+Open(Double)@0.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.6040135838931807	
+Ticker(String)@2.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5936237663803976	
+Open(Double)@4.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5916133184505903	
+Date(String)@40.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5882118340657718	
+Open(Double)@1.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5855145726979465	
+Date(String)@40.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.5817274526799344	
+Date(String)@40.0, High(Double)@0.0, Close(Double)@0.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.5816917532088965	
+Date(String)@0.0, Open(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.581234554762821	
+Date(String)@10.0, Open(Double)@0.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5795669096822706	
+Open(Double)@0.0, High(Double)@2.0, Low(Double)@0.0, Volume(Integer)@100.0->Close(Double)@4.0	 cc:0.579286987676655	
+High(Double)@0.0, Low(Double)@1.0, Close(Double)@1.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.5789373023796167	
+High(Double)@0.0, Low(Double)@0.0, Close(Double)@2.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.5788253807308088	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@0.0->High(Double)@2.0	 cc:0.57559621111633	
+Date(String)@0.0, Open(Double)@0.0, Low(Double)@0.0, Volume(Integer)@100.0->High(Double)@4.0	 cc:0.575264641312976	
+Open(Double)@0.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.5745602222435857	
+High(Double)@0.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.5744172783602856	
+Date(String)@0.0, Open(Double)@0.0, Low(Double)@0.0, Volume(Integer)@100.0->Close(Double)@4.0	 cc:0.5739451475297727	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@2.0	 cc:0.5677119014167049	
+Ticker(String)@1.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->High(Double)@4.0	 cc:0.5676350341887234	
+Date(String)@40.0, Ticker(String)@3.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@0.0->High(Double)@3.0	 cc:0.5589314844333145	
+Date(String)@40.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@2.0	 cc:0.5505838998925594	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->High(Double)@2.0	 cc:0.5496074789246557	
+Date(String)@0.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@2.0	 cc:0.5486695036427793	
+Ticker(String)@2.0, Open(Double)@0.0, High(Double)@3.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.5462723291206815	
+Ticker(String)@2.0, Open(Double)@0.0, High(Double)@2.0, Low(Double)@0.0, Volume(Integer)@100.0->Close(Double)@3.0	 cc:0.5404546476783056	
+Ticker(String)@1.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@2.0	 cc:0.5380458059582591	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->High(Double)@3.0	 cc:0.537107035403386	
+Ticker(String)@3.0, Open(Double)@4.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5361303057632749	
+Date(String)@0.0, Open(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@0.0->High(Double)@3.0	 cc:0.5349292031688783	
+Ticker(String)@2.0, Open(Double)@0.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@200.0->Close(Double)@3.0	 cc:0.5345908293387021	
+Date(String)@0.0, Ticker(String)@2.0, High(Double)@0.0, Close(Double)@0.0, Volume(Integer)@0.0->Low(Double)@3.0	 cc:0.533322942724372	
+Ticker(String)@1.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@300.0->Close(Double)@2.0	 cc:0.5330858460640487	
+Ticker(String)@3.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5300315600106311	
+Date(String)@40.0, Open(Double)@0.0, High(Double)@2.0, Low(Double)@0.0, Volume(Integer)@100.0->Close(Double)@3.0	 cc:0.5299441328394713	
+Date(String)@40.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.5296965219395029	
+Date(String)@40.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.5296727268519912	
+Date(String)@40.0, Open(Double)@1.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.5295451594023528	
+Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@3.0, Close(Double)@2.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5293016480147511	
+Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@4.0, Close(Double)@1.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5292607496880155	
+Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@2.0, Close(Double)@3.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5292339035902274	
+Date(String)@0.0, Open(Double)@3.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@3.0	 cc:0.5291130625344442	
+Ticker(String)@2.0, Open(Double)@1.0, Low(Double)@0.0, Close(Double)@4.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5289904011226946	
+Ticker(String)@2.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@300.0->Close(Double)@3.0	 cc:0.5286834213016133	
+Ticker(String)@2.0, Open(Double)@4.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5277200733723386	
+Date(String)@0.0, Ticker(String)@3.0, Open(Double)@0.0, Low(Double)@1.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5258162066492477	
+Date(String)@40.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@400.0->Close(Double)@3.0	 cc:0.525217367406402	
+Date(String)@40.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@3.0	 cc:0.52515270283266	
+Date(String)@40.0, Open(Double)@0.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@200.0->Close(Double)@3.0	 cc:0.5240803144998678	
+Ticker(String)@3.0, Open(Double)@0.0, High(Double)@2.0, Low(Double)@0.0, Volume(Integer)@100.0->Close(Double)@4.0	 cc:0.5238039749893397	
+Date(String)@0.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@300.0->Close(Double)@3.0	 cc:0.5227983707080006	
+Date(String)@0.0, Open(Double)@1.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@200.0->Close(Double)@3.0	 cc:0.5221659182500877	
+Date(String)@0.0, Open(Double)@0.0, High(Double)@2.0, Low(Double)@0.0, Volume(Integer)@200.0->Close(Double)@3.0	 cc:0.5220596092157912	
+Ticker(String)@2.0, Open(Double)@0.0, High(Double)@4.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5209318126615907	
+Date(String)@0.0, Ticker(String)@3.0, Open(Double)@0.0, Low(Double)@0.0, Volume(Integer)@100.0->High(Double)@4.0	 cc:0.5197816286256607	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@1.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5192557059343496	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5191910413606076	
+Date(String)@40.0, Open(Double)@4.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.5191018275595367	
+Ticker(String)@3.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.5190772095562703	
+Ticker(String)@3.0, Open(Double)@0.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.518949642106632	
+Ticker(String)@1.0, Open(Double)@0.0, High(Double)@3.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.5187683609019578	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5179062959421568	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5177787284925185	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@1.0, Close(Double)@0.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.5176709406810067	
+Date(String)@0.0, Open(Double)@0.0, Low(Double)@4.0, Close(Double)@2.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5167885815243352	
+Date(String)@0.0, Open(Double)@0.0, Low(Double)@2.0, Close(Double)@4.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.516653949695334	
+Ticker(String)@2.0, Open(Double)@3.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.5162066414938371	
+Date(String)@0.0, Ticker(String)@2.0, High(Double)@2.0, Close(Double)@0.0, Volume(Integer)@0.0->Low(Double)@4.0	 cc:0.5141689200594073	
+Date(String)@40.0, High(Double)@0.0, Low(Double)@0.0, Close(Double)@4.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.5126030285056044	
+Date(String)@40.0, High(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->Open(Double)@4.0	 cc:0.5118628872394884	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@4.0	 cc:0.5113963516561443	
+Date(String)@40.0, High(Double)@0.0, Low(Double)@4.0, Close(Double)@0.0, Volume(Integer)@100.0->Open(Double)@4.0	 cc:0.5113634557659101	
+Date(String)@40.0, Ticker(String)@4.0, High(Double)@1.0, Low(Double)@3.0, Close(Double)@0.0, Volume(Integer)@100.0->Open(Double)@4.0	 cc:0.5111005590513543	
+Date(String)@40.0, High(Double)@1.0, Low(Double)@3.0, Close(Double)@0.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.5108834258204004	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, Close(Double)@0.0, Volume(Integer)@200.0->Low(Double)@4.0	 cc:0.5108175995258846	
+Date(String)@0.0, Open(Double)@4.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.5107122353884967	
+Date(String)@40.0, High(Double)@2.0, Low(Double)@0.0, Close(Double)@2.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.510662940251048	
+Ticker(String)@2.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.5106261076791039	
+Date(String)@0.0, Open(Double)@1.0, Low(Double)@0.0, Close(Double)@4.0, Volume(Integer)@100.0->High(Double)@4.0	 cc:0.5105955765842352	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@1.0, Close(Double)@0.0, Volume(Integer)@200.0->Low(Double)@4.0	 cc:0.5089032032761044	
+Date(String)@40.0, High(Double)@1.0, Low(Double)@2.0, Close(Double)@0.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.5064542392753155	
+Date(String)@40.0, High(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.5062548378805247	
+Date(String)@40.0, Open(Double)@0.0, High(Double)@3.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.5061808851826137	
+Date(String)@40.0, Ticker(String)@4.0, High(Double)@1.0, Low(Double)@2.0, Close(Double)@0.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.5061660900348546	
+Date(String)@40.0, High(Double)@3.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.5061072385722962	
+Date(String)@40.0, Ticker(String)@4.0, High(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.5059666886400638	
+Date(String)@40.0, High(Double)@1.0, Low(Double)@1.0, Close(Double)@1.0, Volume(Integer)@200.0->Open(Double)@4.0	 cc:0.5054163260316673	
+Date(String)@40.0, High(Double)@1.0, Low(Double)@0.0, Close(Double)@2.0, Volume(Integer)@200.0->Open(Double)@4.0	 cc:0.5053044043828594	
+Date(String)@40.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@100.0->Close(Double)@4.0	 cc:0.5050762347572736	
+Date(String)@40.0, Ticker(String)@4.0, High(Double)@1.0, Low(Double)@0.0, Close(Double)@2.0, Volume(Integer)@200.0->Open(Double)@4.0	 cc:0.5050162551423985	
+Date(String)@40.0, High(Double)@0.0, Low(Double)@2.0, Close(Double)@1.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.5044926729763006	
+Date(String)@0.0, Open(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@4.0	 cc:0.5041332400612266	
+Date(String)@10.0, High(Double)@0.0, Low(Double)@2.0, Close(Double)@1.0, Volume(Integer)@100.0->Open(Double)@4.0	 cc:0.5027354079005885	
+Ticker(String)@1.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@3.0	 cc:0.5016840535315107	
+Date(String)@40.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.5001155928402695	
+Date(String)@40.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.5000917977527577	
+Date(String)@40.0, High(Double)@0.0, Low(Double)@1.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.5000135184431996	
+Date(String)@0.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@200.0->High(Double)@4.0	 cc:0.4984036521475243	
+Date(String)@0.0, High(Double)@1.0, Low(Double)@1.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.4980362193175232	
+Date(String)@0.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@100.0->Close(Double)@4.0	 cc:0.4966866425862336	
+Ticker(String)@1.0, Open(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->High(Double)@4.0	 cc:0.4965393324080118	
+Ticker(String)@2.0, Open(Double)@0.0, High(Double)@0.0, Close(Double)@0.0, Volume(Integer)@200.0->Low(Double)@4.0	 cc:0.49498866756939985	
+Ticker(String)@1.0, Open(Double)@0.0, Low(Double)@0.0, Close(Double)@3.0, Volume(Integer)@100.0->High(Double)@4.0	 cc:0.4891963663391451	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@1.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@2.0	 cc:0.4858681945506159	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@200.0->Close(Double)@2.0	 cc:0.48555360190777364	
+Ticker(String)@0.0, Open(Double)@0.0, High(Double)@0.0, Close(Double)@3.0, Volume(Integer)@0.0->Low(Double)@4.0	 cc:0.4841525607287131	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@1.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@2.0	 cc:0.4826288546392187	
+Ticker(String)@0.0, Open(Double)@0.0, Low(Double)@0.0, Close(Double)@2.0, Volume(Integer)@300.0->High(Double)@4.0	 cc:0.4822234730309146	
+Date(String)@40.0, Ticker(String)@3.0, Open(Double)@3.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@0.0->High(Double)@3.0	 cc:0.48151435954675414	
+Date(String)@0.0, Ticker(String)@3.0, Open(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@3.0	 cc:0.47995147295297785	
+Ticker(String)@1.0, Open(Double)@0.0, High(Double)@0.0, Close(Double)@2.0, Volume(Integer)@0.0->Low(Double)@4.0	 cc:0.47937285040011446	
+Ticker(String)@1.0, Open(Double)@0.0, High(Double)@0.0, Close(Double)@1.0, Volume(Integer)@200.0->Low(Double)@4.0	 cc:0.4739552625726954	
+Date(String)@40.0, Ticker(String)@3.0, Open(Double)@0.0, Low(Double)@4.0, Close(Double)@2.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.46969516100805975	
+Date(String)@0.0, Ticker(String)@1.0, Open(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@2.0	 cc:0.4691122314172695	
+Date(String)@0.0, Ticker(String)@3.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@400.0->Close(Double)@3.0	 cc:0.4678199584693066	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@3.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@3.0	 cc:0.46706954913223087	
+Date(String)@0.0, Ticker(String)@3.0, Open(Double)@0.0, High(Double)@2.0, Low(Double)@0.0, Volume(Integer)@200.0->Close(Double)@3.0	 cc:0.46657659652847594	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, High(Double)@3.0, Low(Double)@0.0, Volume(Integer)@200.0->Close(Double)@3.0	 cc:0.46633905972736855	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@2.0	 cc:0.464796603905228	
+Date(String)@40.0, Ticker(String)@0.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@200.0->High(Double)@2.0	 cc:0.4637001041849547	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@1.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@2.0	 cc:0.4635144785915349	
+Date(String)@0.0, Ticker(String)@3.0, Open(Double)@1.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@200.0->High(Double)@3.0	 cc:0.4613189442439205	
+Date(String)@0.0, Ticker(String)@3.0, Open(Double)@0.0, Low(Double)@4.0, Close(Double)@2.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.4613055688370198	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.4592634163662495	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.4592396212787377	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@1.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.45911205382909936	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@1.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@200.0->High(Double)@2.0	 cc:0.45886929487925215	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, High(Double)@4.0, Close(Double)@3.0, Volume(Integer)@0.0->Low(Double)@4.0	 cc:0.4576788697649133	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@100.0->Close(Double)@2.0	 cc:0.4576074680175863	
+Date(String)@40.0, Ticker(String)@3.0, Open(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@100.0->High(Double)@4.0	 cc:0.4570398195449513	
+Date(String)@0.0, Ticker(String)@1.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@200.0->High(Double)@2.0	 cc:0.45691208028154795	
+Date(String)@40.0, Ticker(String)@3.0, Open(Double)@1.0, Low(Double)@0.0, Close(Double)@3.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.45667672048156416	
+Date(String)@40.0, Ticker(String)@3.0, High(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->Open(Double)@4.0	 cc:0.45637987455217305	
+Date(String)@40.0, Ticker(String)@3.0, High(Double)@2.0, Low(Double)@0.0, Close(Double)@2.0, Volume(Integer)@200.0->Open(Double)@4.0	 cc:0.45619027858250755	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@4.0, High(Double)@4.0, Close(Double)@0.0, Volume(Integer)@100.0->Low(Double)@4.0	 cc:0.4561275725785203	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@1.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->High(Double)@3.0	 cc:0.45526332853729706	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@400.0->Close(Double)@3.0	 cc:0.4547842618331486	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@3.0	 cc:0.4547195972594066	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@2.0, Close(Double)@4.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.4546104362931205	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@4.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@100.0->Close(Double)@4.0	 cc:0.45378072644043743	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, High(Double)@0.0, Close(Double)@1.0, Volume(Integer)@0.0->Low(Double)@3.0	 cc:0.45144046195784815	
+Date(String)@40.0, Ticker(String)@3.0, Open(Double)@0.0, Low(Double)@0.0, Close(Double)@3.0, Volume(Integer)@200.0->High(Double)@4.0	 cc:0.4512118755790791	
+Date(String)@40.0, Ticker(String)@3.0, High(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.45077182519320946	
+Date(String)@40.0, Ticker(String)@3.0, High(Double)@3.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.45062422588498097	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@4.0, High(Double)@3.0, Close(Double)@0.0, Volume(Integer)@200.0->Low(Double)@4.0	 cc:0.45037239201006696	
+Date(String)@40.0, Ticker(String)@3.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.45029988061247417	
+Date(String)@40.0, Ticker(String)@3.0, High(Double)@1.0, Low(Double)@1.0, Close(Double)@1.0, Volume(Integer)@200.0->Open(Double)@4.0	 cc:0.449933313344352	
+Date(String)@10.0, Ticker(String)@3.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@200.0->High(Double)@4.0	 cc:0.449047684084122	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@4.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@300.0->Close(Double)@4.0	 cc:0.4482916889873004	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@1.0, Low(Double)@4.0, Close(Double)@0.0, Volume(Integer)@100.0->Open(Double)@4.0	 cc:0.4473426432380202	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@4.0, Close(Double)@2.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.4463554759510817	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@2.0, Close(Double)@4.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.4462208441220805	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, High(Double)@4.0, Close(Double)@1.0, Volume(Integer)@200.0->Low(Double)@4.0	 cc:0.4458800033412624	
+Date(String)@40.0, Ticker(String)@3.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@200.0->High(Double)@4.0	 cc:0.4448396684092297	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->High(Double)@4.0	 cc:0.4430996802146478	
+Date(String)@0.0, Ticker(String)@3.0, High(Double)@1.0, Low(Double)@1.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.44255320663020786	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@3.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@400.0->Close(Double)@4.0	 cc:0.4424748663300727	
+Date(String)@40.0, Ticker(String)@2.0, Open(Double)@0.0, Low(Double)@0.0, Close(Double)@4.0, Volume(Integer)@100.0->High(Double)@4.0	 cc:0.4420768672607619	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@4.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.44193438211485614	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@2.0, Low(Double)@0.0, Close(Double)@2.0, Volume(Integer)@200.0->Open(Double)@4.0	 cc:0.4412401856965694	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@3.0, Low(Double)@0.0, Close(Double)@0.0, Volume(Integer)@300.0->High(Double)@3.0	 cc:0.4405755344691417	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@1.0, Low(Double)@2.0, Close(Double)@0.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.43602113370206214	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@1.0, Low(Double)@1.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.4359927059153097	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@400.0->Open(Double)@4.0	 cc:0.4358217323072714	
+Date(String)@40.0, Ticker(String)@2.0, High(Double)@0.0, Low(Double)@2.0, Close(Double)@1.0, Volume(Integer)@0.0->Open(Double)@4.0	 cc:0.4340595674030472	
+Date(String)@10.0, Ticker(String)@2.0, High(Double)@0.0, Low(Double)@2.0, Close(Double)@1.0, Volume(Integer)@100.0->Open(Double)@4.0	 cc:0.432302302327335	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@0.0, High(Double)@0.0, Low(Double)@2.0, Volume(Integer)@100.0->Close(Double)@3.0	 cc:0.4322647306189406	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@0.0->Close(Double)@3.0	 cc:0.43173565306001394	
+Date(String)@0.0, Ticker(String)@2.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@300.0->High(Double)@4.0	 cc:0.42847543158254553	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@0.0, Volume(Integer)@400.0->Close(Double)@3.0	 cc:0.42721562904068283	
+Date(String)@0.0, Ticker(String)@1.0, Open(Double)@1.0, High(Double)@0.0, Low(Double)@1.0, Volume(Integer)@400.0->Close(Double)@3.0	 cc:0.4253658973646447	
+Date(String)@0.0, Ticker(String)@1.0, Open(Double)@1.0, High(Double)@1.0, Low(Double)@0.0, Volume(Integer)@200.0->Close(Double)@3.0	 cc:0.4242288444581105	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@0.0, High(Double)@1.0, Close(Double)@3.0, Volume(Integer)@200.0->Low(Double)@4.0	 cc:0.41223315264839694	
+Date(String)@40.0, Ticker(String)@1.0, Open(Double)@2.0, Low(Double)@0.0, Close(Double)@1.0, Volume(Integer)@0.0->High(Double)@4.0	 cc:0.4078458195078123	
