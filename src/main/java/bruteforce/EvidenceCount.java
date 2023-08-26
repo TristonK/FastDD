@@ -1,6 +1,7 @@
 package bruteforce;
 
 import ch.javasoft.bitset.LongBitSet;
+import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialfunction.DifferentialFunctionBuilder;
 import fastdd.utils.DistanceCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
@@ -137,14 +138,10 @@ public class EvidenceCount {
                     evidence.or(mask);
                 }
                 evidenceSet.add(evidence);
-//                if (TestDup && DDLeft.isSubSetOf(evidence)) {
-//                    System.out.println("dup " + i + " " + j);
-//                }
                 if (TestDup) {
                     for (int k = 0; k < DDLeft.size(); k++) {
                         LongBitSet left = DDLeft.get(k);
                         if (left.isSubSetOf(evidence)) {
-//                            System.out.println("dup for DD " + (k+1) + ": " + i + "," + j);
                             String temp = Integer.toString(i) + ":" + Integer.toString(j);
                             addValue(duplist,k,temp);
                         }
