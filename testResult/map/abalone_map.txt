@@ -1,9 +1,0 @@
-shellWeight:shellWeight
-diameter:diameter
-visceraWeight:visceraWeight
-rings:rings
-wholeWeight:wholeWeight
-shuckedWeight:shuckedWeight
-sex:sex
-length:length
-height:height

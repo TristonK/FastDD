@@ -1,6 +1,0 @@
-COL0:col1
-COL1:col2
-COL2:col3
-COL3:col4
-COL4:col5
-COL5:col6

@@ -1,9 +1,0 @@
-Car:Car
-MPG:MPG
-Cylinders:Cylinders
-Displacement:Displacement
-Horsepower:Horsepower
-Weight:Weight
-Acceleration:Acceleration
-Model:Model
-Origin:Origin

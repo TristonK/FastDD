@@ -1,5 +1,0 @@
-year [0.0][]
-id [0.0,400.0][]
-sex [0.0][]
-education [0.0][]
-vocabulary [0.0][]
