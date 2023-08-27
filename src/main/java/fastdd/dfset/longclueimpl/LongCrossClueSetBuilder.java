@@ -68,12 +68,14 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder implements Calla
             for (int j = 0; j < probeKeys.length; j++) {
                 //long time1 = System.nanoTime();
                 double diff;
+                long t1 = System.nanoTime();
                 if(Config.TestMD){
                     diff = DistanceCalculation.MDLevenstheinDistance(pivotKeys[i], probeKeys[j]);
                 }else{
                     diff = getLevenshteinDistance(pivotKeys[i], probeKeys[j]);
                     //diff = DistanceCalculation.StringDistance(pivotKeys[i], probeKeys[j]);
                 }
+                calDiffTime += (System.nanoTime() - t1);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
                     c = 0;
@@ -97,11 +99,13 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder implements Calla
     private void linerCorrectNum(IPli pivotPli, IPli probePli, long base, List<Double> thresholds) {
         for (int i = 0; i < pivotPli.size(); i++) {
             int[] offsets;
+            long t1 = System.nanoTime();
             if (pivotPli.getClass() == DoublePli.class) {
                 offsets = calUtils.countDouble(probePli, 0, (Double[]) probePli.getKeys(), 0, (Double) pivotPli.getKeys()[i], thresholds);
             } else {
                 offsets = calUtils.countInt(probePli, 0, (Long[]) probePli.getKeys(), 0, (Long) pivotPli.getKeys()[i], thresholds);
             }
+            calDiffTime += (System.nanoTime() - t1);
             for (int j = 0; j < probePli.size(); j++) {
                 setNumMask(pivotPli, i, probePli, j, base, offsets[j]);
             }

@@ -2,6 +2,7 @@ package fastdd;
 
 import bruteforce.ValidateDD;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
+import fastdd.dfset.longclueimpl.LongClueSetBuilder;
 import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialdependency.DifferentialDependencySet;
 import fastdd.differentialfunction.DifferentialFunction;
@@ -79,6 +80,7 @@ public class FastDD {
 //        ValidateDD.printAllDF(differentialFunctionBuilder);
 
         System.out.println("[EvidenceSet] build long clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
+        System.out.println("[Diff-cal] time(ns): " + LongClueSetBuilder.calDiffTime);
         //System.out.println("[countOffset]: " + (BinaryCalOffset.cntTime/1000000+LongSingleClueSetBuilder.cntStrTime+LongCrossClueSetBuilder.cntStrTime/1000000) +
         //        "; [SetMask]: " + (LongCrossClueSetBuilder.setMaskTimeCnt + LongSingleClueSetBuilder.setMaskTimecnt)/1000000);
         long enmurationTime = System.currentTimeMillis();
