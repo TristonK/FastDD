@@ -45,6 +45,8 @@ public abstract class LongClueSetBuilder {
     static List<PredicatePack> doublePacks;  // numerical single-column predicate packs
     static List<PredicatePack> longPacks;
 
+   public static long calDiffTime = 0;
+
     public static void configure(DifferentialFunctionBuilder pBuilder) {
         strPacks = new ArrayList<>();
         doublePacks = new ArrayList<>();

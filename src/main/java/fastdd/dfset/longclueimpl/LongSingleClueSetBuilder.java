@@ -85,12 +85,14 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder implements Call
                 //long time1 = System.currentTimeMillis();
                 //int diff = DistanceCalculation.StringDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 double diff;
+                long t1 = System.nanoTime();
                 if(Config.TestMD){
                     diff = DistanceCalculation.MDLevenstheinDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 }else{
                     diff = getLevenshteinDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                     //diff = DistanceCalculation.StringDistance(pivotKeys[i], probeKeys[j]);
                 }
+                calDiffTime += (System.nanoTime() - t1);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
                     c = 0;
@@ -114,11 +116,13 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder implements Call
     private void linerCorrectNum(IPli pli, long base, List<Double> thresholds) {
         for (int i = 0; i < pli.size(); i++) {
             int[] offsets;
+            long t1 = System.nanoTime();
             if (pli.getClass() == DoublePli.class) {
                 offsets = calUtils.countDouble(pli, 1, (Double[]) pli.getKeys(), i, (Double) pli.getKeys()[i], thresholds);
             } else {
                 offsets = calUtils.countInt(pli, 1, (Long[])pli.getKeys(), i, (Long) pli.getKeys()[i], thresholds);
             }
+            calDiffTime += (System.nanoTime() - t1);
             setSelfNumMask(pli.get(i), base);
             for (int j = i + 1; j < pli.size(); j++) {
                 setNumMask(pli.get(i), pli.get(j), base, offsets[j - i]);
