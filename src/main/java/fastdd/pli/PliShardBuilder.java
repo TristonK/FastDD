@@ -18,6 +18,7 @@ public class PliShardBuilder {
 
     public PliShardBuilder(int _shardLength, List<ParsedColumn<?>> pColumns) {
         shardLength = _shardLength;
+        System.out.println("[ShardSize]: " + shardLength);
         colSize = pColumns.size();
 
         isNum = new boolean[colSize];

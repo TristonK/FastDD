@@ -21,18 +21,20 @@ public class Executor {
     public Executor(PliShard[] pliShards){
         ExecutorService executor = Executors.newFixedThreadPool(numThreads);
         List<Callable<HashMap<Long, Long>>> tasks = new ArrayList<>();
+        List<Future<HashMap<Long, Long>>> futures = new ArrayList<>();
 
         for (int i = 0; i < pliShards.length; i++) {
             IClueOffset util = new BinaryCalOffset();
-            tasks.add(new LongSingleClueSetBuilder(pliShards[i], util));
+           // tasks.add(new LongSingleClueSetBuilder(pliShards[i], util));
+            futures.add(executor.submit(new LongSingleClueSetBuilder(pliShards[i], util)));
             for (int j = i + 1; j < pliShards.length; j++) {
                 IClueOffset util2 = new BinaryCalOffset();
-                tasks.add(new LongCrossClueSetBuilder(pliShards[i], pliShards[j], util2));
+                futures.add(executor.submit(new LongCrossClueSetBuilder(pliShards[i], pliShards[j], util2)));
             }
         }
 
         // 运行所有任务并获取结果
-        List<Future<HashMap<Long, Long>>> futures;
+        /*
         try {
             long t1 = System.currentTimeMillis();
             futures = executor.invokeAll(tasks);
@@ -41,7 +43,7 @@ public class Executor {
             System.err.println("Tasks execution interrupted.");
             e.printStackTrace();
             return;
-        }
+        }*/
 
         // 处理每个任务的返回值
         try {
