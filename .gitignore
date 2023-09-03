@@ -4,5 +4,6 @@
 .DS_Store
 *.iml
 /dataset/
+/datasets/
 /out/
 /META-INF/MANIFEST.MF
