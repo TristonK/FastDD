@@ -100,9 +100,15 @@ public class DifferentialFunctionBuilder {
                 throw new IllegalArgumentException("Please using correct predicates file: 'colName [t1,t2,..][t3,t4,..]'");
             }
         }
+<<<<<<< HEAD
         for (String K : smallerThresholds.keySet()){
             System.out.println(K + smallerThresholds.get(K));
         }
+=======
+       /* for (String K : smallerThresholds.keySet()){
+            System.out.println(K + smallerThresholds.get(K));
+        }*/
+>>>>>>> 91d93c657d11606f96d594a80c38fdfcac3dc63b
         for (ParsedColumn<?> column : input.getColumns()) {
             if (!smallerThresholds.containsKey(column.getColumnName())){System.out.println(column.getColumnName()+column.getColumnName().length());}
             addDifferentialFunctions(column, smallerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()), biggerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()));
