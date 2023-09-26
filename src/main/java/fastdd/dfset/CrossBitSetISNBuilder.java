@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * To build the clue set of two Pli shards
  */
-public class CrossClueSetBuilder extends ClueSetBuilder {
+public class CrossBitSetISNBuilder extends BitSetISNBuilder {
 
     private final List<IPli> plis1, plis2;
     private final int evidenceCount;
@@ -21,9 +21,9 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
     private final double ERR = 0.000000001;
     private long[] forwardClues;//用来代替longbitset，实验测试
     private long[] bases;
-    private IClueOffset calUtils;
+    private IOffset calUtils;
 
-    public CrossClueSetBuilder(PliShard shard1, PliShard shard2, IClueOffset calUtils) {
+    public CrossBitSetISNBuilder(PliShard shard1, PliShard shard2, IOffset calUtils) {
         plis1 = shard1.plis;
         plis2 = shard2.plis;
         evidenceCount = (shard1.end - shard1.beg) * (shard2.end - shard2.beg);

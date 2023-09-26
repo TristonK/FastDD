@@ -139,7 +139,6 @@ public class EvidenceCount {
                 }
             }
         }
-
         return evidenceSet;
     }
 }

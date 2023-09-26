@@ -8,30 +8,29 @@ import java.util.Iterator;
 /**
  * @author tristonK 2022/12/29
  */
-public class PredicateSet implements Iterable<DifferentialFunction>{
+public class DifferentialFunctionSet implements Iterable<DifferentialFunction>{
     public static IndexProvider<DifferentialFunction> indexProvider = new IndexProvider<>();
 
     public static void configure(IndexProvider<DifferentialFunction> indexProvider) {
-        PredicateSet.indexProvider = indexProvider;
+        DifferentialFunctionSet.indexProvider = indexProvider;
     }
-
 
     private final LongBitSet bitset;
 
-    public PredicateSet() {
+    public DifferentialFunctionSet() {
         this.bitset = new LongBitSet();
     }
 
-    public PredicateSet(LongBitSet bitset) {
+    public DifferentialFunctionSet(LongBitSet bitset) {
         this.bitset = bitset.clone();
     }
 
-    public PredicateSet(int haveAllPredicates){
+    public DifferentialFunctionSet(int haveAllPredicates){
         this.bitset = new LongBitSet(haveAllPredicates);
         for(int i = 0; i < haveAllPredicates; i++){this.bitset.set(i);}
     }
 
-    public PredicateSet(PredicateSet pS) {
+    public DifferentialFunctionSet(DifferentialFunctionSet pS) {
         this.bitset = pS.getBitset().clone();
     }
 
@@ -43,7 +42,7 @@ public class PredicateSet implements Iterable<DifferentialFunction>{
         return bitset.get(indexProvider.getIndex(differentialFunction));
     }
 
-    public boolean isSubsetOf(PredicateSet superset) {
+    public boolean isSubsetOf(DifferentialFunctionSet superset) {
         return bitset.isSubSetOf(superset.getBitset());
     }
 
@@ -55,7 +54,7 @@ public class PredicateSet implements Iterable<DifferentialFunction>{
         return bitset;
     }
 
-    public void addAll(PredicateSet predicateBitSet) {
+    public void addAll(DifferentialFunctionSet predicateBitSet) {
         bitset.or(predicateBitSet.getBitset());
     }
 
@@ -100,7 +99,7 @@ public class PredicateSet implements Iterable<DifferentialFunction>{
         if (getClass() != obj.getClass()) {
             return false;
         }
-       PredicateSet other = (PredicateSet) obj;
+       DifferentialFunctionSet other = (DifferentialFunctionSet) obj;
         if (bitset == null) {
             return other.bitset == null;
         } else {

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author tristonK 2022/12/31
  */
-public class Evidence {
+public class MatchDF {
     public final LongBitSet bitset;
 
     /**
@@ -17,16 +17,13 @@ public class Evidence {
     private final long count;
     private final LongBitSet clue;
 
-    public Evidence(LongBitSet clue, Long count, List<List<LongBitSet>> countToPredicateSets){
+    public MatchDF(LongBitSet clue, Long count, List<List<LongBitSet>> countToPredicateSets){
         this.clue = clue;
-//        if(Objects.equals(clue.toString(), "{001000010000000010000001000001}")) {
-//            System.out.println(clue);
-//        }
         this.count = count;
-        this.bitset = buildEvidenceFromClue(countToPredicateSets);
+        this.bitset = buildMatchDFFromBitsetISN(countToPredicateSets);
     }
 
-    public Evidence(long clue, Long count, List<List<LongBitSet>> countToPredicateSets, long[] bases){
+    public MatchDF(long clue, Long count, List<List<LongBitSet>> countToPredicateSets, long[] bases){
         this.clue = null;
         this.count = count;
         LongBitSet evidenceBitSet = new LongBitSet();
@@ -39,17 +36,17 @@ public class Evidence {
         this.bitset = evidenceBitSet;
     }
 
-    private LongBitSet buildEvidenceFromClue(List<List<LongBitSet>> countToPredicateSets){
-        LongBitSet evidenceBitSet = new LongBitSet();
+    private LongBitSet buildMatchDFFromBitsetISN(List<List<LongBitSet>> countToPredicateSets){
+        LongBitSet dfBitSet = new LongBitSet();
         for(int i = clue.nextSetBit(0); i >=0 ; i = clue.nextSetBit(i+1)){
-            int col = ClueSetBuilder.bit2ColMap[i];
-            int offset = i - ClueSetBuilder.col2FirstBitMap[col];
+            int col = BitSetISNBuilder.bit2ColMap[i];
+            int offset = i - BitSetISNBuilder.col2FirstBitMap[col];
             //获得clue里i对应的列属性和偏移量（即在阈值列表中的位置）
             LongBitSet mask = countToPredicateSets.get(col).get(offset);
             if(mask == null){System.out.println("sss");}
-            evidenceBitSet.or(mask);
+            dfBitSet.or(mask);
         }
-        return evidenceBitSet;
+        return dfBitSet;
     }
 
     @Override
@@ -60,8 +57,8 @@ public class Evidence {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Evidence evidence = (Evidence) o;
-        return clue == evidence.clue;
+        MatchDF matchDF = (MatchDF) o;
+        return clue == matchDF.clue;
     }
 
     @Override
@@ -85,7 +82,7 @@ public class Evidence {
     public String toDFString(){
         StringBuilder sb = new StringBuilder();
         for(int i = bitset.nextSetBit(0); i >= 0; i = bitset.nextSetBit(i + 1)){
-            sb.append(DifferentialFunctionBuilder.predicateIdProvider.getObject(i).toString());
+            sb.append(DifferentialFunctionBuilder.dfIdProvider.getObject(i).toString());
             sb.append(",");
         }
         return sb.toString();

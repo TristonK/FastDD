@@ -30,25 +30,14 @@ public class EvidenceInversion {
     }
 
     public Set<IBitSet> getCovers(){
-        //TODO: 修改排序，此处的排序只会影响
         posCover = new TranslatingTreeSearch(countPredsInEvidenceSet(), colPredicatesBitSet);
         List<IBitSet> sortedNegCover = new ArrayList<>();
         for (LongBitSet bitset : evidenceBitSets) {
             sortedNegCover.add(bitset.clone());
         }
-
-        // for evidence minimize
         sortedNegCover = minimizeEvidenceSet(sortedNegCover);
 
         posCover.add(new LongBitSet());
-        /*for(IBitSet bs: colPredicatesBitSet){
-            for(int i = bs.nextSetBit(0); i >= 0;i = bs.nextSetBit(i+1)){
-                LongBitSet pred = new LongBitSet();
-                pred.set(i);
-                posCover.add(pred);
-            }
-        }*/
-
         Collections.sort(sortedNegCover, posCover.getComparator());
 
         for (int i = 0; i < sortedNegCover.size(); ++i) {
@@ -96,5 +85,4 @@ public class EvidenceInversion {
         }
         return counts;
     }
-
 }
