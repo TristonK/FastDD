@@ -9,12 +9,12 @@ import java.util.*;
 /**
  * @author tristonK 2022/12/31
  */
-public class DFSet implements Iterable<Evidence>{
+public class DFSet implements Iterable<MatchDF>{
 
-    private HashMap<LongBitSet, Evidence> clueToEvidence;
-    private HashMap<Long, Evidence> longClueToEvidence;
+    private HashMap<LongBitSet, MatchDF> clueToEvidence;
+    private HashMap<Long, MatchDF> longClueToEvidence;
 
-    private List<Evidence> evidences;
+    private List<MatchDF> matchDFS;
 
     /**
      * count: a bit of 1 in the whole clue
@@ -27,7 +27,7 @@ public class DFSet implements Iterable<Evidence>{
     public DFSet(DifferentialFunctionBuilder differentialFunctionBuilder){
         clueToEvidence = new HashMap<>();
         longClueToEvidence = new HashMap<>();
-        evidences = new ArrayList<>();
+        matchDFS = new ArrayList<>();
         this.offsetToPredicateSets = new ArrayList<>();
         for(int i = 0; i < differentialFunctionBuilder.getColSize(); i++){
             offsetToPredicateSets.add(differentialFunctionBuilder.getOffset2SatisfiedPredicates(i));
@@ -37,9 +37,9 @@ public class DFSet implements Iterable<Evidence>{
     public void build(HashMap<LongBitSet, Long> clueSet){
         for (var entry : clueSet.entrySet()) {
             LongBitSet clue = entry.getKey();
-            Evidence evi = new Evidence(clue, entry.getValue(), offsetToPredicateSets);
+            MatchDF evi = new MatchDF(clue, entry.getValue(), offsetToPredicateSets);
             clueToEvidence.put(clue, evi);
-            evidences.add(evi);
+            matchDFS.add(evi);
         }
     }
 
@@ -47,15 +47,15 @@ public class DFSet implements Iterable<Evidence>{
     public void buildFromLong(HashMap<Long, Long> clueSet){
         for(var entry: clueSet.entrySet()){
             long clue = entry.getKey();
-            Evidence evi = new Evidence(clue, entry.getValue(), offsetToPredicateSets, ISNBuilder.bases);
+            MatchDF evi = new MatchDF(clue, entry.getValue(), offsetToPredicateSets, ISNBuilder.bases);
             //if(evi==null){System.out.println("xxxxxx");}
             longClueToEvidence.put(clue, evi);
-            evidences.add(evi);
+            matchDFS.add(evi);
         }
     }
 
     public int size() {
-        return evidences.size();
+        return matchDFS.size();
     }
 
     @Override
@@ -66,18 +66,18 @@ public class DFSet implements Iterable<Evidence>{
     }
 
     @Override
-    public Iterator<Evidence> iterator() {
-        return evidences.iterator();
+    public Iterator<MatchDF> iterator() {
+        return matchDFS.iterator();
     }
 
-    public Evidence getEvidenceById(int id){
-        if(id >= evidences.size()){
+    public MatchDF getEvidenceById(int id){
+        if(id >= matchDFS.size()){
             throw new IllegalArgumentException("No such evidence id {" + id + "} in evidence set");
         }
-        return evidences.get(id);
+        return matchDFS.get(id);
     }
 
-    public List<Evidence> getEvidences(){
-        return evidences;
+    public List<MatchDF> getEvidences(){
+        return matchDFS;
     }
 }

@@ -7,7 +7,7 @@ import fastdd.differentialdependency.DifferentialDependencySet;
 import fastdd.dfset.DFSet;
 import fastdd.differentialfunction.DifferentialFunction;
 import fastdd.differentialfunction.DifferentialFunctionBuilder;
-import fastdd.differentialfunction.PredicateSet;
+import fastdd.differentialfunction.DifferentialFunctionSet;
 import fastdd.search.TranslatingMinimizeTree;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 import de.metanome.algorithms.dcfinder.predicates.Operator;
@@ -18,7 +18,7 @@ import java.util.*;
  * @author tristonK 2023/2/27
  */
 public class HybridEvidenceInversion implements Enumeration{
-    PredicateSet predicates;
+    DifferentialFunctionSet predicates;
     HashMap<Integer, Set<Integer>> pred2PredGroupMap;
     Set<IBitSet> covers;
     DFSet DFSet;
@@ -37,13 +37,13 @@ public class HybridEvidenceInversion implements Enumeration{
     Map<Integer, Integer> index2Diff;
     List<DifferentialFunction> highestDFofAttr;
     public HybridEvidenceInversion(DFSet DFSet, DifferentialFunctionBuilder differentialFunctionBuilder){
-        this.predicates = new PredicateSet(differentialFunctionBuilder.getPredicates().size());
+        this.predicates = new DifferentialFunctionSet(differentialFunctionBuilder.getPredicates().size());
         this.pred2PredGroupMap = new HashMap<>();
         this.covers = new HashSet<>();
         this.DFSet = DFSet;
         this.colToPredicatesGroup = new ArrayList<>();
         this.index2Diff = differentialFunctionBuilder.getBitsetIndex2ThresholdsIndex();
-        for(BitSet bs: differentialFunctionBuilder.getColPredicateGroup()){
+        for(BitSet bs: differentialFunctionBuilder.getColDFGroup()){
             colToPredicatesGroup.add((BitSet) bs.clone());
         }
         predicateIndexProvider = differentialFunctionBuilder.getPredicateIdProvider();
@@ -119,9 +119,7 @@ public class HybridEvidenceInversion implements Enumeration{
             List<Integer> currPredicateSpace = new ArrayList<>(differentialFunctions);
             currPredicateSpace.removeAll(pred2PredGroupMap.get(rightPid));
             Set<Integer> predsNotSatisfied = new HashSet<>();
-            //for(int j = 0; j < i; j++){predsNotSatisfied.add(preds.get(j));}
-
-            LongBitSet currEvidenceSet = dfNotSatisfiedDFSet.get(rightPid);//predSatisfiedEvidenceSet.get(rightPid);
+            LongBitSet currEvidenceSet = dfNotSatisfiedDFSet.get(rightPid);
             List<LongBitSet> currEvidences = new ArrayList<>();
             for(int eviId = currEvidenceSet.nextSetBit(0); eviId >= 0; eviId = currEvidenceSet.nextSetBit(eviId + 1)){
                 LongBitSet bs = DFSet.getEvidenceById(eviId).getBitset().clone();
@@ -198,16 +196,11 @@ public class HybridEvidenceInversion implements Enumeration{
         }
     }
 
-    //所有的interval个数
     int intervalSize;
-    // predicate的id对应到node的id，先所有属性的的小于等于，再所有属性的大于
     int[] predicateId2NodeId;
-    // 列对应的interval起始点，也就是从这一位开始设置
     int[] col2Interval;
-    // 列对应的第一个谓词的id
     int[] col2PredicateId;
     int colSize;
-    // 列i对应的interval个数
     int[] intervalLength;
     private void constructMinimizeTree(DifferentialFunctionBuilder differentialFunctionBuilder){
         colSize = differentialFunctionBuilder.getColSize();
@@ -216,13 +209,11 @@ public class HybridEvidenceInversion implements Enumeration{
         col2Interval = new int[colSize];
         col2PredicateId = new int[colSize];
         intervalLength = new int[colSize];
-        List<BitSet>  colPredicateGroup = differentialFunctionBuilder.getColPredicateGroup();
+        List<BitSet>  colPredicateGroup = differentialFunctionBuilder.getColDFGroup();
         for(int i = 0; i < colSize; i++){
             BitSet bs = colPredicateGroup.get(i);
-            //System.out.println(bs.toString());
             col2Interval[i] = intervalSize;
             intervalLength[i] = differentialFunctionBuilder.getColThresholdsSize(i);
-            //intervalLength[i] = bs.cardinality()/2;
             intervalSize += intervalLength[i];
             int cnt = 0;
             for(int j = bs.nextSetBit(0); j >= 0; j = bs.nextSetBit(j + 1)){
@@ -251,15 +242,6 @@ public class HybridEvidenceInversion implements Enumeration{
     private long MinimizeTime = 0;
     private long BeforeMinimizeSize = 0;
     private DifferentialDependencySet partialMinimize(int rightPid, Set<IBitSet> partialCovers){
-        /*if (rightPid == 8){
-            System.out.println("pred: " + predicateIndexProvider.getObject(8));
-            for (IBitSet p : partialCovers){
-                for(int i = p.nextSetBit(0); i >= 0; i= p.nextSetBit(i+1)){
-                    System.out.print(predicateIndexProvider.getObject(i));
-                }
-                System.out.println("");
-            }
-        }*/
         long t1 = System.currentTimeMillis();
         TranslatingMinimizeTree minimizeTree;
         if (!minimizeTreeMap.containsKey(predicateIndexProvider.getObject(rightPid).operandWithOpHash())){
@@ -268,22 +250,10 @@ public class HybridEvidenceInversion implements Enumeration{
         } else{
             minimizeTree = minimizeTreeMap.get(predicateIndexProvider.getObject(rightPid).operandWithOpHash());
         }
-        //System.out.println("before "+ partialCovers.size());
         BeforeMinimizeSize += partialCovers.size();
         Set<IBitSet> ret1 = minimizeTree.minimize(new ArrayList<>(partialCovers));
-        //Set<IBitSet> ret1 = partialCovers;
         minimizeTreeMap.put(predicateIndexProvider.getObject(rightPid).operandWithOpHash(), minimizeTree);
         MinimizeTime += System.currentTimeMillis() - t1;
-        /*if (rightPid == 8){
-            System.out.println("after" + ret1.size());
-            System.out.println("pred: " + predicateIndexProvider.getObject(8));
-            for (IBitSet p : ret1){
-                for(int i = p.nextSetBit(0); i >= 0; i= p.nextSetBit(i+1)){
-                    System.out.print(predicateIndexProvider.getObject(i));
-                }
-                System.out.println("");
-            }
-        }*/
         return new DifferentialDependencySet(ret1, rightPid, predicateIndexProvider);
     }
 }

@@ -13,7 +13,6 @@ public class BinaryCalOffset implements IOffset {
 
     @Override
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
-        //long time1 = System.nanoTime();
         int[] posTothreshold = new int[probePli.size()];
         //SinglePli
         if(1 == isSingle){
@@ -63,13 +62,11 @@ public class BinaryCalOffset implements IOffset {
                 }
             }
         }
-        //cntTime += System.nanoTime() - time1;
         return posTothreshold;
     }
 
     @Override
     public int[] countInt(IPli probePli, int isSingle, Long[] keys, int startPos, long key, List<Double> thresholds) {
-       // long time1  = System.nanoTime();
         int[] posTothreshold = new int[probePli.size()];
         //SinglePli
         if(isSingle == 1){
@@ -120,7 +117,6 @@ public class BinaryCalOffset implements IOffset {
                 }
             }
         }
-      //  cntTime += System.nanoTime() - time1;
         return posTothreshold;
     }
 }

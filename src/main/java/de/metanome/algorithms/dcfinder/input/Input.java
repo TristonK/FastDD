@@ -90,15 +90,6 @@ public class Input {
         });
         for (int i = 0; i < colCount; i++) {
             Column c = columns[i];
-            if (Config.TestMD){
-                ParsedColumn<String> pColumn = new ParsedColumn<>(c.getName(), String.class, i, providerS);
-                pColumns.add(pColumn);
-                for (int l = 0; l < c.getLineCount(); ++l) {
-                    pColumn.addLine(c.getString(l));
-                }
-                stringCnt++;
-                continue;
-            }
             if (c.getType() == Column.Type.LONG) {
                 ParsedColumn<Long> pColumn = new ParsedColumn<>(c.getName(), Long.class, i, providerL);
                 pColumns.add(pColumn);
@@ -132,14 +123,6 @@ public class Input {
         int iid = 0, did = 0, sid = 0;
         for (int col = 0; col < colCount; col++) {
             ParsedColumn<?> pColumn = pColumns.get(col);
-            if(Config.TestMD){
-                for (int row = 0; row < rowCount; ++row){
-                    stringInput[sid][row] = (String) pColumn.getValue(row);
-                }
-                colIndex[2][sid] = col;
-                sid++;
-                continue;
-            }
             if(pColumn.getType() ==String.class){
                 for (int row = 0; row < rowCount; ++row){
                     stringInput[sid][row] = (String) pColumn.getValue(row);

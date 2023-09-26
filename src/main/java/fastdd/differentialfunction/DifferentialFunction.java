@@ -12,9 +12,9 @@ public class DifferentialFunction {
     private final ColumnOperand operand;
     private int index;
 
-    private static PredicateProvider predicateProvider;
+    private static DFProvider predicateProvider;
 
-    public static void configure(PredicateProvider provider) {
+    public static void configure(DFProvider provider) {
         DifferentialFunction.predicateProvider = provider;
     }
 

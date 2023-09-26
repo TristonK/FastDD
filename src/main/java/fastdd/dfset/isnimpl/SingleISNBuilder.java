@@ -1,12 +1,10 @@
 package fastdd.dfset.isnimpl;
 
-import fastdd.Config;
 import fastdd.dfset.IOffset;
 import fastdd.pli.Cluster;
 import fastdd.pli.DoublePli;
 import fastdd.pli.IPli;
 import fastdd.pli.PliShard;
-import fastdd.utils.DistanceCalculation;
 
 import java.util.HashMap;
 import java.util.List;
@@ -36,22 +34,19 @@ public class SingleISNBuilder extends ISNBuilder implements Callable<HashMap<Lon
 
     public HashMap<Long, Long> buildClueSet() {
         forwardClues = new long[evidenceCount];
-        for (PredicatePack longPack : longPacks) {
+        for (DFPack longPack : longPacks) {
             linerCorrectNum(plis.get(longPack.colIndex), longPack.base, longPack.thresholds);
         }
-        for (PredicatePack doublePack : doublePacks) {
+        for (DFPack doublePack : doublePacks) {
             linerCorrectNum(plis.get(doublePack.colIndex), doublePack.base, doublePack.thresholds);
         }
-        for (PredicatePack strPack : strPacks) {
+        for (DFPack strPack : strPacks) {
             correctStr(plis.get(strPack.colIndex), strPack.base, strPack.thresholds);
         }
         return accumulateClues(forwardClues);
     }
 
-
-   // public static long setMaskTimecnt = 0;
     private void setNumMask(Cluster cluster1, Cluster cluster2, long base, int offset) {
-        //long time1  = System.nanoTime();
         List<Integer> rawCluster1 = cluster1.getRawCluster();
         List<Integer> rawCluster2 = cluster2.getRawCluster();
         long diff = base * offset;
@@ -68,29 +63,19 @@ public class SingleISNBuilder extends ISNBuilder implements Callable<HashMap<Lon
                 forwardClues[(tid2 - tid1 - 1) + t1 * (2 * tidRange - t1 - 1) / 2] += diff;
             }
         }
-        //setMaskTimecnt += System.nanoTime()- time1;
     }
 
     private void setSelfNumMask(Cluster cluster, long base) {
         return;
     }
 
-    //public static long cntStrTime = 0;
     private void correctStr(IPli pli, long base, List<Double> thresholds) {
         for (int i = 0; i < pli.size(); i++) {
-            // index为0的情况
             setSelfNumMask(pli.get(i), base);
             for (int j = i + 1; j < pli.size(); j++) {
-                //long time1 = System.currentTimeMillis();
-                //int diff = DistanceCalculation.StringDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 double diff;
                 long t1 = System.nanoTime();
-                if(Config.TestMD){
-                    diff = DistanceCalculation.MDLevenstheinDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
-                }else{
-                    diff = getLevenshteinDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
-                    //diff = DistanceCalculation.StringDistance(pivotKeys[i], probeKeys[j]);
-                }
+                diff = getLevenshteinDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 calDiffTime += (System.nanoTime() - t1);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
@@ -106,7 +91,6 @@ public class SingleISNBuilder extends ISNBuilder implements Callable<HashMap<Lon
                         c++;
                     }
                 }
-               // cntStrTime += System.currentTimeMillis() - time1;
                 setNumMask(pli.get(i), pli.get(j), base, c);
             }
         }
@@ -167,14 +151,8 @@ public class SingleISNBuilder extends ISNBuilder implements Callable<HashMap<Lon
         }
 
         for (int i = 0; i < s1.length(); i++) {
-            // calculate v1 (current row distances) from the previous row v0
-            // first element of v1 is A[i+1][0]
-            //   edit distance is delete (i+1) chars from s to match empty t
             v1[0] = i + 1;
-
             int minv1 = v1[0];
-
-            // use formula to fill in the rest of the row
             for (int j = 0; j < s2.length(); j++) {
                 int cost = 1;
                 if (s1.charAt(i) == s2.charAt(j)) {
@@ -192,18 +170,10 @@ public class SingleISNBuilder extends ISNBuilder implements Callable<HashMap<Lon
             if (minv1 >= Integer.MAX_VALUE) {
                 return Integer.MAX_VALUE;
             }
-
-            // copy v1 (current row) to v0 (previous row) for next iteration
-            //System.arraycopy(v1, 0, v0, 0, v0.length);
-
-            // Flip references to current and previous row
             vtemp = v0;
             v0 = v1;
             v1 = vtemp;
-
         }
-
         return v0[s2.length()];
     }
-
 }

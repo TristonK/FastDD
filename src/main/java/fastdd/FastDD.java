@@ -4,7 +4,7 @@ import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 import de.metanome.algorithms.dcfinder.input.Input;
 import fastdd.dfset.DFSet;
 import fastdd.dfset.DFSetBuilder;
-import fastdd.dfset.Evidence;
+import fastdd.dfset.MatchDF;
 import fastdd.dfset.isnimpl.ISNBuilder;
 import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialdependency.DifferentialDependencySet;
@@ -86,7 +86,7 @@ public class FastDD {
         System.out.println("[Enumeration] cost: " + (System.currentTimeMillis() - enmurationTime)+ " ms");
         System.out.println("[Enumeration] # dds: " + dds.size());
         if (Config.OutputDFSet){
-            for (Evidence evi :dfSet){
+            for (MatchDF evi :dfSet){
                // System.out.println(evi.toDFString());
                 IndexProvider in = differentialFunctionBuilder.getPredicateIdProvider();
                 for(DifferentialFunction df: differentialFunctionBuilder.getPredicates()){

@@ -9,15 +9,13 @@ import java.util.Map;
 /**
  * @author tristonK 2022/12/31
  */
-public class PredicateProvider {
+public class DFProvider {
     private final Map<Operator, Map<ColumnOperand<?>, Map<Double, DifferentialFunction>>> predicates;
 
-    public PredicateProvider() {
+    public DFProvider() {
         predicates = new HashMap<>();
     }
 
-
-    //TODO : 可以改掉
     public DifferentialFunction getPredicate(Operator op, ColumnOperand<?> op1, Double distance) {
         return getPredicate(op, op1, distance, true);
     }

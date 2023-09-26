@@ -27,11 +27,11 @@ public abstract class ISNBuilder {
     /**
      * thresholds of one column
      */
-    static class PredicatePack {
+    static class DFPack {
         List<Double> thresholds;
         int colIndex;
         long base;
-        public PredicatePack(ParsedColumn<?> column, long base){
+        public DFPack(ParsedColumn<?> column, long base){
             this.colIndex = column.getIndex();
             this.thresholds = new ArrayList<>(column.getThresholds());
             this.base = base;
@@ -41,9 +41,9 @@ public abstract class ISNBuilder {
 
     public static long[] bases;
 
-    static List<PredicatePack> strPacks;  // String single-column predicate packs
-    static List<PredicatePack> doublePacks;  // numerical single-column predicate packs
-    static List<PredicatePack> longPacks;
+    static List<DFPack> strPacks;
+    static List<DFPack> doublePacks;
+    static List<DFPack> longPacks;
 
    public static long calDiffTime = 0;
 
@@ -52,31 +52,31 @@ public abstract class ISNBuilder {
         doublePacks = new ArrayList<>();
         longPacks = new ArrayList<>();
         bases = new long[pBuilder.getColSize()];
-        buildPredicateGroupsAndCorrectMap(pBuilder);
+        buildDFGroupsAndCorrectMap(pBuilder);
     }
 
-    private static void buildPredicateGroupsAndCorrectMap(DifferentialFunctionBuilder pBuilder) {
-        List<Integer> strPredicatesGroup = pBuilder.getStrPredicatesGroup();
-        List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
-        List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
+    private static void buildDFGroupsAndCorrectMap(DifferentialFunctionBuilder pBuilder) {
+        List<Integer> strDFsGroup = pBuilder.getStrDFsGroup();
+        List<Integer> longDFsGroup = pBuilder.getLongDFsGroup();
+        List<Integer> doubleDFsGroup = pBuilder.getDoubleDFsGroup();
 
-        bases = new long [strPredicatesGroup.size() + longPredicatesGroup.size() + doublePredicatesGroup.size()];
+        bases = new long [strDFsGroup.size() + longDFsGroup.size() + doubleDFsGroup.size()];
 
         long count = 1;
-        for(Integer colIndex: longPredicatesGroup){
-            longPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
+        for(Integer colIndex: longDFsGroup){
+            longPacks.add(new DFPack(pBuilder.getPredicateColumn(colIndex), count));
             int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             bases[colIndex] = count;
             count *= interval;
         }
-        for(Integer colIndex: doublePredicatesGroup){
-            doublePacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
+        for(Integer colIndex: doubleDFsGroup){
+            doublePacks.add(new DFPack(pBuilder.getPredicateColumn(colIndex), count));
             int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             bases[colIndex] = count;
             count *= interval;
         }
-        for(Integer colIndex: strPredicatesGroup){
-            strPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
+        for(Integer colIndex: strDFsGroup){
+            strPacks.add(new DFPack(pBuilder.getPredicateColumn(colIndex), count));
             int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             bases[colIndex] = count;
             count *= interval;

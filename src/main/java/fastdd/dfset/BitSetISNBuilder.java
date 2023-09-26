@@ -70,9 +70,9 @@ abstract public class BitSetISNBuilder {
     }
 
     private static void buildPredicateGroupsAndCorrectMap(DifferentialFunctionBuilder pBuilder) {
-        List<Integer> strPredicatesGroup = pBuilder.getStrPredicatesGroup();
-        List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
-        List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
+        List<Integer> strPredicatesGroup = pBuilder.getStrDFsGroup();
+        List<Integer> longPredicatesGroup = pBuilder.getLongDFsGroup();
+        List<Integer> doublePredicatesGroup = pBuilder.getDoubleDFsGroup();
 
         bit2ColMap = new int[DifferentialFunctionBuilder.getIntervalCnt()];
         col2FirstBitMap = new int [strPredicatesGroup.size() + longPredicatesGroup.size() + doublePredicatesGroup.size()];

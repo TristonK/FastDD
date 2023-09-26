@@ -10,16 +10,11 @@ import java.util.*;
  */
 public class TranslatingMinimizeTree {
     private int intervalSize;
-
-    // first leq for all col, then greater
     private int[] predicateId2NodeId;
-
-    //col -> first interval index in clue bitset
     int[] col2Interval;
 
     int[] intervalLength;
     int colSize;
-    // col -> first predicate index in predicate bitset
     int[] col2PredicateId;
     MinimizeTree search;
     Map<Integer, Integer> index2Diff;
@@ -53,11 +48,10 @@ public class TranslatingMinimizeTree {
     private IBitSet transform2Bitset(IBitSet candidate){
         LongBitSet transformed = LongBitSet.FACTORY.createAllSet(intervalSize);
         for(int i = candidate.nextSetBit(0); i >= 0; i = candidate.nextSetBit(i + 1)){
-            // <=, <=, <= , > , >
             int nodeId = predicateId2NodeId[i];
             boolean isGreater = nodeId >= colSize;
             int col = nodeId % colSize;
-            int diff = index2Diff.get(i); //(i - col2PredicateId[col]) % intervalLength[col];
+            int diff = index2Diff.get(i);
             if(isGreater){
                 for(int j = col2Interval[col] ; j < col2Interval[col] + diff + 1; j++){
                     transformed.clear(j);
@@ -72,11 +66,6 @@ public class TranslatingMinimizeTree {
         return transformed;
     }
 
-    private IBitSet retransform2DD(IBitSet transformed, List<Integer> nodes){
-        //TODO
-        return null;
-    }
-
     public Set<IBitSet> minimize(List<IBitSet> candidates){
         Collections.sort(candidates, new Comparator<IBitSet>() {
             @Override
@@ -89,14 +78,10 @@ public class TranslatingMinimizeTree {
         });
         Set<IBitSet> list = new HashSet<>();
         for(IBitSet candidate: candidates){
-           // System.out.println("测试Bitset：" + candidate);
             IBitSet removedBy = search.addTree(transform2Bitset(candidate), transform2Nodes(candidate));
             if(removedBy == null){
                 list.add(candidate);
             }
-            /*else{
-                System.out.println("Bitset " + candidate +" Removed By " + removedBy);
-            }*/
         }
         return list;
     }

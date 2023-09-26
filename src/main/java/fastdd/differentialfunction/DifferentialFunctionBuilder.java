@@ -19,53 +19,53 @@ import java.util.*;
  */
 public class DifferentialFunctionBuilder {
     private List<DifferentialFunction> differentialFunctions;
-    private final PredicateProvider predicateProvider;
-    public static IndexProvider<DifferentialFunction> predicateIdProvider;
+    private final DFProvider dfProvider;
+    public static IndexProvider<DifferentialFunction> dfIdProvider;
     private Map<Integer, List<Double>> col2Thresholds;
 
     // 属性为long的谓词的列的序号
-    private List<Integer> longPredicatesGroup;
+    private List<Integer> longDFsGroup;
 
-    private List<Integer> doublePredicatesGroup;
-    private List<Integer> strPredicatesGroup;
+    private List<Integer> doubleDFsGroup;
+    private List<Integer> strDFsGroup;
 
     private static int intervalCnt;
 
-    private Map<Integer, List<DifferentialFunction>> colToPredicatesGroup;
+    private Map<Integer, List<DifferentialFunction>> colToDFsGroup;
 
-    private List<BitSet> colPredicateGroup;
-    // df在dfset中的序号 -> 这个df的阈值在属性阈值集中的序号（从0开始）
+    private List<BitSet> colDFGroup;
+
     private Map<Integer, Integer> bitsetIndex2ThresholdsIndex;
 
     private LongBitSet differentialFunctionsBitSet;
     public List<DifferentialFunction> HighestDfOfAttr = new ArrayList<>();
     public DifferentialFunctionBuilder(Input input) {
         init();
-        predicateProvider = new PredicateProvider();
-        predicateIdProvider = new IndexProvider<>();
+        dfProvider = new DFProvider();
+        dfIdProvider = new IndexProvider<>();
         for (ParsedColumn<?> column : input.getColumns()) {
             List<List<Double>> thresholdsAll = CalculateThresholds(column, 0, 5);
             addDifferentialFunctions(column, thresholdsAll.get(0), thresholdsAll.get(1));
         }
-        predicateIdProvider.addAll(differentialFunctions);
-        DifferentialFunction.configure(predicateProvider);
-        PredicateSet.configure(predicateIdProvider);
+        dfIdProvider.addAll(differentialFunctions);
+        DifferentialFunction.configure(dfProvider);
+        DifferentialFunctionSet.configure(dfIdProvider);
         differentialFunctionsBitSet = new LongBitSet.LongBitSetFactory().createAllSet(differentialFunctions.size());
         buildBitSetIndexMap();
     }
     public DifferentialFunctionBuilder(Input input, List<List<List<Double>>> thresholds) {
         init();
-        predicateProvider = new PredicateProvider();
-        predicateIdProvider = new IndexProvider<>();
+        dfProvider = new DFProvider();
+        dfIdProvider = new IndexProvider<>();
         int index =0;
         for (ParsedColumn<?> column : input.getColumns()) {
             List<List<Double>> thresholdsAll = thresholds.get(index);
             addDifferentialFunctions(column, thresholdsAll.get(0), thresholdsAll.get(1));
             index++;
         }
-        predicateIdProvider.addAll(differentialFunctions);
-        DifferentialFunction.configure(predicateProvider);
-        PredicateSet.configure(predicateIdProvider);
+        dfIdProvider.addAll(differentialFunctions);
+        DifferentialFunction.configure(dfProvider);
+        DifferentialFunctionSet.configure(dfIdProvider);
         differentialFunctionsBitSet = new LongBitSet.LongBitSetFactory().createAllSet(differentialFunctions.size());
         buildBitSetIndexMap();
     }
@@ -76,8 +76,8 @@ public class DifferentialFunctionBuilder {
      */
     public DifferentialFunctionBuilder(File index, Input input) throws IOException {
         init();
-        predicateProvider = new PredicateProvider();
-        predicateIdProvider = new IndexProvider<>();
+        dfProvider = new DFProvider();
+        dfIdProvider = new IndexProvider<>();
         BufferedReader reader = new BufferedReader(new FileReader(index));
         String line;
         // accepted: xx <= y
@@ -107,9 +107,9 @@ public class DifferentialFunctionBuilder {
             if (!smallerThresholds.containsKey(column.getColumnName())){System.out.println(column.getColumnName()+column.getColumnName().length());}
             addDifferentialFunctions(column, smallerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()), biggerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()));
         }
-        predicateIdProvider.addAll(differentialFunctions);
-        DifferentialFunction.configure(predicateProvider);
-        PredicateSet.configure(predicateIdProvider);
+        dfIdProvider.addAll(differentialFunctions);
+        DifferentialFunction.configure(dfProvider);
+        DifferentialFunctionSet.configure(dfIdProvider);
         differentialFunctionsBitSet = new LongBitSet.LongBitSetFactory().createAllSet(differentialFunctions.size());
         buildBitSetIndexMap();
     }
@@ -178,14 +178,14 @@ public class DifferentialFunctionBuilder {
 
         // <=, 阈值降序
         for (int i = smallThresholds.size() - 1; i >= 0; i--) {
-            DifferentialFunction p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
+            DifferentialFunction p = dfProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
             partialDifferentialFunctions.add(p);
             if(i == smallThresholds.size() - 1){HighestDfOfAttr.add(p);}
         }
         // >, 阈值升序
         for (int i = 0; i < bigThresholds.size(); i++) {
             Double bigThreshold = bigThresholds.get(i);
-            DifferentialFunction p = predicateProvider.getPredicate(Operator.GREATER, operand, bigThreshold);
+            DifferentialFunction p = dfProvider.getPredicate(Operator.GREATER, operand, bigThreshold);
             partialDifferentialFunctions.add(p);
             if(i == 0){HighestDfOfAttr.add(p);}
         }
@@ -200,14 +200,14 @@ public class DifferentialFunctionBuilder {
         column.setThresholds(thresholds);
         col2Thresholds.put(column.getIndex(), thresholds);
 
-        colToPredicatesGroup.put(column.getIndex(), partialDifferentialFunctions);
+        colToDFsGroup.put(column.getIndex(), partialDifferentialFunctions);
         intervalCnt += thresholds.size() + 1;
         if (column.isLong()) {
-            longPredicatesGroup.add(column.getIndex());
+            longDFsGroup.add(column.getIndex());
         } else if (column.isDouble()) {
-            doublePredicatesGroup.add(column.getIndex());
+            doubleDFsGroup.add(column.getIndex());
         } else {
-            strPredicatesGroup.add(column.getIndex());
+            strDFsGroup.add(column.getIndex());
         }
         if (Config.OutputPredicateFlag){
             StringBuilder sb = new StringBuilder();
@@ -222,22 +222,22 @@ public class DifferentialFunctionBuilder {
     /**
      * @return list of cloumns indexes that are strings
      */
-    public List<Integer> getStrPredicatesGroup() {
-        return strPredicatesGroup;
+    public List<Integer> getStrDFsGroup() {
+        return strDFsGroup;
     }
 
     /**
      * @return list of cloumns indexes that are integers
      */
-    public List<Integer> getLongPredicatesGroup() {
-        return longPredicatesGroup;
+    public List<Integer> getLongDFsGroup() {
+        return longDFsGroup;
     }
 
     /**
      * @return list of cloumns indexes that are double numbers
      */
-    public List<Integer> getDoublePredicatesGroup() {
-        return doublePredicatesGroup;
+    public List<Integer> getDoubleDFsGroup() {
+        return doubleDFsGroup;
     }
 
     /**
@@ -251,7 +251,7 @@ public class DifferentialFunctionBuilder {
      * @return ParsedColumn associated with @Param colIndex
      */
     public ParsedColumn<?> getPredicateColumn(int colIndex) {
-        return colToPredicatesGroup.get(colIndex).get(0).getOperand().getColumn();
+        return colToDFsGroup.get(colIndex).get(0).getOperand().getColumn();
     }
 
     /**
@@ -262,11 +262,11 @@ public class DifferentialFunctionBuilder {
      */
     public List<LongBitSet> getOffset2SatisfiedPredicates(int col) {
         List<LongBitSet> predicateSets = new ArrayList<>();
-        List<DifferentialFunction> differentialFunctionsOfCol = colToPredicatesGroup.get(col);
+        List<DifferentialFunction> differentialFunctionsOfCol = colToDFsGroup.get(col);
         List<Double> thresholds = col2Thresholds.get(col);
         for (int i = 0; i < thresholds.size(); i++) {
             double threshold = thresholds.get(i);
-            PredicateSet mask = new PredicateSet();
+            DifferentialFunctionSet mask = new DifferentialFunctionSet();
             for(DifferentialFunction df: differentialFunctionsOfCol){
                 if(df.getOperator() ==Operator.LESS_EQUAL && df.getDistance() >= threshold){
                     mask.add(df);
@@ -276,7 +276,7 @@ public class DifferentialFunctionBuilder {
             }
             predicateSets.add(mask.getLongBitSet());
         }
-        PredicateSet mask = new PredicateSet();
+        DifferentialFunctionSet mask = new DifferentialFunctionSet();
         double threshold = thresholds.get(thresholds.size() - 1);
         for(DifferentialFunction df: differentialFunctionsOfCol){
             if(df.getOperator() == Operator.GREATER){
@@ -291,21 +291,21 @@ public class DifferentialFunctionBuilder {
      * @return counts of columns
      */
     public int getColSize() {
-        return colToPredicatesGroup.size();
+        return colToDFsGroup.size();
     }
 
     /**
      * @return predicates of {@param col}
      */
     public List<DifferentialFunction> getDFByCol(int col) {
-        return colToPredicatesGroup.get(col);
+        return colToDFsGroup.get(col);
     }
 
     /**
      * @return Predicates Size of {@param col}
      */
     public int getColPredicatesSize(int col) {
-        return colToPredicatesGroup.get(col).size();
+        return colToDFsGroup.get(col).size();
     }
 
     /**
@@ -316,29 +316,29 @@ public class DifferentialFunctionBuilder {
     }
 
     public int getPredicateId(DifferentialFunction differentialFunction) {
-        return predicateIdProvider.getIndex(differentialFunction);
+        return dfIdProvider.getIndex(differentialFunction);
     }
 
-    public PredicateProvider getPredicateProvider() {
-        return predicateProvider;
+    public DFProvider getDfProvider() {
+        return dfProvider;
     }
 
     public IndexProvider<DifferentialFunction> getPredicateIdProvider() {
-        return predicateIdProvider;
+        return dfIdProvider;
     }
 
-    public List<BitSet> getColPredicateGroup() {
-        if (colPredicateGroup == null) {
-            colPredicateGroup = new ArrayList<>();
+    public List<BitSet> getColDFGroup() {
+        if (colDFGroup == null) {
+            colDFGroup = new ArrayList<>();
             for (int i = 0; i < getColSize(); i++) {
                 BitSet bs = new BitSet();
                 for (DifferentialFunction pred : getDFByCol(i)) {
-                    bs.set(predicateIdProvider.getIndex(pred));
+                    bs.set(dfIdProvider.getIndex(pred));
                 }
-                colPredicateGroup.add(bs);
+                colDFGroup.add(bs);
             }
         }
-        return colPredicateGroup;
+        return colDFGroup;
     }
 
     private List<Double> handleThresholdString(String s, boolean needZero) {
@@ -372,10 +372,10 @@ public class DifferentialFunctionBuilder {
     private void init(){
         intervalCnt = 0;
         differentialFunctions = new ArrayList<>();
-        longPredicatesGroup = new ArrayList<>();
-        doublePredicatesGroup = new ArrayList<>();
-        strPredicatesGroup = new ArrayList<>();
-        colToPredicatesGroup = new HashMap<>();
+        longDFsGroup = new ArrayList<>();
+        doubleDFsGroup = new ArrayList<>();
+        strDFsGroup = new ArrayList<>();
+        colToDFsGroup = new HashMap<>();
         col2Thresholds = new HashMap<>();
     }
 
@@ -386,11 +386,11 @@ public class DifferentialFunctionBuilder {
 
     private void buildBitSetIndexMap(){
         bitsetIndex2ThresholdsIndex = new HashMap<>();
-        for(int col: colToPredicatesGroup.keySet()){
-            List<DifferentialFunction> dfs = colToPredicatesGroup.get(col);
+        for(int col: colToDFsGroup.keySet()){
+            List<DifferentialFunction> dfs = colToDFsGroup.get(col);
             for(int i =0; i <  dfs.size(); i++){
                 DifferentialFunction df = dfs.get(i);
-                int index = predicateIdProvider.getIndex(df);
+                int index = dfIdProvider.getIndex(df);
                 assert col2Thresholds.get(col).get(i) == df.getDistance();
                 bitsetIndex2ThresholdsIndex.put(index, i);
             }
@@ -405,11 +405,6 @@ public class DifferentialFunctionBuilder {
         List<Double> ret = new ArrayList<>();
         for(Double t: thresholds){
             ret.add(Math.round(t*1000)*1.0/1000);
-            /*if(isSmaller && t - ((int)(t*1000))/1000 > 0.0001){
-                ret.add(((int)(t*1000))*1.0/1000 + 0.001);
-            }else{
-                ret.add(((int)(t*1000))*1.0/1000);
-            }*/
         }
         return ret;
     }
