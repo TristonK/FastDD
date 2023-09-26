@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * To build the clue set of one Pli shard
+ * To build the isn set of one Pli shard
  */
-public class SingleClueSetBuilder extends ClueSetBuilder {
+public class SingleBitSetISNBuilder extends BitSetISNBuilder {
 
     private final List<IPli> plis;
     private final int tidBeg, tidRange;
@@ -20,9 +20,9 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     private final double ERR = 0.000000001;
     private long[] forwardClues;
     private long[] bases;
-    private IClueOffset calUtils;
+    private IOffset calUtils;
 
-    public SingleClueSetBuilder(PliShard shard, IClueOffset calUtils) {
+    public SingleBitSetISNBuilder(PliShard shard, IOffset calUtils) {
         plis = shard.plis;
         tidBeg = shard.beg;
         tidRange = shard.end - shard.beg;

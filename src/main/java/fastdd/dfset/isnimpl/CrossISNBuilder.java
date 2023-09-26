@@ -1,13 +1,12 @@
-package fastdd.dfset.longclueimpl;
+package fastdd.dfset.isnimpl;
 
 import fastdd.Config;
-import fastdd.dfset.IClueOffset;
+import fastdd.dfset.IOffset;
 import fastdd.pli.DoublePli;
 import fastdd.pli.IPli;
 import fastdd.pli.PliShard;
 import fastdd.utils.DistanceCalculation;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -15,15 +14,15 @@ import java.util.concurrent.Callable;
 /**
  * @author tristonK 2023/6/2
  */
-public class LongCrossClueSetBuilder extends LongClueSetBuilder implements Callable<HashMap<Long, Long>> {
+public class CrossISNBuilder extends ISNBuilder implements Callable<HashMap<Long, Long>> {
     private final List<IPli> plis1, plis2;
     private final int evidenceCount;
 
     private final double ERR = 0.000000001;
     private long[] forwardClues;//用来代替longbitset，实验测试
-    private IClueOffset calUtils;
+    private IOffset calUtils;
 
-    public LongCrossClueSetBuilder(PliShard shard1, PliShard shard2, IClueOffset calUtils) {
+    public CrossISNBuilder(PliShard shard1, PliShard shard2, IOffset calUtils) {
         plis1 = shard1.plis;
         plis2 = shard2.plis;
         evidenceCount = (shard1.end - shard1.beg) * (shard2.end - shard2.beg);

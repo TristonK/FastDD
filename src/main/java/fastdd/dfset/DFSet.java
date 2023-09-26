@@ -1,7 +1,7 @@
 package fastdd.dfset;
 
 import ch.javasoft.bitset.LongBitSet;
-import fastdd.dfset.longclueimpl.LongClueSetBuilder;
+import fastdd.dfset.isnimpl.ISNBuilder;
 import fastdd.differentialfunction.DifferentialFunctionBuilder;
 
 import java.util.*;
@@ -47,7 +47,7 @@ public class DFSet implements Iterable<Evidence>{
     public void buildFromLong(HashMap<Long, Long> clueSet){
         for(var entry: clueSet.entrySet()){
             long clue = entry.getKey();
-            Evidence evi = new Evidence(clue, entry.getValue(), offsetToPredicateSets, LongClueSetBuilder.bases);
+            Evidence evi = new Evidence(clue, entry.getValue(), offsetToPredicateSets, ISNBuilder.bases);
             //if(evi==null){System.out.println("xxxxxx");}
             longClueToEvidence.put(clue, evi);
             evidences.add(evi);

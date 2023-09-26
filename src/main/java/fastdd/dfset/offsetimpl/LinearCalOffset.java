@@ -1,6 +1,6 @@
 package fastdd.dfset.offsetimpl;
 
-import fastdd.dfset.IClueOffset;
+import fastdd.dfset.IOffset;
 import fastdd.pli.IPli;
 
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author tristonK 2023/6/2
  */
-public class LinearCalOffset implements IClueOffset {
+public class LinearCalOffset implements IOffset {
 
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int pos = startPos;

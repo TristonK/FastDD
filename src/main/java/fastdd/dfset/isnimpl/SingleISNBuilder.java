@@ -1,7 +1,7 @@
-package fastdd.dfset.longclueimpl;
+package fastdd.dfset.isnimpl;
 
 import fastdd.Config;
-import fastdd.dfset.IClueOffset;
+import fastdd.dfset.IOffset;
 import fastdd.pli.Cluster;
 import fastdd.pli.DoublePli;
 import fastdd.pli.IPli;
@@ -9,14 +9,13 @@ import fastdd.pli.PliShard;
 import fastdd.utils.DistanceCalculation;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
 /**
  * @author tristonK 2023/6/2
  */
-public class LongSingleClueSetBuilder extends LongClueSetBuilder implements Callable<HashMap<Long, Long>> {
+public class SingleISNBuilder extends ISNBuilder implements Callable<HashMap<Long, Long>> {
 
     private final List<IPli> plis;
     private final int tidBeg, tidRange;
@@ -24,9 +23,9 @@ public class LongSingleClueSetBuilder extends LongClueSetBuilder implements Call
 
     private final double ERR = 0.000000001;
     private long[] forwardClues;
-    private IClueOffset calUtils;
+    private IOffset calUtils;
 
-    public LongSingleClueSetBuilder(PliShard shard, IClueOffset calUtils) {
+    public SingleISNBuilder(PliShard shard, IOffset calUtils) {
         plis = shard.plis;
         tidBeg = shard.beg;
         tidRange = shard.end - shard.beg;

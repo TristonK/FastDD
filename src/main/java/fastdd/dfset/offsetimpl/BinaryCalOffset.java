@@ -1,6 +1,6 @@
 package fastdd.dfset.offsetimpl;
 
-import fastdd.dfset.IClueOffset;
+import fastdd.dfset.IOffset;
 import fastdd.pli.IPli;
 
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author tristonK 2023/6/2
  */
-public class BinaryCalOffset implements IClueOffset {
+public class BinaryCalOffset implements IOffset {
     public static long cntTime = 0;
 
     @Override

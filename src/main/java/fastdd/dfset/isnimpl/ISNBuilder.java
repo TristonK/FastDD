@@ -1,4 +1,4 @@
-package fastdd.dfset.longclueimpl;
+package fastdd.dfset.isnimpl;
 
 import fastdd.differentialfunction.DifferentialFunctionBuilder;
 import de.metanome.algorithms.dcfinder.input.ParsedColumn;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * @author tristonK 2023/6/2
  */
-public abstract class LongClueSetBuilder {
+public abstract class ISNBuilder {
     abstract public HashMap<Long, Long> buildClueSet();
     private final double ERR = 0.000000001;
 

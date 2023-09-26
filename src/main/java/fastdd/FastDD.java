@@ -1,23 +1,20 @@
 package fastdd;
 
-import bruteforce.ValidateDD;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
-import fastdd.dfset.longclueimpl.LongClueSetBuilder;
+import de.metanome.algorithms.dcfinder.input.Input;
+import fastdd.dfset.DFSet;
+import fastdd.dfset.DFSetBuilder;
+import fastdd.dfset.Evidence;
+import fastdd.dfset.isnimpl.ISNBuilder;
 import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialdependency.DifferentialDependencySet;
 import fastdd.differentialfunction.DifferentialFunction;
+import fastdd.differentialfunction.DifferentialFunctionBuilder;
 import fastdd.enumeration.Enumeration;
 import fastdd.enumeration.HybridEvidenceInversion;
-import fastdd.dfset.*;
-import fastdd.dfset.longclueimpl.LongCrossClueSetBuilder;
-import fastdd.dfset.longclueimpl.LongSingleClueSetBuilder;
-import fastdd.dfset.offsetimpl.BinaryCalOffset;
 import fastdd.pli.PliShard;
 import fastdd.pli.PliShardBuilder;
-import fastdd.differentialfunction.DifferentialFunctionBuilder;
 import fastdd.utils.PrintResult;
-import de.metanome.algorithms.dcfinder.input.Input;
-import ie.hybrid.Analyzer;
 import thresholds.Determination;
 import thresholds.ExtremaStrategy;
 
@@ -75,12 +72,12 @@ public class FastDD {
 //        Set<LongBitSet> evidenceSetBrutal = new EvidenceCount().calculateEvidence(input, differentialFunctionBuilder);
 
         DFSetBuilder.buildEvidenceSetFromLongClue(pliShards);
-        DFSet dfSet = DFSetBuilder.getEvidenceSet();
+        DFSet dfSet = DFSetBuilder.getDFSet();
 
 //        ValidateDD.printAllDF(differentialFunctionBuilder);
 
         System.out.println("[EvidenceSet] build long clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
-        System.out.println("[Diff-cal] time(ns): " + LongClueSetBuilder.calDiffTime);
+        System.out.println("[Diff-cal] time(ns): " + ISNBuilder.calDiffTime);
         //System.out.println("[countOffset]: " + (BinaryCalOffset.cntTime/1000000+LongSingleClueSetBuilder.cntStrTime+LongCrossClueSetBuilder.cntStrTime/1000000) +
         //        "; [SetMask]: " + (LongCrossClueSetBuilder.setMaskTimeCnt + LongSingleClueSetBuilder.setMaskTimecnt)/1000000);
         long enmurationTime = System.currentTimeMillis();
@@ -108,21 +105,6 @@ public class FastDD {
         }
         if(Config.OutputDD2File){
             PrintResult.PrintDD(dds);
-        }
-
-        //ValidateDD.printAllDF(differentialFunctionBuilder);
-        //ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
-        if(Config.DebugFlag) {
-            new ValidateDD().validate(dfSet, dds);
-        }
-        // new TranslateRFD().validatByInput(input);
-        if(Config.TestIE){
-            long t1 = System.currentTimeMillis();
-            DifferentialDependencySet ies = new Analyzer(dfSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
-            System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
-            System.out.println("ie #dd : " + ies.size());
-            System.out.println("ies == dds: " + dds.haveSameDDs(ies));
-            //new ValidateDD().validate(dfSet, ies);
         }
         return dds;
     }
