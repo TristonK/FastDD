@@ -1,0 +1,3 @@
+[submodule "FastDD-Exp"]
+	path = FastDD-Exp
+	url = git@github.com:TristonK/FastDD-Exp.git

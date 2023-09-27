@@ -11,9 +11,6 @@ FastDD is a solution for Differitial Dependency discovery. Given an instance of 
 
 ## Usage
 
-### A Quick Example
-After building the project with maven, it is already runnable with a simple example. This example takes as input the dataset [TODO], computes its DDs, and outputs relevant information including the number of DDs and running time.
-
 ### Configures
 
 If you want to run our code, you should input 1~3 params to specific your target.
@@ -32,7 +29,7 @@ Most parameters and configures related to our experiment are in Config.java. Som
 
 ## Comparative Experiments
 
-FastDD are compared to other two discovery methods, IE and [Domino(RFD)](https://dast-unisa.github.io/Domino-SW/). The source code of Domino can be found here. And we implement DD-IE with our best effort here.
+FastDD are compared to other two discovery methods, [IE](https://github.com/TristonK/FastDD/tree/IE) and [Domino(RFD)](https://dast-unisa.github.io/Domino-SW/). The source code of Domino can be found here. And we implement DD-IE with our best effort here.
 
 ## License
 
