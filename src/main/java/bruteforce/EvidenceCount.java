@@ -44,7 +44,7 @@ public class EvidenceCount {
                     double diff = Math.abs(iInput[k][i] - iInput[k][j]);
                     List<Double> th = columns.get(k).getThresholds();
                     clue.set(findMaskPos(diff, th) + cnt);
-                    cnt += th.size() + 1;//定位到下一个属性的阈值列表的起始位置
+                    cnt += th.size() + 1;
                 }
                 for (int k = 0; k < dInput.length; k++) {
                     double diff = Math.abs(dInput[k][i] - dInput[k][j]);
@@ -65,7 +65,7 @@ public class EvidenceCount {
         return clueSet;
     }
 
-    private int findMaskPos(double diff, List<Double> th) {//找到元组差值在阈值列表中的位置
+    private int findMaskPos(double diff, List<Double> th) {
         int c = 0;
         if (diff < th.get(0) + ERR) {
             c = 0;

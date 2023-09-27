@@ -82,7 +82,7 @@ abstract public class BitSetISNBuilder {
         int count = 0;
         for(Integer colIndex: longPredicatesGroup){
             intPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
-            int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;//对于某个属性，n个阈值有n+1个interval，现在修改成n个，无视0阈值
+            int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             for(int i = count; i < count + interval; i++){
                 bit2ColMap[i] = colIndex;
             }

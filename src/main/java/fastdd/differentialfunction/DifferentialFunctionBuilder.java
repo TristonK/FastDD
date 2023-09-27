@@ -100,15 +100,7 @@ public class DifferentialFunctionBuilder {
                 throw new IllegalArgumentException("Please using correct predicates file: 'colName [t1,t2,..][t3,t4,..]'");
             }
         }
-<<<<<<< HEAD
-        for (String K : smallerThresholds.keySet()){
-            System.out.println(K + smallerThresholds.get(K));
-        }
-=======
-       /* for (String K : smallerThresholds.keySet()){
-            System.out.println(K + smallerThresholds.get(K));
-        }*/
->>>>>>> 91d93c657d11606f96d594a80c38fdfcac3dc63b
+
         for (ParsedColumn<?> column : input.getColumns()) {
             if (!smallerThresholds.containsKey(column.getColumnName())){System.out.println(column.getColumnName()+column.getColumnName().length());}
             addDifferentialFunctions(column, smallerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()), biggerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()));
@@ -157,7 +149,6 @@ public class DifferentialFunctionBuilder {
             }
             thresholds.add(bThresholds);
         } else if (mode == 1) {
-            //TODO
         } else {
             throw new IllegalArgumentException("Bad add predicates mode.");
         }
@@ -264,7 +255,6 @@ public class DifferentialFunctionBuilder {
      * @return construct each offset => statisfied predicates of cloumn {@param col}
      * thresholds: - 0 - 1 - 2 - 3
      * offset:     0 -  1 - 2 - 3 - 4
-     * offset为2满足的：<=2, <=3, >0, >1
      */
     public List<LongBitSet> getOffset2SatisfiedPredicates(int col) {
         List<LongBitSet> predicateSets = new ArrayList<>();

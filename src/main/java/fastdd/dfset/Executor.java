@@ -32,23 +32,6 @@ public class Executor {
             }
         }
 
-        // 运行所有任务并获取结果
-        /*
->>>>>>> 91d93c657d11606f96d594a80c38fdfcac3dc63b
-        try {
-            long t1 = System.currentTimeMillis();
-            futures = executor.invokeAll(tasks);
-            System.out.println("true multi time: " + (System.currentTimeMillis() - t1));
-        } catch (InterruptedException e) {
-            System.err.println("Tasks execution interrupted.");
-            e.printStackTrace();
-            return;
-<<<<<<< HEAD
-        }
-=======
-        }*/
-
-        // 处理每个任务的返回值
         try {
             for (Future<HashMap<Long, Long>> future : futures) {
                 var result = future.get();
@@ -62,7 +45,6 @@ public class Executor {
             e.printStackTrace();
         }
 
-        // 关闭Executor
         executor.shutdown();
     }
 }

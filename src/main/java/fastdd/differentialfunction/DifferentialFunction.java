@@ -102,7 +102,6 @@ public class DifferentialFunction {
      * @return 0: not for a column or not the same operator
      * 1: this have a bigger distance
      * -1: p has a bigger distance
-     * 用此排序，表示范围大的在前
      * */
     public int compare(DifferentialFunction p){
         if(p.operand.equals(this.operand)  && p.operator.equals(this.operator)){

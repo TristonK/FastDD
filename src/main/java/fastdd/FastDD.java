@@ -68,7 +68,7 @@ public class FastDD {
         LongSingleClueSetBuilder.cntStrTime =0;
         LongCrossClueSetBuilder.cntStrTime = 0;*/
         DFSetBuilder DFSetBuilder = new DFSetBuilder(differentialFunctionBuilder);
-//        //测试暴力生成evidenceset
+
 //        Set<LongBitSet> evidenceSetBrutal = new EvidenceCount().calculateEvidence(input, differentialFunctionBuilder);
 
         DFSetBuilder.buildEvidenceSetFromLongClue(pliShards);
@@ -87,7 +87,6 @@ public class FastDD {
         System.out.println("[Enumeration] # dds: " + dds.size());
         if (Config.OutputDFSet){
             for (MatchDF evi :dfSet){
-               // System.out.println(evi.toDFString());
                 IndexProvider in = differentialFunctionBuilder.getPredicateIdProvider();
                 for(DifferentialFunction df: differentialFunctionBuilder.getPredicates()){
                     if (!evi.getBitset().get(in.getIndex(df))){
@@ -95,7 +94,6 @@ public class FastDD {
                     }
                 }
                 System.out.println("");
-                //System.out.println(evi + evi.toDFString());
             }
         }
         if(Config.OutputDDFlag) {

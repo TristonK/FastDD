@@ -17,7 +17,7 @@ public class CrossISNBuilder extends ISNBuilder implements Callable<HashMap<Long
     private final int evidenceCount;
 
     private final double ERR = 0.000000001;
-    private long[] forwardClues;//用来代替longbitset，实验测试
+    private long[] forwardClues;
     private IOffset calUtils;
 
     public CrossISNBuilder(PliShard shard1, PliShard shard2, IOffset calUtils) {
