@@ -23,7 +23,6 @@ public class DifferentialFunctionBuilder {
     public static IndexProvider<DifferentialFunction> dfIdProvider;
     private Map<Integer, List<Double>> col2Thresholds;
 
-    // 属性为long的谓词的列的序号
     private List<Integer> longDFsGroup;
 
     private List<Integer> doubleDFsGroup;
@@ -132,7 +131,6 @@ public class DifferentialFunctionBuilder {
             diffD = column.getMaxNum() - column.getMinNum();
         }
         if (mode == 0 || !column.isNum()) {
-            //TODO:修改String属性列情况
             double step = diffD / (threshold + 1);
             List<Double> sThresholds = new ArrayList<>();
             for (int i = 0; i < (threshold + 1) / 2; i++) {
@@ -163,7 +161,6 @@ public class DifferentialFunctionBuilder {
         List<DifferentialFunction> partialDifferentialFunctions = new ArrayList<>();
         ColumnOperand<?> operand = new ColumnOperand<>(column, 0);
 
-        // 确定所有的Differential Function
         smallThresholds = roundList(smallThresholds, true);
         bigThresholds = roundList(bigThresholds, false);
         smallThresholds = dedup(smallThresholds);
@@ -173,13 +170,11 @@ public class DifferentialFunctionBuilder {
 
         System.out.println(column.getColumnName() + smallThresholds.toString()+bigThresholds.toString());
 
-        // <=, 阈值降序
         for (int i = smallThresholds.size() - 1; i >= 0; i--) {
             DifferentialFunction p = dfProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
             partialDifferentialFunctions.add(p);
             if(i == smallThresholds.size() - 1){HighestDfOfAttr.add(p);}
         }
-        // >, 阈值升序
         for (int i = 0; i < bigThresholds.size(); i++) {
             Double bigThreshold = bigThresholds.get(i);
             DifferentialFunction p = dfProvider.getPredicate(Operator.GREATER, operand, bigThreshold);
@@ -188,7 +183,6 @@ public class DifferentialFunctionBuilder {
         }
         differentialFunctions.addAll(partialDifferentialFunctions);
 
-        //确定涉及到的全部阈值
         Set<Double> thresholdsSet = new HashSet<>();
         thresholdsSet.addAll(smallThresholds);
         thresholdsSet.addAll(bigThresholds);

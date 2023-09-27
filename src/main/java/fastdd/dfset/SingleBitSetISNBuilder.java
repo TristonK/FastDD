@@ -121,7 +121,7 @@ public class SingleBitSetISNBuilder extends BitSetISNBuilder {
                 Double key = (Double) pli.getKeys()[i];//获取pli的第i个key值
                 for (int index = 1; index < thresholds.size() && start < pli.size(); index++) {
                     int end = pli.getFirstIndexWhereKeyIsLT(key - thresholds.get(index), start, 1);
-                    for (int correct = start; correct < end && correct < pli.size(); correct++) {//correct对应从目标key开始往后的下标，循环遍历完之后也就是对应的j
+                    for (int correct = start; correct < end && correct < pli.size(); correct++) {
                         setNumMask(clues, pli.get(i), pli.get(correct), pos + index);
                     }
                     start = end;

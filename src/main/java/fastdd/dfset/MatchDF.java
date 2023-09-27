@@ -41,7 +41,6 @@ public class MatchDF {
         for(int i = clue.nextSetBit(0); i >=0 ; i = clue.nextSetBit(i+1)){
             int col = BitSetISNBuilder.bit2ColMap[i];
             int offset = i - BitSetISNBuilder.col2FirstBitMap[col];
-            //获得clue里i对应的列属性和偏移量（即在阈值列表中的位置）
             LongBitSet mask = countToPredicateSets.get(col).get(offset);
             if(mask == null){System.out.println("sss");}
             dfBitSet.or(mask);

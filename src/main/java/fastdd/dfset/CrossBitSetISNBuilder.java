@@ -19,7 +19,7 @@ public class CrossBitSetISNBuilder extends BitSetISNBuilder {
     private final int evidenceCount;
 
     private final double ERR = 0.000000001;
-    private long[] forwardClues;//用来代替longbitset，实验测试
+    private long[] forwardClues;
     private long[] bases;
     private IOffset calUtils;
 
@@ -63,7 +63,6 @@ public class CrossBitSetISNBuilder extends BitSetISNBuilder {
             int r1 = t1 * range2 - beg2;
             for (int tid2 : pli2.get(j).getRawCluster()) {
                 clues1[r1 + tid2].set(pos);
-                //clues2[(tid2 - beg2) * range1 + t1].set(pos);
             }
         }
 

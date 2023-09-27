@@ -48,7 +48,6 @@ public class DFSet implements Iterable<MatchDF>{
         for(var entry: clueSet.entrySet()){
             long clue = entry.getKey();
             MatchDF evi = new MatchDF(clue, entry.getValue(), offsetToPredicateSets, ISNBuilder.bases);
-            //if(evi==null){System.out.println("xxxxxx");}
             longClueToEvidence.put(clue, evi);
             matchDFS.add(evi);
         }
