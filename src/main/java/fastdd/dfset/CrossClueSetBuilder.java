@@ -70,8 +70,6 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
     }
 
     private void correctStr(LongBitSet[] clues1, IPli pivotPli, IPli probePli, int pos, List<Double> thresholds) {
-        //假设元组对含有三个属性。每个属性含有2个阈值，那么clue = 100 010 001 表示: 第一个属性的差值为0，第二个属性的差值在阈值列表中的第二位...
-        //TODO: 上面的clue对应地修改为： 00 10 01
         final String[] pivotKeys = (String[]) pivotPli.getKeys();
         final String[] probeKeys = (String[]) probePli.getKeys();
         for (int i = 0; i < pivotKeys.length; i++) {
@@ -101,7 +99,6 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         final Double[] probeKeys = (Double[]) probePli.getKeys();
 
         for (int i = 0; i < pivotKeys.length; i++) {
-            //下面用接口方法实现
             int start = 0;
             for (int index = thresholds.size() - 1; index >= 0 && start < probeKeys.length; index--) {
                 int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] + thresholds.get(index), start, 0);
@@ -134,9 +131,6 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
     }
 
     private void correctInteger(LongBitSet[] forwardArray, IPli pivotPli, IPli probePli, int pos, List<Double> thresholds) {
-        //与liner的区别在于，针对pivotPli中的每个key，在给定阈值差距的情况下，去寻找probepli中满足该阈值条件的子数组(start to end)，然后setNumMask
-        //keys数组：根据行顺序存储的某一列键值，大小为350or更小
-        //keys数组降序
         final Integer[] pivotKeys = (Integer[]) pivotPli.getKeys();
         final Integer[] probeKeys = (Integer[]) probePli.getKeys();
 
@@ -162,9 +156,6 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
                 int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] - thresholds.get(index).intValue(), start, 1);
                 for (int j = start; j < end; j++) {
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index);
-                    // setmask {
-                    // list<Integer> xxx
-                    // }
                 }
                 start = end;
             }

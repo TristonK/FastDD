@@ -17,15 +17,15 @@ import java.util.List;
  * @author tristonK 2023/7/15
  */
 public class Analyzer {
-    private final List<LongBitSet> fullEvidenceSet;
+    private final List<LongBitSet> fullDifferentialSet;
     private final DifferentialFunctionBuilder differentialFunctionBuilder;
 
-    public Analyzer(DFSet DFSet, DifferentialFunctionBuilder dfBuilder) {
+    public Analyzer(List<LongBitSet> differentialSet, DifferentialFunctionBuilder dfBuilder) {
         List<LongBitSet> evis = new ArrayList<>();
-        for (Evidence evi : DFSet) {
-            evis.add(evi.getBitset().clone());
+        for (LongBitSet evi : differentialSet) {
+            evis.add(evi);
         }
-        fullEvidenceSet = evis;
+        fullDifferentialSet = evis;
         this.differentialFunctionBuilder = dfBuilder;
         SearchSpace.configure(dfBuilder);
     }
@@ -37,7 +37,7 @@ public class Analyzer {
         for (int i = pSpace.nextSetBit(0); i >= 0; i = pSpace.nextSetBit(i + 1)) {
             LongBitSet right = new LongBitSet();
             right.set(i);
-            dds.addAll(reduce(fullEvidenceSet, right, new SearchSpace(i)));
+            dds.addAll(reduce(fullDifferentialSet, right, new SearchSpace(i)));
         }
         System.out.println("[IE] reduce time: " + (System.currentTimeMillis() - t1));
         t1 = System.currentTimeMillis();
@@ -84,9 +84,9 @@ public class Analyzer {
         return ret;
     }
 
-    public List<LongBitSet> exclude(List<LongBitSet> evidenceSet, LongBitSet left, LongBitSet right) {
+    public List<LongBitSet> exclude(List<LongBitSet> differentialSet, LongBitSet left, LongBitSet right) {
         List<LongBitSet> D1 = new ArrayList<>();
-        for (LongBitSet bs : evidenceSet) {
+        for (LongBitSet bs : differentialSet) {
             if (left.isSubSetOf(bs) && !right.isSubSetOf(bs)) {
                 D1.add(bs.clone());
             }
@@ -94,9 +94,9 @@ public class Analyzer {
         return D1;
     }
 
-    public List<LongBitSet> excludeV2(List<List<Integer>> evidenceSet, LongBitSet left, LongBitSet right){
+    public List<LongBitSet> excludeV2(List<List<Integer>> differentialSet, LongBitSet left, LongBitSet right){
         List<LongBitSet> D1 = new ArrayList<>();
-        /*for (List<Integer> list: evidenceSet) {
+        /*for (List<Integer> list: differentialSet) {
             differentialFunctionBuilder.getBitsetIndex2ThresholdsIndex()
             if (left.isSubSetOf(bs) && !right.isSubSetOf(bs)) {
                 D1.add(bs.clone());

@@ -27,7 +27,7 @@ public class DFSetBuilder {
         dfSet = new DFSet(differentialFunctionBuilder);
     }
 
-    public Set<LongBitSet> buildEvidenceSet(PliShard[] pliShards) {
+    public Set<LongBitSet> buildDifferentialSet(PliShard[] pliShards) {
         if (pliShards.length != 0) {
             long t1 = System.currentTimeMillis();
             HashMap<LongBitSet, Long> clueSet = linearBuildClueSet(pliShards);
@@ -39,7 +39,7 @@ public class DFSetBuilder {
         return null;
     }
 
-    public Set<Long> buildEvidenceSetFromLongClue(PliShard[] pliShards){
+    public Set<Long> buildDifferentialSetFromLongClue(PliShard[] pliShards){
         long t2 = System.currentTimeMillis();
         HashMap<Long, Long> longClueSet = buildLongClueSet(pliShards);
         System.out.println("[LongClueSet] build cost: " + (System.currentTimeMillis() - t2) + " ms");
@@ -68,7 +68,7 @@ public class DFSetBuilder {
     }
 
 
-    public DFSet getEvidenceSet() {
+    public DFSet getDifferentialSet() {
         return dfSet;
     }
 

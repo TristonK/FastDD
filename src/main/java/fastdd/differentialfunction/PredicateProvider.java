@@ -16,8 +16,6 @@ public class PredicateProvider {
         predicates = new HashMap<>();
     }
 
-
-    //TODO : 可以改掉
     public DifferentialFunction getPredicate(Operator op, ColumnOperand<?> op1, Double distance) {
         return getPredicate(op, op1, distance, true);
     }

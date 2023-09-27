@@ -13,16 +13,16 @@ import java.util.*;
 public class TranslateRFD {
     public static String[] FullRFD;
     public static void translate(String []args){
-        // 读取映射文件，构建属性名映射关系
+
         Map<String, String> attributeMappings = readAttributeMappings(args[0]);
 
-        // 读取原始文本
+
         String text = readTextFromFile(args[1]);
 
-        // 替换属性名并获取约束值
+
         var constraintValues = replaceAttributeNames(text, attributeMappings);
 
-        // 输出结果
+
         System.out.println("**********[Thresholds]**********");
         for(String key: constraintValues.keySet()){
             System.out.println(key + " " + constraintValues.get(key).toString());
@@ -65,7 +65,7 @@ public class TranslateRFD {
     private static HashMap<String, Set<Double>> replaceAttributeNames(String text, Map<String, String> attributeMappings) {
         HashMap<String, Set<Double>> thresholds = new HashMap<>();
         String[] lines = text.split("\n");
-        for (int i = 1; i < lines.length; i++) { // 从第二行开始，跳过标题行
+        for (int i = 1; i < lines.length; i++) {
             String line = lines[i];
             String[] parts = line.split("->");
             String[] attributes = parts[0].split(", ");

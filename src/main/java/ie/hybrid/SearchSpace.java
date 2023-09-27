@@ -18,7 +18,6 @@ public class SearchSpace {
         dfBuilder = builder;
     }
     public SearchSpace(int right){
-        //int col = dfBuilder.getPredicateIdProvider().getObject(right).getOperand().getIndex();
         phis = new ArrayList<>();
         getPhis(dfBuilder.getColPredicateGroup(), 0, new LongBitSet(dfBuilder.size()), right);
         phis.sort(new Comparator<IBitSet>() {
@@ -54,10 +53,6 @@ public class SearchSpace {
 
     }
 
-    /* 返回值：
-    * RET[0]: 找到属性集个数比 pivot 大并且能规约到 pivot 的(只在pivot对应的属性上)
-    * RET[1]: 剩下的
-    */
     public List<SearchSpace> extractPositive(LongBitSet pivot){
         List<LongBitSet> phi1 = new ArrayList<>();
         List<LongBitSet> phi2 = new ArrayList<>();
@@ -72,10 +67,6 @@ public class SearchSpace {
         return List.of(new SearchSpace(phi1), new SearchSpace(phi2));
     }
 
-    /* 返回值：
-     * RET[0]: 找到属性集个数比 pivot 小并且从 pivot 规约得到
-     * RET[1]: 剩下的
-     */
     public List<SearchSpace> extractNegative(LongBitSet pivot){
         List<LongBitSet> phi1 = new ArrayList<>();
         List<LongBitSet> phi2 = new ArrayList<>();
@@ -89,8 +80,6 @@ public class SearchSpace {
         return List.of(new SearchSpace(phi1), new SearchSpace(phi2));
     }
 
-    // 在a的属性上，a表示的范围更大，返回true
-    // 也就是 a subsumes b on projection of Attrs(a)
     private boolean isLeftReduce(LongBitSet a, LongBitSet b){
         if (a.cardinality() > b.cardinality()){
             return false;

@@ -20,7 +20,7 @@ public class LongCrossClueSetBuilder extends LongClueSetBuilder implements Calla
     private final int evidenceCount;
 
     private final double ERR = 0.000000001;
-    private long[] forwardClues;//用来代替longbitset，实验测试
+    private long[] forwardClues;
     private IClueOffset calUtils;
 
     public LongCrossClueSetBuilder(PliShard shard1, PliShard shard2, IClueOffset calUtils) {

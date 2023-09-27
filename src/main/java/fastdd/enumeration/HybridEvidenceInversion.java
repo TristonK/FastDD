@@ -22,7 +22,7 @@ public class HybridEvidenceInversion implements Enumeration{
     HashMap<Integer, Set<Integer>> pred2PredGroupMap;
     Set<IBitSet> covers;
     DFSet DFSet;
-    Map<Integer, LongBitSet> predSatisfiedEvidenceSet;
+    Map<Integer, LongBitSet> predSatisfiedDifferentialSet;
     Map<Integer, LongBitSet> dfNotSatisfiedDFSet;
 
     LongBitSet evidenceBitSet;
@@ -80,22 +80,15 @@ public class HybridEvidenceInversion implements Enumeration{
             if (Objects.equals(o1, o2)){return 0;}
             DifferentialFunction p1 = predicateIndexProvider.getObject(o1), p2 = predicateIndexProvider.getObject(o2);
             if (p1.operandWithOpHash() == p2.operandWithOpHash()){
-                // 表示范围越来越大
                 if (p1.getOperator().equals(Operator.LESS_EQUAL)){
                     return Double.compare(p1.getDistance(), p2.getDistance());
-                    //return p2.getDistance() - p1.getDistance() < 0 ? 1 : -1;
                 }
                 return Double.compare(p2.getDistance(), p1.getDistance());
-                //return p1.getDistance() - p2.getDistance() < 0 ? 1 : -1;
             }
             return o1 - o2;
-            //return Integer.compare(dfNotSatisfiedDFSet.get(o1).cardinality(), dfNotSatisfiedDFSet.get(o2).cardinality());
         });
 
         DifferentialDependencySet ret = new DifferentialDependencySet();
-        /*System.out.println("Minimize Tree: " + intervalSize + " === " + Arrays.toString(predicateId2NodeId)+ "==\n" +
-                Arrays.toString(col2Interval) + " == "+ Arrays.toString(col2PredicateId) + " == " + colSize + " == " +
-                Arrays.toString(intervalLength) + " ==\n " + index2Diff.toString());*/
 
         for(int i = 0; i < preds.size(); i++){
             int rightPid = preds.get(i);
@@ -119,11 +112,10 @@ public class HybridEvidenceInversion implements Enumeration{
             List<Integer> currPredicateSpace = new ArrayList<>(differentialFunctions);
             currPredicateSpace.removeAll(pred2PredGroupMap.get(rightPid));
             Set<Integer> predsNotSatisfied = new HashSet<>();
-            //for(int j = 0; j < i; j++){predsNotSatisfied.add(preds.get(j));}
 
-            LongBitSet currEvidenceSet = dfNotSatisfiedDFSet.get(rightPid);//predSatisfiedEvidenceSet.get(rightPid);
+            LongBitSet currDifferentialSet = dfNotSatisfiedDFSet.get(rightPid);//predSatisfiedDifferentialSet.get(rightPid);
             List<LongBitSet> currEvidences = new ArrayList<>();
-            for(int eviId = currEvidenceSet.nextSetBit(0); eviId >= 0; eviId = currEvidenceSet.nextSetBit(eviId + 1)){
+            for(int eviId = currDifferentialSet.nextSetBit(0); eviId >= 0; eviId = currDifferentialSet.nextSetBit(eviId + 1)){
                 LongBitSet bs = DFSet.getEvidenceById(eviId).getBitset().clone();
                 pred2PredGroupMap.get(rightPid).forEach(bs::clear);
                 predsNotSatisfied.forEach(bs::clear);
@@ -143,10 +135,10 @@ public class HybridEvidenceInversion implements Enumeration{
 
     private void buildClueIndexes() {
 
-        predSatisfiedEvidenceSet = new HashMap<>(predicates.size());
+        predSatisfiedDifferentialSet = new HashMap<>(predicates.size());
         dfNotSatisfiedDFSet = new HashMap<>(predicates.size());
         for(int i = 0; i < predicates.size(); i++){
-            predSatisfiedEvidenceSet.put(i, new LongBitSet());
+            predSatisfiedDifferentialSet.put(i, new LongBitSet());
             dfNotSatisfiedDFSet.put(i, new LongBitSet());
         }
         evidenceBitSet = new LongBitSet();
@@ -155,7 +147,7 @@ public class HybridEvidenceInversion implements Enumeration{
             LongBitSet bs = DFSet.getEvidenceById(evidenceId).getBitset();
             for(int i = 0; i < predicates.size(); i++){
                 if(bs.get(i)){
-                    predSatisfiedEvidenceSet.get(i).set(evidenceId);
+                    predSatisfiedDifferentialSet.get(i).set(evidenceId);
                 }else{
                     dfNotSatisfiedDFSet.get(i).set(evidenceId);
                 }
@@ -198,16 +190,16 @@ public class HybridEvidenceInversion implements Enumeration{
         }
     }
 
-    //所有的interval个数
+
     int intervalSize;
-    // predicate的id对应到node的id，先所有属性的的小于等于，再所有属性的大于
+
     int[] predicateId2NodeId;
-    // 列对应的interval起始点，也就是从这一位开始设置
+
     int[] col2Interval;
-    // 列对应的第一个谓词的id
+
     int[] col2PredicateId;
     int colSize;
-    // 列i对应的interval个数
+
     int[] intervalLength;
     private void constructMinimizeTree(DifferentialFunctionBuilder differentialFunctionBuilder){
         colSize = differentialFunctionBuilder.getColSize();
@@ -251,15 +243,6 @@ public class HybridEvidenceInversion implements Enumeration{
     private long MinimizeTime = 0;
     private long BeforeMinimizeSize = 0;
     private DifferentialDependencySet partialMinimize(int rightPid, Set<IBitSet> partialCovers){
-        /*if (rightPid == 8){
-            System.out.println("pred: " + predicateIndexProvider.getObject(8));
-            for (IBitSet p : partialCovers){
-                for(int i = p.nextSetBit(0); i >= 0; i= p.nextSetBit(i+1)){
-                    System.out.print(predicateIndexProvider.getObject(i));
-                }
-                System.out.println("");
-            }
-        }*/
         long t1 = System.currentTimeMillis();
         TranslatingMinimizeTree minimizeTree;
         if (!minimizeTreeMap.containsKey(predicateIndexProvider.getObject(rightPid).operandWithOpHash())){
@@ -274,16 +257,6 @@ public class HybridEvidenceInversion implements Enumeration{
         //Set<IBitSet> ret1 = partialCovers;
         minimizeTreeMap.put(predicateIndexProvider.getObject(rightPid).operandWithOpHash(), minimizeTree);
         MinimizeTime += System.currentTimeMillis() - t1;
-        /*if (rightPid == 8){
-            System.out.println("after" + ret1.size());
-            System.out.println("pred: " + predicateIndexProvider.getObject(8));
-            for (IBitSet p : ret1){
-                for(int i = p.nextSetBit(0); i >= 0; i= p.nextSetBit(i+1)){
-                    System.out.print(predicateIndexProvider.getObject(i));
-                }
-                System.out.println("");
-            }
-        }*/
         return new DifferentialDependencySet(ret1, rightPid, predicateIndexProvider);
     }
 }

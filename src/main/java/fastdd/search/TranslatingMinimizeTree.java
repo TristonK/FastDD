@@ -72,10 +72,9 @@ public class TranslatingMinimizeTree {
         return transformed;
     }
 
-    private IBitSet retransform2DD(IBitSet transformed, List<Integer> nodes){
-        //TODO
-        return null;
-    }
+//    private IBitSet retransform2DD(IBitSet transformed, List<Integer> nodes){
+//        return null;
+//    }
 
     public Set<IBitSet> minimize(List<IBitSet> candidates){
         Collections.sort(candidates, new Comparator<IBitSet>() {
@@ -89,14 +88,10 @@ public class TranslatingMinimizeTree {
         });
         Set<IBitSet> list = new HashSet<>();
         for(IBitSet candidate: candidates){
-           // System.out.println("测试Bitset：" + candidate);
             IBitSet removedBy = search.addTree(transform2Bitset(candidate), transform2Nodes(candidate));
             if(removedBy == null){
                 list.add(candidate);
             }
-            /*else{
-                System.out.println("Bitset " + candidate +" Removed By " + removedBy);
-            }*/
         }
         return list;
     }

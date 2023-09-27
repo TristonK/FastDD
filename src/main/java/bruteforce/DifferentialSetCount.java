@@ -1,7 +1,6 @@
 package bruteforce;
 
 import ch.javasoft.bitset.LongBitSet;
-import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialfunction.DifferentialFunctionBuilder;
 import fastdd.utils.DistanceCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
@@ -12,7 +11,7 @@ import java.util.*;
 /**
  * @author tristonK 2023/2/7
  */
-public class EvidenceCount {
+public class DifferentialSetCount {
     private final double ERR = 0.000000001;
 
     public Set<LongBitSet> calculate(Input input) {
@@ -90,7 +89,7 @@ public class EvidenceCount {
         for (int i = 0; i < differentialFunctionBuilder.getColSize(); i++) {
             countToPredicateSets.add(differentialFunctionBuilder.getOffset2SatisfiedPredicates(i));
         }
-        Set<LongBitSet> evidenceSet = new HashSet<>();
+        Set<LongBitSet> differentialSet = new HashSet<>();
         //int -> double -> string
         double[][] dInput = input.getDoubleInput();
         long[][] iInput = input.getLongInput();
@@ -133,13 +132,13 @@ public class EvidenceCount {
                     LongBitSet mask = countToPredicateSets.get(k + iInput.length + dInput.length).get(findMaskPos(diff, th));
                     evidence.or(mask);
                 }
-                evidenceSet.add(evidence);
+                differentialSet.add(evidence);
                 if(TestDup && DDLeft.isSubSetOf(evidence)){
                     System.out.println("dup "+ i + " "+ j);
                 }
             }
         }
 
-        return evidenceSet;
+        return differentialSet;
     }
 }

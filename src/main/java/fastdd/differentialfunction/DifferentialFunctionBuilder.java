@@ -23,7 +23,6 @@ public class DifferentialFunctionBuilder {
     public static IndexProvider<DifferentialFunction> predicateIdProvider;
     private Map<Integer, List<Double>> col2Thresholds;
 
-    // 属性为long的谓词的列的序号
     private List<Integer> longPredicatesGroup;
 
     private List<Integer> doublePredicatesGroup;
@@ -34,7 +33,6 @@ public class DifferentialFunctionBuilder {
     private Map<Integer, List<DifferentialFunction>> colToPredicatesGroup;
 
     private List<BitSet> colPredicateGroup;
-    // df在dfset中的序号 -> 这个df的阈值在属性阈值集中的序号（从0开始）
     private Map<Integer, Integer> bitsetIndex2ThresholdsIndex;
 
     private LongBitSet differentialFunctionsBitSet;
@@ -100,9 +98,6 @@ public class DifferentialFunctionBuilder {
                 throw new IllegalArgumentException("Please using correct predicates file: 'colName [t1,t2,..][t3,t4,..]'");
             }
         }
-       /* for (String K : smallerThresholds.keySet()){
-            System.out.println(K + smallerThresholds.get(K));
-        }*/
         for (ParsedColumn<?> column : input.getColumns()) {
             if (!smallerThresholds.containsKey(column.getColumnName())){System.out.println(column.getColumnName()+column.getColumnName().length());}
             addDifferentialFunctions(column, smallerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()), biggerThresholds.getOrDefault(column.getColumnName(), new ArrayList<>()));
@@ -134,7 +129,6 @@ public class DifferentialFunctionBuilder {
             diffD = column.getMaxNum() - column.getMinNum();
         }
         if (mode == 0 || !column.isNum()) {
-            //TODO:修改String属性列情况
             double step = diffD / (threshold + 1);
             List<Double> sThresholds = new ArrayList<>();
             for (int i = 0; i < (threshold + 1) / 2; i++) {
@@ -151,7 +145,7 @@ public class DifferentialFunctionBuilder {
             }
             thresholds.add(bThresholds);
         } else if (mode == 1) {
-            //TODO
+
         } else {
             throw new IllegalArgumentException("Bad add predicates mode.");
         }
@@ -166,7 +160,6 @@ public class DifferentialFunctionBuilder {
         List<DifferentialFunction> partialDifferentialFunctions = new ArrayList<>();
         ColumnOperand<?> operand = new ColumnOperand<>(column, 0);
 
-        // 确定所有的Differential Function
         smallThresholds = roundList(smallThresholds, true);
         bigThresholds = roundList(bigThresholds, false);
         smallThresholds = dedup(smallThresholds);
@@ -176,13 +169,13 @@ public class DifferentialFunctionBuilder {
 
         System.out.println(column.getColumnName() + smallThresholds.toString()+bigThresholds.toString());
 
-        // <=, 阈值降序
+
         for (int i = smallThresholds.size() - 1; i >= 0; i--) {
             DifferentialFunction p = predicateProvider.getPredicate(Operator.LESS_EQUAL, operand, smallThresholds.get(i));
             partialDifferentialFunctions.add(p);
             if(i == smallThresholds.size() - 1){HighestDfOfAttr.add(p);}
         }
-        // >, 阈值升序
+
         for (int i = 0; i < bigThresholds.size(); i++) {
             Double bigThreshold = bigThresholds.get(i);
             DifferentialFunction p = predicateProvider.getPredicate(Operator.GREATER, operand, bigThreshold);
@@ -191,7 +184,7 @@ public class DifferentialFunctionBuilder {
         }
         differentialFunctions.addAll(partialDifferentialFunctions);
 
-        //确定涉及到的全部阈值
+
         Set<Double> thresholdsSet = new HashSet<>();
         thresholdsSet.addAll(smallThresholds);
         thresholdsSet.addAll(bigThresholds);
@@ -258,7 +251,6 @@ public class DifferentialFunctionBuilder {
      * @return construct each offset => statisfied predicates of cloumn {@param col}
      * thresholds: - 0 - 1 - 2 - 3
      * offset:     0 -  1 - 2 - 3 - 4
-     * offset为2满足的：<=2, <=3, >0, >1
      */
     public List<LongBitSet> getOffset2SatisfiedPredicates(int col) {
         List<LongBitSet> predicateSets = new ArrayList<>();

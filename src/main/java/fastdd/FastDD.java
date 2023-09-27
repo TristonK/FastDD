@@ -1,6 +1,8 @@
 package fastdd;
 
+import bruteforce.DifferentialSetCount;
 import bruteforce.ValidateDD;
+import ch.javasoft.bitset.LongBitSet;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 import fastdd.dfset.longclueimpl.LongClueSetBuilder;
 import fastdd.differentialdependency.DifferentialDependency;
@@ -23,8 +25,10 @@ import thresholds.ExtremaStrategy;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * @author tristonk
@@ -66,64 +70,15 @@ public class FastDD {
         System.out.println("[PLIs] build PLIs cost: " + buildPliTime + "ms");
 
         t0 = System.currentTimeMillis();
-        /*LongCrossClueSetBuilder.setMaskTimeCnt = 0;
-        LongSingleClueSetBuilder.setMaskTimecnt = 0;
-        LongSingleClueSetBuilder.cntStrTime =0;
-        LongCrossClueSetBuilder.cntStrTime = 0;*/
-        DFSetBuilder DFSetBuilder = new DFSetBuilder(differentialFunctionBuilder);
-//        //测试暴力生成evidenceset
-//        Set<LongBitSet> evidenceSetBrutal = new EvidenceCount().calculateEvidence(input, differentialFunctionBuilder);
 
-        DFSetBuilder.buildEvidenceSetFromLongClue(pliShards);
-        DFSet dfSet = DFSetBuilder.getEvidenceSet();
+        List<LongBitSet> differentialSet = new ArrayList<>(new DifferentialSetCount().calculateEvidence(input, differentialFunctionBuilder));
+        System.out.println("[DifferentialSet] naive build differential set cost: " + (System.currentTimeMillis()-t0) + " ms");
 
-//        ValidateDD.printAllDF(differentialFunctionBuilder);
+        long t1 = System.currentTimeMillis();
+        DifferentialDependencySet ies = new Analyzer(differentialSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
+        System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
+        System.out.println("ie #dd : " + ies.size());
 
-        System.out.println("[EvidenceSet] build long clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
-        System.out.println("[Diff-cal] time(ns): " + LongClueSetBuilder.calDiffTime);
-        //System.out.println("[countOffset]: " + (BinaryCalOffset.cntTime/1000000+LongSingleClueSetBuilder.cntStrTime+LongCrossClueSetBuilder.cntStrTime/1000000) +
-        //        "; [SetMask]: " + (LongCrossClueSetBuilder.setMaskTimeCnt + LongSingleClueSetBuilder.setMaskTimecnt)/1000000);
-        long enmurationTime = System.currentTimeMillis();
-        Enumeration ddfinder = new HybridEvidenceInversion(dfSet, differentialFunctionBuilder);
-        DifferentialDependencySet dds = ddfinder.buildDifferentialDenpendency();
-        System.out.println("[Enumeration] cost: " + (System.currentTimeMillis() - enmurationTime)+ " ms");
-        System.out.println("[Enumeration] # dds: " + dds.size());
-        if (Config.OutputDFSet){
-            for (Evidence evi :dfSet){
-               // System.out.println(evi.toDFString());
-                IndexProvider in = differentialFunctionBuilder.getPredicateIdProvider();
-                for(DifferentialFunction df: differentialFunctionBuilder.getPredicates()){
-                    if (!evi.getBitset().get(in.getIndex(df))){
-                        System.out.print(df.toString());
-                    }
-                }
-                System.out.println("");
-                //System.out.println(evi + evi.toDFString());
-            }
-        }
-        if(Config.OutputDDFlag) {
-            for (DifferentialDependency dd : dds) {
-                System.out.println(dd.toString());
-            }
-        }
-        if(Config.OutputDD2File){
-            PrintResult.PrintDD(dds);
-        }
-
-        //ValidateDD.printAllDF(differentialFunctionBuilder);
-        //ValidateDD.translateRFDToDD(differentialFunctionBuilder, evidenceSet);
-        if(Config.DebugFlag) {
-            new ValidateDD().validate(dfSet, dds);
-        }
-        // new TranslateRFD().validatByInput(input);
-        if(Config.TestIE){
-            long t1 = System.currentTimeMillis();
-            DifferentialDependencySet ies = new Analyzer(dfSet, differentialFunctionBuilder).run(differentialFunctionBuilder.getFullDFBitSet());
-            System.out.println("ie use time : "+ (System.currentTimeMillis() - t1));
-            System.out.println("ie #dd : " + ies.size());
-            System.out.println("ies == dds: " + dds.haveSameDDs(ies));
-            //new ValidateDD().validate(dfSet, ies);
-        }
-        return dds;
+        return ies;
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
  * @author tristonK 2023/6/2
  */
 public class BruteCalOffset implements IClueOffset {
-    private int findMaskPos(double diff, List<Double> th) {//找到元组差值在阈值列表中的位置
+    private int findMaskPos(double diff, List<Double> th) {
         int c = 0;
         if (diff < th.get(0) + ERR) {
             c = 0;
@@ -31,9 +31,7 @@ public class BruteCalOffset implements IClueOffset {
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
-//        int thresholdsId = thresholds.size() - 1;
 
-        //循环遍历keys，分别与key做差的到diff，然后找到其在thresholds中的位置，最后添加到posTothreshold中
         while (pos < keys.length) {
             double diff = Math.abs(keys[pos] - key);
             posTothreshold[pos - startPos] = findMaskPos(diff, thresholds);
@@ -45,9 +43,6 @@ public class BruteCalOffset implements IClueOffset {
     public int[] countInt(IPli probePli, int isSingle, Long[] keys, int startPos, long key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
-//        int thresholdsId = thresholds.size() - 1;
-
-        //循环遍历keys，分别与key做差的到diff，然后找到其在thresholds中的位置，最后添加到posTothreshold中
         while (pos < keys.length) {
             double diff = Math.abs(keys[pos] - key);
             posTothreshold[pos - startPos] = findMaskPos(diff, thresholds);

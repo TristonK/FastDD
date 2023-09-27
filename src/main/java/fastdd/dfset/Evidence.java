@@ -19,9 +19,6 @@ public class Evidence {
 
     public Evidence(LongBitSet clue, Long count, List<List<LongBitSet>> countToPredicateSets){
         this.clue = clue;
-//        if(Objects.equals(clue.toString(), "{001000010000000010000001000001}")) {
-//            System.out.println(clue);
-//        }
         this.count = count;
         this.bitset = buildEvidenceFromClue(countToPredicateSets);
     }
@@ -44,7 +41,6 @@ public class Evidence {
         for(int i = clue.nextSetBit(0); i >=0 ; i = clue.nextSetBit(i+1)){
             int col = ClueSetBuilder.bit2ColMap[i];
             int offset = i - ClueSetBuilder.col2FirstBitMap[col];
-            //获得clue里i对应的列属性和偏移量（即在阈值列表中的位置）
             LongBitSet mask = countToPredicateSets.get(col).get(offset);
             if(mask == null){System.out.println("sss");}
             evidenceBitSet.or(mask);

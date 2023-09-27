@@ -31,7 +31,7 @@ public class ValidateDD {
         System.out.println("count :: " + count);
     }
 
-    // 最后一个string为right,string格式，
+
     public static void translateRFDToDD(DifferentialFunctionBuilder builder, DFSet DFSet){
         LongBitSet leftBs = new LongBitSet();
         LongBitSet allBs = new LongBitSet();

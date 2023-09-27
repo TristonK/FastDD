@@ -128,9 +128,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     private void correctNum(LongBitSet[] clues, IPli pli, int pos, List<Double> thresholds) {
 
         for (int i = 0; i < pli.size(); i++) {
-            // index为0的情况
             setSelfNumMask(clues, pli.get(i), pos);
-            //接口实现
             int start = i + 1;
             if (pli.getClass() == DoublePli.class) {
                 Double key = (Double) pli.getKeys()[i];//获取pli的第i个key值
