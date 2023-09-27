@@ -24,7 +24,7 @@ public class DFSetBuilder {
         dfSet = new DFSet(differentialFunctionBuilder);
     }
 
-    public Set<Long> buildEvidenceSetFromLongClue(PliShard[] pliShards){
+    public Set<Long> buildDifferentialSetFromLongClue(PliShard[] pliShards){
         long t2 = System.currentTimeMillis();
         HashMap<Long, Long> longClueSet = buildLongClueSet(pliShards);
         System.out.println("[LongClueSet] build cost: " + (System.currentTimeMillis() - t2) + " ms");

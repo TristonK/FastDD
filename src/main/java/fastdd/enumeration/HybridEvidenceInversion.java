@@ -22,7 +22,7 @@ public class HybridEvidenceInversion implements Enumeration{
     HashMap<Integer, Set<Integer>> pred2PredGroupMap;
     Set<IBitSet> covers;
     DFSet DFSet;
-    Map<Integer, LongBitSet> predSatisfiedEvidenceSet;
+    Map<Integer, LongBitSet> predSatisfiedDifferentialSet;
     Map<Integer, LongBitSet> dfNotSatisfiedDFSet;
 
     LongBitSet evidenceBitSet;
@@ -119,9 +119,9 @@ public class HybridEvidenceInversion implements Enumeration{
             List<Integer> currPredicateSpace = new ArrayList<>(differentialFunctions);
             currPredicateSpace.removeAll(pred2PredGroupMap.get(rightPid));
             Set<Integer> predsNotSatisfied = new HashSet<>();
-            LongBitSet currEvidenceSet = dfNotSatisfiedDFSet.get(rightPid);
+            LongBitSet currDifferentialSet = dfNotSatisfiedDFSet.get(rightPid);
             List<LongBitSet> currEvidences = new ArrayList<>();
-            for(int eviId = currEvidenceSet.nextSetBit(0); eviId >= 0; eviId = currEvidenceSet.nextSetBit(eviId + 1)){
+            for(int eviId = currDifferentialSet.nextSetBit(0); eviId >= 0; eviId = currDifferentialSet.nextSetBit(eviId + 1)){
                 LongBitSet bs = DFSet.getEvidenceById(eviId).getBitset().clone();
                 pred2PredGroupMap.get(rightPid).forEach(bs::clear);
                 predsNotSatisfied.forEach(bs::clear);
@@ -141,10 +141,10 @@ public class HybridEvidenceInversion implements Enumeration{
 
     private void buildClueIndexes() {
 
-        predSatisfiedEvidenceSet = new HashMap<>(predicates.size());
+        predSatisfiedDifferentialSet = new HashMap<>(predicates.size());
         dfNotSatisfiedDFSet = new HashMap<>(predicates.size());
         for(int i = 0; i < predicates.size(); i++){
-            predSatisfiedEvidenceSet.put(i, new LongBitSet());
+            predSatisfiedDifferentialSet.put(i, new LongBitSet());
             dfNotSatisfiedDFSet.put(i, new LongBitSet());
         }
         evidenceBitSet = new LongBitSet();
@@ -153,7 +153,7 @@ public class HybridEvidenceInversion implements Enumeration{
             LongBitSet bs = DFSet.getEvidenceById(evidenceId).getBitset();
             for(int i = 0; i < predicates.size(); i++){
                 if(bs.get(i)){
-                    predSatisfiedEvidenceSet.get(i).set(evidenceId);
+                    predSatisfiedDifferentialSet.get(i).set(evidenceId);
                 }else{
                     dfNotSatisfiedDFSet.get(i).set(evidenceId);
                 }

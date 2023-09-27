@@ -30,12 +30,12 @@ public class EvidenceInversion {
     }
 
     public Set<IBitSet> getCovers(){
-        posCover = new TranslatingTreeSearch(countPredsInEvidenceSet(), colPredicatesBitSet);
+        posCover = new TranslatingTreeSearch(countPredsInDifferentialSet(), colPredicatesBitSet);
         List<IBitSet> sortedNegCover = new ArrayList<>();
         for (LongBitSet bitset : evidenceBitSets) {
             sortedNegCover.add(bitset.clone());
         }
-        sortedNegCover = minimizeEvidenceSet(sortedNegCover);
+        sortedNegCover = minimizeDifferentialSet(sortedNegCover);
 
         posCover.add(new LongBitSet());
         Collections.sort(sortedNegCover, posCover.getComparator());
@@ -50,7 +50,7 @@ public class EvidenceInversion {
         return result;
     }
 
-    private List<IBitSet> minimizeEvidenceSet(final List<IBitSet> sortedNegCover) {
+    private List<IBitSet> minimizeDifferentialSet(final List<IBitSet> sortedNegCover) {
 
         Collections.sort(sortedNegCover, new Comparator<IBitSet>() {
             @Override
@@ -76,7 +76,7 @@ public class EvidenceInversion {
         neg.add(invalid);
     }
 
-    private int[] countPredsInEvidenceSet(){
+    private int[] countPredsInDifferentialSet(){
         int[] counts = new int[predicateSetSize];
         for(LongBitSet evidence: evidenceBitSets){
             for(int i = evidence.nextSetBit(0); i>=0 ; i = evidence.nextSetBit(i+1)){

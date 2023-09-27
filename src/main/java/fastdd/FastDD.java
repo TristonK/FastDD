@@ -69,14 +69,13 @@ public class FastDD {
         LongCrossClueSetBuilder.cntStrTime = 0;*/
         DFSetBuilder DFSetBuilder = new DFSetBuilder(differentialFunctionBuilder);
 
-//        Set<LongBitSet> evidenceSetBrutal = new EvidenceCount().calculateEvidence(input, differentialFunctionBuilder);
 
-        DFSetBuilder.buildEvidenceSetFromLongClue(pliShards);
+        DFSetBuilder.buildDifferentialSetFromLongClue(pliShards);
         DFSet dfSet = DFSetBuilder.getDFSet();
 
 //        ValidateDD.printAllDF(differentialFunctionBuilder);
 
-        System.out.println("[EvidenceSet] build long clueSet and evidence set cost: " + (System.currentTimeMillis()-t0) + " ms");
+        System.out.println("[DifferentialSet] build long clueSet and differential set cost: " + (System.currentTimeMillis()-t0) + " ms");
         System.out.println("[Diff-cal] time(ns): " + ISNBuilder.calDiffTime);
         //System.out.println("[countOffset]: " + (BinaryCalOffset.cntTime/1000000+LongSingleClueSetBuilder.cntStrTime+LongCrossClueSetBuilder.cntStrTime/1000000) +
         //        "; [SetMask]: " + (LongCrossClueSetBuilder.setMaskTimeCnt + LongSingleClueSetBuilder.setMaskTimecnt)/1000000);
