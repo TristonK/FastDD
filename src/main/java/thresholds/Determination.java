@@ -65,8 +65,8 @@ public class Determination {
         for (int i = 0; i < this.rowLimit - 1; i++) {
             for (int j = i + 1; j < this.rowLimit; j++) {
                 for (int k = 0; k < iInput.length; k++) {
-                    double diff = Math.abs(iInput[k][arr[i]] - iInput[k][arr[j]]);//获得差值
-                    HashMap<Double, Integer> tmpmap = this.columnsDiff.get(k);//获取对应属性的hashmap
+                    double diff = Math.abs(iInput[k][arr[i]] - iInput[k][arr[j]]);
+                    HashMap<Double, Integer> tmpmap = this.columnsDiff.get(k);
                     if (tmpmap.containsKey(diff)) {
                         tmpmap.put(diff, tmpmap.get(diff) + 1);
                     } else {
@@ -86,7 +86,7 @@ public class Determination {
                 }
                 for (int k = 0; k < sInput.length; k++) {
                     double diff = DistanceCalculation.StringDistance(sInput[k][arr[i]], sInput[k][arr[j]]);
-                    HashMap<Double, Integer> tmpmap = this.columnsDiff.get(k + iInput.length + dInput.length);//获取对应属性的hashmap
+                    HashMap<Double, Integer> tmpmap = this.columnsDiff.get(k + iInput.length + dInput.length);
                     if (tmpmap.containsKey(diff)) {
                         tmpmap.put(diff, tmpmap.get(diff) + 1);
                     } else {
@@ -98,7 +98,6 @@ public class Determination {
         }
 
 
-        //得到升序排列的hashmap键值
         for (int i = 0; i < colSize; i++) {
             List<Double> tmplist = new ArrayList<>(this.columnsDiff.get(i).keySet());
             hashKeys.add(i, tmplist);

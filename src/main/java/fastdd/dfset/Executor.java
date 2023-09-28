@@ -1,9 +1,8 @@
 package fastdd.dfset;
 
 import fastdd.Config;
-import fastdd.dfset.longclueimpl.LongClueSetBuilder;
-import fastdd.dfset.longclueimpl.LongCrossClueSetBuilder;
-import fastdd.dfset.longclueimpl.LongSingleClueSetBuilder;
+import fastdd.dfset.isnimpl.CrossISNBuilder;
+import fastdd.dfset.isnimpl.SingleISNBuilder;
 import fastdd.dfset.offsetimpl.BinaryCalOffset;
 import fastdd.pli.PliShard;
 
@@ -24,12 +23,12 @@ public class Executor {
         List<Future<HashMap<Long, Long>>> futures = new ArrayList<>();
 
         for (int i = 0; i < pliShards.length; i++) {
-            IClueOffset util = new BinaryCalOffset();
+            IOffset util = new BinaryCalOffset();
            // tasks.add(new LongSingleClueSetBuilder(pliShards[i], util));
-            futures.add(executor.submit(new LongSingleClueSetBuilder(pliShards[i], util)));
+            futures.add(executor.submit(new SingleISNBuilder(pliShards[i], util)));
             for (int j = i + 1; j < pliShards.length; j++) {
-                IClueOffset util2 = new BinaryCalOffset();
-                futures.add(executor.submit(new LongCrossClueSetBuilder(pliShards[i], pliShards[j], util2)));
+                IOffset util2 = new BinaryCalOffset();
+                futures.add(executor.submit(new CrossISNBuilder(pliShards[i], pliShards[j], util2)));
             }
         }
 

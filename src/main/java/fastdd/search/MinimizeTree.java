@@ -14,7 +14,6 @@ public class MinimizeTree {
     protected List<IBitSet> bitsets;
 
     public MinimizeTree(){
-        //this.intervalSize = intervalSize;
         this.bitsets = new ArrayList<>();
     }
 
@@ -23,19 +22,16 @@ public class MinimizeTree {
             for(IBitSet bs : bitsets){
                 if(candidateTransformed.isSubSetOf(bs)){
                     return bs;
-                    //return false;
                 }
             }
         }
         if(index >= nodes.size()){
             return null;
-            //return true;
         }
         int nextNode = nodes.get(index);
         if(subtrees.containsKey(nextNode)){
             IBitSet flag = subtrees.get(nextNode).canAdd(candidateTransformed, nodes, index + 1);
             if(flag != null){return flag;}
-            //if(!flag){return  false;}
         }
         return canAdd(candidateTransformed, nodes, index + 1);
     }
@@ -44,7 +40,6 @@ public class MinimizeTree {
         IBitSet canRemovedBy = canAdd(candidateTransformed, nodes, 0);
         if(canRemovedBy != null){
             return canRemovedBy;
-            //return false;
         }
         MinimizeTree currNode = this;
         for(int i = 0; i < nodes.size(); i++){

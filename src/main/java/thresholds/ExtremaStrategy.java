@@ -11,7 +11,6 @@ public class ExtremaStrategy implements ThresholdsStrategy {
 
     @Override
     public List<List<Double>> calculateThresholds(HashMap<Double, Integer> diff2Freq, List<Double> orderedKeyList, int thresholdsNum, int minThresholdsSize, double freqBoundary, double indexBoundary) {
-
         List<Double> resLeft = new ArrayList<>();
         List<Double> resRight = new ArrayList<>();
         double ERR = 0.000000001;
@@ -19,9 +18,10 @@ public class ExtremaStrategy implements ThresholdsStrategy {
         int tmpIndex = 0;
         double maxScore = -1;
         int index = 0;
-        int partitionLeftIndex;
+        int partitionLeftIndex = 0;
         int partitionRightIndex = 0;
         long totalFreqSum = 0;
+
 
         if (diff2Freq.size() <= 1) {
             resLeft.add(0.0);
@@ -98,13 +98,17 @@ public class ExtremaStrategy implements ThresholdsStrategy {
             count++;
         }
 
+
+
+
+
         tmpIndex = partitionRightIndex;
         while (count < thresholdsNum) {
             for (int i = tmpIndex; i < diff2Freq.size() - 1; i++) {
                 double intervalLength = orderedKeyList.get(diff2Freq.size() - 1) - orderedKeyList.get(i);//当前阈值与右端点阈值的区间长度
                 int freqSum = 0;
                 for (int j = i + 1; j < diff2Freq.size(); j++) {
-                    freqSum += diff2Freq.get(orderedKeyList.get(j));//(orderedKeyList.get(i),右端点阈值]范围内的所有freq
+                    freqSum += diff2Freq.get(orderedKeyList.get(j));
                 }
                 double score = freqSum / intervalLength;
                 if (maxScore < score) {
@@ -117,6 +121,7 @@ public class ExtremaStrategy implements ThresholdsStrategy {
             maxScore = -1;
             count++;
         }
+
 
         Set<Double> resSet = new HashSet<>();
         List<Double> resLeftWithoutDuplicates = new ArrayList<>();

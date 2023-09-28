@@ -4,7 +4,6 @@ import ch.javasoft.bitset.LongBitSet;
 import fastdd.Config;
 import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialdependency.DifferentialDependencySet;
-import fastdd.dfset.Evidence;
 import fastdd.dfset.DFSet;
 import fastdd.differentialfunction.DifferentialFunction;
 import fastdd.differentialfunction.DifferentialFunctionBuilder;
@@ -43,12 +42,6 @@ public class Analyzer {
         t1 = System.currentTimeMillis();
         dds = new Minimal().minimize(dds);
         System.out.println("[IE] minimize Time: " + (System.currentTimeMillis() - t1));
-        if(Config.OutputIEFlag){
-            System.out.println("==============[IE dds]=======================");
-            for (DifferentialDependency dd : dds) {
-                System.out.println(dd);
-            }
-        }
         return dds;
     }
 
@@ -96,12 +89,6 @@ public class Analyzer {
 
     public List<LongBitSet> excludeV2(List<List<Integer>> differentialSet, LongBitSet left, LongBitSet right){
         List<LongBitSet> D1 = new ArrayList<>();
-        /*for (List<Integer> list: differentialSet) {
-            differentialFunctionBuilder.getBitsetIndex2ThresholdsIndex()
-            if (left.isSubSetOf(bs) && !right.isSubSetOf(bs)) {
-                D1.add(bs.clone());
-            }
-        }*/
         return D1;
     }
 

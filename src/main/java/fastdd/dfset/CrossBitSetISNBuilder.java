@@ -13,17 +13,17 @@ import java.util.List;
 /**
  * To build the clue set of two Pli shards
  */
-public class CrossClueSetBuilder extends ClueSetBuilder {
+public class CrossBitSetISNBuilder extends BitSetISNBuilder {
 
     private final List<IPli> plis1, plis2;
     private final int evidenceCount;
 
     private final double ERR = 0.000000001;
-    private long[] forwardClues;//用来代替longbitset，实验测试
+    private long[] forwardClues;
     private long[] bases;
-    private IClueOffset calUtils;
+    private IOffset calUtils;
 
-    public CrossClueSetBuilder(PliShard shard1, PliShard shard2, IClueOffset calUtils) {
+    public CrossBitSetISNBuilder(PliShard shard1, PliShard shard2, IOffset calUtils) {
         plis1 = shard1.plis;
         plis2 = shard2.plis;
         evidenceCount = (shard1.end - shard1.beg) * (shard2.end - shard2.beg);
@@ -33,7 +33,7 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
     public HashMap<LongBitSet, Long> buildClueSet() {
         LongBitSet[] forwardClues = new LongBitSet[evidenceCount];   // plis1 -> plis2
         for (int i = 0; i < evidenceCount; i++) {
-            forwardClues[i] = new LongBitSet(DifferentialFunctionBuilder.getIntervalCnt());//TODO: n个阈值有n+1个interval，这里需要修改（eg:54 => 45）
+            forwardClues[i] = new LongBitSet(DifferentialFunctionBuilder.getIntervalCnt());
         }
         for (PredicatePack strPack : strPacks) {
             correctStr(forwardClues, plis1.get(strPack.colIndex), plis2.get(strPack.colIndex), strPack.pos, strPack.thresholds);
@@ -63,7 +63,6 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
             int r1 = t1 * range2 - beg2;
             for (int tid2 : pli2.get(j).getRawCluster()) {
                 clues1[r1 + tid2].set(pos);
-                //clues2[(tid2 - beg2) * range1 + t1].set(pos);
             }
         }
 
@@ -115,7 +114,7 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
                 start++;
             }
             for (int index = 1; index < thresholds.size() && start < probeKeys.length; index++) {
-                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] - thresholds.get(index), start, 1);//LT：less than 获取probePli.keys[]中 key小于的首个元素的位置
+                int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] - thresholds.get(index), start, 1);
                 for (int j = start; j < end; j++) {
                     setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index);
                 }
@@ -137,11 +136,9 @@ public class CrossClueSetBuilder extends ClueSetBuilder {
         for (int i = 0; i < pivotKeys.length; i++) {
             int start = 0;
             for (int index = thresholds.size() - 1; index >= 0 && start < probeKeys.length; index--) {
-                //keys降序排列
-                //end得到的返回值是比目标key值+指定阈值的和小或相等的第一个下标i，即keys[i]<key+th[index]
                 int end = probePli.getFirstIndexWhereKeyIsLT(pivotKeys[i] + thresholds.get(index).intValue(), start, 0);
                 for (int j = start; j < end; j++) {
-                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index + 1);//给定偏移为index+1，即keys[start] to keys[end]的值与目标key的差值都在此范围内
+                    setNumMask(forwardArray, pivotPli, i, probePli, j, pos + index + 1);
                 }
                 start = end;
             }

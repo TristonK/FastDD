@@ -1,6 +1,6 @@
 package fastdd.dfset.offsetimpl;
 
-import fastdd.dfset.IClueOffset;
+import fastdd.dfset.IOffset;
 import fastdd.pli.IPli;
 
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author tristonK 2023/6/2
  */
-public class BruteCalOffset implements IClueOffset {
+public class BruteCalOffset implements IOffset {
     private int findMaskPos(double diff, List<Double> th) {
         int c = 0;
         if (diff < th.get(0) + ERR) {
@@ -31,7 +31,6 @@ public class BruteCalOffset implements IClueOffset {
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
         int pos = startPos;
         int[] posTothreshold = new int[keys.length - startPos];
-
         while (pos < keys.length) {
             double diff = Math.abs(keys[pos] - key);
             posTothreshold[pos - startPos] = findMaskPos(diff, thresholds);
@@ -51,6 +50,4 @@ public class BruteCalOffset implements IClueOffset {
         }
         return posTothreshold;
     }
-
-
 }

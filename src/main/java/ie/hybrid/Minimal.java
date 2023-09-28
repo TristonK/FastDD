@@ -21,7 +21,7 @@ public class Minimal {
 
         for (int i = 0; i < dds.size(); i++) {
             DifferentialDependency pivot = dds.get(i);
-            LongBitSet pivotLeftPredicate = new LongBitSet(pivot.getLeftPredicateSet());
+            LongBitSet pivotLeftPredicate = new LongBitSet(pivot.getLeftDFSet());
             DifferentialFunction pivotRight = pivot.getRight();
 
             for (int j = i + 1; j < dds.size(); j++) {
@@ -30,7 +30,7 @@ public class Minimal {
                 if (pivotRight.operandWithOpHash() != laterRight.operandWithOpHash() || minimizeIndex.contains(j)){
                     continue;
                 }
-                LongBitSet laterLeftPredicate = new LongBitSet(later.getLeftPredicateSet());
+                LongBitSet laterLeftPredicate = new LongBitSet(later.getLeftDFSet());
 
                 if (isRightReduce(pivotRight, laterRight)) {
 
@@ -48,7 +48,6 @@ public class Minimal {
                 }
             }
         }
-        //去除minimizeIndex中所含下标的dd，完成minimize
         if(minimizeIndex.isEmpty()){
             return ddSet;
         }

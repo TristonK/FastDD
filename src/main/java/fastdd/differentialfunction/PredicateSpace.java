@@ -10,32 +10,32 @@ import java.util.List;
  * @author tristonK 2023/4/18
  */
 public class PredicateSpace {
-    private PredicateSet predicateSet;
-    private PredicateSet acceptPredicateSet;
-    private PredicateSet rejectPredicateSet;
+    private DifferentialFunctionSet differentialFunctionSet;
+    private DifferentialFunctionSet acceptDifferentialFunctionSet;
+    private DifferentialFunctionSet rejectDifferentialFunctionSet;
 
     private IndexProvider<DifferentialFunction> predicateIndexProvider;
 
     private List<BitSet> colPredicateGroup;
 
     public PredicateSpace(LongBitSet predicateSet, LongBitSet acceptPredicateSet, LongBitSet rejectPredicateSet, IndexProvider<DifferentialFunction> indexProvider, List<BitSet> colPredicates){
-        this.predicateSet = new PredicateSet(predicateSet);
-        this.acceptPredicateSet = new PredicateSet(acceptPredicateSet);
-        this.rejectPredicateSet = new PredicateSet(rejectPredicateSet);
+        this.differentialFunctionSet = new DifferentialFunctionSet(predicateSet);
+        this.acceptDifferentialFunctionSet = new DifferentialFunctionSet(acceptPredicateSet);
+        this.rejectDifferentialFunctionSet = new DifferentialFunctionSet(rejectPredicateSet);
         this.predicateIndexProvider = indexProvider;
         this.colPredicateGroup = colPredicates;
     }
 
-    public PredicateSet getPredicateSet() {
-        return predicateSet;
+    public DifferentialFunctionSet getPredicateSet() {
+        return differentialFunctionSet;
     }
 
-    public PredicateSet getAcceptPredicateSet() {
-        return acceptPredicateSet;
+    public DifferentialFunctionSet getAcceptPredicateSet() {
+        return acceptDifferentialFunctionSet;
     }
 
-    public PredicateSet getRejectPredicateSet() {
-        return rejectPredicateSet;
+    public DifferentialFunctionSet getRejectPredicateSet() {
+        return rejectDifferentialFunctionSet;
     }
 
     public IndexProvider<DifferentialFunction> getPredicateIndexProvider() {
@@ -48,10 +48,10 @@ public class PredicateSpace {
 
     @Override
     public String toString() {
-        return "{full predicates: " + predicateSet.toString() + " accepted: " + acceptPredicateSet.toString() + " rejected: " + rejectPredicateSet.toString() + "}";
+        return "{full predicates: " + differentialFunctionSet.toString() + " accepted: " + acceptDifferentialFunctionSet.toString() + " rejected: " + rejectDifferentialFunctionSet.toString() + "}";
     }
 
     public int size(){
-        return predicateSet.size();
+        return differentialFunctionSet.size();
     }
 }

@@ -1,6 +1,6 @@
 package fastdd.dfset.offsetimpl;
 
-import fastdd.dfset.IClueOffset;
+import fastdd.dfset.IOffset;
 import fastdd.pli.IPli;
 
 import java.util.List;
@@ -8,12 +8,11 @@ import java.util.List;
 /**
  * @author tristonK 2023/6/2
  */
-public class BinaryCalOffset implements IClueOffset {
+public class BinaryCalOffset implements IOffset {
     public static long cntTime = 0;
 
     @Override
     public int[] countDouble(IPli probePli, int isSingle, Double[] keys, int startPos, double key, List<Double> thresholds) {
-        //long time1 = System.nanoTime();
         int[] posTothreshold = new int[probePli.size()];
         //SinglePli
         if(1 == isSingle){
@@ -63,13 +62,11 @@ public class BinaryCalOffset implements IClueOffset {
                 }
             }
         }
-        //cntTime += System.nanoTime() - time1;
         return posTothreshold;
     }
 
     @Override
     public int[] countInt(IPli probePli, int isSingle, Long[] keys, int startPos, long key, List<Double> thresholds) {
-       // long time1  = System.nanoTime();
         int[] posTothreshold = new int[probePli.size()];
         //SinglePli
         if(isSingle == 1){
@@ -120,7 +117,6 @@ public class BinaryCalOffset implements IClueOffset {
                 }
             }
         }
-      //  cntTime += System.nanoTime() - time1;
         return posTothreshold;
     }
 }

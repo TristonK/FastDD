@@ -8,7 +8,7 @@ import de.metanome.algorithms.dcfinder.input.ParsedColumn;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-abstract public class ClueSetBuilder{
+abstract public class BitSetISNBuilder {
 
 
     abstract public HashMap<LongBitSet, Long> buildClueSet();
@@ -48,9 +48,9 @@ abstract public class ClueSetBuilder{
      static int[] bit2ColMap;
      static int[] col2FirstBitMap;
 
-    static List<ClueSetBuilder.PredicatePack> strPacks;  // String single-column predicate packs
-    static List<ClueSetBuilder.PredicatePack> doublePacks;  // numerical single-column predicate packs
-    static List<ClueSetBuilder.PredicatePack> intPacks;
+    static List<BitSetISNBuilder.PredicatePack> strPacks;  // String single-column predicate packs
+    static List<BitSetISNBuilder.PredicatePack> doublePacks;  // numerical single-column predicate packs
+    static List<BitSetISNBuilder.PredicatePack> intPacks;
 
     static List<Integer> startPositions;
 
@@ -70,9 +70,9 @@ abstract public class ClueSetBuilder{
     }
 
     private static void buildPredicateGroupsAndCorrectMap(DifferentialFunctionBuilder pBuilder) {
-        List<Integer> strPredicatesGroup = pBuilder.getStrPredicatesGroup();
-        List<Integer> longPredicatesGroup = pBuilder.getLongPredicatesGroup();
-        List<Integer> doublePredicatesGroup = pBuilder.getDoublePredicatesGroup();
+        List<Integer> strPredicatesGroup = pBuilder.getStrDFsGroup();
+        List<Integer> longPredicatesGroup = pBuilder.getLongDFsGroup();
+        List<Integer> doublePredicatesGroup = pBuilder.getDoubleDFsGroup();
 
         bit2ColMap = new int[DifferentialFunctionBuilder.getIntervalCnt()];
         col2FirstBitMap = new int [strPredicatesGroup.size() + longPredicatesGroup.size() + doublePredicatesGroup.size()];
@@ -82,7 +82,7 @@ abstract public class ClueSetBuilder{
         int count = 0;
         for(Integer colIndex: longPredicatesGroup){
             intPacks.add(new PredicatePack(pBuilder.getPredicateColumn(colIndex), count));
-            int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;//对于某个属性，n个阈值有n+1个interval，现在修改成n个，无视0阈值
+            int interval  = pBuilder.getColThresholdsSize(colIndex) + 1;
             for(int i = count; i < count + interval; i++){
                 bit2ColMap[i] = colIndex;
             }
@@ -113,10 +113,5 @@ abstract public class ClueSetBuilder{
 
         System.out.println("  [CLUE] # of bits in clue: " + count);
     }
-
-
-
-
-
 }
 

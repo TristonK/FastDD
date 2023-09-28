@@ -19,7 +19,7 @@ public class SearchSpace {
     }
     public SearchSpace(int right){
         phis = new ArrayList<>();
-        getPhis(dfBuilder.getColPredicateGroup(), 0, new LongBitSet(dfBuilder.size()), right);
+        getPhis(dfBuilder.getColDFGroup(), 0, new LongBitSet(dfBuilder.size()), right);
         phis.sort(new Comparator<IBitSet>() {
             @Override
             public int compare(IBitSet o1, IBitSet o2) {

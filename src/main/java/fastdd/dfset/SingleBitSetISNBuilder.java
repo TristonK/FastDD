@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * To build the clue set of one Pli shard
+ * To build the isn set of one Pli shard
  */
-public class SingleClueSetBuilder extends ClueSetBuilder {
+public class SingleBitSetISNBuilder extends BitSetISNBuilder {
 
     private final List<IPli> plis;
     private final int tidBeg, tidRange;
@@ -20,9 +20,9 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
     private final double ERR = 0.000000001;
     private long[] forwardClues;
     private long[] bases;
-    private IClueOffset calUtils;
+    private IOffset calUtils;
 
-    public SingleClueSetBuilder(PliShard shard, IClueOffset calUtils) {
+    public SingleBitSetISNBuilder(PliShard shard, IOffset calUtils) {
         plis = shard.plis;
         tidBeg = shard.beg;
         tidRange = shard.end - shard.beg;
@@ -89,19 +89,8 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
 
     private void correctStr(LongBitSet[] clues, IPli pli, int pos, List<Double> thresholds) {
         for (int i = 0; i < pli.size(); i++) {
-            // index为0的情况
             setSelfNumMask(clues, pli.get(i), pos);
             for (int j = i + 1; j < pli.size(); j++) {
-                /*String smallOne = (String) pli.getKeys()[i], biggerOne = (String) pli.getKeys()[j];
-                if(smallOne.compareTo(biggerOne) > 0){
-                    String tmp = biggerOne;
-                    biggerOne = smallOne;
-                    smallOne = tmp;
-                }
-                if(ClueSetBuilder.stringDistance.containsKey(smallOne) && ClueSetBuilder.stringDistance.get(smallOne).containsKey(biggerOne)){
-                    setNumMask(clues, pli.get(i), pli.get(j), pos + ClueSetBuilder.stringDistance.get(smallOne).get(biggerOne));
-                    continue;
-                }*/
                 int diff = DistanceCalculation.StringDistance((String) pli.getKeys()[i], (String) pli.getKeys()[j]);
                 int c = 0;
                 if (diff < ERR + thresholds.get(0)) {
@@ -118,9 +107,6 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
                     }
                 }
                 setNumMask(clues, pli.get(i), pli.get(j), pos + c);
-                //ConcurrentHashMap<String, Integer> newMap = stringDistance.getOrDefault(smallOne, new ConcurrentHashMap<String, Integer>());
-                //newMap.put(biggerOne, c);
-                //stringDistance.put(smallOne, newMap);
             }
         }
     }
@@ -129,12 +115,13 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
 
         for (int i = 0; i < pli.size(); i++) {
             setSelfNumMask(clues, pli.get(i), pos);
+            //接口实现
             int start = i + 1;
             if (pli.getClass() == DoublePli.class) {
                 Double key = (Double) pli.getKeys()[i];//获取pli的第i个key值
                 for (int index = 1; index < thresholds.size() && start < pli.size(); index++) {
                     int end = pli.getFirstIndexWhereKeyIsLT(key - thresholds.get(index), start, 1);
-                    for (int correct = start; correct < end && correct < pli.size(); correct++) {//correct对应从目标key开始往后的下标，循环遍历完之后也就是对应的j
+                    for (int correct = start; correct < end && correct < pli.size(); correct++) {
                         setNumMask(clues, pli.get(i), pli.get(correct), pos + index);
                     }
                     start = end;
@@ -167,7 +154,7 @@ public class SingleClueSetBuilder extends ClueSetBuilder {
             }
             setSelfNumMask(clues, pli.get(i), pos);
             for (int j = i + 1; j < pli.size(); j++) {
-                setNumMask(clues, pli.get(i), pli.get(j), pos + offsets[j - i]);//i是当前的目标key下标，j是在其之后的所有key,j-i代表offset数组中的下标（i对应0）
+                setNumMask(clues, pli.get(i), pli.get(j), pos + offsets[j - i]);
             }
         }
     }

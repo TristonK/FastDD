@@ -13,17 +13,17 @@ public class DifferentialDependency {
     private List<DifferentialFunction> left;
     private DifferentialFunction right;
 
-    private IBitSet predicateSet;
-    private IBitSet leftPredicateSet;
+    private IBitSet dfSet;
+    private IBitSet leftDFSet;
 
-    public DifferentialDependency(List<DifferentialFunction> left, DifferentialFunction right, IBitSet predicateSet, IBitSet leftPredicates){
+    public DifferentialDependency(List<DifferentialFunction> left, DifferentialFunction right, IBitSet dfSet, IBitSet leftPredicates){
         if(left == null || right == null){
             throw new IllegalArgumentException("DifferentialFunction should not be null.");
         }
         this.left = left;
         this.right = right;
-        this.predicateSet = predicateSet;
-        this.leftPredicateSet = leftPredicates;
+        this.dfSet = dfSet;
+        this.leftDFSet = leftPredicates;
     }
 
     public static final String AND = " ∧ ";
@@ -71,12 +71,12 @@ public class DifferentialDependency {
         }
     }
 
-    public IBitSet getPredicateSet() {
-        return predicateSet;
+    public IBitSet getDfSet() {
+        return dfSet;
     }
 
-    public IBitSet getLeftPredicateSet() {
-        return leftPredicateSet;
+    public IBitSet getLeftDFSet() {
+        return leftDFSet;
     }
 
     public DifferentialFunction getRight() {
