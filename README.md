@@ -2,7 +2,7 @@
 
 ## Introduction
 
-FastDD is a solution for Differitial Dependency discovery. Given an instance of a relational schema, FastDD efficiently computes the set of all minimal DDs.
+FastDD is a solution to Differitial Dependency discovery. Given an instance of a relational schema, FastDD efficiently computes the set of all minimal valid DDs.
 
 ## Requirements
 
@@ -10,6 +10,14 @@ FastDD is a solution for Differitial Dependency discovery. Given an instance of 
 * Maven 3.1.0 or later
 
 ## Usage
+
+After building the project with maven, you can get `FastDD.jar`. You can run our code by adding 1~3 params(See [Configures](https://github.com/TristonK/FastDD#configures)). 
+
+For example, you can run
+```shell
+java -jar FastDD.jar ./FastDD-Exp/dataset/restaurant.csv
+```
+This example takes the dataset restaurant.csv as input, sample its thresholds, computes its minimal valid DCs, and outputs relevant information including the number of DDs and running time.
 
 ### Configures
 
@@ -29,10 +37,12 @@ Most parameters and configures related to our experiment are in Config.java. Som
 
 ## Comparative Experiments
 
-FastDD are compared to other two discovery methods, [IE](https://github.com/TristonK/FastDD/tree/IE) and [Domino(RFD)](https://dast-unisa.github.io/Domino-SW/). The source code of Domino can be found here. And we implement DD-IE with our best effort here.
+FastDD are compared to other two discovery methods, IE and Domino(RFD). The source code of Domino can be found [here](https://dast-unisa.github.io/Domino-SW/). And we implement DD-IE with our best effort [here](https://github.com/TristonK/FastDD-Exp).
+
+Our datasets and related experiment information are provided [here](https://github.com/TristonK/FastDD-Exp)
 
 ## License
 
 fastdd is released under the [Apache 2.0 license](https://github.com/RangerShaw/FastADC/blob/master/LICENSE).
-Some source code is imported from [DCFinder](https://github.com/HPI-Information-Systems/metanome-algorithms/tree/master/dcfinder) and [FastADC](https://github.com/RangerShaw/FastADC),
+Some basic data structure's source code is imported from [DCFinder](https://github.com/HPI-Information-Systems/metanome-algorithms/tree/master/dcfinder) and [FastADC](https://github.com/RangerShaw/FastADC),
 which is also under [Apache 2.0 license](https://github.com/HPI-Information-Systems/metanome-algorithms/blob/master/LICENSE).
