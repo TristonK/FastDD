@@ -30,7 +30,7 @@ public class DFSet implements Iterable<MatchDF>{
         matchDFS = new ArrayList<>();
         this.offsetToPredicateSets = new ArrayList<>();
         for(int i = 0; i < differentialFunctionBuilder.getColSize(); i++){
-            offsetToPredicateSets.add(differentialFunctionBuilder.getOffset2SatisfiedPredicates(i));
+            offsetToPredicateSets.add(differentialFunctionBuilder.getOffset2SatisfiedDFs(i));
         }
     }
 

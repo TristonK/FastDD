@@ -2,7 +2,7 @@
 
 ## Introduction
 
-FastDD is a solution to Differitial Dependency discovery. Given an instance of a relational schema, FastDD efficiently computes the set of all minimal valid DDs.
+FastDD is a solution to Differential Dependency discovery. Given an instance of a relational schema, FastDD efficiently computes the set of all minimal valid DDs.
 
 ## Requirements
 

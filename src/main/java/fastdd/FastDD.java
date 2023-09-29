@@ -50,9 +50,9 @@ public class FastDD {
         }else{
             this.differentialFunctionBuilder = new DifferentialFunctionBuilder(new File(predicatesPath), input);
         }
-        long buildPredicateTime = System.currentTimeMillis() - t0;
-        System.out.println("[Time] build predicates cost: " + buildPredicateTime + " ms");
-        System.out.println("Predicates Size: " + differentialFunctionBuilder.size());
+        long buildDFsTime = System.currentTimeMillis() - t0;
+        System.out.println("[Time] build differential functions cost: " + buildDFsTime + " ms");
+        System.out.println("Differential functions Size: " + differentialFunctionBuilder.size());
     }
 
     public DifferentialDependencySet buildDDs(){
@@ -63,22 +63,11 @@ public class FastDD {
         System.out.println("[PLIs] build PLIs cost: " + buildPliTime + "ms");
 
         t0 = System.currentTimeMillis();
-        /*LongCrossClueSetBuilder.setMaskTimeCnt = 0;
-        LongSingleClueSetBuilder.setMaskTimecnt = 0;
-        LongSingleClueSetBuilder.cntStrTime =0;
-        LongCrossClueSetBuilder.cntStrTime = 0;*/
         DFSetBuilder DFSetBuilder = new DFSetBuilder(differentialFunctionBuilder);
-
-
-        DFSetBuilder.buildDifferentialSetFromLongClue(pliShards);
+        DFSetBuilder.buildDifferentialSetFromISN(pliShards);
         DFSet dfSet = DFSetBuilder.getDFSet();
-
-//        ValidateDD.printAllDF(differentialFunctionBuilder);
-
-        System.out.println("[DifferentialSet] build long clueSet and differential set cost: " + (System.currentTimeMillis()-t0) + " ms");
+        System.out.println("[DifferentialSet] build ISN and differential set cost: " + (System.currentTimeMillis()-t0) + " ms");
         System.out.println("[Diff-cal] time(ns): " + ISNBuilder.calDiffTime);
-        //System.out.println("[countOffset]: " + (BinaryCalOffset.cntTime/1000000+LongSingleClueSetBuilder.cntStrTime+LongCrossClueSetBuilder.cntStrTime/1000000) +
-        //        "; [SetMask]: " + (LongCrossClueSetBuilder.setMaskTimeCnt + LongSingleClueSetBuilder.setMaskTimecnt)/1000000);
         long enmurationTime = System.currentTimeMillis();
         Enumeration ddfinder = new HybridEvidenceInversion(dfSet, differentialFunctionBuilder);
         DifferentialDependencySet dds = ddfinder.buildDifferentialDenpendency();

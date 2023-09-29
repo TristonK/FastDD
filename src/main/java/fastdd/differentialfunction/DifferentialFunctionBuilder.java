@@ -250,7 +250,7 @@ public class DifferentialFunctionBuilder {
      * thresholds: - 0 - 1 - 2 - 3
      * offset:     0 -  1 - 2 - 3 - 4
      */
-    public List<LongBitSet> getOffset2SatisfiedPredicates(int col) {
+    public List<LongBitSet> getOffset2SatisfiedDFs(int col) {
         List<LongBitSet> predicateSets = new ArrayList<>();
         List<DifferentialFunction> differentialFunctionsOfCol = colToDFsGroup.get(col);
         List<Double> thresholds = col2Thresholds.get(col);

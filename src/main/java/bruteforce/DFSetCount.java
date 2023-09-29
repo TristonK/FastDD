@@ -1,7 +1,6 @@
 package bruteforce;
 
 import ch.javasoft.bitset.LongBitSet;
-import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialfunction.DifferentialFunctionBuilder;
 import fastdd.utils.DistanceCalculation;
 import de.metanome.algorithms.dcfinder.input.Input;
@@ -12,11 +11,11 @@ import java.util.*;
 /**
  * @author tristonK 2023/2/7
  */
-public class EvidenceCount {
+public class DFSetCount {
     private final double ERR = 0.000000001;
 
     public Set<LongBitSet> calculate(Input input) {
-        Set<LongBitSet> clueSet = new HashSet<>();
+        Set<LongBitSet> DFSet = new HashSet<>();
         //int -> double -> string
         double[][] dInput = input.getDoubleInput();
         long[][] iInput = input.getLongInput();
@@ -38,31 +37,31 @@ public class EvidenceCount {
         }
         for (int i = 0; i < rows - 1; i++) {
             for (int j = i + 1; j < rows; j++) {
-                LongBitSet clue = new LongBitSet(DifferentialFunctionBuilder.getIntervalCnt());
+                LongBitSet dfset = new LongBitSet(DifferentialFunctionBuilder.getIntervalCnt());
                 int cnt = 0;
                 for (int k = 0; k < iInput.length; k++) {
                     double diff = Math.abs(iInput[k][i] - iInput[k][j]);
                     List<Double> th = columns.get(k).getThresholds();
-                    clue.set(findMaskPos(diff, th) + cnt);
+                    dfset.set(findMaskPos(diff, th) + cnt);
                     cnt += th.size() + 1;
                 }
                 for (int k = 0; k < dInput.length; k++) {
                     double diff = Math.abs(dInput[k][i] - dInput[k][j]);
                     List<Double> th = columns.get(k + iInput.length).getThresholds();
 
-                    clue.set(findMaskPos(diff, th) + cnt);
+                    dfset.set(findMaskPos(diff, th) + cnt);
                     cnt += th.size() + 1;
                 }
                 for (int k = 0; k < sInput.length; k++) {
                     double diff = DistanceCalculation.StringDistance(sInput[k][i], sInput[k][j]);
                     List<Double> th = columns.get(k + iInput.length + dInput.length).getThresholds();
-                    clue.set(findMaskPos(diff, th) + cnt);
+                    dfset.set(findMaskPos(diff, th) + cnt);
                     cnt += th.size() + 1;
                 }
-                clueSet.add(clue);
+                DFSet.add(dfset);
             }
         }
-        return clueSet;
+        return DFSet;
     }
 
     private int findMaskPos(double diff, List<Double> th) {
@@ -85,12 +84,12 @@ public class EvidenceCount {
 
     boolean TestDup = false;
     LongBitSet DDLeft = null;
-    public Set<LongBitSet> calculateEvidence(Input input, DifferentialFunctionBuilder differentialFunctionBuilder) {
-        List<List<LongBitSet>> countToPredicateSets = new ArrayList<>();
+    public Set<LongBitSet> calculateDFSet(Input input, DifferentialFunctionBuilder differentialFunctionBuilder) {
+        List<List<LongBitSet>> countToDFSets = new ArrayList<>();
         for (int i = 0; i < differentialFunctionBuilder.getColSize(); i++) {
-            countToPredicateSets.add(differentialFunctionBuilder.getOffset2SatisfiedPredicates(i));
+            countToDFSets.add(differentialFunctionBuilder.getOffset2SatisfiedDFs(i));
         }
-        Set<LongBitSet> evidenceSet = new HashSet<>();
+        Set<LongBitSet> setOfDFSet = new HashSet<>();
         //int -> double -> string
         double[][] dInput = input.getDoubleInput();
         long[][] iInput = input.getLongInput();
@@ -112,33 +111,33 @@ public class EvidenceCount {
         }
         for (int i = 0; i < rows - 1; i++) {
             for (int j = i + 1; j < rows; j++) {
-                LongBitSet evidence = new LongBitSet();
+                LongBitSet dfset = new LongBitSet();
                 int cnt = 0;
                 for (int k = 0; k < iInput.length; k++) {
                     double diff = Math.abs(iInput[k][i] - iInput[k][j]);
                     List<Double> th = columns.get(k).getThresholds();
-                    LongBitSet mask = countToPredicateSets.get(k).get(findMaskPos(diff, th));
-                    evidence.or(mask);
+                    LongBitSet mask = countToDFSets.get(k).get(findMaskPos(diff, th));
+                    dfset.or(mask);
                 }
                 ;
                 for (int k = 0; k < dInput.length; k++) {
                     double diff = Math.abs(dInput[k][i] - dInput[k][j]);
                     List<Double> th = columns.get(k + iInput.length).getThresholds();
-                    LongBitSet mask = countToPredicateSets.get(k + iInput.length).get(findMaskPos(diff, th));
-                    evidence.or(mask);
+                    LongBitSet mask = countToDFSets.get(k + iInput.length).get(findMaskPos(diff, th));
+                    dfset.or(mask);
                 }
                 for (int k = 0; k < sInput.length; k++) {
                     double diff = DistanceCalculation.StringDistance(sInput[k][i], sInput[k][j]);
                     List<Double> th = columns.get(k + iInput.length + dInput.length).getThresholds();
-                    LongBitSet mask = countToPredicateSets.get(k + iInput.length + dInput.length).get(findMaskPos(diff, th));
-                    evidence.or(mask);
+                    LongBitSet mask = countToDFSets.get(k + iInput.length + dInput.length).get(findMaskPos(diff, th));
+                    dfset.or(mask);
                 }
-                evidenceSet.add(evidence);
-                if(TestDup && DDLeft.isSubSetOf(evidence)){
+                setOfDFSet.add(dfset);
+                if(TestDup && DDLeft.isSubSetOf(dfset)){
                     System.out.println("dup "+ i + " "+ j);
                 }
             }
         }
-        return evidenceSet;
+        return setOfDFSet;
     }
 }
