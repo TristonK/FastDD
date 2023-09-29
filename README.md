@@ -37,7 +37,7 @@ Most parameters and configures related to our experiment are in Config.java. Som
 
 ## Comparative Experiments
 
-FastDD are compared to other two discovery methods, IE and Domino(RFD). The source code of Domino can be found [here](https://dast-unisa.github.io/Domino-SW/). And we implement DD-IE with our best effort [here](https://github.com/TristonK/FastDD-Exp).
+FastDD are compared to other two discovery methods, IE and Domino(RFD). The source code of Domino can be found [here](https://dast-unisa.github.io/Domino-SW/). And we implement DD-IE with our best effort [here](https://github.com/TristonK/FastDD-Exp/blob/main/Exp-1/IE.zip).
 
 Our datasets and related experiment information are provided [here](https://github.com/TristonK/FastDD-Exp)
 
