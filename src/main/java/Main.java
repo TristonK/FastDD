@@ -1,5 +1,8 @@
+import bruteforce.FindDup;
+import bruteforce.FindVio;
 import fastdd.Config;
 import fastdd.FastDD;
+import fastdd.differentialdependency.DifferentialDependency;
 import fastdd.differentialdependency.DifferentialDependencySet;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.RelationalInput;
@@ -37,7 +40,19 @@ public class Main {
 
 
         FastDD dDFast = new FastDD(new Input(new RelationalInput(fp), rowLimit), dfp);
-        DifferentialDependencySet dds = dDFast.buildDDs();
+        // DifferentialDependencySet dds = dDFast.buildDDs();
+
+        // 找重复值
+        /*FindDup.benchPath = "xx";
+        FindDup.trueAssert = new String[]{
+                "{ [name(<=0.0)] ∧ [addr(<=13.0)] -> [phone(<=8.0)]}"
+        };
+        dDFast.findDup();*/
+
+        // 找违反对
+        /*FindVio.DDFilePath = "xx";
+        FindVio.BenchFilePath = "xx";
+        dDFast.findVio();*/
     }
 
 }

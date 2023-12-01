@@ -119,7 +119,6 @@ public class DFSetCount {
                     LongBitSet mask = countToDFSets.get(k).get(findMaskPos(diff, th));
                     dfset.or(mask);
                 }
-                ;
                 for (int k = 0; k < dInput.length; k++) {
                     double diff = Math.abs(dInput[k][i] - dInput[k][j]);
                     List<Double> th = columns.get(k + iInput.length).getThresholds();

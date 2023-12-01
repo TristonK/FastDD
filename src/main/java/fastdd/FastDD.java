@@ -1,5 +1,7 @@
 package fastdd;
 
+import bruteforce.FindDup;
+import bruteforce.FindVio;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 import de.metanome.algorithms.dcfinder.input.Input;
 import fastdd.dfset.DFSet;
@@ -93,5 +95,15 @@ public class FastDD {
             PrintResult.PrintDD(dds);
         }
         return dds;
+    }
+
+    public void findDup(){
+        FindDup worker = new FindDup(this.differentialFunctionBuilder);
+        worker.run(input);
+    }
+
+    public void findVio(){
+        FindVio worker = new FindVio(this.differentialFunctionBuilder);
+        worker.run(input);
     }
 }
