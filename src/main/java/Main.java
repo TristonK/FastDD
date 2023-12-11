@@ -5,6 +5,11 @@ import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.RelationalInput;
 
 import java.io.IOException;
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryMXBean;
+import java.lang.management.MemoryPoolMXBean;
+import java.lang.management.MemoryUsage;
+import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 
 public class Main {
@@ -35,9 +40,16 @@ public class Main {
             System.out.println("Paralism: "+ ForkJoinPool.commonPool().getParallelism());
         }
 
-
+        long memoryConsumption = 0L;
+        List<MemoryPoolMXBean> pools = ManagementFactory.getMemoryPoolMXBeans();
         FastDD dDFast = new FastDD(new Input(new RelationalInput(fp), rowLimit), dfp);
         DifferentialDependencySet dds = dDFast.buildDDs();
+        for (MemoryPoolMXBean pool : pools) {
+            MemoryUsage peak = pool.getPeakUsage();
+            memoryConsumption += peak.getUsed();
+        }
+        memoryConsumption /= 1048576L;
+        System.out.println("Memory Consumption: " + memoryConsumption + "MB");
     }
 
 }
